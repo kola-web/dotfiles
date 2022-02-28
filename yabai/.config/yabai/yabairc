@@ -1,0 +1,84 @@
+#!/usr/bin/env sh
+
+# ██╗   ██╗       █████╗       ██████╗        █████╗       ██╗
+# ╚██╗ ██╔╝      ██╔══██╗      ██╔══██╗      ██╔══██╗      ██║
+#  ╚████╔╝       ███████║      ██████╔╝      ███████║      ██║
+#   ╚██╔╝        ██╔══██║      ██╔══██╗      ██╔══██║      ██║
+#    ██║         ██║  ██║      ██████╔╝      ██║  ██║      ██║
+#    ╚═╝         ╚═╝  ╚═╝      ╚═════╝       ╚═╝  ╚═╝      ╚═╝
+
+# necessary to load scripting-addition during startup on macOS Big Sur
+# *yabai --load-sa* is configured to run through sudo without a password
+sudo yabai --load-sa
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+
+gap=12
+grid=24:24:2:2:20:20
+
+# global settings
+yabai -m config external_bar main:0:0
+yabai -m config window_placement second_child
+yabai -m config mouse_modifier ctrl
+yabai -m config window_topmost off
+yabai -m config window_shadow off
+
+# general space settings
+yabai -m config layout bsp
+yabai -m config top_padding 40
+yabai -m config bottom_padding $gap
+yabai -m config left_padding $gap
+yabai -m config right_padding $gap
+yabai -m config window_gap $gap
+
+# yabai -m config window_border on
+# yabai -m config window_border_width 10
+
+# mission-control desktop labels
+yabai -m space 1 --label chrome
+yabai -m space 2 --label code
+yabai -m space 3 --label view
+yabai -m space 4 --label mail
+yabai -m space 5 --label other
+
+# yabai -m config --space Code layout stack
+yabai -m config --space view layout stack
+yabai -m config --space code layout stack
+# yabai -m config --space mail layout float
+# yabai -m config --space other layout float
+
+# rule
+yabai -m rule --add app="^Code$" space=code
+yabai -m rule --add app="^webstorm$" layer=normal space=code
+
+yabai -m rule --add app="^微信开发者工具$" space=view
+
+yabai -m rule --add app="^企业微信$" space=mail layer=normal manage=off grid=$grid
+yabai -m rule --add app="^网易云音乐$" space=mail layer=normal manage=off grid=$grid
+yabai -m rule --add app="^喜马拉雅$" space=mail layer=normal manage=off grid=$grid
+yabai -m rule --add app="^QQ$" space=mail layer=normal manage=off grid=$grid
+yabai -m rule --add app="^QQ音乐$" space=mail layer=normal manage=off grid=$grid
+yabai -m rule --add app="^微信$" space=mail layer=normal manage=off grid=$grid
+
+yabai -m rule --add app="^访达$" manage=off grid=$grid
+yabai -m rule --add app="^系统偏好设置$" manage=off layer=normal sticky=on grid=$grid
+yabai -m rule --add app="^Panda$" manage=off
+yabai -m rule --add app="^Rime$" manage=off
+
+yabai -m rule --add app="^预览$" layer=normal manage=off grid=$grid
+# yabai -m rule --add app="^WebStorm" manage=off
+# yabai -m rule --add app="^WebStorm" title="(.*\[(.*)\].*)|(.*\(\:.*\).*)" manage=on
+
+# yabai -m rule --add app="^Discord$" space=social grid=1:1:0:0:1:1 manage=off
+
+# yabai -m signal --add event=application_hidden action='/usr/bin/env sh -c yabai -m window --focus mouse'
+
+# yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
+# yabai -m signal --add event=window_destroyed action="yabai -m window --focus mouse"
+# yabai -m signal --add event=application_terminated action="yabai -m window --focus mouse"
+
+# SKETCHYBAR EVENTS
+yabai -m signal --add event=window_focused action="sketchybar -m --trigger window_focus &> /dev/null"
+yabai -m signal --add event=window_title_changed action="sketchybar -m --trigger title_change &> /dev/null"
+
+
+echo "yabai configuration loaded.."
