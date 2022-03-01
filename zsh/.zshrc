@@ -115,38 +115,47 @@ zsh_add_plugin "ajeetdsouza/zoxide"
 zsh_add_completion "esc/conda-zsh-completion" false
 
 ### ----------------------------------------------------- ZOXIDE -----------------------------------------------------
-#
+
 # =============================================================================
+#
 # Utility functions for zoxide.
 #
+
 # pwd based on the value of _ZO_RESOLVE_SYMLINKS.
 function __zoxide_pwd() {
     \builtin pwd -L
 }
+
 # cd + custom logic based on the value of _ZO_ECHO.
 function __zoxide_cd() {
     # shellcheck disable=SC2164
     \builtin cd "$@"
 }
+
 # =============================================================================
 #
 # Hook configuration for zoxide.
 #
+
 # Hook to add new entries to the database.
 function __zoxide_hook() {
     \command zoxide add -- "$(__zoxide_pwd || \builtin true)"
 }
+
 # Initialize hook.
 # shellcheck disable=SC2154
 if [[ ${precmd_functions[(Ie)__zoxide_hook]:-} -eq 0 ]] && [[ ${chpwd_functions[(Ie)__zoxide_hook]:-} -eq 0 ]]; then
     chpwd_functions+=(__zoxide_hook)
 fi
+
 # =============================================================================
 #
 # When using zoxide with --no-aliases, alias these internal functions as
 # desired.
 #
+
 __zoxide_z_prefix='z#'
+
 # Jump to a directory using only keywords.
 function __zoxide_z() {
     # shellcheck disable=SC2199
@@ -172,35 +181,42 @@ function __zoxide_z() {
             __zoxide_cd "${result}"
     fi
 }
+
 # Jump to a directory using interactive search.
 function __zoxide_zi() {
     \builtin local result
     result="$(\command zoxide query -i -- "$@")" && __zoxide_cd "${result}"
 }
+
 # =============================================================================
 #
 # Convenient aliases for zoxide. Disable these using --no-aliases.
 #
+
 # Remove definitions.
 function __zoxide_unset() {
     \builtin unalias "$@" &>/dev/null || \builtin true
     \builtin unfunction "$@" &>/dev/null || \builtin true
     \builtin unset "$@" &>/dev/null
 }
+
 __zoxide_unset cd
 function cd() {
     __zoxide_z "$@"
 }
+
 __zoxide_unset cdi
 function cdi() {
     __zoxide_zi "$@"
 }
+
 if [[ -o zle ]]; then
     __zoxide_unset _cd
     function _cd() {
         # Only show completions when the cursor is at the end of the line.
         # shellcheck disable=SC2154
         [[ "${#words[@]}" -eq "${CURRENT}" ]] || return
+
         if [[ "${#words[@]}" -eq 2 ]]; then
             _files -/
         elif [[ "${words[-1]}" == '' ]]; then
@@ -214,6 +230,7 @@ if [[ -o zle ]]; then
             \builtin printf '\e[5n'
         fi
     }
+
     __zoxide_unset _cd_helper
     function _cd_helper() {
         \builtin local result="${__zoxide_z_prefix}${__zoxide_result}"
@@ -221,6 +238,7 @@ if [[ -o zle ]]; then
         [[ -n "${__zoxide_result}" ]] && LBUFFER="${LBUFFER}${(q-)result}"
         \builtin zle reset-prompt
     }
+
     \builtin zle -N _cd_helper
     \builtin bindkey "\e[0n" _cd_helper
     if [[ "${+functions[compdef]}" -ne 0 ]]; then
@@ -228,11 +246,12 @@ if [[ -o zle ]]; then
         \compdef _cd cd
     fi
 fi
+
 # =============================================================================
 #
 # To initialize zoxide, add this to your configuration (usually ~/.zshrc):
 #
-eval "$(zoxide init zsh)"
+# eval "$(zoxide init zsh)"
 
 ### ----------------------------------------------------- ZSH-VI-MODE -----------------------------------------------------
 function zvm_config() {
