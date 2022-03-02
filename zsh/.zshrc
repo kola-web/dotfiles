@@ -7,12 +7,10 @@ unsetopt BEEP
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
-export all_proxy=socks5://127.0.0.1:1090
 export svn_editor=code
 export EDITOR="nvim"
 export TERMINAL="alacritty"
 export BROWSER="chrome"
-export all_proxy="socks5://127.0.0.1:1090"
 export PATH=/Users/lijialin/.local/bin:$PATH
 
 ### ----------------------------------------------------- ALIAS -----------------------------------------------------
@@ -261,3 +259,41 @@ function zvm_config() {
   ZVM_LAZY_KEYBINDINGS=false
 }
 source ~/zsh/plugins/zsh-vi-mode/zsh-vi-mode.zsh
+
+
+
+### ----------------------------------------------------- proxy -----------------------------------------------------
+port=1090
+
+case "$(uname -s)" in
+
+Darwin)
+	# echo 'Mac OS X'
+  export host=127.0.0.1
+	;;
+Linux)
+	# echo 'Linux'
+  export host=127.0.0.1
+	;;
+CYGWIN* | MINGW32* | MSYS* | MINGW*)
+	# echo 'MS Windows'
+  sed -i "/.*ProxyCommand*/c\ ProxyCommand nc -v -x $host:$port %h %p" ~/.ssh/config
+  export host=`cat /etc/resolv.conf|grep nameserver|awk'{print $2}'`
+	;;
+*)
+	echo 'Other OS'
+	;;
+esac
+
+function sp() {
+    export ALL_PROXY=socks5://$host:1090
+    export {http,https,ftp}_proxy=$ALL_PROXY
+    export {HTTP,HTTPS,FTP}_PROXY=$ALL_PROXY
+}
+function rp() {
+    unset {http,https,ftp}_proxy
+    unset {HTTP,HTTPS,FTP}_PROXY
+    unset ALL_PROXY
+}
+
+sp
