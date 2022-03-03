@@ -4,9 +4,6 @@ export ZDOTDIR=$HOME/zsh
 unsetopt BEEP
 
 ### ----------------------------------------------------- EXPORT -----------------------------------------------------
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
 export svn_editor=code
 export EDITOR="nvim"
 export TERMINAL="alacritty"
@@ -14,7 +11,7 @@ export BROWSER="chrome"
 export PATH=/Users/lijialin/.local/bin:$PATH
 
 ### ----------------------------------------------------- ALIAS -----------------------------------------------------
-# alias sudo="sudo "
+alias sudo="sudo -E"
 # alias nvim=lvim
 alias r="ranger"
 alias s="neofetch"
@@ -31,7 +28,7 @@ alias ll='logo-ls -al'
 alias lsg='logo-ls -D'
 alias lag='logo-ls -AD'
 alias llg='logo-ls -alD'
-eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
+#$eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
 eval "$(fnm env --use-on-cd)"
 
 ### ----------------------------------------------------- PROMPT -----------------------------------------------------
@@ -110,7 +107,7 @@ zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 zsh_add_plugin "hlissner/zsh-autopair"
 zsh_add_plugin "ajeetdsouza/zoxide"
-zsh_add_completion "esc/conda-zsh-completion" false
+zsh_add_completion "zsh-users/zsh-completions" false
 
 ### ----------------------------------------------------- ZOXIDE -----------------------------------------------------
 
@@ -197,24 +194,20 @@ function __zoxide_unset() {
     \builtin unfunction "$@" &>/dev/null || \builtin true
     \builtin unset "$@" &>/dev/null
 }
-
 __zoxide_unset cd
 function cd() {
     __zoxide_z "$@"
 }
-
 __zoxide_unset cdi
 function cdi() {
     __zoxide_zi "$@"
 }
-
 if [[ -o zle ]]; then
     __zoxide_unset _cd
     function _cd() {
         # Only show completions when the cursor is at the end of the line.
         # shellcheck disable=SC2154
         [[ "${#words[@]}" -eq "${CURRENT}" ]] || return
-
         if [[ "${#words[@]}" -eq 2 ]]; then
             _files -/
         elif [[ "${words[-1]}" == '' ]]; then
@@ -228,7 +221,6 @@ if [[ -o zle ]]; then
             \builtin printf '\e[5n'
         fi
     }
-
     __zoxide_unset _cd_helper
     function _cd_helper() {
         \builtin local result="${__zoxide_z_prefix}${__zoxide_result}"
@@ -236,7 +228,6 @@ if [[ -o zle ]]; then
         [[ -n "${__zoxide_result}" ]] && LBUFFER="${LBUFFER}${(q-)result}"
         \builtin zle reset-prompt
     }
-
     \builtin zle -N _cd_helper
     \builtin bindkey "\e[0n" _cd_helper
     if [[ "${+functions[compdef]}" -ne 0 ]]; then
@@ -260,19 +251,16 @@ function zvm_config() {
 }
 source ~/zsh/plugins/zsh-vi-mode/zsh-vi-mode.zsh
 
-
-
 ### ----------------------------------------------------- proxy -----------------------------------------------------
-port=1090
-
 case "$(uname -s)" in
-
 Darwin)
 	# echo 'Mac OS X'
+  export port=1090
   export host=127.0.0.1
 	;;
 Linux)
-	# echo 'Linux'
+  # echo 'Linux'
+  export port=1090
   export host=127.0.0.1
 	;;
 CYGWIN* | MINGW32* | MSYS* | MINGW*)
@@ -284,9 +272,8 @@ CYGWIN* | MINGW32* | MSYS* | MINGW*)
 	echo 'Other OS'
 	;;
 esac
-
 function sp() {
-    export ALL_PROXY=socks5://$host:1090
+    export ALL_PROXY=http://$host:$port
     export {http,https,ftp}_proxy=$ALL_PROXY
     export {HTTP,HTTPS,FTP}_PROXY=$ALL_PROXY
 }
@@ -295,5 +282,4 @@ function rp() {
     unset {HTTP,HTTPS,FTP}_PROXY
     unset ALL_PROXY
 }
-
 sp
