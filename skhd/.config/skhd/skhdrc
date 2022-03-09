@@ -4,7 +4,8 @@
 alt - q : $(yabai -m window $(yabai -m query --windows --window | jq -re ".id") --close)
 alt - e : open ~
 alt - o : brew services restart sketchybar 
-
+alt + shift - e : /Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron
+alt + shift - w : /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
 
 ## 打开终端
 # alt - return : /Applications/iTerm.app/Contents/MacOS/iTerm2
@@ -15,9 +16,9 @@ alt - f : yabai -m window --toggle zoom-parent
 alt + shift - f : yabai -m window --toggle native-fullscreen
 
 ## 切换窗口布局
-alt - s : yabai -m space --layout stack
-alt - t : yabai -m space --layout bsp
-alt - f : yabai -m space --layout float
+alt + shift - s : yabai -m space --layout stack
+alt + shift - t : yabai -m space --layout bsp
+alt + shift - m : yabai -m space --layout float
 
 alt - a : yabai -m space --toggle padding; yabai -m space --toggle gap
 alt - r : yabai -m space --rotate 90

@@ -30,7 +30,11 @@ yabai -m config left_padding $gap
 yabai -m config right_padding $gap
 yabai -m config window_gap $gap
 
-# yabai -m config window_border on
+yabai -m config window_border on
+yabai -m config window_border_width 6
+yabai -m config active_window_border_color   0xff775759
+yabai -m config normal_window_border_color   0xff555555
+yabai -m config insert_feedback_color        0xffd75f5f
 # yabai -m config window_border_width 10
 
 # mission-control desktop labels
@@ -79,6 +83,5 @@ yabai -m rule --add app="^预览$" layer=normal manage=off grid=$grid
 # SKETCHYBAR EVENTS
 yabai -m signal --add event=window_focused action="sketchybar -m --trigger window_focus &> /dev/null"
 yabai -m signal --add event=window_title_changed action="sketchybar -m --trigger title_change &> /dev/null"
-
 
 echo "yabai configuration loaded.."
