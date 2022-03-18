@@ -89,7 +89,6 @@ alt + shift - 5 : yabai -m window --space 5
 alt + shift - 0 : yabai -m space --balance
 
 alt + shift - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
-alt - o : brew services restart sketchybar
 
 alt - left   : yabai -m window west --resize right:-40:0 2> /dev/null || yabai -m window --resize right:-40:0
 alt - down   : yabai -m window north --resize bottom:0:40 2> /dev/null || yabai -m window --resize bottom:0:40

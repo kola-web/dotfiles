@@ -24,7 +24,7 @@ yabai -m config window_shadow off
 
 # general space settings
 yabai -m config layout bsp
-yabai -m config top_padding 40
+yabai -m config top_padding $gap
 yabai -m config bottom_padding $gap
 yabai -m config left_padding $gap
 yabai -m config right_padding $gap
@@ -80,8 +80,5 @@ yabai -m rule --add app="^预览$" layer=normal manage=off grid=$grid
 # yabai -m signal --add event=window_destroyed action="yabai -m window --focus mouse"
 # yabai -m signal --add event=application_terminated action="yabai -m window --focus mouse"
 
-# SKETCHYBAR EVENTS
-yabai -m signal --add event=window_focused action="sketchybar -m --trigger window_focus &> /dev/null"
-yabai -m signal --add event=window_title_changed action="sketchybar -m --trigger title_change &> /dev/null"
 
 echo "yabai configuration loaded.."
