@@ -6,7 +6,7 @@ alt + shift -q : sudo halt
 
 alt - e : open ~
 alt + shift - e : /Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron
-alt + shift - w : /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
+# alt + shift - w : /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
 
 ## 打开终端
 # alt - return : /Applications/iTerm.app/Contents/MacOS/iTerm2
@@ -17,9 +17,9 @@ alt - f : yabai -m window --toggle zoom-parent
 alt + shift - f : yabai -m window --toggle native-fullscreen
 
 ## 切换窗口布局
-alt + shift - s : yabai -m space --layout stack
-alt + shift - t : yabai -m space --layout bsp
-alt + shift - m : yabai -m space --layout float
+alt - s : yabai -m space --layout stack
+alt - t : yabai -m space --layout bsp
+alt - m : yabai -m space --layout float
 
 alt - a : yabai -m space --toggle padding; yabai -m space --toggle gap
 alt - r : yabai -m space --rotate 90
@@ -28,6 +28,10 @@ alt - r : yabai -m space --rotate 90
 alt - space : yabai -m window --toggle float;\
               yabai -m window --grid 24:24:2:2:20:20
 
+# alt-, 上一个屏幕
+alt - 0x2B : yabai -m display --focus prev
+# alt-. 下一个屏幕
+alt - 0x2F : yabai -m display --focus next
 
 ## 窗口位置变换
 # alt-k
@@ -71,6 +75,7 @@ alt - m : yabai -m window --focus mouse
 # alt - 4 : yabai -m space --focus mail
 # alt - 5 : yabai -m space --focus other
 # alt - 6 : yabai -m space --focus 6
+alt - tab : yabai -m space --focus recent
 
 # 窗口空间变换
 # alt + shift - 1 : yabai -m window --space 1; skhd -k "alt - 1"
