@@ -1,27 +1,35 @@
 #!/bin/bash
 
+# remap keybind
+# ctrl - j : skhd --key "down"
+# ctrl - k : skhd --key "up"
+ctrl - n : skhd --key "down"
+ctrl - p : skhd --key "up"
+
 ## 关闭当前窗口
 alt - q : $(yabai -m window $(yabai -m query --windows --window | jq -re ".id") --close)
-alt + shift -q : sudo halt
-
-alt - e : open ~
-alt + shift - e : /Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron
+# open finder on home
+alt + shift - e : open ~
+alt - e :  cd ~ && kitty -e ranger
+# alt + shift - e : /Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron
 # alt + shift - w : /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
 
 ## 打开终端
 # alt - return : /Applications/iTerm.app/Contents/MacOS/iTerm2
 alt - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
+# alt + shift - return : /Applications/Alacritty.app/Contents/MacOS/alacritty -e tmux
 
 ##全屏
-alt - f : yabai -m window --toggle zoom-parent
-alt + shift - f : yabai -m window --toggle native-fullscreen
+alt - z : yabai -m window --toggle zoom-parent
+alt + shift - z : yabai -m window --toggle native-fullscreen
 
 ## 切换窗口布局
 alt - s : yabai -m space --layout stack
 alt - t : yabai -m space --layout bsp
-alt - m : yabai -m space --layout float
+alt - f : yabai -m space --layout float
 
-alt - a : yabai -m space --toggle padding; yabai -m space --toggle gap
+alt - o : yabai -m space --toggle padding; yabai -m space --toggle gap
+alt + shift - o : yabai -m window --toggle border
 alt - r : yabai -m space --rotate 90
 
 ## 缺划浮动
@@ -69,11 +77,11 @@ alt - j : yabai -m query --spaces --space \
 alt - m : yabai -m window --focus mouse
 
 # 空间变化
-# alt - 1 : yabai -m space --focus chrome
-# alt - 2 : yabai -m space --focus code
-# alt - 3 : yabai -m space --focus view
-# alt - 4 : yabai -m space --focus mail
-# alt - 5 : yabai -m space --focus other
+# alt - 1 : yabai -m space --focus 1
+# alt - 2 : yabai -m space --focus 2
+# alt - 3 : yabai -m space --focus 3
+# alt - 4 : yabai -m space --focus 4
+# alt - 5 : yabai -m space --focus 5
 # alt - 6 : yabai -m space --focus 6
 alt - tab : yabai -m space --focus recent
 
@@ -105,3 +113,4 @@ shift + alt - left : yabai -m window --move rel:-20:0
 shift + alt - down : yabai -m window --move rel:0:20
 shift + alt - up : yabai -m window --move rel:0:-20
 shift + alt - right : yabai -m window --move rel:20:0
+

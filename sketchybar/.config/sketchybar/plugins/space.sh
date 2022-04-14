@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ "$SELECTED" = "true" ]; then
-  sketchybar -m --set $NAME background.color=0xff81a1c1
+  sketchybar -m --set $NAME label.highlight=on icon.highlight=on
 else
-  sketchybar -m --set $NAME background.color=0xff57627A
+  sketchybar -m --set $NAME label.highlight=off icon.highlight=off
 fi
