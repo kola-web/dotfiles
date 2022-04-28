@@ -16,7 +16,7 @@ gap=12
 grid=24:24:2:2:20:20
 
 # global settings
-yabai -m config external_bar main:24:0
+yabai -m config external_bar main:0:0
 yabai -m config window_placement first_child
 yabai -m config mouse_modifier ctrl
 yabai -m config window_topmost off
@@ -44,10 +44,10 @@ yabai -m config --space 2 layout stack
 # yabai -m config --space other layout float
 
 # rule
-yabai -m rule --add app="^Code$" space=code
-yabai -m rule --add app="^webstorm$" layer=normal space=code
+yabai -m rule --add app="^Code$" space=2
+yabai -m rule --add app="^webstorm$" layer=normal space=2
 
-yabai -m rule --add app="^微信开发者工具$" space=view
+yabai -m rule --add app="^微信开发者工具$" space=3
 
 yabai -m rule --add app="^企业微信$" space=4 layer=normal manage=off grid=$grid
 yabai -m rule --add app="^网易云音乐$" space=4 layer=normal manage=off grid=$grid

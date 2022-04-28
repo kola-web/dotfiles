@@ -143,3 +143,4 @@ sketchybar -m --add item title center                                           
                 title window_focus front_app_switched space_change title_change
 
 sketchybar -m --update && echo "sketchybar configuration loaded.."
+
