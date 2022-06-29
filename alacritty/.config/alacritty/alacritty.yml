@@ -11,7 +11,7 @@ env:
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
   TERM: xterm-256color
-  #WINIT_X11_SCALE_FACTOR: '2.0'
+  WINIT_X11_SCALE_FACTOR: '2.0'
 
 hide_cursor_when_typing: true
 
@@ -267,12 +267,13 @@ import:
 # The value `0.0` is completely transparent and `1.0` is opaque.
 opacity: 1
 
-#selection:
-#semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+# selection:
+# semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+semantic_escape_chars: ',│`|:"'' ()[]{}<>'
 # When set to `true`, selected text will be copied to the primary clipboard.
-#save_to_clipboard: false
+save_to_clipboard: true
 # Allow terminal applications to change Alacritty's window title.
-#dynamic_title: true
+dynamic_title: true
 cursor:
   # Cursor style
   #
@@ -920,7 +921,7 @@ schemes:
       magenta: '#d6438a'
       cyan: '#2AA298'
       white: '#F0F0F0'
-color: &night-owl
+colors: *night-owl
 
   #debug:
   # Display the time it takes to redraw each frame.
