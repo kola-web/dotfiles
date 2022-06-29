@@ -1,13 +1,14 @@
-# 公司wifi密码 qweasdzxc888
-#!/bin/sh
-source ~/.config/zsh/.zprezto/runcoms/zshrc
 export ZDOTDIR=$HOME/.config/zsh
-HISTFILE=~/.zsh_history
-setopt appendhistory
+source "$HOME/.config/zsh/.zshrc"
+
+# 公司wifi密码 qweasdzxc888
 ### ----------------------------------------------------- STTTING -----------------------------------------------------
 unsetopt BEEP
 setopt HIST_IGNORE_ALL_DUPS
 bindkey -v
+WORDCHARS=${WORDCHARS//[\/]}
+ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
 ### ----------------------------------------------------- PROXY -----------------------------------------------------
 function proxy() {
@@ -23,7 +24,6 @@ function unproxy() {
     unset all_proxy
 }
 proxy
-
 
 ### ----------------------------------------------------- EXPORT -----------------------------------------------------
 # export all_proxy=socks5://127.0.0.1:1090
@@ -66,7 +66,7 @@ fd() {
 
 ### ----------------------------------------------------- eval -----------------------------------------------------
 eval "$(fnm env --use-on-cd)"
-# eval "$(zoxide init zsh)"
+eval "$(zoxide init zsh)"
 # eval "$(starship init zsh)"
 
 ### ----------------------------------------------------- plugin -----------------------------------------------------
