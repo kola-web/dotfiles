@@ -55,6 +55,7 @@ yabai -m rule --add app="^喜马拉雅$" space=4 layer=normal manage=off grid=$g
 yabai -m rule --add app="^QQ$" space=4 layer=normal manage=off grid=$grid
 yabai -m rule --add app="^QQ音乐$" space=4 layer=normal manage=off grid=$grid
 yabai -m rule --add app="^微信$" space=4 layer=normal manage=off grid=$grid
+yabai -m rule --add app="^Listen1$" space=4 layer=normal manage=off grid=$grid
 
 yabai -m rule --add app="^访达$" manage=off grid=$grid border=off
 yabai -m rule --add app="^系统偏好设置$" manage=off layer=normal sticky=on grid=$grid
@@ -62,16 +63,10 @@ yabai -m rule --add app="^Panda$" manage=off
 yabai -m rule --add app="^Rime$" manage=off
 
 yabai -m rule --add app="^预览$" layer=normal manage=off grid=$grid
-# yabai -m rule --add app="^WebStorm" manage=off
-# yabai -m rule --add app="^WebStorm" title="(.*\[(.*)\].*)|(.*\(\:.*\).*)" manage=on
 
-# yabai -m rule --add app="^Discord$" space=social grid=1:1:0:0:1:1 manage=off
-
-# yabai -m signal --add event=application_hidden action='/usr/bin/env sh -c yabai -m window --focus mouse'
-
-# yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
-# yabai -m signal --add event=window_destroyed action="yabai -m window --focus mouse"
-# yabai -m signal --add event=application_terminated action="yabai -m window --focus mouse"
+yabai -m rule --add app="^WebStorm$" manage=off
+yabai -m rule --add app="^WebStorm$" title="( – )"  manage=onj
+yabai -m rule --add app="^Snipaste$" manage=off
 
 
 echo "yabai configuration loaded.."

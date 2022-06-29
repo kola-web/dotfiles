@@ -1,0 +1,12 @@
+pane	0	1	1	:*	1	lijialin@bogon: ~/project/touyan-system/web_src	:/Users/lijialin/project/touyan-system/web_src	0	node	:node /Users/lijialin/Library/Caches/fnm_multishells/3336_1656379890394/bin/yarn dev
+pane	0	1	1	:*	2	lijialin@localhost: ~/project/touyan-system	:/Users/lijialin/project/touyan-system	0	zsh	:
+pane	0	1	1	:*	3	lijialin@localhost: ~/project/devRed-systeam/web_src	:/Users/lijialin/project/devRed-systeam/web_src	1	node	:node /Users/lijialin/Library/Caches/fnm_multishells/3378_1656379890422/bin/yarn dev
+pane	0	2	0	:##	1	lijialin@localhost: ~/.config/nvim	:/Users/lijialin/.config/nvim	1	nvim	:/opt/homebrew/Cellar/python@3.10/3.10.4/Frameworks/Python.framework/Versions/3.10/Resources/Python.app/Contents/MacOS/Python -O /opt/homebrew/bin/ranger
+pane	0	2	0	:##	2	lijialin@localhost: ~/.config/nvimC	:/Users/lijialin/.config/nvimC	0	nvim	:nvim init.lua
+pane	0	3	0	:	1	lijialin@localhost: ~/project/touyan	:/Users/lijialin/project/touyan	1	zsh	:
+pane	0	4	0	:-	1	lijialin@localhost: ~/.config/alacritty	:/Users/lijialin/dotfiles/alacritty/.config/alacritty	1	zsh	:
+window	0	1	:node	1	:*	50af,224x54,0,0{109x54,0,0[109x27,0,0,1,109x26,0,28,14],114x54,110,0,2}	:
+window	0	2	:nvim	0	:##	5bdb,224x54,0,0{112x54,0,0,11,111x54,113,0,15}	:
+window	0	3	:zsh	0	:	5fc2,224x54,0,0,13	:
+window	0	4	:zsh	0	:-	5fc5,224x54,0,0,16	:
+state	0	

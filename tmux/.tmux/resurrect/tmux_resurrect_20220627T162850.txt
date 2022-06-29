@@ -1,0 +1,16 @@
+pane	0	1	0	:	1	lijialin@bogon: ~/project/touyan-system/web_src	:/Users/lijialin/project/touyan-system/web_src	1	node	:node /Users/lijialin/Library/Caches/fnm_multishells/1665_1656291537832/bin/yarn dev
+pane	0	1	0	:	2	lijialin@bogon: ~/project/touyan-system/web_src	:/Users/lijialin/project/touyan-system/web_src	0	zsh	:
+pane	0	2	0	:	1	lijialin@bogon: ~/.config/nvim	:/Users/lijialin/.config/nvim	1	nvim	:bash
+pane	0	2	0	:	2	lijialin@bogon: ~/.config/nvimC	:/Users/lijialin/.config/nvim	0	zsh	:
+pane	0	2	0	:	3	lijialin@bogon: ~/.config/nvimC	:/Users/lijialin/.config/nvimC	0	nvim	:nvim init.lua
+pane	0	3	0	:	1	lijialin@bogon: ~/.tmux/plugins	:/Users/lijialin/dotfiles/tmux/.tmux/plugins	1	zsh	:
+pane	0	4	0	:-	1	lijialin@bogon: ~/.config/nvim	:/Users/lijialin/.config/nvim	1	zsh	:
+pane	0	5	1	:*	1	lijialin@bogon: ~/.config/nvim	:/Users/lijialin/.config/nvim	1	nvim	:nvim /Users/lijialin/.tmux.conf
+pane	1	1	1	:*	1	lijialin@bogon: ~	:/Users/lijialin	1	zsh	:
+window	0	1	:node	0	:	f275,224x54,0,0{109x54,0,0,0,114x54,110,0,1}	:
+window	0	2	:zsh	0	:	1e24,224x54,0,0{56x54,0,0,2,55x54,57,0,7,111x54,113,0,6}	off
+window	0	3	:zsh	0	:	bf25,224x54,0,0,8	:
+window	0	4	:zsh	0	:-	bf26,224x54,0,0,9	:
+window	0	5	:nvim	1	:*	5fc0,224x54,0,0,11	:
+window	1	1	:zsh	1	:*	5fbf,224x54,0,0,10	:
+state	0	1

@@ -3,8 +3,8 @@
 # remap keybind
 # ctrl - j : skhd --key "down"
 # ctrl - k : skhd --key "up"
-ctrl - n : skhd --key "down"
-ctrl - p : skhd --key "up"
+# ctrl - n : skhd --key "down"
+# ctrl - p : skhd --key "up"
 
 ## 关闭当前窗口
 alt - q : $(yabai -m window $(yabai -m query --windows --window | jq -re ".id") --close)
@@ -37,9 +37,9 @@ alt - space : yabai -m window --toggle float;\
               yabai -m window --grid 24:24:2:2:20:20
 
 # alt-, 上一个屏幕
-alt - 0x2B : yabai -m display --focus prev
+alt - 0x2F : yabai -m display --focus prev
 # alt-. 下一个屏幕
-alt - 0x2F : yabai -m display --focus next
+alt - 0x2B : yabai -m display --focus next
 
 ## 窗口位置变换
 # alt-k
@@ -55,10 +55,6 @@ alt + shift - j : yabai -m query --spaces --space \
   | xargs -I{} yabai -m query --windows --space {} \
   | jq -sre 'add | map(select(."is-minimized"==false)) | sort_by(.display, .frame.y, .frame.x, .id) |. as $array | length as $array_length | index(map(select(."has-focus"==true))) as $has_index | if $array_length - 1 > $has_index then nth($has_index + 1).id else nth(0).id end' \
   | xargs -I{} yabai -m window --swap {}
-
-
-alt - h : yabai -m window --resize bottom_right:-40:-40 || yabai -m window --resize top_left:-40:-40
-alt - l : yabai -m window --resize bottom_right:40:40 || yabai -m window --resize top_left:40:40
 
 # alt-k
 alt - k : yabai -m query --spaces --space \
@@ -84,6 +80,8 @@ alt - m : yabai -m window --focus mouse
 # alt - 5 : yabai -m space --focus 5
 # alt - 6 : yabai -m space --focus 6
 alt - tab : yabai -m space --focus recent
+# alt - n : yabai -m space --focus next
+# alt - p : yabai -m space --focus prev
 
 # 窗口空间变换
 # alt + shift - 1 : yabai -m window --space 1; skhd -k "alt - 1"
@@ -103,14 +101,14 @@ alt + shift - 0 : yabai -m space --balance
 
 alt + shift - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
 
-alt - left   : yabai -m window west --resize right:-40:0 2> /dev/null || yabai -m window --resize right:-40:0
-alt - down   : yabai -m window north --resize bottom:0:40 2> /dev/null || yabai -m window --resize bottom:0:40
-alt - up     : yabai -m window south --resize top:0:-40 2> /dev/null || yabai -m window --resize top:0:-40
-alt - right : yabai -m window east --resize left:40:0 2> /dev/null || yabai -m window --resize left:40:0
+# alt - left   : yabai -m window west --resize right:-40:0 2> /dev/null || yabai -m window --resize right:-40:0
+# alt - down   : yabai -m window north --resize bottom:0:40 2> /dev/null || yabai -m window --resize bottom:0:40
+# alt - up     : yabai -m window south --resize top:0:-40 2> /dev/null || yabai -m window --resize top:0:-40
+# alt - right : yabai -m window east --resize left:40:0 2> /dev/null || yabai -m window --resize left:40:0
 
 # 移动窗口
-shift + alt - left : yabai -m window --move rel:-20:0
-shift + alt - down : yabai -m window --move rel:0:20
-shift + alt - up : yabai -m window --move rel:0:-20
-shift + alt - right : yabai -m window --move rel:20:0
+# shift + alt - left : yabai -m window --move rel:-20:0
+# shift + alt - down : yabai -m window --move rel:0:20
+# shift + alt - up : yabai -m window --move rel:0:-20
+# shift + alt - right : yabai -m window --move rel:20:0
 

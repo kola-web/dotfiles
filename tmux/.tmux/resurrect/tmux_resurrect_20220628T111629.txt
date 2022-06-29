@@ -1,0 +1,6 @@
+pane	0	1	0	:-	1	lijialin@bogon: ~/project/touyan-system/web_src	:/Users/lijialin/project/touyan-system/web_src	1	node	:node /Users/lijialin/Library/Caches/fnm_multishells/3336_1656379890394/bin/yarn dev
+pane	0	1	0	:-	2	lijialin@localhost: ~/project/devRed-systeam/web_src	:/Users/lijialin/project/devRed-systeam/web_src	0	node	:node /Users/lijialin/Library/Caches/fnm_multishells/3378_1656379890422/bin/yarn dev
+pane	0	2	1	:*	1	lijialin@localhost: ~/docker/old-touyan-systeam-docker/app/old_dev_red/src_code/lkzhf——vue页面	:/Users/lijialin/docker/old-touyan-systeam-docker/app/old_dev_red/src_code/lkzhf——vue页面	1	bash	:/opt/homebrew/Cellar/python@3.10/3.10.4/Frameworks/Python.framework/Versions/3.10/Resources/Python.app/Contents/MacOS/Python -O /opt/homebrew/bin/ranger
+window	0	1	:node	0	:-	7277,224x54,0,0{109x54,0,0,1,114x54,110,0,2}	:
+window	0	2	:bash	1	:*	5fc0,224x54,0,0,11	:
+state	0	

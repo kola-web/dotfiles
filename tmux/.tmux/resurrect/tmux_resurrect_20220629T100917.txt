@@ -1,0 +1,12 @@
+pane	0	1	0	:-	1	lijialin@localhost: ~/project/touyan-system/web_src	:/Users/lijialin/project/touyan-system/web_src	0	node	:node /Users/lijialin/Library/Caches/fnm_multishells/2976_1656464057994/bin/yarn dev
+pane	0	1	0	:-	2	lijialin@localhost: ~/project/touyan-system	:/Users/lijialin/project/touyan-system	0	zsh	:
+pane	0	1	0	:-	3	lijialin@localhost: ~/project/zhongchi-system/web_src	:/Users/lijialin/project/zhongchi-system/web_src	1	node	:node /Users/lijialin/Library/Caches/fnm_multishells/3067_1656464058068/bin/yarn dev
+pane	0	1	0	:-	4	lijialin@localhost: ~/project/zhongchi-system/web_src	:/Users/lijialin/project/zhongchi-system/web_src	0	zsh	:
+pane	0	2	1	:*	1	lijialin@localhost: ~/.config/ranger	:/Users/lijialin/.config/ranger	1	zsh	:
+pane	0	3	0	:	1	lijialin@localhost: ~	:/Users/lijialin	1	zsh	:
+pane	2	1	1	:*	1	lijialin@localhost: ~	:/Users/lijialin	1	zsh	:
+window	0	1	:node	0	:-	6201,201x54,0,0{97x54,0,0[97x27,0,0,1,97x26,0,28,2],103x54,98,0[103x27,98,0,3,103x26,98,28,8]}	:
+window	0	2	:zsh	1	:*	bd22,201x54,0,0,5	off
+window	0	3	:zsh	0	:	bd23,201x54,0,0,6	:
+window	2	1	:zsh	1	:*	bf24,224x54,0,0,7	:
+state	0	
