@@ -1,0 +1,17 @@
+pane	2	1	1	:*	1	web_src: yarn dev	:/Users/lijialin/project/kanghong-system/web_src	0	node	:node /Users/lijialin/Library/Caches/fnm_multishells/2278_1657328320587/bin/yarn dev
+pane	2	1	1	:*	2	~/project/kanghong-system	:/Users/lijialin/project/kanghong-system	1	zsh	:
+pane	2	1	1	:*	3	~/project/kanghong-webview/web_src	:/Users/lijialin/project/kanghong-webview/web_src	0	zsh	:
+pane	2	1	1	:*	4	~/project/kanghong-webview	:/Users/lijialin/project/kanghong-webview	0	zsh	:
+pane	2	1	1	:*	5	~/project/zhongchi-system/web_src	:/Users/lijialin/project/zhongchi-system/web_src	0	zsh	:
+pane	2	1	1	:*	6	~/project/zhongchi-system/web_src	:/Users/lijialin/project/zhongchi-system/web_src	0	zsh	:
+pane	2	1	1	:*	7	web_src: yarn dev	:/Users/lijialin/project/nuohe-system/web_src	0	node	:node /Users/lijialin/Library/Caches/fnm_multishells/41718_1657334882259/bin/yarn dev
+pane	2	1	1	:*	8	~/project/nuohe-system	:/Users/lijialin/project/nuohe-system	0	zsh	:
+pane	2	2	0	:	1	~/learn/vue-project	:/Users/lijialin/project/kanghong	1	nvim	:nvim
+pane	2	3	0	:	1	nvim: nvim init.lua	:/Users/lijialin/.config/nvim	1	nvim	:nvim init.lua
+pane	2	3	0	:	2	localhost	:/Users/lijialin/.config/nvimC	0	nvim	:nvim init.lua
+pane	2	4	0	:-	1	MacBook-Pro.local	:/Users/lijialin/.config/nvim	1	zsh	:
+window	2	1	:zsh	1	:*	5582,201x54,0,0{100x54,0,0[100x24,0,0{51x24,0,0,1,48x24,52,0,2},100x29,0,25{51x29,0,25,3,48x29,52,25,4}],100x54,101,0[100x24,101,0{51x24,101,0,5,48x24,153,0,6},100x29,101,25{51x29,101,25,7,48x29,153,25,8}]}	:
+window	2	2	:zsh	0	:	bd26,201x54,0,0,9	off
+window	2	3	:nvim	0	:	c17c,201x54,0,0{100x54,0,0,10,100x54,101,0,11}	:
+window	2	4	:zsh	0	:-	5ec2,201x54,0,0,13	:
+state	2	

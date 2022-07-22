@@ -1,0 +1,20 @@
+pane	2	1	0	:	1	~/project/kanghong-system/web_src	:/Users/lijialin/project/kanghong-system/web_src	1	zsh	:-zsh
+pane	2	1	0	:	2	~/project/kanghong-system	:/Users/lijialin/project/kanghong-system	0	zsh	:-zsh
+pane	2	1	0	:	3	~/project/kanghong-webview	:/Users/lijialin/project/kanghong-webview	0	zsh	:-zsh
+pane	2	1	0	:	4	~/project/kanghong-webview	:/Users/lijialin/project/kanghong-webview	0	zsh	:-zsh
+pane	2	1	0	:	5	~/project/zhongchi-system/web_src	:/Users/lijialin/project/zhongchi-system/web_src	0	zsh	:-zsh
+pane	2	1	0	:	6	~/project/zhongchi-system/web_src	:/Users/lijialin/project/zhongchi-system/web_src	0	zsh	:-zsh
+pane	2	1	0	:	7	~/project/zhongchi-system	:/Users/lijialin/project/zhongchi-system	0	zsh	:-zsh
+pane	2	1	0	:	8	~/project/zhongchi-system	:/Users/lijialin/project/zhongchi-system	0	zsh	:-zsh
+pane	2	2	0	:-	1	~/project/kanghong-system/web_src	:/Users/lijialin/project/kanghong-system/web_src	1	zsh	:-zsh
+pane	2	3	1	:*	1	config.lua (~/.config/lvim) - NVIM	:/Users/lijialin	1	nvim	:-zsh
+nvim -u /Users/lijialin/.local/share/lunarvim/lvim/init.lua config.lua
+pane	2	4	0	:	1	nvim: nvim init.lua	:/Users/lijialin/.config/nvim	1	nvim	:nvim init.lua
+-zsh
+pane	2	4	0	:	2	lvim: nvim	:/Users/lijialin/.local/share/lunarvim/lvim	0	nvim	:nvim
+-zsh
+window	2	1	:zsh	0	:	6e67,201x54,0,0{100x54,0,0[100x25,0,0{50x25,0,0,1,49x25,51,0,2},100x28,0,26{50x28,0,26,3,49x28,51,26,4}],100x54,101,0[100x25,101,0{50x25,101,0,5,49x25,152,0,6},100x28,101,26{50x28,101,26,7,49x28,152,26,8}]}	:
+window	2	2	:zsh	0	:-	bd26,201x54,0,0,9	off
+window	2	3	:nvim	1	:*	5ebf,201x54,0,0,10	:
+window	2	4	:nvim	0	:	ddd5,201x54,0,0{101x54,0,0,11,99x54,102,0,12}	:
+state	2	

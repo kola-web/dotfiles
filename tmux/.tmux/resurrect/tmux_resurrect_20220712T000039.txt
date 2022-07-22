@@ -1,0 +1,14 @@
+pane	2	1	0	:	1	web_src: yarn dev	:/Users/lijialin/project/kanghong-system/web_src	0	zsh	:
+pane	2	1	0	:	2	~/project/kanghong-system	:/Users/lijialin/project/kanghong-system	0	zsh	:
+pane	2	1	0	:	3	~/project/kanghong-webview/web_src	:/Users/lijialin/project/kanghong-webview/web_src	0	zsh	:
+pane	2	1	0	:	4	~/project/kanghong-webview	:/Users/lijialin/project/kanghong-webview	0	zsh	:
+pane	2	1	0	:	5	~/project/zhongchi-system/web_src	:/Users/lijialin/project/zhongchi-system/web_src	0	zsh	:
+pane	2	1	0	:	6	~/project/zhongchi-system/web_src	:/Users/lijialin/project/zhongchi-system/web_src	0	zsh	:
+pane	2	1	0	:	7	web_src: yarn dev	:/Users/lijialin/project/nuohe-system/web_src	1	zsh	:
+pane	2	1	0	:	8	~/project/nuohe-system	:/Users/lijialin/project/nuohe-system	0	zsh	:
+pane	2	2	0	:-	1	~/learn/vue-project	:/Users/lijialin/project/kanghong-system/web_src	1	nvim	:nvim
+pane	2	3	1	:*	1	MacBook-Pro.local	:/Users/lijialin/.config/nvim	1	zsh	:
+window	2	1	:zsh	0	:	2fc3,201x54,0,0{98x54,0,0[98x24,0,0{48x24,0,0,1,49x24,49,0,2},98x29,0,25{48x29,0,25,3,49x29,49,25,4}],102x54,99,0[102x24,99,0{54x24,99,0,5,47x24,154,0,6},102x29,99,25{54x29,99,25,7,47x29,154,25,8}]}	:
+window	2	2	:zsh	0	:-	bd26,201x54,0,0,9	off
+window	2	3	:zsh	1	:*	dec7,201x54,0,0,47	:
+state	2	

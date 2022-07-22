@@ -1,0 +1,12 @@
+pane	2	1	0	:##-	1	web_src: yarn dev	:/Users/lijialin/project/kanghong-system/web_src	0	zsh	:
+pane	2	1	0	:##-	2	~/project/kanghong-system	:/Users/lijialin/project/kanghong-system	0	zsh	:
+pane	2	1	0	:##-	3	~/project/kanghong-webview/web_src	:/Users/lijialin/project/kanghong-webview/web_src	0	zsh	:
+pane	2	1	0	:##-	4	~/project/kanghong-webview	:/Users/lijialin/project/kanghong-webview	0	zsh	:
+pane	2	1	0	:##-	5	~/project/zhongchi-system/web_src	:/Users/lijialin/project/zhongchi-system/web_src	0	zsh	:
+pane	2	1	0	:##-	6	~/project/zhongchi-system/web_src	:/Users/lijialin/project/zhongchi-system/web_src	0	zsh	:
+pane	2	1	0	:##-	7	~/project/nuohe-system	:/Users/lijialin/project/nuohe-system/web_src	1	node	:node /Users/lijialin/Library/Caches/fnm_multishells/2293_1657673934823/bin/yarn dev
+pane	2	1	0	:##-	8	bogon	:/Users/lijialin/project/nuohe-system	0	zsh	:
+pane	2	2	1	:*	1	MacBook-Pro.local	:/Users/lijialin/project/nuohe-system/web_src	1	nvim	:nvim
+window	2	1	:node	0	:##-	ee58,201x54,0,0{98x54,0,0[98x24,0,0{47x24,0,0,1,50x24,48,0,2},98x29,0,25{47x29,0,25,3,50x29,48,25,4}],102x54,99,0[102x24,99,0{61x24,99,0,5,40x24,161,0,6},102x29,99,25{61x29,99,25,7,40x29,161,25,8}]}	:
+window	2	2	:nvim	1	:*	bd26,201x54,0,0,9	:
+state	2	

@@ -1,0 +1,7 @@
+pane	2	1	1	:*	1	web_src: yarn dev	:/Users/lijialin/project/nuohe-system/web_src	1	node	:node /Users/lijialin/Library/Caches/fnm_multishells/35747_1656648665397/bin/yarn dev
+-zsh
+pane	2	1	1	:*	2	~/project/nuohe-system/web_src	:/Users/lijialin/project/nuohe-system/web_src	0	zsh	:-zsh
+pane	2	2	0	:##-	1	~/project/kanghong-system/web_src	:/Users/lijialin/project/kanghong-system/web_src	1	zsh	:-zsh
+window	2	1	:node	1	:*	dbde,224x54,0,0{112x54,0,0,15,111x54,113,0,18}	:
+window	2	2	:zsh	0	:##-	5fc6,224x54,0,0,17	:
+state	2	

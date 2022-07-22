@@ -1,0 +1,13 @@
+pane	0	1	0	:	1	~/project/touyan-system/web_src	:/Users/lijialin/project/touyan-system/web_src	0	zsh	:-zsh
+pane	0	1	0	:	2	~/project/touyan-system	:/Users/lijialin/project/touyan-system	0	zsh	:-zsh
+pane	0	1	0	:	3	~/project/zhongchi-system/web_src	:/Users/lijialin/project/zhongchi-system/web_src	1	zsh	:-zsh
+pane	0	1	0	:	4	~/project/zhongchi-system/web_src	:/Users/lijialin/project/zhongchi-system/web_src	0	zsh	:-zsh
+pane	0	2	0	:-	1	~/project/touyan	:/Users/lijialin/project/touyan	1	zsh	:-zsh
+pane	0	3	1	:*	1	.zprezto: nvim ~/.zshrc	:/Users/lijialin/dotfiles/zsh/.config/zsh/.zprezto	1	nvim	:nvim /Users/lijialin/.zshrc
+-zsh
+pane	2	1	1	:*	1	~	:/Users/lijialin	1	zsh	:-zsh
+window	0	1	:zsh	0	:	f187,224x54,0,0{109x54,0,0[109x27,0,0,1,109x26,0,28,2],114x54,110,0[114x27,110,0,3,114x26,110,28,4]}	:
+window	0	2	:zsh	0	:-	bf22,224x54,0,0,5	off
+window	0	3	:zsh	1	:*	bf23,224x54,0,0,6	off
+window	2	1	:zsh	1	:*	bf25,224x54,0,0,8	:
+state	0	2

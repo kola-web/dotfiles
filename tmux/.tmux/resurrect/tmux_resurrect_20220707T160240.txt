@@ -1,0 +1,20 @@
+pane	2	1	0	:	1	web_src: yarn dev	:/Users/lijialin/project/kanghong-system/web_src	0	node	:node /Users/lijialin/Library/Caches/fnm_multishells/2272_1657155761615/bin/yarn dev
+-zsh
+pane	2	1	0	:	2	~/project/kanghong-system	:/Users/lijialin/project/kanghong-system	1	zsh	:-zsh
+pane	2	1	0	:	3	~/project/kanghong-webview	:/Users/lijialin/project/kanghong-webview	0	zsh	:-zsh
+pane	2	1	0	:	4	~/project/kanghong-webview	:/Users/lijialin/project/kanghong-webview	0	zsh	:-zsh
+pane	2	1	0	:	5	~/project/zhongchi-system/web_src	:/Users/lijialin/project/zhongchi-system/web_src	0	zsh	:-zsh
+pane	2	1	0	:	6	~/project/zhongchi-system/web_src	:/Users/lijialin/project/zhongchi-system/web_src	0	zsh	:-zsh
+pane	2	1	0	:	7	~/project/zhongchi-system	:/Users/lijialin/project/zhongchi-system	0	zsh	:-zsh
+pane	2	1	0	:	8	~/project/zhongchi-system	:/Users/lijialin/project/zhongchi-system	0	zsh	:-zsh
+pane	2	2	0	:	1	~/project/kanghong-system/web_src	:/Users/lijialin/project/kanghong-system/web_src	1	zsh	:-zsh
+pane	2	3	0	:-	1	~/project/kanghong	:/Users/lijialin/project/kanghong	1	zsh	:-zsh
+pane	2	4	1	:*	1	nvim: nvim init.lua	:/Users/lijialin/.config/nvim	0	nvim	:nvim init.lua
+-zsh
+pane	2	4	1	:*	2	lvim: nvim	:/Users/lijialin/.local/share/lunarvim/lvim	1	nvim	:nvim
+-zsh
+window	2	1	:zsh	0	:	2b79,201x54,0,0{100x54,0,0[100x25,0,0{50x25,0,0,1,49x25,51,0,2},100x28,0,26{50x28,0,26,3,49x28,51,26,10}],100x54,101,0[100x25,101,0{50x25,101,0,4,49x25,152,0,11},100x28,101,26{50x28,101,26,5,49x28,152,26,12}]}	:
+window	2	2	:zsh	0	:	bd23,201x54,0,0,6	off
+window	2	3	:zsh	0	:-	bd24,201x54,0,0,7	:
+window	2	4	:nvim	1	:*	1a53,201x54,0,0{101x54,0,0,8,99x54,102,0,9}	:
+state	2	

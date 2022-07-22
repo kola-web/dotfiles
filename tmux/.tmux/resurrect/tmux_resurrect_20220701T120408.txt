@@ -1,0 +1,5 @@
+pane	2	1	1	:*	1	~	:/Users/lijialin	1	zsh	:-zsh
+pane	4	1	1	:*	1	~	:/Users/lijialin	1	zsh	:-zsh
+window	2	1	:zsh	1	:*	bf26,224x54,0,0,9	:
+window	4	1	:zsh	1	:*	5fc1,224x54,0,0,12	off
+state	4	
