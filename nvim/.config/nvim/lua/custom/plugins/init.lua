@@ -28,4 +28,11 @@ return {
 			require("custom.plugins.lspconfig")
 		end,
 	},
+
+	["folke/which-key.nvim"] = {
+		module = "which-key",
+		config = function()
+      require("custom.mappings.which-key")
+		end,
+	},
 }

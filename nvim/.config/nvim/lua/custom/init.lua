@@ -1,3 +1,4 @@
+require("custom.options")
 require("custom.filetype")
 vim.api.nvim_create_autocmd({ "TextYankPost" }, {
 	callback = function()
