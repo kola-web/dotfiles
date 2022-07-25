@@ -40,4 +40,8 @@ M["NvChad/ui"] = {
 	},
 }
 
+M["williamboman/mason"] = {
+	ensure_installed = { "lua-language-server", "vue-language-server", "emmet-ls", "html-lsp", "css-lsp" }, -- not an option from mason.nvim
+}
+
 return M
