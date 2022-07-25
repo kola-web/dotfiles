@@ -6,25 +6,40 @@ local M = {}
 -- example of changing theme:
 
 M.ui = {
-  theme = "gruvchad",
+	theme = "gruvchad",
 }
 
 M.options = {
-  user = function()
-    vim.opt.relativenumber = true
-    vim.opt.timeoutlen = 1000
-  end,
+	user = function()
+		vim.opt.relativenumber = true
+		vim.opt.timeoutlen = 1000
+	end,
 }
 
 M.plugins = {
-  user = require "custom.plugins",
-  options = {
-    lspconfig = {
-      setup_lspconf = "custom.plugins.lspconfig",
-    },
-  },
+	user = require("custom.plugins"),
+	override = {
+		["nvim-treesitter/nvim-treesitter"] = {
+			ensure_installed = {
+				"lua",
+				"html",
+				"css",
+				"javascript",
+				"typescript",
+				"vue",
+				"json",
+			},
+			highlight = {
+				enable = true,
+				use_languagetree = true,
+			},
+		},
+	},
+	remove = {
+		"NvChad/nvterm",
+	},
 }
 
-M.mappings = require "custom.mappings"
+M.mappings = require("custom.mappings")
 
 return M

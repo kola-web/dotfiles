@@ -1,0 +1,16 @@
+pane	2	1	0	:##	1	web_src: yarn dev	:/Users/lijialin/project/kanghong-system/web_src	0	zsh	:
+pane	2	1	0	:##	2	~/project/kanghong-system	:/Users/lijialin/project/kanghong-system	0	zsh	:
+pane	2	1	0	:##	3	~/project/kanghong-webview/web_src	:/Users/lijialin/project/zhongchi-system/web_src	0	zsh	:
+pane	2	1	0	:##	4	localhost	:/Users/lijialin/project/zhongchi-system/web_src	0	zsh	:
+pane	2	1	0	:##	5	~/project/zhongchi-system/web_src	:/Users/lijialin/project/devRed-systeam/web_src	0	zsh	:
+pane	2	1	0	:##	6	localhost	:/Users/lijialin/project/devRed-systeam/web_src	0	zsh	:
+pane	2	1	0	:##	7	~/project/nuohe-system	:/Users/lijialin/project/nuohe-system/web_src	1	node	:node /Users/lijialin/Library/Caches/fnm_multishells/2655_1658710835671/bin/yarn dev
+pane	2	1	0	:##	8	bogon	:/Users/lijialin/project/nuohe-system	0	zsh	:
+pane	2	2	0	:	1	MacBook-Pro.local	:/Users/lijialin/project/nuohe	1	zsh	:
+pane	2	3	1	:*	1	lspconfig.lua + (~/dotfiles/nvim/.config/nvim/lua/custom/plugins) - NVIM	:/Users/lijialin/dotfiles/nvim/.config/nvim/lua/custom	1	nvim	:nvim
+pane	2	4	0	:-	1	lsp-installer.lua (~/.config/nvim.bak/lua/user/lsp) - NVIM	:/Users/lijialin/.config/nvim.bak	1	nvim	:nvim init.lua
+window	2	1	:node	0	:##	9f94,140x41,0,0{66x41,0,0[66x16,0,0{30x16,0,0,1,35x16,31,0,2},66x24,0,17{30x24,0,17,3,35x24,31,17,4}],73x41,67,0[73x16,67,0{35x16,67,0,5,37x16,103,0,6},73x24,67,17{35x24,67,17,7,37x24,103,17,8}]}	:
+window	2	2	:zsh	0	:	af86,140x41,0,0,9	:
+window	2	3	:Python	1	:*	57ef,140x41,0,0,10	off
+window	2	4	:nvim	0	:-	57f0,140x41,0,0,11	:
+state	2	
