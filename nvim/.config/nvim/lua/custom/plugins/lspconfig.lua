@@ -4,17 +4,13 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require("lspconfig")
 
 local servers = {
-	"cssls",
-	"cssmodules_ls",
+	"sumneko_lua",
 	"emmet_ls",
 	"html",
+	"cssls",
 	"jsonls",
-	"sumneko_lua",
 	"tsserver",
-	"yamlls",
-	"bashls",
 	"volar",
-	"bashls",
 }
 
 for _, lsp in ipairs(servers) do
@@ -28,6 +24,12 @@ for _, lsp in ipairs(servers) do
 	end
 	if servers == "tsserver" then
 		opts.filetypes = { "typescript", "typescriptreact", "typescript.tsx" }
+	end
+	if servers == "volar" then
+		opts.filetypes = { "vue" }
+		opts.init_options = {
+			serverPath = "echo "..FNM_MULTISHELL_PATH.."/lib/node_modules/typescript/lib/tsserverlibrary.js",
+		}
 	end
 	lspconfig[lsp].setup(opts)
 end
