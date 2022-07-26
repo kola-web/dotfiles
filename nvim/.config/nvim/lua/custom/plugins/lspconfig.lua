@@ -26,9 +26,11 @@ for _, lsp in ipairs(servers) do
 		opts.filetypes = { "typescript", "typescriptreact", "typescript.tsx" }
 	end
 	if servers == "volar" then
-		opts.filetypes = { "vue" }
+		-- opts.filetypes = { "vue" }
 		opts.init_options = {
-			serverPath = "echo "..FNM_MULTISHELL_PATH.."/lib/node_modules/typescript/lib/tsserverlibrary.js",
+			typescript = {
+				serverPath = os.getenv("FNM_MULTISHELL_PATH") .. "/lib/node_modules/typescript/lib/tsserverlibrary.js",
+			},
 		}
 	end
 	lspconfig[lsp].setup(opts)
