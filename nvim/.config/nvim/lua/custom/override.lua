@@ -54,6 +54,7 @@ M["williamboman/mason"] = {
 		"emmet-ls",
 		"json-lsp",
 		"vue-language-server",
+    "vetur-vls",
 
 		-- shell
 		"shfmt",

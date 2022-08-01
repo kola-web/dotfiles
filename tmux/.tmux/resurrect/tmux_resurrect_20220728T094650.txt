@@ -1,0 +1,14 @@
+pane	2	1	0	:##-	1	web_src: yarn dev	:/Users/lijialin/project/kanghong-system/web_src	0	zsh	:
+pane	2	1	0	:##-	2	~/project/kanghong-webview/web_src	:/Users/lijialin/project/zhongchi-system/web_src	1	node	:node /Users/lijialin/Library/Caches/fnm_multishells/2072_1658970111959/bin/yarn dev
+pane	2	1	0	:##-	3	~/project/zhongchi-system/web_src	:/Users/lijialin/project/devRed-systeam/web_src	0	zsh	:
+pane	2	1	0	:##-	4	~/project/nuohe-system	:/Users/lijialin/project/nuohe-system/web_src	0	zsh	:
+pane	2	1	0	:##-	5	localhost	:/Users/lijialin/project/nuohe-system	0	zsh	:
+pane	2	2	1	:*	1	create.vue (~/project/zhongchi-system/web_src/src/book-sale-sys/pages/bs-price-m/reagent) - NVIM	:/Users/lijialin/project/zhongchi-system/web_src	1	nvim	:nvim
+pane	2	3	0	:	1	options.lua (~/dotfiles/nvim/.config/nvim/lua/custom) - NVIM	:/Users/lijialin/dotfiles/nvim/.config/nvim/lua/custom	1	nvim	:nvim
+pane	2	4	0	:	1	App.vue (~/project/nuohe-system/web_src/src) - NVIM	:/Users/lijialin/project/yingji	1	zsh	:
+pane	2	4	0	:	2	localhost	:/Users/lijialin/.config/nvim.bak	0	zsh	:
+window	2	1	:node	0	:##-	dd1d,201x54,0,0{97x54,0,0[97x23,0,0,1,97x30,0,24,2],103x54,98,0[103x23,98,0,3,103x30,98,24{51x30,98,24,4,51x30,150,24,5}]}	:
+window	2	2	:zsh	1	:*	bd23,201x54,0,0,6	off
+window	2	3	:Python	0	:	bd24,201x54,0,0,7	off
+window	2	4	:zsh	0	:	b1b9,201x54,0,0{100x54,0,0,8,100x54,101,0,9}	:
+state	2	

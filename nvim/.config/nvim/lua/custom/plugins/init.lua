@@ -32,7 +32,19 @@ return {
 	["folke/which-key.nvim"] = {
 		module = "which-key",
 		config = function()
-      require("custom.mappings.which-key")
+			require("custom.mappings.which-key")
+		end,
+	},
+
+	["chentoast/marks.nvim"] = {
+		config = function()
+			require("custom.plugins.marks")
+		end,
+	},
+
+	["windwp/nvim-ts-autotag"] = {
+		config = function()
+			require("custom.plugins.autotag")
 		end,
 	},
 }

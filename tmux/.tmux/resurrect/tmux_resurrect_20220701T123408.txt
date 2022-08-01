@@ -1,3 +1,0 @@
-pane	2	1	1	:*	1	~/project/nuohe-system/web_src	:/Users/lijialin/project/nuohe-system/web_src	1	zsh	:-zsh
-window	2	1	:zsh	1	:*	5fc4,224x54,0,0,15	:
-state	2	

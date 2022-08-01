@@ -10,6 +10,7 @@ local servers = {
 	"cssls",
 	"jsonls",
 	"tsserver",
+	-- "vuels",
 	"volar",
 }
 
@@ -19,11 +20,24 @@ for _, lsp in ipairs(servers) do
 		capabilities = capabilities,
 		root_dir = vim.loop.cwd,
 	}
+	if servers == "sumneko_lua" then
+		opts.settings = {
+			Lua = {
+				diagnostics = {
+					globals = { "vim" },
+				},
+			},
+		}
+	end
 	if servers == "emmet_ls" then
 		opts.filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "vue" }
-	end
-	if servers == "tsserver" then
-		opts.filetypes = { "typescript", "typescriptreact", "typescript.tsx" }
+		opts.init_options = {
+			html = {
+				options = {
+					["bem.enabled"] = true,
+				},
+			},
+		}
 	end
 	if servers == "volar" then
 		-- opts.filetypes = { "vue" }

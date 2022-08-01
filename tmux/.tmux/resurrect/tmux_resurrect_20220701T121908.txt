@@ -1,4 +1,0 @@
-pane	2	1	1	:*	1	web_src: yarn dev	:/Users/lijialin/project/nuohe-system/web_src	1	node	:node /Users/lijialin/Library/Caches/fnm_multishells/35747_1656648665397/bin/yarn dev
--zsh
-window	2	1	:node	1	:*	5fc4,224x54,0,0,15	:
-state	2	

@@ -1,0 +1,12 @@
+pane	2	1	0	:##	1	web_src: yarn dev	:/Users/lijialin/project/kanghong-system/web_src	0	zsh	:
+pane	2	1	0	:##	2	~/project/kanghong-webview/web_src	:/Users/lijialin/project/zhongchi-system/web_src	0	zsh	:
+pane	2	1	0	:##	3	localhost	:/Users/lijialin/project/zhongchi-system	0	zsh	:
+pane	2	1	0	:##	4	~/project/zhongchi-system/web_src	:/Users/lijialin/project/devRed-systeam/web_src	0	zsh	:
+pane	2	1	0	:##	5	~/project/nuohe-system	:/Users/lijialin/project/nuohe-system/web_src	0	node	:node /Users/lijialin/Library/Caches/fnm_multishells/2999_1659143484263/bin/yarn dev
+pane	2	1	0	:##	6	localhost	:/Users/lijialin/project/nuohe-system	1	zsh	:
+pane	2	2	0	:-	1	MacBook-Pro.local	:/Users/lijialin/project/nuohe	1	zsh	:
+pane	2	3	1	:*	1	monthList.vue (~/project/zhongchi-system/web_src/src/book-sale-sys/pages/zc-rebate-account/zc-sign-task-rebate/taskRebate/components) - NVIM	:/Users/lijialin/project/kanghong-system	1	zsh	:
+window	2	1	:zsh	0	:##	f86a,201x54,0,0{97x54,0,0[97x23,0,0,1,97x30,0,24{48x30,0,24,2,48x30,49,24,3}],103x54,98,0[103x23,98,0,4,103x30,98,24{51x30,98,24,5,51x30,150,24,6}]}	:
+window	2	2	:zsh	0	:-	bd24,201x54,0,0,7	off
+window	2	3	:Python	1	:*	bd25,201x54,0,0,8	off
+state	2	
