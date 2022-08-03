@@ -10,8 +10,8 @@ local servers = {
 	"cssls",
 	"jsonls",
 	"tsserver",
-	-- "vuels",
-	"volar",
+	"vuels",
+	-- "volar",
 }
 
 for _, lsp in ipairs(servers) do
@@ -29,6 +29,12 @@ for _, lsp in ipairs(servers) do
 			},
 		}
 	end
+	if servers == "tsserver" then
+		opts.init_options = {
+			hostInfo = "neovim",
+			locale = "zh-cn",
+		}
+	end
 	if servers == "emmet_ls" then
 		opts.filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "vue" }
 		opts.init_options = {
@@ -40,7 +46,7 @@ for _, lsp in ipairs(servers) do
 		}
 	end
 	if servers == "volar" then
-		-- opts.filetypes = { "vue" }
+		opts.filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" }
 		opts.init_options = {
 			typescript = {
 				serverPath = os.getenv("FNM_MULTISHELL_PATH") .. "/lib/node_modules/typescript/lib/tsserverlibrary.js",

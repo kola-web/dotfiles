@@ -1,5 +1,7 @@
 local M = {}
 
+local icons = require("custom.icons")
+
 M["nvim-treesitter/nvim-treesitter"] = {
 	ensure_installed = {
 		"lua",
@@ -54,7 +56,7 @@ M["williamboman/mason"] = {
 		"emmet-ls",
 		"json-lsp",
 		"vue-language-server",
-    "vetur-vls",
+		"vetur-vls",
 
 		-- shell
 		"shfmt",

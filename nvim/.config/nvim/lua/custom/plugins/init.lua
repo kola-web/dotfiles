@@ -10,7 +10,11 @@ return {
 	["wellle/targets.vim"] = {},
 	["tpope/vim-repeat"] = {},
 	["tpope/vim-surround"] = {},
-	["gbprod/substitute.nvim"] = {},
+	["gbprod/substitute.nvim"] = {
+		config = function()
+			require("custom.plugins.substitute")
+		end,
+	},
 	["aserowy/tmux.nvim"] = {
 		config = function()
 			require("custom.plugins.tmux")
