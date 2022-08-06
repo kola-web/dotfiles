@@ -36,7 +36,26 @@ for _, lsp in ipairs(servers) do
 		}
 	end
 	if servers == "emmet_ls" then
-		opts.filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "vue" }
+		opts.filetypes = {
+			"html",--{{{
+			"css",
+			"scss",
+			"javascript",
+			"javascriptreact",
+			"typescript",
+			"typescriptreact",
+			"haml",
+			"xml",
+			"xsl",
+			"pug",
+			"slim",
+			"sass",
+			"stylus",
+			"less",
+			"sss",
+			"hbs",
+			"handlebars",--}}}
+		}
 		opts.init_options = {
 			html = {
 				options = {

@@ -42,7 +42,7 @@ M["NvChad/ui"] = {
 	},
 }
 
-M["williamboman/mason"] = {
+M["williamboman/mason.nvim"] = {
 	ensure_installed = {
 		-- lua stuff
 		"lua-language-server",
@@ -57,6 +57,8 @@ M["williamboman/mason"] = {
 		"json-lsp",
 		"vue-language-server",
 		"vetur-vls",
+    "prettier",
+    "eslint_d",
 
 		-- shell
 		"shfmt",

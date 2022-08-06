@@ -44,6 +44,9 @@ noremap zp editor.gotoParentFold
 noremap zm :vsc dakara-foldplus.levelAtCursor<CR>
 noremap zr :vsc dakara-foldplus.levelAtCursor.unfold<CR>
 
+noremap zd :vsc editor.removeManualFoldingRanges<CR>
+vnoremap zf :vsc editor.createFoldingRangeFromSelection<CR>
+
 noremap <space> :vsc whichkey.show<CR>
 
 noremap <C-m> :vsc workbench.action.minimizeOtherEditors<CR>
