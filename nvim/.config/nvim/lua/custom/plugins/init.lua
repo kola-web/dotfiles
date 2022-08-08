@@ -35,6 +35,7 @@ return {
 
 	["folke/which-key.nvim"] = {
 		module = "which-key",
+		disable = false,
 		config = function()
 			require("custom.mappings.which-key")
 		end,
@@ -49,6 +50,16 @@ return {
 	["windwp/nvim-ts-autotag"] = {
 		config = function()
 			require("custom.plugins.autotag")
+		end,
+	},
+
+	["michaelb/sniprun"] = {
+		run = "bash ./install.sh",
+	},
+
+	["johmsalas/text-case.nvim"] = {
+		config = function()
+			require("textcase").setup({})
 		end,
 	},
 }

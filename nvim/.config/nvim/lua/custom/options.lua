@@ -39,8 +39,8 @@ local options = {
 	scrolloff = 8, -- is one of my fav
 	sidescrolloff = 8,
 	guifont = "FiraCode Nerd Font:h17", -- the font used in graphical neovim applications
-	foldmethod = "marker",
-	foldlevel = 0,
+	foldmethod = "indent,marks",
+	foldlevel = 99,
 }
 
 vim.g.loaded_netrw = 1

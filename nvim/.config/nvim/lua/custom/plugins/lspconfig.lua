@@ -14,6 +14,7 @@ local servers = {
 	-- "volar",
 }
 
+
 for _, lsp in ipairs(servers) do
 	local opts = {
 		on_attach = on_attach,
@@ -37,7 +38,7 @@ for _, lsp in ipairs(servers) do
 	end
 	if servers == "emmet_ls" then
 		opts.filetypes = {
-			"html",--{{{
+			"html", --{{{
 			"css",
 			"scss",
 			"javascript",
@@ -54,7 +55,7 @@ for _, lsp in ipairs(servers) do
 			"less",
 			"sss",
 			"hbs",
-			"handlebars",--}}}
+			"handlebars", --}}}
 		}
 		opts.init_options = {
 			html = {
@@ -68,7 +69,8 @@ for _, lsp in ipairs(servers) do
 		opts.filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" }
 		opts.init_options = {
 			typescript = {
-				serverPath = os.getenv("FNM_MULTISHELL_PATH") .. "/lib/node_modules/typescript/lib/tsserverlibrary.js",
+				-- serverPath = os.getenv(--[[ "FNM_MULTISHELL_PATH" ]]) .. "/lib/node_modules/typescript/lib/tsserverlibrary.js",
+				serverPath = "~/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/lib/tsserverlibrary.js",
 			},
 		}
 	end
