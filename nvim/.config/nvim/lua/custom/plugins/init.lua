@@ -59,7 +59,7 @@ return {
 
 	["johmsalas/text-case.nvim"] = {
 		config = function()
-			require("textcase").setup({})
+      require("custom.plugins.textcase")
 		end,
 	},
 }

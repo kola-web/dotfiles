@@ -32,6 +32,11 @@ M["kyazdani42/nvim-tree.lua"] = {
 		},
 	},
 }
+
+M["nvim-telescope/telescope.nvim"] = {
+	extensions_list = { "themes", "terms", "textcase" },
+}
+
 M["NvChad/ui"] = {
 	tabufline = {
 		enable = true,
@@ -57,8 +62,8 @@ M["williamboman/mason.nvim"] = {
 		"json-lsp",
 		"vue-language-server",
 		"vetur-vls",
-    "prettier",
-    "eslint_d",
+		"prettier",
+		"eslint_d",
 
 		-- shell
 		"shfmt",

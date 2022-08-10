@@ -291,6 +291,41 @@ local vmappings = {
 	s = { "<esc><cmd>'<,'>SnipRun<cr>", "Run range" },
 }
 
+local ga_opts = {
+	mode = "n", -- NORMAL mode
+	prefix = "ga",
+	buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+	silent = true, -- use `silent` when creating keymaps
+	noremap = true, -- use `noremap` when creating keymaps
+	nowait = true, -- use `nowait` when creating keymaps
+}
+
+local vga_opts = {
+	mode = "v", -- NORMAL mode
+	prefix = "ga",
+	buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+	silent = true, -- use `silent` when creating keymaps
+	noremap = true, -- use `noremap` when creating keymaps
+	nowait = true, -- use `nowait` when creating keymaps
+}
+
+local ga_mappings = {
+	["u"] = { "<cmd>lua require('textcase').current_word('to_upper_case')<CR>", "to_upper_case" },
+	["l"] = { "<cmd>lua require('textcase').current_word('to_lower_case')<CR>", "to_lower_case" },
+	["s"] = { "<cmd>lua require('textcase').current_word('to_snake_case')<CR>", "to_snake_case" },
+	["d"] = { "<cmd>lua require('textcase').current_word('to_dash_case')<CR>", "to_dash_case" },
+	["n"] = { "<cmd>lua require('textcase').current_word('to_constant_case')<CR>", "to_constant_case" },
+	["."] = { "<cmd>lua require('textcase').current_word('to_dot_case')<CR>", "to_dot_case" },
+	["a"] = { "<cmd>lua require('textcase').current_word('to_phrase_case')<CR>", "to_phrase_case" },
+	["c"] = { "<cmd>lua require('textcase').current_word('to_camel_case')<CR>", "to_camel_case" },
+	["p"] = { "<cmd>lua require('textcase').current_word('to_pascal_case')<CR>", "to_pascal_case" },
+	["t"] = { "<cmd>lua require('textcase').current_word('to_title_case')<CR>", "to_title_case" },
+	["f"] = { "<cmd>lua require('textcase').current_word('to_path_case')<CR>", "to_path_case" },
+	["o"] = { "<cmd>TextCaseOpenTelescope<CR>", "to_path_case" },
+}
+
 which_key.setup(setup)
 which_key.register(mappings, opts)
 which_key.register(vmappings, vopts)
+which_key.register(ga_mappings, ga_opts)
+which_key.register(ga_mappings, vga_opts)
