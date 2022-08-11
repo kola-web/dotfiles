@@ -14,13 +14,13 @@ local servers = {
 	-- "volar",
 }
 
-
 for _, lsp in ipairs(servers) do
 	local opts = {
 		on_attach = on_attach,
 		capabilities = capabilities,
 		root_dir = vim.loop.cwd,
 	}
+
 	if servers == "sumneko_lua" then
 		opts.settings = {
 			Lua = {
@@ -30,15 +30,16 @@ for _, lsp in ipairs(servers) do
 			},
 		}
 	end
+
 	if servers == "tsserver" then
 		opts.init_options = {
-			hostInfo = "neovim",
-			locale = "zh-cn",
+			locale = "zh-CN",
 		}
 	end
+
 	if servers == "emmet_ls" then
 		opts.filetypes = {
-			"html", --{{{
+			"html",
 			"css",
 			"scss",
 			"javascript",
@@ -55,7 +56,7 @@ for _, lsp in ipairs(servers) do
 			"less",
 			"sss",
 			"hbs",
-			"handlebars", --}}}
+			"handlebars",
 		}
 		opts.init_options = {
 			html = {

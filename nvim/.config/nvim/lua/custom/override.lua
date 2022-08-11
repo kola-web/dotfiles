@@ -11,6 +11,10 @@ M["nvim-treesitter/nvim-treesitter"] = {
 		"typescript",
 		"vue",
 		"json",
+		"vim",
+		"markdown",
+		"bash",
+		"toml",
 	},
 	highlight = {
 		enable = true,

@@ -48,6 +48,8 @@ return {
 	},
 
 	["windwp/nvim-ts-autotag"] = {
+    ft = { "html", "javascriptreact" },
+    after = "nvim-treesitter",
 		config = function()
 			require("custom.plugins.autotag")
 		end,
