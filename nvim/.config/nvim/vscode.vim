@@ -59,7 +59,4 @@ noremap gd :vsc editor.action.goToDeclaration<CR>
 noremap gD :vsc editor.action.revealDefinitionAside<CR>
 noremap gp :vsc references-view.showSupertypes<CR>
 
-noremap W <leader>w
-noremap E <leader>e
-noremap B <leader>b
-" omap aw i<leader>w
+noremap B :enew<cr>

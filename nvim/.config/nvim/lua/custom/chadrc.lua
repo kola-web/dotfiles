@@ -6,7 +6,7 @@ local M = {}
 -- example of changing theme:
 
 M.ui = {
-  theme = "gruvbox", -- default theme
+	theme = "gruvbox", -- default theme
 }
 
 M.plugins = {
@@ -14,6 +14,7 @@ M.plugins = {
 	override = require("custom.override"),
 	remove = {
 		"NvChad/nvterm",
+		"folke/which-key.nvim",
 	},
 }
 
