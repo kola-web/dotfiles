@@ -32,6 +32,13 @@ return {
 			require("custom.plugins.lspconfig")
 		end,
 	},
+	["tzachar/cmp-tabnine"] = {
+		run = "./install.sh",
+		requires = "hrsh7th/nvim-cmp",
+		config = function()
+			require("custom.plugins.tabnine")
+		end,
+	},
 
 	["folke/which-key.nvim"] = {
 		module = "which-key",

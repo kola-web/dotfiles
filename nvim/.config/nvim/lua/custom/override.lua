@@ -79,4 +79,16 @@ M["williamboman/mason.nvim"] = {
 	},
 }
 
+M["hrsh7th/nvim-cmp"] = {
+	sources = {
+		{ name = "luasnip" },
+		{ name = "nvim_lsp" },
+		{ name = "buffer" },
+		{ name = "nvim_lua" },
+		{ name = "path" },
+		{ name = "tabnine" },
+	},
+}
+
 return M
+
