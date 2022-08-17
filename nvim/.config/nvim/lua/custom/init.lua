@@ -7,5 +7,11 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
 	end,
 })
 
-vim.g.luasnippets_path = "~/.config/nvim.bak/vscodesinps"
+-- autocmds
+-- pretty up norg ft!
+autocmd("FileType", {
+	pattern = "norg",
+	callback = function() end,
+})
 
+vim.g.luasnippets_path = "~/.config/nvim.bak/vscodesinps"

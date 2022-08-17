@@ -15,7 +15,7 @@ M["nvim-treesitter/nvim-treesitter"] = {
 		"markdown",
 		"bash",
 		"toml",
-    "yaml"
+		"yaml",
 	},
 	highlight = {
 		enable = true,
@@ -73,6 +73,9 @@ M["williamboman/mason.nvim"] = {
 		-- shell
 		"shfmt",
 		"shellcheck",
+
+		--yaml
+		"yaml-language-server",
 	},
 }
 

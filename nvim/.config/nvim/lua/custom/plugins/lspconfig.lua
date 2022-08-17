@@ -5,6 +5,7 @@ local lspconfig = require("lspconfig")
 
 local servers = {
 	"sumneko_lua",
+  "yamlls",
 	"emmet_ls",
 	"html",
 	"cssls",

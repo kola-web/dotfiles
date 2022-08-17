@@ -48,8 +48,8 @@ return {
 	},
 
 	["windwp/nvim-ts-autotag"] = {
-    ft = { "html", "javascriptreact" },
-    after = "nvim-treesitter",
+		ft = { "html", "javascriptreact" },
+		after = "nvim-treesitter",
 		config = function()
 			require("custom.plugins.autotag")
 		end,
@@ -61,7 +61,14 @@ return {
 
 	["johmsalas/text-case.nvim"] = {
 		config = function()
-      require("custom.plugins.textcase")
+			require("custom.plugins.textcase")
+		end,
+	},
+
+	["nvim-treesitter/playground"] = {
+		cmd = "TSCaptureUnderCursor",
+		config = function()
+			require("nvim-treesitter.configs").setup()
 		end,
 	},
 }
