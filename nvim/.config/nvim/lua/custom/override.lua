@@ -15,6 +15,7 @@ M["nvim-treesitter/nvim-treesitter"] = {
 		"markdown",
 		"bash",
 		"toml",
+    "yaml"
 	},
 	highlight = {
 		enable = true,
