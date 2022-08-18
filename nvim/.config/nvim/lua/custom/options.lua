@@ -41,6 +41,7 @@ local options = {
 	guifont = "FiraCode Nerd Font:h17", -- the font used in graphical neovim applications
 	foldmethod = "indent",
 	foldlevel = 99,
+	linespace = 6,
 }
 
 vim.g.loaded_netrw = 1

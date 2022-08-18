@@ -32,13 +32,6 @@ return {
 			require("custom.plugins.lspconfig")
 		end,
 	},
-	["tzachar/cmp-tabnine"] = {
-		run = "./install.sh",
-		requires = "hrsh7th/nvim-cmp",
-		config = function()
-			require("custom.plugins.tabnine")
-		end,
-	},
 
 	["folke/which-key.nvim"] = {
 		module = "which-key",
@@ -72,10 +65,6 @@ return {
 		end,
 	},
 
-	["nvim-treesitter/playground"] = {
-		cmd = "TSCaptureUnderCursor",
-		config = function()
-			require("nvim-treesitter.configs").setup()
-		end,
-	},
+	-- Syntax
+	["fladson/vim-kitty"] = {},
 }

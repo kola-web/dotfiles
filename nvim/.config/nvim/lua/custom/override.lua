@@ -3,20 +3,7 @@ local M = {}
 local icons = require("custom.icons")
 
 M["nvim-treesitter/nvim-treesitter"] = {
-	ensure_installed = {
-		"lua",
-		"html",
-		"css",
-		"javascript",
-		"typescript",
-		"vue",
-		"json",
-		"vim",
-		"markdown",
-		"bash",
-		"toml",
-		"yaml",
-	},
+	ensure_installed = {},
 	highlight = {
 		enable = true,
 		use_languagetree = true,
@@ -48,7 +35,7 @@ M["NvChad/ui"] = {
 		lazyload = false,
 	},
 	statusline = {
-		separator_style = "default",
+		separator_style = "round",
 	},
 }
 
@@ -86,9 +73,7 @@ M["hrsh7th/nvim-cmp"] = {
 		{ name = "buffer" },
 		{ name = "nvim_lua" },
 		{ name = "path" },
-		{ name = "tabnine" },
 	},
 }
 
 return M
-
