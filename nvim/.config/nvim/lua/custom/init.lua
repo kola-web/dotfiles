@@ -14,4 +14,11 @@ autocmd("FileType", {
 	callback = function() end,
 })
 
-vim.g.luasnippets_path = "~/.config/nvim.bak/vscodesinps"
+-- vim.g.luasnippets_path = "./vscodeSnipes/package.json"
+-- require("luasnip.loaders.from_vscode").load({ include = { "vue" } })
+require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./vscodeSnipes" } })
+print(1)
+
+
+
+

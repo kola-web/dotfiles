@@ -18,3 +18,4 @@ vim.filetype.add {
     ["nginx/template/*"] = "nginx", -- Included in the plugin
   },
 }
+

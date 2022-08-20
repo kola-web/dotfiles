@@ -64,6 +64,13 @@ return {
 			require("custom.plugins.textcase")
 		end,
 	},
+	["tzachar/cmp-tabnine"] = {
+		after = "nvim-cmp",
+		run = "./install.sh",
+		config = function()
+			require("custom.plugins.tabnine")
+		end,
+	},
 
 	-- Syntax
 	["fladson/vim-kitty"] = {},

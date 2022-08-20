@@ -93,7 +93,7 @@ local mappings = {
 	["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
 	["o"] = { "<cmd>Telescope lsp_document_symbols<CR>", "Symbols" },
 	["R"] = { '<cmd>lua require("renamer").rename()<cr>', "Rename" },
-	["/"] = { '<cmd>lua require("Comment.api").toggle.linewise.current()<CR>', "Comment" },
+	["/"] = { '<cmd>lua require("Comment.api").toggle.linewise.current()<cr>', "Comment" },
 	["f"] = {
 		"<cmd> Telescope find_files <CR>",
 		"Find files",
@@ -286,7 +286,7 @@ local vopts = {
 }
 
 local vmappings = {
-	["/"] = { '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>', "Comment" },
+	["/"] = { "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>", "Comment" },
 	s = { "<esc><cmd>'<,'>SnipRun<cr>", "Run range" },
 }
 

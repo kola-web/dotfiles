@@ -73,6 +73,7 @@ M["hrsh7th/nvim-cmp"] = {
 		{ name = "buffer" },
 		{ name = "nvim_lua" },
 		{ name = "path" },
+		{ name = "cmp-tabnine" },
 	},
 }
 
