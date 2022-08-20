@@ -4,7 +4,8 @@ vim.filetype.add {
     pn = "potion",
     wxml = "html",
     wxss = "css",
-    wxs = "javascript"
+    wxs = "javascript",
+    ["code-snippets"] = "jsonc", -- Included in the plugin
   },
   -- 文件名
   filename = {

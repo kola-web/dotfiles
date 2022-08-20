@@ -1,7 +1,0 @@
-{
-  "require": {
-    "prefix": "al",
-    "body": ["require(\"${1:module}\")"],
-    "description": "Require module"
-  }
-}
