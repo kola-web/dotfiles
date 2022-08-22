@@ -15,9 +15,9 @@ alt + shift - e :  cd ~ && kitty -e ranger
 # alt + shift - w : /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
 
 ## 打开终端
-alt - return : open -na /Applications/iTerm.app/Contents/MacOS/iTerm2
+# alt - return : open -na /Applications/iTerm.app/Contents/MacOS/iTerm2
 # alt - return : open -na /Applications/Alacritty.app/Contents/MacOS/alacritty
-# alt - return : open -na /Applications/kitty.app/Contents/MacOS/kitty
+alt - return : open -na /Applications/kitty.app/Contents/MacOS/kitty
 # alt + shift - return : /Applications/Alacritty.app/Contents/MacOS/alacritty -e tmux
 
 ##全屏
