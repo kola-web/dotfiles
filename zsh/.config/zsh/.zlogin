@@ -1,1 +1,0 @@
-/Users/lijialin/.config/zsh/.zprezto/runcoms/zlogin
