@@ -17,6 +17,7 @@ vim.filetype.add {
     [".*git/config"] = "gitconfig", -- Included in the plugin
     ["nginx/*.conf"] = "nginx", -- Included in the plugin
     ["nginx/template/*"] = "nginx", -- Included in the plugin
+    ["vscode-snippets"] = "jsonc", -- Included in the plugin
   },
 }
 

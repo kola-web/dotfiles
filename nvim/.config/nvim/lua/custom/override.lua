@@ -3,7 +3,7 @@ local M = {}
 local icons = require("custom.icons")
 
 M["nvim-treesitter/nvim-treesitter"] = {
-	ensure_installed = {},
+	-- ensure_installed = {},
 	highlight = {
 		enable = true,
 		use_languagetree = true,
