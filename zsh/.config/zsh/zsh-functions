@@ -37,15 +37,13 @@ function mach_java_mode() {
 }
 
 function proxy() {
-    export ALL_PROXY=socks5://127.0.0.1:1090
-    export all_proxy=$ALL_PROXY
-    export {http,https,ftp}_proxy=http://127.0.0.1:41091
-    export {HTTP,HTTPS,FTP}_PROXY=https://127.0.0.1:41091
+  export http_proxy=http://127.0.0.1:41091
+  export https_proxy=$http_proxy
+  export socks5_proxy="socks5://127.0.0.1:1090"
 }
 
 function unproxy() {
-    unset {http,https,ftp}_proxy
-    unset {HTTP,HTTPS,FTP}_PROXY
-    unset ALL_PROXY
-    unset all_proxy
+  unset http_proxy
+  unset https_proxy
+  echo "HTTP Proxy off"
 }
