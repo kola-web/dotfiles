@@ -1,3 +1,6 @@
+# 公司wifi密码 qweasdzxc888
+# export ZDOTDIR=$HOME/.config/zsh
+# source "$HOME/.config/zsh/.zshrc"
 #!/bin/sh
 export ZDOTDIR=$HOME/.config/zsh
 HISTFILE=~/.zsh_history
@@ -12,39 +15,35 @@ zle_highlight=('paste:none')
 # beeping is annoying
 unsetopt BEEP
 
-
-# completions
-autoload -Uz compinit
-zstyle ':completion:*' menu select
-# zstyle ':completion::complete:lsof:*' menu yes select
-zmodload zsh/complist
-# compinit
-_comp_options+=(globdots)		# Include hidden files.
-
-autoload -U up-line-or-beginning-search
-autoload -U down-line-or-beginning-search
-zle -N up-line-or-beginning-search
-zle -N down-line-or-beginning-search
-
 # Colors
 autoload -Uz colors && colors
 
 # Useful Functions
 source "$ZDOTDIR/zsh-functions"
+proxy
 
 # Normal files to source
 zsh_add_file "zsh-exports"
-zsh_add_file "zsh-vim-mode"
 zsh_add_file "zsh-aliases"
 zsh_add_file "zsh-prompt"
 
 # Plugins
+zsh_add_plugin  "jeffreytse/zsh-vi-mode"
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 zsh_add_plugin "hlissner/zsh-autopair"
-# zsh_add_completion "esc/conda-zsh-completion" false
+zsh_add_plugin "marlonrichert/zsh-autocomplete"
 # For more plugins: https://github.com/unixorn/awesome-zsh-plugins
 # More completions https://github.com/zsh-users/zsh-completions
+
+# zsh-vi-mode
+source $ZDOTDIR/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+# zsh-completions
+zstyle ':autocomplete:*' insert-unambiguous yes
+zstyle ':autocomplete:*' widget-style menu-select
+bindkey -M menuselect '\r' accept-line
+
+
 
 # Key-bindings
 bindkey -s '^o' 'ranger^M'
@@ -70,7 +69,6 @@ bindkey -r "^d"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f $ZDOTDIR/completion/_fnm ] && fpath+="$ZDOTDIR/completion/"
 # export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
-compinit
 
 # Edit line in vim with ctrl-e:
 autoload edit-command-line; zle -N edit-command-line
@@ -83,7 +81,3 @@ export BROWSER="brave"
 
 # For QT Themes
 export QT_QPA_PLATFORMTHEME=qt5ct
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
