@@ -20,7 +20,7 @@ autoload -Uz colors && colors
 
 # Useful Functions
 source "$ZDOTDIR/zsh-functions"
-proxy
+proxy 127.0.0.1:41091
 
 # Normal files to source
 zsh_add_file "zsh-exports"
