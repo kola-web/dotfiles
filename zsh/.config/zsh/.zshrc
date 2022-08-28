@@ -39,6 +39,8 @@ zsh_add_plugin "marlonrichert/zsh-autocomplete"
 # zsh-vi-mode
 source $ZDOTDIR/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 # zsh-completions
+zstyle ' :autocomplete:* ' min-delay 2
+zstyle ':autocomplete:*' min-input 10000
 zstyle ':autocomplete:*' insert-unambiguous yes
 zstyle ':autocomplete:*' widget-style menu-select
 bindkey -M menuselect '\r' accept-line
