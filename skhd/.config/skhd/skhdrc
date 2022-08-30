@@ -102,13 +102,11 @@ alt + shift - 0 : yabai -m space --balance
 
 alt + shift - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
 
-alt - h : yabai -m window west --resize bottom_right:-40:-40 2> /dev/null || yabai -m window --resize bottom_right:-40:-40
-alt - l : yabai -m window east --resize top_left:-40:40 2> /dev/null || yabai -m window --resize top_left:-40:40
 
-# alt - left   : yabai -m window west --resize right:-40:0 2> /dev/null || yabai -m window --resize right:-40:0
-# alt - down   : yabai -m window north --resize bottom:0:40 2> /dev/null || yabai -m window --resize bottom:0:40
-# alt - up     : yabai -m window south --resize top:0:-40 2> /dev/null || yabai -m window --resize top:0:-40
-# alt - right : yabai -m window east --resize left:40:0 2> /dev/null || yabai -m window --resize left:40:0
+alt - left   : yabai -m window west --resize right:-40:0 2> /dev/null || yabai -m window --resize right:-40:0
+alt - down   : yabai -m window north --resize bottom:0:40 2> /dev/null || yabai -m window --resize bottom:0:40
+alt - up     : yabai -m window south --resize top:0:-40 2> /dev/null || yabai -m window --resize top:0:-40
+alt - right : yabai -m window east --resize left:40:0 2> /dev/null || yabai -m window --resize left:40:0
 
 # 移动窗口
 # shift + alt - left : yabai -m window --move rel:-20:0
