@@ -32,7 +32,6 @@ return {
 			require("custom.plugins.lspconfig")
 		end,
 	},
-
 	["folke/which-key.nvim"] = {
 		module = "which-key",
 		disable = false,
