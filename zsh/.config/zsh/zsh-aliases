@@ -12,6 +12,9 @@ alias ll='logo-ls -al'
 alias lsg='logo-ls -D'
 alias lag='logo-ls -AD'
 alias llg='logo-ls -alD'
+alias d='duf'
+alias ds='dust'
+alias b='btop'
 
 # alias lvim='nvim -u ~/.local/share/lunarvim/lvim/init.lua --cmd "set runtimepath+=~/.local/share/lunarvim/lvim"'
 
