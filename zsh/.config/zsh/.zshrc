@@ -15,12 +15,25 @@ zle_highlight=('paste:none')
 # beeping is annoying
 unsetopt BEEP
 
+# completions
+autoload -Uz compinit
+zstyle ':completion:*' menu select
+# zstyle ':completion::complete:lsof:*' menu yes select
+zmodload zsh/complist
+# compinit
+_comp_options+=(globdots)		# Include hidden files.
+
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+
 # Colors
 autoload -Uz colors && colors
 
 # Useful Functions
 source "$ZDOTDIR/zsh-functions"
-proxy 127.0.0.1:41091
+# proxy 127.0.0.1:41091
 
 # Normal files to source
 zsh_add_file "zsh-exports"
@@ -28,9 +41,10 @@ zsh_add_file "zsh-aliases"
 zsh_add_file "zsh-prompt"
 
 # Plugins
-zsh_add_plugin  "jeffreytse/zsh-vi-mode"
-zsh_add_plugin "zsh-users/zsh-autosuggestions"
+zsh_add_plugin "sukkaw/zsh-proxy"
+zsh_add_plugin "jeffreytse/zsh-vi-mode"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
+zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "hlissner/zsh-autopair"
 zsh_add_plugin "marlonrichert/zsh-autocomplete"
 # For more plugins: https://github.com/unixorn/awesome-zsh-plugins
@@ -40,6 +54,7 @@ zsh_add_plugin "marlonrichert/zsh-autocomplete"
 source $ZDOTDIR/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 # zsh-completions
 zstyle ' :autocomplete:* ' min-delay 2
+zstyle ':autocomplete:*' ignored-input '..##' 
 zstyle ':autocomplete:*' min-input 10000
 zstyle ':autocomplete:*' insert-unambiguous yes
 zstyle ':autocomplete:*' widget-style menu-select
