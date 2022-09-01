@@ -60,3 +60,5 @@ noremap gD :vsc editor.action.revealDefinitionAside<CR>
 noremap gp :vsc references-view.showSupertypes<CR>
 
 noremap B :enew<cr>
+
+vnoremap // y/<c-r>"<cr >

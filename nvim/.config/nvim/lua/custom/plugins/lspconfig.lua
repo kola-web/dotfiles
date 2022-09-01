@@ -5,7 +5,7 @@ local lspconfig = require("lspconfig")
 
 local servers = {
 	"sumneko_lua",
-  "yamlls",
+	"yamlls",
 	"emmet_ls",
 	"html",
 	"cssls",
@@ -13,6 +13,8 @@ local servers = {
 	"tsserver",
 	"vuels",
 	-- "volar",
+	"intelephense",
+	"dockerls",
 }
 
 for _, lsp in ipairs(servers) do
@@ -39,36 +41,9 @@ for _, lsp in ipairs(servers) do
 	end
 
 	if servers == "emmet_ls" then
-		opts.filetypes = {
-			"html",
-			"css",
-			"scss",
-			"javascript",
-			"javascriptreact",
-			"typescript",
-			"typescriptreact",
-			"haml",
-			"xml",
-			"xsl",
-			"pug",
-			"slim",
-			"sass",
-			"stylus",
-			"less",
-			"sss",
-			"hbs",
-			"handlebars",
-		}
-		opts.init_options = {
-			html = {
-				options = {
-					["bem.enabled"] = true,
-				},
-			},
-		}
+		opts.filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "php" }
 	end
 	if servers == "volar" then
-		opts.filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" }
 		opts.init_options = {
 			typescript = {
 				-- serverPath = os.getenv(--[[ "FNM_MULTISHELL_PATH" ]]) .. "/lib/node_modules/typescript/lib/tsserverlibrary.js",

@@ -9,6 +9,7 @@ M["nvim-treesitter/nvim-treesitter"] = {
 		"css",
 		"vue",
 		"javascript",
+		"php",
 	},
 	highlight = {
 		enable = true,
@@ -69,6 +70,13 @@ M["williamboman/mason.nvim"] = {
 
 		--yaml
 		"yaml-language-server",
+
+		-- php
+		"intelephense",
+    "phpcsfixer",
+
+		--docker
+		"dockerfile-language-server",
 	},
 }
 
@@ -84,3 +92,4 @@ M["hrsh7th/nvim-cmp"] = {
 }
 
 return M
+

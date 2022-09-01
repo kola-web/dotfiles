@@ -18,6 +18,9 @@ local sources = {
 	-- Shell
 	b.formatting.shfmt,
 	b.diagnostics.shellcheck.with({ diagnostics_format = "#{m} [#{c}]" }),
+
+	-- php
+	b.formatting.phpcsfixer,
 }
 
 null_ls.setup({
