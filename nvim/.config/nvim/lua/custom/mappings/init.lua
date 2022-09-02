@@ -71,14 +71,23 @@ M.general = {
 	n = {
 		["<S-l>"] = { "$", "$" },
 		["<S-h>"] = { "^", "^" },
-		["("] = { "<cmd>lua require('custom.mappings.buffers').move_buf_left()<cr>", "move_buf_left", opts = { noremap = true } },
-		[")"] = { "<cmd>lua require('custom.mappings.buffers').move_buf_right()<cr>", "move_buf_left", opts = { noremap = true } },
+		["("] = {
+			"<cmd>lua require('custom.mappings.buffers').move_buf_left()<cr>",
+			"move_buf_left",
+			opts = { noremap = true },
+		},
+		[")"] = {
+			"<cmd>lua require('custom.mappings.buffers').move_buf_right()<cr>",
+			"move_buf_left",
+			opts = { noremap = true },
+		},
 	},
 	v = {
 		["<S-l>"] = { "$", "$" },
 		["<S-h>"] = { "^", "^" },
 		["<"] = { "<gv", "<" },
 		[">"] = { ">gv", "<" },
+		["/"] = { '// y/<c-r>"<cr>', "/" },
 	},
 	o = {
 		["<S-l>"] = { "$", "$" },

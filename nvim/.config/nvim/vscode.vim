@@ -61,4 +61,4 @@ noremap gp :vsc references-view.showSupertypes<CR>
 
 noremap B :enew<cr>
 
-vnoremap // y/<c-r>"<cr >
+vnoremap // y/<c-r>"<cr>

@@ -43,6 +43,17 @@ for _, lsp in ipairs(servers) do
 	if servers == "emmet_ls" then
 		opts.filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "php" }
 	end
+
+	if servers == "jsonls" then
+		opts.filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "php" }
+		opts.settings = {
+			json = {
+				schemas = require("schemastore").json.schemas(),
+				validate = { enable = true },
+			},
+		}
+	end
+
 	if servers == "volar" then
 		opts.init_options = {
 			typescript = {
