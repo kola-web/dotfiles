@@ -77,6 +77,9 @@ M["williamboman/mason.nvim"] = {
 
 		--docker
 		"dockerfile-language-server",
+
+    --c
+    "clangd"
 	},
 }
 
