@@ -38,6 +38,7 @@ zsh_add_plugin "jeffreytse/zsh-vi-mode"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "hlissner/zsh-autopair"
+zsh_add_plugin "zsh-users/zsh-completions"
 zsh_add_plugin "marlonrichert/zsh-autocomplete"
 # zsh_add_completion "esc/conda-zsh-completion" false
 #
@@ -46,13 +47,11 @@ zsh_add_plugin "marlonrichert/zsh-autocomplete"
 
 # zsh-vi-mode
 source $ZDOTDIR/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+
 # zsh-completions
-zstyle ' :autocomplete:* ' min-delay 2
-zstyle ':autocomplete:*' ignored-input '..##' 
-zstyle ':autocomplete:*' min-input 10000
-zstyle ':autocomplete:*' insert-unambiguous yes
+zstyle ':autocomplete:*' ignored-input '..##'
+zstyle ':autocomplete:recent-dirs' backend zoxide
 zstyle ':autocomplete:*' widget-style menu-select
-bindkey -M menuselect '\r' accept-line
 
 
 

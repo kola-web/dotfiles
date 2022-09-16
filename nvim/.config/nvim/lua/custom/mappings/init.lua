@@ -81,6 +81,11 @@ M.general = {
 			"move_buf_left",
 			opts = { noremap = true },
 		},
+		["<F1>"] = {
+			"<cmd>e ~/note/<cr>",
+			"open-note",
+			opts = { noremap = true },
+		},
 	},
 	v = {
 		["<S-l>"] = { "$", "$" },
