@@ -77,3 +77,4 @@ return {
 		after = "nvim-lspconfig",
 	},
 }
+

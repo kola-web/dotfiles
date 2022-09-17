@@ -1,33 +1,48 @@
 local M = {}
 
-function moveAllEleTest(originTbl, n)
-	if type(originTbl) ~= "table" then
-		return
+function moveItemRight(originTbl, n)
+	local index = nil
+	for k, v in ipairs(originTbl) do
+    print(v)
+		if v == n then
+			index = k
+		end
 	end
-	if #originTbl == 0 then
-		return
+	table.remove(originTbl, index)
+	if index == #originTbl + 1 then
+		table.insert(originTbl, 1, n)
+	else
+		table.insert(originTbl, index + 1, n)
 	end
+  return originTbl
+end
 
-	local newTbl = {}
-	for i = 1, #originTbl do
-		newTbl[i] = originTbl[(n - 1 + i) % #originTbl + 1]
+function moveItemLeft(originTbl, n)
+	local index = nil
+	for k, v in ipairs(originTbl) do
+		if v == n then
+			index = k
+		end
 	end
-	return newTbl
+	table.remove(originTbl, index)
+	if index == 1 then
+		table.insert(originTbl, #originTbl + 1, n)
+	else
+		table.insert(originTbl, index - 1, n)
+	end
+  return originTbl
 end
 
 M.move_buf_left = function()
 	local bufs = vim.t.bufs
-
-	bufs = moveAllEleTest(bufs, 1)
-
+	bufs = moveItemLeft(bufs, vim.api.nvim_get_current_buf())
 	vim.t.bufs = bufs
 	vim.cmd("redrawtabline")
 end
 
 M.move_buf_right = function()
 	local bufs = vim.t.bufs
-	bufs = moveAllEleTest(bufs, -1)
-
+	bufs = moveItemRight(bufs, vim.api.nvim_get_current_buf())
 	vim.t.bufs = bufs
 	vim.cmd("redrawtabline")
 end
