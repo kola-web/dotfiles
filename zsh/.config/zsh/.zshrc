@@ -53,8 +53,6 @@ zstyle ':autocomplete:*' ignored-input '..##'
 zstyle ':autocomplete:recent-dirs' backend zoxide
 zstyle ':autocomplete:*' widget-style menu-select
 
-
-
 # Key-bindings
 bindkey -s '^o' 'ranger^M'
 bindkey -s '^f' 'zi^M'
