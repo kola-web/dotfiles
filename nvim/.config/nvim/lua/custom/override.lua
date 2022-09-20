@@ -73,13 +73,16 @@ M["williamboman/mason.nvim"] = {
 
 		-- php
 		"intelephense",
-    "phpcsfixer",
+		"phpcsfixer",
 
 		--docker
 		"dockerfile-language-server",
 
-    --c
-    "clangd"
+		--c
+		"clangd",
+
+		--markdown
+		"marksman",
 	},
 }
 
@@ -95,4 +98,3 @@ M["hrsh7th/nvim-cmp"] = {
 }
 
 return M
-
