@@ -15,6 +15,9 @@ zle_highlight=('paste:none')
 # beeping is annoying
 unsetopt BEEP
 
+# compinit
+_comp_options+=(globdots)		# Include hidden files.
+
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
 zle -N up-line-or-beginning-search
@@ -29,6 +32,7 @@ source "$ZDOTDIR/zsh-functions"
 
 # Normal files to source
 zsh_add_file "zsh-exports"
+zsh_add_file "zsh-vim-mode"
 zsh_add_file "zsh-aliases"
 zsh_add_file "zsh-prompt"
 
@@ -38,7 +42,7 @@ zsh_add_plugin "jeffreytse/zsh-vi-mode"
 zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
 zsh_add_plugin "zsh-users/zsh-autosuggestions"
 zsh_add_plugin "hlissner/zsh-autopair"
-zsh_add_plugin "zsh-users/zsh-completions"
+zsh_add_completion "zsh-users/zsh-completions"
 # zsh_add_plugin "marlonrichert/zsh-autocomplete"
 # zsh_add_completion "esc/conda-zsh-completion" false
 #
@@ -47,11 +51,6 @@ zsh_add_plugin "zsh-users/zsh-completions"
 
 # zsh-vi-mode
 source $ZDOTDIR/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-
-# zsh-completions
-zstyle ':autocomplete:*' ignored-input '..##'
-zstyle ':autocomplete:recent-dirs' backend zoxide
-zstyle ':autocomplete:*' widget-style menu-select
 
 # Key-bindings
 bindkey -s '^o' 'ranger^M'
@@ -82,8 +81,4 @@ bindkey -r "^d"
 autoload edit-command-line; zle -N edit-command-line
 # bindkey '^e' edit-command-line
 
-# Environment variables set everywhere
-export EDITOR="nvim"
-export TERMINAL="alacritty"
-export BROWSER="chrome"
 
