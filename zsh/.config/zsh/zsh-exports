@@ -1,17 +1,10 @@
 #!/bin/sh
 # HISTFILE="$XDG_DATA_HOME"/zsh/history
-export EDITOR="nvim"
-export VISUAL="nvim"
-export TERMINAL="alacritty"
-export BROWSER="chrome"
 export PATH="$HOME/.local/bin":$PATH
 export PATH="$HOME/.local/share/neovim/bin":$PATH
-#export PATH="$PATH:./node_modules/.bin"
-# eval "$(fnm env)"
 eval "$(fnm env --use-on-cd)"
 eval "$(zoxide init zsh)"
 # eval "$(starship init zsh)"
-# eval "`pip completion --zsh`"
 
 case "$(uname -s)" in
 

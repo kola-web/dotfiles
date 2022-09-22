@@ -229,6 +229,7 @@ local mappings = {
 			"Colorscheme",
 		},
 		t = { "<cmd>TodoTelescope<cr>", "todoList" },
+		T = { "<cmd>Telescope themes<cr>", "todoList" },
 		h = { "<cmd>Telescope help_tags<cr>", "Help" },
 		i = { "<cmd>lua require('telescope').extensions.media_files.media_files()<cr>", "Media" },
 		l = { "<cmd>Telescope resume<cr>", "Last Search" },

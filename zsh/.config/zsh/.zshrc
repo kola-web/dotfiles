@@ -1,34 +1,27 @@
-# 公司wifi密码 qweasdzxc888
-# export ZDOTDIR=$HOME/.config/zsh
-# source "$HOME/.config/zsh/.zshrc"
 #!/bin/sh
-export ZDOTDIR=$HOME/.config/zsh
-HISTFILE=~/.zsh_history
-setopt appendhistory
 
-# some useful options (man zshoptions)
-setopt autocd extendedglob nomatch menucomplete
-setopt interactive_comments
-stty stop undef		# Disable ctrl-s to freeze terminal.
-zle_highlight=('paste:none')
+# +---------+
+# | BASE |
+# +---------+
 
-# beeping is annoying
-unsetopt BEEP
+unsetopt BEEP                    # beeping is annoying
 
-# compinit
-_comp_options+=(globdots)		# Include hidden files.
+# +---------+
+# | HISTORY |
+# +---------+
 
-autoload -U up-line-or-beginning-search
-autoload -U down-line-or-beginning-search
-zle -N up-line-or-beginning-search
-zle -N down-line-or-beginning-search
-
-# Colors
-autoload -Uz colors && colors
+setopt EXTENDED_HISTORY          # Write the history file in the ':start:elapsed;command' format.
+setopt SHARE_HISTORY             # Share history between all sessions.
+setopt HIST_EXPIRE_DUPS_FIRST    # Expire a duplicate event first when trimming history.
+setopt HIST_IGNORE_DUPS          # Do not record an event that was just recorded again.
+setopt HIST_IGNORE_ALL_DUPS      # Delete an old recorded event if a new event is a duplicate.
+setopt HIST_FIND_NO_DUPS         # Do not display a previously found event.
+setopt HIST_IGNORE_SPACE         # Do not record an event starting with a space.
+setopt HIST_SAVE_NO_DUPS         # Do not write a duplicate event to the history file.
+setopt HIST_VERIFY               # Do not execute immediately upon history expansion.
 
 # Useful Functions
 source "$ZDOTDIR/zsh-functions"
-# proxy 127.0.0.1:41091
 
 # Normal files to source
 zsh_add_file "zsh-exports"
@@ -49,36 +42,9 @@ zsh_add_completion "zsh-users/zsh-completions"
 # For more plugins: https://github.com/unixorn/awesome-zsh-plugins
 # More completions https://github.com/zsh-users/zsh-completions
 
-# zsh-vi-mode
-source $ZDOTDIR/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
-# Key-bindings
-bindkey -s '^o' 'ranger^M'
-bindkey -s '^f' 'zi^M'
-bindkey -s '^s' 'ncdu^M'
-# bindkey -s '^n' 'nvim $(fzf)^M'
-# bindkey -s '^v' 'nvim\n'
-bindkey -s '^z' 'zi^M'
-bindkey '^[[P' delete-char
-bindkey "^p" up-line-or-beginning-search # Up
-bindkey "^n" down-line-or-beginning-search # Down
-bindkey "^k" up-line-or-beginning-search # Up
-bindkey "^j" down-line-or-beginning-search # Down
-bindkey -r "^u"
-bindkey -r "^d"
+# +------------+
+# | COMPLETION |
+# +------------+
 
-# FZF 
-# TODO update for mac
-[ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
-[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
-[ -f /usr/share/doc/fzf/examples/completion.zsh ] && source /usr/share/doc/fzf/examples/completion.zsh
-[ -f /usr/share/doc/fzf/examples/key-bindings.zsh ] && source /usr/share/doc/fzf/examples/key-bindings.zsh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f $ZDOTDIR/completion/_fnm ] && fpath+="$ZDOTDIR/completion/"
-# export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
-
-# Edit line in vim with ctrl-e:
-autoload edit-command-line; zle -N edit-command-line
-# bindkey '^e' edit-command-line
-
-
+source $ZDOTDIR/scripts/completion.zsh
