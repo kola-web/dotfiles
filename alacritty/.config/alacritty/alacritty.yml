@@ -776,6 +776,22 @@ key_bindings:
   - { key: Key8, mods: Command, chars: "\x028" }
   - { key: Key9, mods: Command, chars: "\x029" }
 
+  - { key: T, mods: Alt, chars: "\x02c" }
+  - { key: W, mods: Alt, chars: "\x02x" }
+  - { key: L, mods: Alt, chars: "\x02\f\n" }
+  - { key: D, mods: Alt, chars: "\x02%" }
+  - { key: D, mods: Alt|Shift, chars: "\x02\"" }
+  - { key: U, mods: Alt, chars: "\x75u" }
+  - { key: Key1, mods: Alt, chars: "\x021" }
+  - { key: Key2, mods: Alt, chars: "\x022" }
+  - { key: Key3, mods: Alt, chars: "\x023" }
+  - { key: Key4, mods: Alt, chars: "\x024" }
+  - { key: Key5, mods: Alt, chars: "\x025" }
+  - { key: Key6, mods: Alt, chars: "\x026" }
+  - { key: Key7, mods: Alt, chars: "\x027" }
+  - { key: Key8, mods: Alt, chars: "\x028" }
+  - { key: Key9, mods: Alt, chars: "\x029" }
+
   #- { key: Paste,                                       action: Paste          }
   #- { key: Copy,                                        action: Copy           }
   #- { key: L,         mods: Control,                    action: ClearLogNotice }
