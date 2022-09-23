@@ -1,2 +1,3 @@
 tmux/.tmux/resurrect
+tmux/.tmux/plugins
 .zsh_history
