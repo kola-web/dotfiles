@@ -765,7 +765,7 @@ key_bindings:
   - { key: L, mods: Command, chars: "\x02\f\n" }
   - { key: D, mods: Command, chars: "\x02%" }
   - { key: D, mods: Command|Shift, chars: "\x02\"" }
-  - { key: U, mods: Command, chars: "\x75u" }
+  - { key: U, mods: Command, chars: "\x02u" }
   - { key: Key1, mods: Command, chars: "\x021" }
   - { key: Key2, mods: Command, chars: "\x022" }
   - { key: Key3, mods: Command, chars: "\x023" }
@@ -781,7 +781,7 @@ key_bindings:
   - { key: L, mods: Alt, chars: "\x02\f\n" }
   - { key: D, mods: Alt, chars: "\x02%" }
   - { key: D, mods: Alt|Shift, chars: "\x02\"" }
-  - { key: U, mods: Alt, chars: "\x75u" }
+  - { key: U, mods: Alt, chars: "\x02u" }
   - { key: Key1, mods: Alt, chars: "\x021" }
   - { key: Key2, mods: Alt, chars: "\x022" }
   - { key: Key3, mods: Alt, chars: "\x023" }
