@@ -73,6 +73,9 @@ alt - j : yabai -m query --spaces --space \
 
 alt - m : yabai -m window --focus mouse
 
+# cmd - j : yabai -m window --focus $(yabai -m query --windows --space | jq 'sort_by(.id) | .[(to_entries | .[] | select(.value.focused == 1) | .key + 1) % length] | .id')
+# cmd - k : yabai -m window --focus $(yabai -m query --windows --space | jq 'sort_by(.id) | .[(to_entries | .[] | select(.value.focused == 1) | .key - 1) % length] | .id')
+
 # 空间变化
 # alt - 1 : yabai -m space --focus 1
 # alt - 2 : yabai -m space --focus 2
