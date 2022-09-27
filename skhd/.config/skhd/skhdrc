@@ -10,7 +10,7 @@
 alt - q : $(yabai -m window $(yabai -m query --windows --window | jq -re ".id") --close)
 # open finder on home
 alt - e : open ~
-alt + shift - e :  cd ~ && kitty -e ranger
+alt + shift - e : cd ~ && kitty -e ranger
 # alt + shift - e : /Applications/Visual\ Studio\ Code.app/Contents/MacOS/Electron
 # alt + shift - w : /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
 
@@ -29,13 +29,14 @@ alt - s : yabai -m space --layout stack
 alt - t : yabai -m space --layout bsp
 alt - f : yabai -m space --layout float
 
-alt - o : yabai -m space --toggle padding; yabai -m space --toggle gap
+alt - o : yabai -m space --toggle padding
+yabai -m space --toggle gap
 alt + shift - o : yabai -m window --toggle border
 alt - r : yabai -m space --rotate 90
 
 ## 缺划浮动
-alt - space : yabai -m window --toggle float;\
-              yabai -m window --grid 24:24:2:2:20:20
+alt - space : yabai -m window --toggle float
+yabai -m window --grid 24:24:2:2:20:20
 
 # alt-, 上一个屏幕
 alt - 0x2F : yabai -m display --focus prev
@@ -44,36 +45,36 @@ alt - 0x2B : yabai -m display --focus next
 
 ## 窗口位置变换
 # alt-k
-alt + shift - k : yabai -m query --spaces --space \
-  | jq -re ".index" \
-  | xargs -I{} yabai -m query --windows --space {} \
-  | jq -sre 'add | map(select(."is-minimized"==false)) | sort_by(.display, .frame.y, .frame.x, .id) | . as $array | length as $array_length | index(map(select(."has-focus"==true))) as $has_index | if $has_index > 0 then nth($has_index - 1).id else nth($array_length - 1).id end'  \
-  | xargs -I{} yabai -m window --swap {}
+alt + shift - k : yabai -m query --spaces --space |
+	jq -re ".index" |
+	xargs -I{} yabai -m query --windows --space {} |
+	jq -sre 'add | map(select(."is-minimized"==false)) | sort_by(.display, .frame.y, .frame.x, .id) | . as $array | length as $array_length | index(map(select(."has-focus"==true))) as $has_index | if $has_index > 0 then nth($has_index - 1).id else nth($array_length - 1).id end' |
+	xargs -I{} yabai -m window --swap {}
 
 # alt-j
-alt + shift - j : yabai -m query --spaces --space \
-  | jq -re ".index" \
-  | xargs -I{} yabai -m query --windows --space {} \
-  | jq -sre 'add | map(select(."is-minimized"==false)) | sort_by(.display, .frame.y, .frame.x, .id) |. as $array | length as $array_length | index(map(select(."has-focus"==true))) as $has_index | if $array_length - 1 > $has_index then nth($has_index + 1).id else nth(0).id end' \
-  | xargs -I{} yabai -m window --swap {}
+alt + shift - j : yabai -m query --spaces --space |
+	jq -re ".index" |
+	xargs -I{} yabai -m query --windows --space {} |
+	jq -sre 'add | map(select(."is-minimized"==false)) | sort_by(.display, .frame.y, .frame.x, .id) |. as $array | length as $array_length | index(map(select(."has-focus"==true))) as $has_index | if $array_length - 1 > $has_index then nth($has_index + 1).id else nth(0).id end' |
+	xargs -I{} yabai -m window --swap {}
 
 # alt-k
-alt - k : yabai -m query --spaces --space \
-  | jq -re ".index" \
-  | xargs -I{} yabai -m query --windows --space {} \
-  | jq -sre 'add | map(select(."is-minimized"==false)) | sort_by(.display, .frame.y, .frame.x, .id) | . as $array | length as $array_length | index(map(select(."has-focus"==true))) as $has_index | if $has_index > 0 then nth($has_index - 1).id else nth($array_length - 1).id end'  \
-  | xargs -I{} yabai -m window --focus {}
+alt - k : yabai -m query --spaces --space |
+	jq -re ".index" |
+	xargs -I{} yabai -m query --windows --space {} |
+	jq -sre 'add | map(select(."is-minimized"==false)) | sort_by(.display, .frame.y, .frame.x, .id) | . as $array | length as $array_length | index(map(select(."has-focus"==true))) as $has_index | if $has_index > 0 then nth($has_index - 1).id else nth($array_length - 1).id end' |
+	xargs -I{} yabai -m window --focus {}
 
 # alt-j
-alt - j : yabai -m query --spaces --space \
-  | jq -re ".index" \
-  | xargs -I{} yabai -m query --windows --space {} \
-  | jq -sre 'add | map(select(."is-minimized"==false)) | sort_by(.display, .frame.y, .frame.x, .id) | . as $array | length as $array_length | index(map(select(."has-focus"==true))) as $has_index | if $array_length - 1 > $has_index then nth($has_index + 1).id else nth(0).id end' \
-  | xargs -I{} yabai -m window --focus {}
+alt - j : yabai -m query --spaces --space |
+	jq -re ".index" |
+	xargs -I{} yabai -m query --windows --space {} |
+	jq -sre 'add | map(select(."is-minimized"==false)) | sort_by(.display, .frame.y, .frame.x, .id) | . as $array | length as $array_length | index(map(select(."has-focus"==true))) as $has_index | if $array_length - 1 > $has_index then nth($has_index + 1).id else nth(0).id end' |
+	xargs -I{} yabai -m window --focus {}
 
 alt - m : yabai -m window --focus mouse
 
-# cmd - j : yabai -m window --focus $(yabai -m query --windows --space | jq 'sort_by(.id) | .[(to_entries | .[] | select(.value.focused == 1) | .key + 1) % length] | .id')
+ctrl - j : yabai -m window --focus $(yabai -m query --windows --space | jq 'sort_by(.id) | .[(to_entries | .[] | select(.value.focused == 1) | .key + 1) % length] | .id')
 # cmd - k : yabai -m window --focus $(yabai -m query --windows --space | jq 'sort_by(.id) | .[(to_entries | .[] | select(.value.focused == 1) | .key - 1) % length] | .id')
 
 # 空间变化
@@ -105,15 +106,13 @@ alt + shift - 0 : yabai -m space --balance
 
 alt + shift - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
 
-
-alt - left   : yabai -m window west --resize right:-40:0 2> /dev/null || yabai -m window --resize right:-40:0
-alt - down   : yabai -m window north --resize bottom:0:40 2> /dev/null || yabai -m window --resize bottom:0:40
-alt - up     : yabai -m window south --resize top:0:-40 2> /dev/null || yabai -m window --resize top:0:-40
-alt - right : yabai -m window east --resize left:40:0 2> /dev/null || yabai -m window --resize left:40:0
+alt - left : yabai -m window west --resize right:-40:0 2>/dev/null || yabai -m window --resize right:-40:0
+alt - down : yabai -m window north --resize bottom:0:40 2>/dev/null || yabai -m window --resize bottom:0:40
+alt - up : yabai -m window south --resize top:0:-40 2>/dev/null || yabai -m window --resize top:0:-40
+alt - right : yabai -m window east --resize left:40:0 2>/dev/null || yabai -m window --resize left:40:0
 
 # 移动窗口
 # shift + alt - left : yabai -m window --move rel:-20:0
 # shift + alt - down : yabai -m window --move rel:0:20
 # shift + alt - up : yabai -m window --move rel:0:-20
 # shift + alt - right : yabai -m window --move rel:20:0
-
