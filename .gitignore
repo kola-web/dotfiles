@@ -4,3 +4,6 @@ tmux/.tmux/plugins
 
 zsh/.config/zsh/.zsh_history
 zsh/.config/zsh/.zim
+zsh/.config/zsh/.zcompdump.zwc
+zsh/.config/zsh/.zhistory
+zsh/.config/zsh/.zhistory
