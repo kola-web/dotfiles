@@ -23,24 +23,10 @@ setopt HIST_VERIFY               # Do not execute immediately upon history expan
 # Useful Functions
 source "$ZDOTDIR/zsh-functions"
 
-# Normal files to source
 zsh_add_file "zsh-exports"
-zsh_add_file "zsh-vim-mode"
+zsh_add_file "zsh-zimfw"
 zsh_add_file "zsh-aliases"
 zsh_add_file "zsh-prompt"
-
-# Plugins
-zsh_add_plugin "sukkaw/zsh-proxy"
-# zsh_add_plugin "jeffreytse/zsh-vi-mode"
-zsh_add_plugin "zsh-users/zsh-syntax-highlighting"
-zsh_add_plugin "zsh-users/zsh-autosuggestions"
-zsh_add_plugin "hlissner/zsh-autopair"
-zsh_add_plugin "zsh-users/zsh-completions"
-
-#
-# For more plugins: https://github.com/unixorn/awesome-zsh-plugins
-# More completions https://github.com/zsh-users/zsh-completions
-
 
 # +------------+
 # | COMPLETION |
