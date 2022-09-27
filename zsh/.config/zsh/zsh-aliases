@@ -1,4 +1,5 @@
 #!/bin/sh
+alias n='neofetch'
 alias f='zi'
 alias r='ranger'
 alias g='lazygit'

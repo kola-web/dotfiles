@@ -32,4 +32,4 @@ zsh_add_file "zsh-prompt"
 # | COMPLETION |
 # +------------+
 
-source $ZDOTDIR/scripts/completion.zsh
+zsh_add_file "scripts/completion.zsh"
