@@ -63,11 +63,25 @@ return {
 			require("custom.plugins.textcase")
 		end,
 	},
+	["andymass/vim-matchup"] = {
+		config = function()
+			require("custom.plugins.matchup")
+		end,
+	},
+	["terryma/vim-expand-region"] = {},
 
 	-- Syntax
 	["fladson/vim-kitty"] = {},
 	["b0o/schemastore.nvim"] = {
 		after = "nvim-lspconfig",
 	},
-}
 
+	--markdwon
+	["iamcco/markdown-preview.nvim"] = {
+		run = "cd app && npm install",
+		setup = function()
+			vim.g.mkdp_filetypes = { "markdown" }
+		end,
+		ft = { "markdown" },
+	},
+}

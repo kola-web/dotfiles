@@ -15,6 +15,11 @@ M["nvim-treesitter/nvim-treesitter"] = {
 		enable = true,
 		use_languagetree = true,
 	},
+	matchup = {
+		enable = true, -- mandatory, false will disable the whole extension
+		disable = {}, -- optional, list of language that will be disabled
+		-- [options]
+	},
 }
 
 M["kyazdani42/nvim-tree.lua"] = {

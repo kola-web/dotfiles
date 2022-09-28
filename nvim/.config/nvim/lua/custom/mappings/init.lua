@@ -69,6 +69,7 @@ M.disabled = {
 
 M.general = {
 	n = {
+		["<cr>"] = { "%", "%" },
 		["<S-l>"] = { "$", "$" },
 		["<S-h>"] = { "^", "^" },
 		["("] = {
@@ -86,6 +87,7 @@ M.general = {
 			"open-note",
 			opts = { noremap = true },
 		},
+    ["<F5>"] = {"<cmd>MarkdownPreview<cr>","MarkdownPreview"}
 	},
 	v = {
 		["<S-l>"] = { "$", "$" },
