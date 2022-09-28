@@ -21,13 +21,13 @@ alt - return : open -na /Applications/Alacritty.app/Contents/MacOS/alacritty
 # alt + shift - return : /Applications/Alacritty.app/Contents/MacOS/alacritty -e tmux
 
 ##全屏
-alt - z : yabai -m window --toggle zoom-parent
-alt + shift - z : yabai -m window --toggle native-fullscreen
+alt - z : yabai -m window --toggle zoom-fullscreen; sketchybar --trigger window_focus
+alt + shift - z : yabai -m window --toggle native-fullscreen; sketchybar --trigger window_focus
 
 ## 切换窗口布局
 alt - s : yabai -m space --layout stack
 alt - t : yabai -m space --layout bsp
-alt - f : yabai -m space --layout float
+alt - f : yabai -m space --layout float; sketchybar --trigger window_focus
 
 alt - o : yabai -m space --toggle padding; yabai -m space --toggle gap
 alt + shift - o : yabai -m window --toggle border

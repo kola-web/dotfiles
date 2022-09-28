@@ -1,0 +1,3 @@
+[submodule "alacritty/.config/alacritty"]
+  path = "alacritty/.config/alacritty"
+	url = https://github.com/catppuccin/alacritty.git

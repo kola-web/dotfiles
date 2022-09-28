@@ -22,18 +22,32 @@ export MANPAGER='nvim +Man!'
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-FZF_COLORS="bg+:-1,\
-fg:gray,\
-fg+:white,\
-border:black,\
-spinner:0,\
-hl:yellow,\
-header:blue,\
-info:green,\
-pointer:red,\
-marker:red,\
-prompt:gray,\
-hl+:red"
+# FZF_COLORS="bg+:-1,\
+# fg:gray,\
+# fg+:white,\
+# border:black,\
+# spinner:0,\
+# hl:yellow,\
+# header:blue,\
+# info:green,\
+# pointer:red,\
+# marker:red,\
+# prompt:gray,\
+# hl+:red"
+
+
+FZF_COLORS="bg+:#363a4f,\
+bg:#24273a,\
+spinner:#f4dbd6,\
+hl:#ed8796,\
+fg:#cad3f5,\
+header:#ed8796,\
+info:#c6a0f6,\
+pointer:#f4dbd6,\
+marker:#f4dbd6,\
+fg+:#cad3f5,\
+prompt:#c6a0f6,\
+hl+:#ed8796"
 
 export FZF_DEFAULT_OPTS="--height 60% \
 --border sharp \
@@ -41,4 +55,5 @@ export FZF_DEFAULT_OPTS="--height 60% \
 --prompt '∷ ' \
 --pointer ▶ \
 --marker ⇒"
+
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -n 10'"

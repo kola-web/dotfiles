@@ -6,7 +6,7 @@ local M = {}
 -- example of changing theme:
 
 M.ui = {
-	theme = "onedark", -- default theme
+	theme = "catppuccin", -- default theme
 	hl_override = require("custom.highlights"),
 }
 
