@@ -1,5 +1,4 @@
 tmux/.tmux/resurrect
-tmux/.tmux/plugins
 .zsh_history
 
 zsh/.config/zsh/.zsh_history
@@ -9,3 +8,10 @@ zsh/.config/zsh/.zhistory
 zsh/.config/zsh/.zhistory
 
 alacritty/.config/alacritty/catppuccin
+
+tmux/.tmux/plugins/tmux-resurrect
+tmux/.tmux/plugins/tmux-fzf-url
+tmux/.tmux/plugins/tmux-copycat
+tmux/.tmux/plugins/tmux-continuum
+tmux/.tmux/plugins/tmux
+tmux/.tmux/plugins/extrakto
