@@ -17,9 +17,11 @@
       {
         "language": [
           "javascript",
-          "javascriptreact"
+          "javascriptreact",
+          "vue",
+          "svelte"
         ],
-        "path": "./vscode-snippets/script.code-snippets"
+        "path": "./snippets/javascript/javascript.json"
       }
     ]
   }
