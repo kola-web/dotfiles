@@ -1,3 +1,6 @@
 [submodule "alacritty/.config/alacritty/alacritty"]
 	path = alacritty/.config/alacritty/alacritty
 	url = https://github.com/catppuccin/alacritty.git
+[submodule "sketchybar/.config/SketchyBar"]
+	path = sketchybar/.config/SketchyBar
+	url = git@github.com:FelixKratz/SketchyBar.git
