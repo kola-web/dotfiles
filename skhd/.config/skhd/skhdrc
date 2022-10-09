@@ -1,10 +1,10 @@
-#!/bin/bash
-
 # remap keybind
-# ctrl - j : skhd --key "down"
-# ctrl - k : skhd --key "up"
-# ctrl - n : skhd --key "down"
-# ctrl - p : skhd --key "up"
+ctrl - n [
+  "微信" : skhd --key "down"
+] 
+ctrl - p [
+  "微信" : skhd --key "up"
+] 
 
 ## 关闭当前窗口
 alt - q : $(yabai -m window $(yabai -m query --windows --window | jq -re ".id") --close)
