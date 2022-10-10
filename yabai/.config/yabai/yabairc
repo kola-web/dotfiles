@@ -17,7 +17,7 @@ gap=12
 grid=24:24:2:2:20:20
 
 # global settings
-yabai -m config external_bar all:40:0
+yabai -m config external_bar all:32:0
 yabai -m config mouse_modifier ctrl
 yabai -m config window_topmost off
 yabai -m config window_shadow off

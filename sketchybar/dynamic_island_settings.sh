@@ -1,0 +1,1 @@
+.config/sketchybar/dynamic_island_settings.sh
