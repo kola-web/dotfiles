@@ -99,7 +99,7 @@ local mappings = {
 		"Find files",
 	},
 	["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
-	["m"] = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
+	["m"] = { "<cmd>lua vim.lsp.buf.format { async = true }<cr>", "Format" },
 	["z"] = { "<cmd>ZenMode<cr>", "Zen" },
 	[";"] = { "<cmd>Trouble<cr>", "Trouble" },
 
@@ -191,6 +191,7 @@ local mappings = {
 		name = "LSP",
 		a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
 		d = { "<cmd>Telescope diagnostics bufnr=0 theme=get_ivy<cr>", "Buffer Diagnostics" },
+		s = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "lsp signature_help" },
 		w = { "<cmd>Telescope diagnostics<cr>", "Diagnostics" },
 		i = { "<cmd>LspInfo<cr>", "Info" },
 		I = { "<cmd>Mason<cr>", "Installer Info" },
@@ -211,12 +212,6 @@ local mappings = {
 		},
 		q = { vim.diagnostic.setloclist, "Quickfix" },
 		r = { vim.lsp.buf.rename, "Rename" },
-		s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
-		S = {
-			"<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
-			"Workspace Symbols",
-		},
-		e = { "<cmd>Telescope quickfix<cr>", "Telescope Quickfix" },
 	},
 
 	s = {

@@ -15,8 +15,10 @@ local servers = {
 	-- "volar",
 	"intelephense",
 	"dockerls",
-  "clangd",
-  "marksman"
+	"clangd",
+	"marksman",
+	--bash
+	"bashls",
 }
 
 for _, lsp in ipairs(servers) do

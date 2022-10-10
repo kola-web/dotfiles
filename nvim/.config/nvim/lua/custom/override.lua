@@ -70,6 +70,7 @@ M["williamboman/mason.nvim"] = {
 		"eslint_d",
 
 		-- shell
+    "bash-language-server",
 		"shfmt",
 		"shellcheck",
 

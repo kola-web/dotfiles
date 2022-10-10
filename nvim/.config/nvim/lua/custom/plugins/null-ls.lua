@@ -4,23 +4,26 @@ if not present then
 	return
 end
 
-local b = null_ls.builtins
+-- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
+local formatting = null_ls.builtins.formatting
+-- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
+local diagnostics = null_ls.builtins.diagnostics
 
 local sources = {
 
 	-- webdev stuff
-	b.formatting.deno_fmt,
-	b.formatting.prettier,
+	formatting.prettier,
+	formatting.black.with({ extra_args = { "--fast" } }),
 
 	-- Lua
-	b.formatting.stylua,
+	formatting.stylua,
 
 	-- Shell
-	b.formatting.shfmt,
-	b.diagnostics.shellcheck.with({ diagnostics_format = "#{m} [#{c}]" }),
+	formatting.shfmt,
+	diagnostics.shellcheck,
 
 	-- php
-	b.formatting.phpcsfixer,
+	formatting.phpcsfixer,
 }
 
 null_ls.setup({
