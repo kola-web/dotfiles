@@ -54,7 +54,7 @@ source "$ITEM_DIR/front_app.sh"
 
 # Center
 # source "$ITEM_DIR/spotify.sh"
-source "$ITEM_DIR/dynamic_island.sh"
+# source "$ITEM_DIR/dynamic_island.sh"
 
 # Right
 # source "$ITEM_DIR/github.sh"
