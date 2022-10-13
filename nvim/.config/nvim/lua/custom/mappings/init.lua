@@ -69,7 +69,7 @@ M.disabled = {
 
 M.general = {
 	n = {
-		["<cr>"] = { "%", "%" },
+		["<C-m>"] = { "<Ignore><Plug>(matchup-%)", "%" },
 		["<S-l>"] = { "$", "$" },
 		["<S-h>"] = { "^", "^" },
 		["("] = {
@@ -82,12 +82,7 @@ M.general = {
 			"move_buf_left",
 			opts = { noremap = true },
 		},
-		["<F1>"] = {
-			"<cmd>e ~/note/<cr>",
-			"open-note",
-			opts = { noremap = true },
-		},
-    ["<F5>"] = {"<cmd>MarkdownPreview<cr>","MarkdownPreview"}
+		["<F5>"] = { "<cmd>MarkdownPreview<cr>", "MarkdownPreview" },
 	},
 	v = {
 		["<S-l>"] = { "$", "$" },

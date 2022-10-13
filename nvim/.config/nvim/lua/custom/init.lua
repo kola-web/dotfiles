@@ -24,3 +24,11 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
 		vim.highlight.on_yank({ higroup = "Search", timeout = 200 })
 	end,
 })
+
+-- markdown preview
+vim.cmd[[
+ function OpenMarkdownPreview (url)
+    execute "silent !  /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --new-window " . a:url
+  endfunction
+  let g:mkdp_browserfunc = 'OpenMarkdownPreview'
+]]

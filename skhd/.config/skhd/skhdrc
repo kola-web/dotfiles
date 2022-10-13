@@ -6,6 +6,8 @@ ctrl - p [
   "微信" : skhd --key "up"
 ] 
 
+
+
 ## 关闭当前窗口
 alt - q : $(yabai -m window $(yabai -m query --windows --window | jq -re ".id") --close)
 # open finder on home
@@ -19,6 +21,7 @@ alt + shift - e :  cd ~ && kitty -e ranger
 alt - return : open -na /Applications/Alacritty.app/Contents/MacOS/alacritty
 # alt - return : open -na /Applications/kitty.app/Contents/MacOS/kitty
 # alt + shift - return : /Applications/Alacritty.app/Contents/MacOS/alacritty -e tmux
+f1 : /Applications/Alacritty.app/Contents/MacOS/alacritty --working-directory ~/note -e nvim 
 
 ##全屏
 alt - z : yabai -m window --toggle zoom-fullscreen; sketchybar --trigger window_focus

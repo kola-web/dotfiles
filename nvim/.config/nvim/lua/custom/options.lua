@@ -3,6 +3,8 @@ local options = {
 	wrap = false,
 	backup = false, -- 创建备份文件
 	scrolloff = 5, -- minimal number of screen lines to keep above and below the cursor.
+	foldmethod = "indent",
+	foldlevel = 10,
 }
 
 for k, v in pairs(options) do

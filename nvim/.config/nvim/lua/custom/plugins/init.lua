@@ -29,7 +29,7 @@ return {
 	["neovim/nvim-lspconfig"] = {
 		config = function()
 			require("plugins.configs.lspconfig")
-			require("custom.plugins.lspconfig")
+			require("custom.plugins.lsp.lspconfig")
 		end,
 	},
 	["folke/which-key.nvim"] = {
@@ -83,5 +83,12 @@ return {
 			vim.g.mkdp_filetypes = { "markdown" }
 		end,
 		ft = { "markdown" },
+	},
+
+	["phaazon/hop.nvim"] = {
+		branch = "v2",
+		config = function()
+			require("custom.plugins.hop")
+		end,
 	},
 }

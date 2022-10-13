@@ -10,6 +10,9 @@ M["nvim-treesitter/nvim-treesitter"] = {
 		"vue",
 		"javascript",
 		"php",
+    "markdown",
+    "scss",
+    "json",
 	},
 	highlight = {
 		enable = true,

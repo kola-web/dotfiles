@@ -11,8 +11,6 @@ local servers = {
 	"cssls",
 	"jsonls",
 	"tsserver",
-	"vuels",
-	-- "volar",
 	"intelephense",
 	"dockerls",
 	"clangd",
@@ -20,6 +18,9 @@ local servers = {
 	--bash
 	"bashls",
 }
+
+-- vue
+require("custom.plugins.lsp.volar")
 
 for _, lsp in ipairs(servers) do
 	local opts = {
@@ -39,6 +40,7 @@ for _, lsp in ipairs(servers) do
 	end
 
 	if servers == "tsserver" then
+		opts.filetypes = { "typescript", "typescriptreact", "typescript.tsx" }
 		opts.init_options = {
 			locale = "zh-CN",
 		}
@@ -58,13 +60,5 @@ for _, lsp in ipairs(servers) do
 		}
 	end
 
-	if servers == "volar" then
-		opts.init_options = {
-			typescript = {
-				-- serverPath = os.getenv(--[[ "FNM_MULTISHELL_PATH" ]]) .. "/lib/node_modules/typescript/lib/tsserverlibrary.js",
-				serverPath = "~/.local/share/nvim/mason/packages/typescript-language-server/node_modules/typescript/lib/tsserverlibrary.js",
-			},
-		}
-	end
 	lspconfig[lsp].setup(opts)
 end

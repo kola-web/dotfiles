@@ -270,6 +270,14 @@ local mappings = {
 		h = { "<cmd>TSHighlightCapturesUnderCursor<cr>", "Highlight" },
 		p = { "<cmd>TSPlaygroundToggle<cr>", "Playground" },
 	},
+	[" "] = {
+		name = "hop",
+		f = { "<cmd>HopChar1<cr>", "HopChar1" },
+		l = { "<cmd>HopLine<cr>", "HopLine" },
+		i = { "<cmd>HopLineStart<cr>", "HopLineStart" },
+		w = { "<cmd>HopWord<cr>", "HopWord" },
+		s = { "<cmd>HopPattern<cr>", "HopPattern" },
+	},
 }
 
 local vopts = {
