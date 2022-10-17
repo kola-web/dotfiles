@@ -17,10 +17,9 @@ local servers = {
 	"marksman",
 	--bash
 	"bashls",
+	-- vue
+	"volar",
 }
-
--- vue
-require("custom.plugins.lsp.volar")
 
 for _, lsp in ipairs(servers) do
 	local opts = {
@@ -47,7 +46,7 @@ for _, lsp in ipairs(servers) do
 	end
 
 	if servers == "emmet_ls" then
-		opts.filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "php" }
+		opts.filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "php", "vue" }
 	end
 
 	if servers == "jsonls" then
