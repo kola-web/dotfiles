@@ -60,3 +60,10 @@ noremap gD :vsc editor.action.revealDefinitionAside<CR>
 noremap gp :vsc references-view.showSupertypes<CR>
 
 noremap B :enew<cr>
+
+noremap ]h /<template<cr>
+noremap ]H /<\/template<cr>
+noremap ]s /<script<cr>
+noremap ]S /<\/script<cr>
+noremap ]c /<style<cr>
+noremap ]C /<\/style<cr>
