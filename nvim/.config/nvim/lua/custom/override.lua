@@ -10,9 +10,9 @@ M["nvim-treesitter/nvim-treesitter"] = {
 		"vue",
 		"javascript",
 		"php",
-    "markdown",
-    "scss",
-    "json",
+		"markdown",
+		"scss",
+		"json",
 	},
 	highlight = {
 		enable = true,
@@ -73,16 +73,12 @@ M["williamboman/mason.nvim"] = {
 		"eslint_d",
 
 		-- shell
-    "bash-language-server",
+		"bash-language-server",
 		"shfmt",
 		"shellcheck",
 
 		--yaml
 		"yaml-language-server",
-
-		-- php
-		"intelephense",
-		"phpcsfixer",
 
 		--docker
 		"dockerfile-language-server",
@@ -91,7 +87,10 @@ M["williamboman/mason.nvim"] = {
 		"clangd",
 
 		--markdown
-		"marksman",
+		"zk",
+
+		--php
+		"phpactor",
 	},
 }
 

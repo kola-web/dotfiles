@@ -21,9 +21,6 @@ local sources = {
 	-- Shell
 	formatting.shfmt,
 	diagnostics.shellcheck,
-
-	-- php
-	formatting.phpcsfixer,
 }
 
 null_ls.setup({

@@ -4,21 +4,19 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require("lspconfig")
 
 local servers = {
-	"sumneko_lua",
-	"yamlls",
+	"cssls",
 	"emmet_ls",
 	"html",
-	"cssls",
 	"jsonls",
+	"sumneko_lua",
 	"tsserver",
-	"intelephense",
+	"yamlls",
 	"dockerls",
 	"clangd",
-	"marksman",
-	--bash
 	"bashls",
-	-- vue
 	"volar",
+	"zk",
+	"phpactor",
 }
 
 for _, lsp in ipairs(servers) do

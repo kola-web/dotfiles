@@ -1,10 +1,4 @@
 #!/bin/sh
-# HISTFILE="$XDG_DATA_HOME"/zsh/history
-export PATH="$HOME/.local/bin":$PATH
-export PATH="$HOME/.local/share/neovim/bin":$PATH
-eval "$(fnm env --use-on-cd)"
-eval "$(zoxide init zsh)"
-# eval "$(starship init zsh)"
 
 case "$(uname -s)" in
 
@@ -28,3 +22,11 @@ CYGWIN* | MINGW32* | MSYS* | MINGW*)
 	# echo 'Other OS'
 	;;
 esac
+
+
+# HISTFILE="$XDG_DATA_HOME"/zsh/history
+export PATH="$HOME/.local/bin":$PATH
+export PATH="$HOME/.local/share/neovim/bin":$PATH
+eval "$(fnm env --use-on-cd)"
+eval "$(zoxide init zsh)"
+# eval "$(starship init zsh)"
