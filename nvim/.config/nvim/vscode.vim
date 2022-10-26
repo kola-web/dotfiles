@@ -58,6 +58,7 @@ noremap gi :vsc editor.action.goToImplementation<CR>
 noremap gd :vsc editor.action.goToDeclaration<CR>
 noremap gD :vsc editor.action.revealDefinitionAside<CR>
 noremap gp :vsc references-view.showSupertypes<CR>
+noremap gr :vsc editor.action.goToReferences<CR>
 
 noremap B :enew<cr>
 

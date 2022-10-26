@@ -121,4 +121,47 @@ M.tmux = {
 	},
 }
 
+M.lspconfig = {
+	plugin = true,
+
+	-- See `<cmd> :help vim.lsp.*` for documentation on any of the below functions
+
+	n = {
+		["gD"] = {
+			function()
+				vim.lsp.buf.declaration()
+			end,
+			"lsp declaration",
+		},
+
+		["gd"] = {
+			function()
+				vim.lsp.buf.definition()
+			end,
+			"lsp definition",
+		},
+
+		["K"] = {
+			function()
+				vim.lsp.buf.hover()
+			end,
+			"lsp hover",
+		},
+
+		["gi"] = {
+			function()
+				vim.lsp.buf.implementation()
+			end,
+			"lsp implementation",
+		},
+
+		["gr"] = {
+			function()
+				vim.lsp.buf.references()
+			end,
+			"lsp references",
+		},
+	},
+}
+
 return M

@@ -190,28 +190,11 @@ local mappings = {
 	l = {
 		name = "LSP",
 		a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
-		d = { "<cmd>Telescope diagnostics bufnr=0 theme=get_ivy<cr>", "Buffer Diagnostics" },
-		s = { "<cmd>lua vim.lsp.buf.signature_help()<cr>", "lsp signature_help" },
-		w = { "<cmd>Telescope diagnostics<cr>", "Diagnostics" },
-		i = { "<cmd>LspInfo<cr>", "Info" },
-		I = { "<cmd>Mason<cr>", "Installer Info" },
-		j = {
-			vim.diagnostic.goto_next,
-			"Next Diagnostic",
-		},
-		k = {
-			vim.diagnostic.goto_prev,
-			"Prev Diagnostic",
-		},
-		l = { vim.lsp.codelens.run, "CodeLens Action" },
-		p = {
-			name = "Peek",
-			d = { vim.lsp.buf.definiti, "Definition" },
-			t = { vim.lsp.buf.type_definition, "Type Definition" },
-			i = { vim.lsp.buf.implementation, "Implementation" },
-		},
-		q = { vim.diagnostic.setloclist, "Quickfix" },
-		r = { vim.lsp.buf.rename, "Rename" },
+		e = { "<cmd>lua vim.diagnostic.setloclist()<cr>", "Errors" },
+		n = { "<cmd>lua vim.diagnostic.goto_next()<cr>", "Netx Errors" },
+		p = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", "Prev Errors" },
+		r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
+		s = { "<cmd>lua Lspsaga signature_help()<cr>", "signature" },
 	},
 
 	s = {

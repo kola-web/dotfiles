@@ -1,5 +1,6 @@
 require("custom.options")
 require("custom.filetype")
+require("custom.transparent")
 
 -- vim.g.luasnippets_path = "~/.config/nvim/lua/custom/snippets"
 
@@ -18,10 +19,8 @@ elseif is_mac then
 	vim.g.luasnippets_path = "/Users/lijialin/Library/Application Support/Code/User/snippets/"
 end
 
-
 vim.api.nvim_create_autocmd({ "TextYankPost" }, {
 	callback = function()
 		vim.highlight.on_yank({ higroup = "Search", timeout = 200 })
 	end,
 })
-

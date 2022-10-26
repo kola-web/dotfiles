@@ -84,13 +84,13 @@ M["williamboman/mason.nvim"] = {
 		"dockerfile-language-server",
 
 		--c
-		"clangd",
+		"sourcery",
 
 		--markdown
 		"zk",
 
 		--php
-		"phpactor",
+		"intelephense",
 	},
 }
 
