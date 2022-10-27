@@ -11,9 +11,10 @@ if [ $(command -v "exa") ]; then
     alias ls='exa --icons'
 fi
 
-alias d='duf'
-alias ds='dust'
+# alias d='duf'
+alias d='dust'
 alias b='btop'
+alias man='tldr'
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
