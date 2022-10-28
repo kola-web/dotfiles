@@ -4,3 +4,6 @@
 [submodule "sketchybar/.config/sketchybar"]
 	path = sketchybar/.config/SketchyBar
 	url = git@github.com:FelixKratz/SketchyBar.git
+[submodule "iterm"]
+	path = iterm
+	url = git@github.com:catppuccin/iterm.git
