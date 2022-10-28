@@ -25,7 +25,6 @@ yabai -m config window_shadow off
 yabai -m config window_placement second_child
 yabai -m config window_origin_display focused
 
-
 # general space settings
 yabai -m config layout bsp
 yabai -m config top_padding $gap
@@ -65,6 +64,7 @@ yabai -m rule --add app="^Listen1$" space=4 layer=normal manage=off grid=$grid
 
 yabai -m rule --add app="^访达$" manage=off grid=$grid border=off
 yabai -m rule --add app="^系统偏好设置$" manage=off layer=normal sticky=on grid=$grid
+yabai -m rule --add app="^mpv$" manage=off layer=normal sticky=on grid=3:1:2:0:3:1
 yabai -m rule --add app="^Panda$" manage=off
 yabai -m rule --add app="^Rime$" manage=off
 
