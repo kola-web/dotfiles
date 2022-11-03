@@ -7,6 +7,8 @@ local M = {}
 
 M.ui = {
 	theme = "catppuccin", -- default theme
+	transparency = false,
+	theme_toggle = { "catppuccin", "catppuccin_latte" },
 	hl_override = require("custom.highlights"),
 }
 
@@ -22,4 +24,3 @@ M.plugins = {
 M.mappings = require("custom.mappings")
 
 return M
-

@@ -3,7 +3,6 @@ local M = {}
 function moveItemRight(originTbl, n)
 	local index = nil
 	for k, v in ipairs(originTbl) do
-    print(v)
 		if v == n then
 			index = k
 		end
@@ -14,7 +13,7 @@ function moveItemRight(originTbl, n)
 	else
 		table.insert(originTbl, index + 1, n)
 	end
-  return originTbl
+	return originTbl
 end
 
 function moveItemLeft(originTbl, n)
@@ -30,7 +29,7 @@ function moveItemLeft(originTbl, n)
 	else
 		table.insert(originTbl, index - 1, n)
 	end
-  return originTbl
+	return originTbl
 end
 
 M.move_buf_left = function()

@@ -200,14 +200,14 @@ local mappings = {
 	s = {
 		name = "Search",
 		b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
-		c = {
+		T = {
 			function()
 				require("base46").toggle_theme()
 			end,
 			"Colorscheme",
 		},
 		t = { "<cmd>TodoTelescope<cr>", "todoList" },
-		T = { "<cmd>Telescope themes<cr>", "todoList" },
+		c = { "<cmd>Telescope themes<cr>", "todoList" },
 		h = { "<cmd>Telescope help_tags<cr>", "Help" },
 		i = { "<cmd>lua require('telescope').extensions.media_files.media_files()<cr>", "Media" },
 		l = { "<cmd>Telescope resume<cr>", "Last Search" },

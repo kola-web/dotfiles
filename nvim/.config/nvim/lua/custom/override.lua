@@ -4,15 +4,19 @@ local icons = require("custom.icons")
 
 M["nvim-treesitter/nvim-treesitter"] = {
 	ensure_installed = {
-		"lua",
+		"vim",
 		"html",
 		"css",
-		"vue",
 		"javascript",
-		"php",
-		"markdown",
-		"scss",
 		"json",
+		"toml",
+		"markdown",
+		"bash",
+		"lua",
+		"norg",
+		"tsx",
+		"typescript",
+		"vue",
 	},
 	highlight = {
 		enable = true,
