@@ -1,3 +1,4 @@
+imap jk <Esc>
 map s gr
 nmap ss grr
 map S gr$

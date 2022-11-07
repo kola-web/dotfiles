@@ -11,7 +11,8 @@ local sources = {
 	-- webdev stuff
 	-- b.formatting.prettier,
 	b.formatting.prettier,
-	b.diagnostics.eslint,
+	b.code_actions.eslint_d,
+	-- b.diagnostics.editorconfig_checker,
 
 	-- Lua
 	b.formatting.stylua,
@@ -19,9 +20,6 @@ local sources = {
 	-- Shell
 	b.formatting.shfmt,
 	b.diagnostics.shellcheck.with({ diagnostics_format = "#{m} [#{c}]" }),
-
-	-- cpp
-	b.formatting.clang_format,
 }
 
 null_ls.setup({

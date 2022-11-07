@@ -2,25 +2,6 @@
 -- THe plugin name is github user or organization name/reponame
 
 return {
-	["goolord/alpha-nvim"] = {
-		disable = false,
-		cmd = "Alpha",
-		override_options = {
-			header = {
-				val = {
-					"           ▄ ▄                   ",
-					"       ▄   ▄▄▄     ▄ ▄▄▄ ▄ ▄     ",
-					"       █ ▄ █▄█ ▄▄▄ █ █▄█ █ █     ",
-					"    ▄▄ █▄█▄▄▄█ █▄█▄█▄▄█▄▄█ █     ",
-					"  ▄ █▄▄█ ▄ ▄▄ ▄█ ▄▄▄▄▄▄▄▄▄▄▄▄▄▄  ",
-					"  █▄▄▄▄ ▄▄▄ █ ▄ ▄▄▄ ▄ ▄▄▄ ▄ ▄ █ ▄ ",
-					"▄ █ █▄█ █▄█ █ █ █▄█ █ █▄█ ▄▄▄ █ █ ",
-					"█▄█ ▄ █▄▄█▄▄█ █ ▄▄█ █ ▄ █ █▄█▄█ █ ",
-					"    █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█ █▄█▄▄▄█     ",
-				},
-			},
-		},
-	},
 	["mg979/vim-visual-multi"] = {},
 	["kola-web/vim-indent-object"] = {},
 	["kana/vim-textobj-user"] = {},

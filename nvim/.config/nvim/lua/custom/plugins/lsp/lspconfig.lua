@@ -2,8 +2,8 @@ local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
 
 local lspconfig = require("lspconfig")
+
 local servers = {
-	"cssls",
 	"emmet_ls",
 	"html",
 	"tsserver",
@@ -22,9 +22,27 @@ for _, lsp in ipairs(servers) do
 	local opts = {
 		on_attach = on_attach,
 		capabilities = capabilities,
+		root_dir = vim.loop.cwd,
 	}
 
+	if servers == "sumneko_lua" then
+		opts.settings = {
+			Lua = {
+				diagnostics = {
+					globals = { "vim" },
+				},
+			},
+		}
+	end
+
+	if servers == "tsserver" then
+		opts.init_options = {
+			locale = "zh-CN",
+		}
+	end
+
 	if servers == "jsonls" then
+		opts.filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "php" }
 		opts.settings = {
 			json = {
 				schemas = vim.list_extend(

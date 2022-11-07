@@ -60,6 +60,7 @@ M["NvChad/ui"] = {
 
 M["williamboman/mason.nvim"] = {
 	ensure_installed = {
+    "editorconfig-checker",
 		-- lua stuff
 		"lua-language-server",
 		"stylua",
@@ -72,7 +73,6 @@ M["williamboman/mason.nvim"] = {
 		"emmet-ls",
 		"json-lsp",
 		"vue-language-server",
-		"vetur-vls",
 		"prettier",
 		"eslint_d",
 
@@ -89,6 +89,7 @@ M["williamboman/mason.nvim"] = {
 
 		--c
 		"sourcery",
+    "clang-format",
 
 		--markdown
 		"zk",
