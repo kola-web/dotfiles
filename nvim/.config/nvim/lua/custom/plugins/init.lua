@@ -95,4 +95,9 @@ return {
 			require("custom.plugins.hop")
 		end,
 	},
+	["windwp/nvim-spectre"] = {
+		config = function()
+			require("custom.plugins.spectre")
+		end,
+	},
 }

@@ -1,7 +1,5 @@
 local M = {}
 
-local icons = require("custom.icons")
-
 M["nvim-treesitter/nvim-treesitter"] = {
 	ensure_installed = {
 		"vim",
@@ -99,22 +97,30 @@ M["williamboman/mason.nvim"] = {
 	},
 }
 
-M["hrsh7th/nvim-cmp"] = {
-	sources = {
-		{ name = "luasnip" },
-		{ name = "nvim_lsp" },
-		{ name = "buffer" },
-		{ name = "nvim_lua" },
-		{ name = "path" },
-	},
-}
+-- M["hrsh7th/nvim-cmp"] = {
+-- 	sources = {
+-- 		{ name = "luasnip" },
+-- 		{ name = "nvim_lsp" },
+-- 		{ name = "buffer" },
+-- 		{ name = "nvim_lua" },
+-- 		{ name = "path" },
+-- 	},
+-- }
 
-M["goolord/alpha-nvim"] = {
-	after = "base46",
-	disable = false,
-	config = function()
-		require("plugins.configs.alpha")
-	end,
+M["lukas-reineke/indent-blankline.nvim"] = {
+	filetype_exclude = {
+		"help",
+		"terminal",
+		"alpha",
+		"packer",
+		"lspinfo",
+		"TelescopePrompt",
+		"TelescopeResults",
+		"nvchad_cheatsheet",
+		"lsp-installer",
+		"norg",
+		"",
+	},
 }
 
 return M

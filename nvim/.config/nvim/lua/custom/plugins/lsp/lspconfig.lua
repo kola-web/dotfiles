@@ -41,8 +41,16 @@ for _, lsp in ipairs(servers) do
 		}
 	end
 
+	if lsp == "emmet_ls" then
+		opts.filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "vue" }
+	end
+
+	if lsp == "volar" then
+		local volar = require("custom.plugins.lsp.volar")
+		opts = vim.tbl_deep_extend("force", volar, opts)
+	end
+
 	if lsp == "jsonls" then
-		opts.filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "php" }
 		opts.settings = {
 			json = {
 				schemas = vim.list_extend({
