@@ -2,6 +2,12 @@
 -- THe plugin name is github user or organization name/reponame
 
 return {
+	["goolord/alpha-nvim"] = {
+		disable = false,
+		config = function()
+			require("custom.plugins.alpha")
+		end,
+	},
 	["mg979/vim-visual-multi"] = {},
 	["kola-web/vim-indent-object"] = {},
 	["kana/vim-textobj-user"] = {},

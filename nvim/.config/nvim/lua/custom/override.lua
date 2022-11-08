@@ -60,7 +60,7 @@ M["NvChad/ui"] = {
 
 M["williamboman/mason.nvim"] = {
 	ensure_installed = {
-    "editorconfig-checker",
+		"editorconfig-checker",
 		-- lua stuff
 		"lua-language-server",
 		"stylua",
@@ -89,7 +89,7 @@ M["williamboman/mason.nvim"] = {
 
 		--c
 		"sourcery",
-    "clang-format",
+		"clang-format",
 
 		--markdown
 		"zk",
@@ -107,6 +107,14 @@ M["hrsh7th/nvim-cmp"] = {
 		{ name = "nvim_lua" },
 		{ name = "path" },
 	},
+}
+
+M["goolord/alpha-nvim"] = {
+	after = "base46",
+	disable = false,
+	config = function()
+		require("plugins.configs.alpha")
+	end,
 }
 
 return M
