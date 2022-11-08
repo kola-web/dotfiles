@@ -78,9 +78,7 @@ return {
 
 	-- Syntax
 	["fladson/vim-kitty"] = {},
-	["b0o/schemastore.nvim"] = {
-		after = "nvim-lspconfig",
-	},
+	["b0o/schemastore.nvim"] = {},
 
 	--markdwon
 	["iamcco/markdown-preview.nvim"] = {
