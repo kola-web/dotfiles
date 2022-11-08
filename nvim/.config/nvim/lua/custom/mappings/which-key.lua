@@ -195,6 +195,7 @@ local mappings = {
 		p = { "<cmd>lua vim.diagnostic.goto_prev()<cr>", "Prev Errors" },
 		r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
 		s = { "<cmd>lua Lspsaga signature_help()<cr>", "signature" },
+		t = { "<cmd>Telescope filetypes<cr>", "filetypes" },
 	},
 
 	s = {
