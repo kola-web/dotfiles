@@ -110,7 +110,9 @@ local mappings = {
 			"Buffers",
 		},
 		o = {
-			"<cmd>BufferLineCloseLeft<cr><cmd>BufferLineCloseRight<cr>",
+			function()
+				require("custom.mappings.buffers").close_other_bufs()
+			end,
 			"closeOtherBuffer",
 		},
 		j = { "<cmd>BufferLinePick<cr>", "Jump" },

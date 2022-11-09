@@ -12,6 +12,7 @@ M.disabled = {
 		["<leader>rn"] = "",
 		["<leader>uu"] = "",
 		["<leader>tt"] = "",
+		["<leader>b"] = "",
 		--tabufline
 		["<leader>tp"] = "",
 		["<leader>tn"] = "",
@@ -73,12 +74,16 @@ M.general = {
 		["<S-l>"] = { "$", "$" },
 		["<S-h>"] = { "^", "^" },
 		["("] = {
-			"<cmd>lua require('custom.mappings.buffers').move_buf_left()<cr>",
+			function()
+				require("custom.mappings.buffers").move_buf_left()
+			end,
 			"move_buf_left",
 			opts = { noremap = true },
 		},
 		[")"] = {
-			"<cmd>lua require('custom.mappings.buffers').move_buf_right()<cr>",
+			function()
+				require("custom.mappings.buffers").move_buf_right()
+			end,
 			"move_buf_left",
 			opts = { noremap = true },
 		},

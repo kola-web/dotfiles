@@ -96,6 +96,7 @@ return {
 		end,
 	},
 	["windwp/nvim-spectre"] = {
+		after = "nvim-web-devicons",
 		config = function()
 			require("custom.plugins.spectre")
 		end,

@@ -46,4 +46,13 @@ M.move_buf_right = function()
 	vim.cmd("redrawtabline")
 end
 
+M.close_other_bufs = function()
+	local bufs = vim.t.bufs
+	for _, buf in ipairs(bufs) do
+		if  vim.api.nvim_get_current_buf() ~= buf  then
+			require("nvchad_ui.tabufline").close_buffer(buf)
+		end
+	end
+end
+
 return M
