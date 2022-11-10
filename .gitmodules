@@ -7,3 +7,6 @@
 [submodule "iterm"]
 	path = iterm
 	url = git@github.com:catppuccin/iterm.git
+[submodule "ranger/.config/ranger/plugins/ranger-zoxide"]
+	path = ranger/.config/ranger/plugins/ranger-zoxide
+	url = git@github.com:jchook/ranger-zoxide.git
