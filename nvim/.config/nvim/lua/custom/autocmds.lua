@@ -14,3 +14,9 @@ vim.api.nvim_create_autocmd(
 	{ "BufRead", "BufNewFile" },
 	{ pattern = { "*.txt", "*.md", "*.tex" }, command = "setlocal spell" }
 )
+
+-- Turn off paste mode when leaving insert
+vim.api.nvim_create_autocmd("InsertLeave", {
+  pattern = '*',
+  command = "set nopaste"
+})

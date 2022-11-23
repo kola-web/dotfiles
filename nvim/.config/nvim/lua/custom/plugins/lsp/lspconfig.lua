@@ -4,7 +4,7 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require("lspconfig")
 
 local servers = {
-	"emmet_ls",
+	-- "emmet_ls",
 	"html",
 	"tsserver",
 	"jsonls",

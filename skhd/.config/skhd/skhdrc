@@ -1,14 +1,19 @@
 # remap keybind
-ctrl - n [
-  "微信" : skhd --key "down"
-  "Obsidian" : skhd --key "down"
-] 
-ctrl - p [
-  "微信" : skhd --key "up"
-  "Obsidian" : skhd --key "up"
-] 
+# ctrl - n [
+#   "微信" : skhd --key "down"
+#   "Obsidian" : skhd --key "down"
+# ] 
+# ctrl - p [
+#   "微信" : skhd --key "up"
+#   "Obsidian" : skhd --key "up"
+# ] 
 
-ctrl - g : skhd --key "escape"
+ctrl - p : skhd -k "up"
+ctrl - n : skhd -k "down"
+
+# ctrl - g : skhd --key "escape"
+# ctrl - return : skhd --key "escape"
+ctrl - 0x21 : skhd --key "escape"
 
 
 ## 关闭当前窗口
@@ -107,6 +112,7 @@ alt + shift - 5 : yabai -m window --space 5
 alt + shift - 0 : yabai -m space --balance
 
 alt + shift - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
+
 
 alt - left   : yabai -m window west --resize right:-40:0 2> /dev/null || yabai -m window --resize right:-40:0
 alt - down   : yabai -m window north --resize bottom:0:40 2> /dev/null || yabai -m window --resize bottom:0:40

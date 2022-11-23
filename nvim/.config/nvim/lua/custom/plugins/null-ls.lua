@@ -11,7 +11,9 @@ local sources = {
 	-- webdev stuff
 	-- b.formatting.prettier,
 	b.formatting.prettier,
-	b.code_actions.eslint_d,
+	b.code_actions.eslint_d.with({
+		diagnostics_format = "[eslint] #{m}\n(#{c})",
+	}),
 	-- b.diagnostics.editorconfig_checker,
 
 	-- Lua
@@ -26,5 +28,3 @@ null_ls.setup({
 	debug = true,
 	sources = sources,
 })
-
-

@@ -72,7 +72,7 @@ M["williamboman/mason.nvim"] = {
 		"json-lsp",
 		"vue-language-server",
 		"prettier",
-		"eslint_d",
+		"eslint",
 
 		-- shell
 		"bash-language-server",

@@ -1,9 +1,10 @@
 vim.opt.backup = false -- creates a backup file
 vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
-vim.opt.cmdheight = 2 -- more space in the neovim command line for displaying messages
+vim.opt.cmdheight = 1 -- more space in the neovim command line for displaying messages
 vim.opt.colorcolumn = "99999" -- fixes indentline for now
 vim.opt.completeopt = { "menuone", "noselect" }
 vim.opt.conceallevel = 0 -- so that `` is visible in markdown files
+vim.opt.showcmd = true -- so that `` is visible in markdown files
 vim.opt.fileencoding = "utf-8" -- the encoding written to a file
 vim.opt.foldmethod = "manual" -- folding set to "expr" for treesitter based folding
 vim.opt.foldexpr = "" -- set to "nvim_treesitter#foldexpr()" for treesitter based folding

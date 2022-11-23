@@ -71,12 +71,23 @@ M.disabled = {
 M.general = {
 	n = {
 		["<C-m>"] = { "<Ignore><Plug>(matchup-%)", "%" },
+		["<C-z>"] = { "<nop>", "nop" },
 		["<S-l>"] = { "$", "$" },
 		["<S-h>"] = { "^", "^" },
+		["x"] = { '"_x', "x" },
+		["+"] = { '<C-a>', "-" },
+		["-"] = { '<C-x>', "+" },
+		["]h"] = { '/<templacet<cr>', "jump tem" },
+		["]H"] = { '/</templacet<cr>', "jump tem end" },
+		["]s"] = { '/<script<cr>', "jump script" },
+		["]S"] = { '/</script<cr>', "jump script end" },
+		["]c"] = { '/<style<cr>', "jump style" },
+		["]C"] = { '/</style<cr>', "jump style end" },
 		["("] = {
 			function()
 				require("custom.mappings.buffers").move_buf_left()
 			end,
+			-- "<cmd>TbufLeft<cr>",
 			"move_buf_left",
 			opts = { noremap = true },
 		},
@@ -84,6 +95,7 @@ M.general = {
 			function()
 				require("custom.mappings.buffers").move_buf_right()
 			end,
+			-- "<cmd>TbufRight<cr>",
 			"move_buf_left",
 			opts = { noremap = true },
 		},

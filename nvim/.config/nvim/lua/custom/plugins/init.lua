@@ -32,6 +32,14 @@ return {
 			require("custom.plugins.null-ls")
 		end,
 	},
+	["williamboman/mason"] = {
+		config = function() end,
+	},
+	["williamboman/mason-lspconfig"] = {
+		config = function()
+			require("custom.plugins.mason")
+		end,
+	},
 	["neovim/nvim-lspconfig"] = {
 		config = function()
 			require("plugins.configs.lspconfig")

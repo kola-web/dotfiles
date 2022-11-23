@@ -3,23 +3,3 @@ function zsh_add_file() {
     [ -f "$ZDOTDIR/$1" ] && source "$ZDOTDIR/$1"
 }
 
-function start_proxy() {
-    export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
-
-    local proxy= http://127.0.0.1:41091
-    export http_proxy="$proxy" \
-           https_proxy=$proxy \
-           ftp_proxy=$proxy \
-           rsync_proxy=$proxy \
-           HTTP_PROXY=$proxy \
-           HTTPS_PROXY=$proxy \
-           FTP_PROXY=$proxy \
-           RSYNC_PROXY=$proxy
-}
-
-function statr_unproxy() {
-    unset http_proxy https_proxy ftp_proxy rsync_proxy \
-          HTTP_PROXY HTTPS_PROXY FTP_PROXY RSYNC_PROXY
-    echo -e "Proxy environment variable removed."
-}
-
