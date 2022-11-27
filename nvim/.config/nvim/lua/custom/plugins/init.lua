@@ -8,7 +8,6 @@ return {
 			require("custom.plugins.alpha")
 		end,
 	},
-	["mg979/vim-visual-multi"] = {},
 	["kola-web/vim-indent-object"] = {},
 	["kana/vim-textobj-user"] = {},
 	["whatyouhide/vim-textobj-xmlattr"] = {},
@@ -74,7 +73,6 @@ return {
 			require("custom.plugins.matchup")
 		end,
 	},
-	["terryma/vim-expand-region"] = {},
 
 	-- Syntax
 	["fladson/vim-kitty"] = {},

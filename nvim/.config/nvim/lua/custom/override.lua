@@ -35,6 +35,12 @@ M["kyazdani42/nvim-tree.lua"] = {
 	renderer = {
 		highlight_git = true,
 		icons = {
+			glyphs = {
+				folder = {
+					arrow_closed = "", -- arrow when folder is closed
+					arrow_open = "", -- arrow when folder is open
+				},
+			},
 			show = {
 				git = true,
 			},
@@ -99,15 +105,27 @@ M["williamboman/mason.nvim"] = {
 	},
 }
 
--- M["hrsh7th/nvim-cmp"] = {
--- 	sources = {
--- 		{ name = "luasnip" },
--- 		{ name = "nvim_lsp" },
--- 		{ name = "buffer" },
--- 		{ name = "nvim_lua" },
--- 		{ name = "path" },
--- 	},
--- }
+M["hrsh7th/nvim-cmp"] = {
+	sources = {
+		{
+			name = "nvim_lsp",
+			entry_filter = function(entry, ctx)
+				local kind = require("cmp.types").lsp.CompletionItemKind[entry:get_kind()]
+				if kind == "Snippet" and ctx.prev_context.filetype == "java" then
+					return false
+				end
+				if kind == "Text" then
+					return false
+				end
+				return true
+			end,
+		},
+		{ name = "path" },
+		{ name = "luasnip" },
+		{ name = "nvim_lua" },
+		{ name = "buffer" },
+	},
+}
 
 M["lukas-reineke/indent-blankline.nvim"] = {
 	filetype_exclude = {

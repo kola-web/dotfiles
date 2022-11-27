@@ -4,8 +4,9 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require("lspconfig")
 
 local servers = {
-	-- "emmet_ls",
+	"emmet_ls",
 	"html",
+	"cssls",
 	"tsserver",
 	"jsonls",
 	"sumneko_lua",
@@ -35,6 +36,20 @@ for _, lsp in ipairs(servers) do
 		}
 	end
 
+	if lsp == "cssls" then
+		opts.settings = {
+			css = {
+				validate = false,
+			},
+			less = {
+				validate = false,
+			},
+			scss = {
+				validate = false,
+			},
+		}
+	end
+
 	if lsp == "tsserver" then
 		opts.init_options = {
 			locale = "zh-CN",
@@ -42,7 +57,15 @@ for _, lsp in ipairs(servers) do
 	end
 
 	if lsp == "emmet_ls" then
-		opts.filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "vue" }
+		opts.filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less" }
+		opts.init_options = {
+			html = {
+				options = {
+					-- For possible options, see: https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
+					["bem.enabled"] = true,
+				},
+			},
+		}
 	end
 
 	if lsp == "volar" then
