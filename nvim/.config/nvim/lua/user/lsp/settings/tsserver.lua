@@ -1,0 +1,3 @@
+return {
+	locale = "zh-CN",
+}

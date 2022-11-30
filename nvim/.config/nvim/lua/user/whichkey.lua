@@ -79,43 +79,15 @@ local opts = {
 	nowait = true, -- use `nowait` when creating keymaps
 }
 
-local m_opts = {
-	mode = "n", -- NORMAL mode
-	prefix = "m",
-	buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
-	silent = true, -- use `silent` when creating keymaps
-	noremap = true, -- use `noremap` when creating keymaps
-	nowait = true, -- use `nowait` when creating keymaps
-}
-
-local m_mappings = {
-	a = { "<cmd>silent BookmarkAnnotate<cr>", "Annotate" },
-	c = { "<cmd>silent BookmarkClear<cr>", "Clear" },
-	b = { "<cmd>silent BookmarkToggle<cr>", "Toggle" },
-	m = { '<cmd>lua require("harpoon.mark").add_file()<cr>', "Harpoon" },
-	["."] = { '<cmd>lua require("harpoon.ui").nav_next()<cr>', "Harpoon Next" },
-	[","] = { '<cmd>lua require("harpoon.ui").nav_prev()<cr>', "Harpoon Prev" },
-	l = { "<cmd>lua require('user.bfs').open()<cr>", "Buffers" },
-	j = { "<cmd>silent BookmarkNext<cr>", "Next" },
-	s = { "<cmd>Telescope harpoon marks<cr>", "Search Files" },
-	k = { "<cmd>silent BookmarkPrev<cr>", "Prev" },
-	S = { "<cmd>silent BookmarkShowAll<cr>", "Prev" },
-	-- s = {
-	--   "<cmd>lua require('telescope').extensions.vim_bookmarks.all({ hide_filename=false, prompt_title=\"bookmarks\", shorten_path=false })<cr>",
-	--   "Show",
-	-- },
-	x = { "<cmd>BookmarkClearAll<cr>", "Clear All" },
-	[";"] = { '<cmd>lua require("harpoon.ui").toggle_quick_menu()<cr>', "Harpoon UI" },
-}
-
 local mappings = {
 	a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Action" },
 	b = { "<cmd>Telescope buffers<cr>", "Buffers" },
 	e = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-	v = { "<cmd>vsplit<cr>", "vsplit" },
-	h = { "<cmd>split<cr>", "split" },
+	-- v = { "<cmd>vsplit<cr>", "vsplit" },
+	-- h = { "<cmd>split<cr>", "split" },
 	w = { "<cmd>w<CR>", "Write" },
 	-- h = { "<cmd>nohlsearch<CR>", "No HL" },
+	["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
 	q = { '<cmd>lua require("user.functions").smart_quit()<CR>', "Quit" },
 	["/"] = { '<cmd>lua require("Comment.api").toggle.linewise.current()<CR>', "Comment" },
 	c = { "<cmd>Bdelete!<CR>", "Close Buffer" },
@@ -352,6 +324,21 @@ local mappings = {
 	-- },
 }
 
+local ga_mappings = {
+	["u"] = { "<cmd>lua require('textcase').current_word('to_upper_case')<CR>", "to_upper_case" },
+	["l"] = { "<cmd>lua require('textcase').current_word('to_lower_case')<CR>", "to_lower_case" },
+	["s"] = { "<cmd>lua require('textcase').current_word('to_snake_case')<CR>", "to_snake_case" },
+	["d"] = { "<cmd>lua require('textcase').current_word('to_dash_case')<CR>", "to_dash_case" },
+	["n"] = { "<cmd>lua require('textcase').current_word('to_constant_case')<CR>", "to_constant_case" },
+	["."] = { "<cmd>lua require('textcase').current_word('to_dot_case')<CR>", "to_dot_case" },
+	["a"] = { "<cmd>lua require('textcase').current_word('to_phrase_case')<CR>", "to_phrase_case" },
+	["c"] = { "<cmd>lua require('textcase').current_word('to_camel_case')<CR>", "to_camel_case" },
+	["p"] = { "<cmd>lua require('textcase').current_word('to_pascal_case')<CR>", "to_pascal_case" },
+	["t"] = { "<cmd>lua require('textcase').current_word('to_title_case')<CR>", "to_title_case" },
+	["f"] = { "<cmd>lua require('textcase').current_word('to_path_case')<CR>", "to_path_case" },
+	["o"] = { "<cmd>TextCaseOpenTelescope<CR>", "to_path_case" },
+}
+
 local vopts = {
 	mode = "v", -- VISUAL mode
 	prefix = "<leader>",
@@ -366,7 +353,26 @@ local vmappings = {
 	-- z = { "<cmd>TZNarrow<cr>", "Narrow" },
 }
 
+local ga_opts = {
+	mode = "n", -- NORMAL mode
+	prefix = "ga",
+	buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+	silent = true, -- use `silent` when creating keymaps
+	noremap = true, -- use `noremap` when creating keymaps
+	nowait = true, -- use `nowait` when creating keymaps
+}
+
+local vga_opts = {
+	mode = "v", -- NORMAL mode
+	prefix = "ga",
+	buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+	silent = true, -- use `silent` when creating keymaps
+	noremap = true, -- use `noremap` when creating keymaps
+	nowait = true, -- use `nowait` when creating keymaps
+}
+
 which_key.setup(setup)
 which_key.register(mappings, opts)
 which_key.register(vmappings, vopts)
-which_key.register(m_mappings, m_opts)
+which_key.register(ga_mappings, ga_opts)
+which_key.register(ga_mappings, vga_opts)

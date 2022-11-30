@@ -71,6 +71,7 @@ return packer.startup(function(use)
 	use("tpope/vim-surround")
 	use("gbprod/substitute.nvim")
 	use("aserowy/tmux.nvim")
+	use("johmsalas/text-case.nvim")
 
 	-- Colorschemes
 	use({ "folke/tokyonight.nvim" })
@@ -95,7 +96,8 @@ return packer.startup(function(use)
 	use({ "williamboman/mason-lspconfig.nvim" })
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- for formatters and linters
 	use({ "RRethy/vim-illuminate" })
-
+	use({ "windwp/nvim-ts-autotag" })
+	use({ "b0o/schemastore.nvim" })
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim" })
 
@@ -111,6 +113,9 @@ return packer.startup(function(use)
 	use({ "mfussenegger/nvim-dap" })
 	use({ "rcarriga/nvim-dap-ui" })
 	use({ "ravenxrz/DAPInstall.nvim" })
+
+	--mark
+	use({ "chentoast/marks.nvim" })
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

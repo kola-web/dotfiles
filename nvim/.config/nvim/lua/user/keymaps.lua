@@ -50,6 +50,12 @@ keymap("i", "jk", "<ESC>", opts)
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
+-- Lua
+keymap("n", "s", "<cmd>lua require('substitute').operator()<cr>", { noremap = true })
+keymap("n", "ss", "<cmd>lua require('substitute').line()<cr>", { noremap = true })
+keymap("n", "S", "<cmd>lua require('substitute').eol()<cr>", { noremap = true })
+keymap("x", "s", "<cmd>lua require('substitute').visual()<cr>", { noremap = true })
+
 -- Plugins --
 
 -- NvimTree
