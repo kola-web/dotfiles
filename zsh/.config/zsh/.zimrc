@@ -1,4 +1,4 @@
-# zmodule sukkaw/zsh-proxy
+zmodule sukkaw/zsh-proxy
 zmodule Aloxaf/fzf-tab
 zmodule zsh-users/zsh-completions --fpath src
 zmodule zsh-users/zsh-syntax-highlighting

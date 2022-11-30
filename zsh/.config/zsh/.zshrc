@@ -23,7 +23,7 @@ setopt HIST_VERIFY               # Do not execute immediately upon history expan
 # Useful Functions
 source "$ZDOTDIR/zsh-functions"
 
-proxy
+#proxy
 
 zsh_add_file "zsh-exports"
 zsh_add_file "zsh-zimfw"

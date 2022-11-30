@@ -3,15 +3,15 @@ function zsh_add_file() {
 	[ -f "$ZDOTDIR/$1" ] && source "$ZDOTDIR/$1"
 }
 
-function proxy() {
-    export ALL_PROXY=socks5://127.0.0.1:1090
-    export all_proxy=$ALL_PROXY
-    export {http,https,ftp}_proxy=http://127.0.0.1:41091
-    export {HTTP,HTTPS,FTP}_PROXY=https://127.0.0.1:41091
-}
-function unproxy() {
-    unset {http,https,ftp}_proxy
-    unset {HTTP,HTTPS,FTP}_PROXY
-    unset ALL_PROXY
-    unset all_proxy
-}
+# function proxy() {
+#     export ALL_PROXY=socks5://127.0.0.1:1090
+#     export all_proxy=$ALL_PROXY
+#     export {http,https,ftp}_proxy=http://127.0.0.1:41091
+#     export {HTTP,HTTPS,FTP}_PROXY=https://127.0.0.1:41091
+# }
+# function unproxy() {
+#     unset {http,https,ftp}_proxy
+#     unset {HTTP,HTTPS,FTP}_PROXY
+#     unset ALL_PROXY
+#     unset all_proxy
+# }
