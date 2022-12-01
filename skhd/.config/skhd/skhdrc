@@ -1,15 +1,15 @@
 # remap keybind
-# ctrl - n [
-#   "微信" : skhd --key "down"
-#   "Obsidian" : skhd --key "down"
-# ] 
-# ctrl - p [
-#   "微信" : skhd --key "up"
-#   "Obsidian" : skhd --key "up"
-# ] 
+ctrl - n [
+  "微信" : skhd --key "down"
+  "Obsidian" : skhd --key "down"
+] 
+ctrl - p [
+  "微信" : skhd --key "up"
+  "Obsidian" : skhd --key "up"
+] 
 
-ctrl - p : skhd -k "up"
-ctrl - n : skhd -k "down"
+# ctrl - p : skhd -k "up"
+# ctrl - n : skhd -k "down"
 
 # ctrl - g : skhd --key "escape"
 # ctrl - return : skhd --key "escape"

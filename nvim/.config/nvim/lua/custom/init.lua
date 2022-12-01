@@ -3,8 +3,6 @@ require("custom.filetype")
 require("custom.transparent")
 require("custom.autocmds")
 
--- vim.g.luasnippets_path = "~/.config/nvim/lua/custom/snippets"
-
 local has = function(x)
 	return vim.fn.has(x) == 1
 end
@@ -17,5 +15,5 @@ local is_linux = has("linux")
 if is_linux then
 	require("custom.linux")
 elseif is_mac then
-	vim.g.luasnippets_path = "/Users/lijialin/Library/Application Support/Code/User/snippets/"
+	vim.g.luasnippets_path = "~/.config/nvim/lua/custom/snippets"
 end
