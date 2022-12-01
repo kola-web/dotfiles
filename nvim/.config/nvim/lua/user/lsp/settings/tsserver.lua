@@ -1,3 +1,0 @@
-return {
-	locale = "zh-CN",
-}
