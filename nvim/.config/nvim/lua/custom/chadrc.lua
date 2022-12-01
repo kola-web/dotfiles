@@ -18,6 +18,7 @@ M.plugins = {
 	remove = {
 		"NvChad/nvterm",
 		"folke/which-key.nvim",
+		"williamboman/mason.nvim",
 	},
 }
 

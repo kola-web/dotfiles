@@ -31,12 +31,15 @@ return {
 			require("custom.plugins.null-ls")
 		end,
 	},
-	["neovim/nvim-lspconfig"] = {
+	["williamboman/mason.nvim"] = {},
+  ["jayp0521/mason-null-ls.nvim"] = {},
+	["williamboman/mason-lspconfig.nvim"] = {
+		after = "nvim-lspconfig",
 		config = function()
-			require("plugins.configs.lspconfig")
-			require("custom.plugins.lsp.lspconfig")
+			require("custom.plugins.lsp.mason")
 		end,
 	},
+
 	["folke/which-key.nvim"] = {
 		module = "which-key",
 		disable = false,

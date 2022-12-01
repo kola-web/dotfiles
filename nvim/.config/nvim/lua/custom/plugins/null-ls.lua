@@ -10,6 +10,7 @@ local sources = {
 
 	-- webdev stuff
 	-- b.formatting.prettier,
+	b.diagnostics.editorconfig_checker,
 	b.formatting.prettier,
 	b.code_actions.eslint.with({
 		diagnostics_format = "[eslint] #{m}\n(#{c})",

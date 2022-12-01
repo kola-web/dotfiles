@@ -64,44 +64,19 @@ M["NvChad/ui"] = {
 
 M["williamboman/mason.nvim"] = {
 	ensure_installed = {
-		"editorconfig-checker",
-		-- lua stuff
-		"lua-language-server",
+		-- "editorconfig-checker",
 		"stylua",
-
-		-- web dev
-		"css-lsp",
-		"html-lsp",
-		"typescript-language-server",
-		"deno",
-		"emmet-ls",
-		"json-lsp",
-		"vue-language-server",
 		"prettier",
-		"prettierd",
 		"eslint",
-		"eslint_d",
 
 		-- shell
-		"bash-language-server",
 		"shfmt",
 		"shellcheck",
 
-		--yaml
-		"yaml-language-server",
-
-		--docker
-		"dockerfile-language-server",
-
-		--c
-		"sourcery",
 		"clang-format",
 
 		--markdown
 		"zk",
-
-		--php
-		"intelephense",
 	},
 }
 
