@@ -15,5 +15,7 @@ local is_linux = has("linux")
 if is_linux then
 	require("custom.linux")
 elseif is_mac then
-	vim.g.luasnippets_path = "~/.config/nvim/lua/custom/snippets"
+	-- vim.g.luasnippets_path = "~/Library/Application Support/Code/User/snippets"
+	vim.g.luasnippets_path = "~/.config/nvim/custom/snippets/package.json"
 end
+
