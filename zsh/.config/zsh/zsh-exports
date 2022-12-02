@@ -12,6 +12,7 @@ Darwin)
 	;;
 
 Linux)
+	export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 	;;
 
 CYGWIN* | MINGW32* | MSYS* | MINGW*)
