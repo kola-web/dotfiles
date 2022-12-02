@@ -17,7 +17,7 @@ Linux)
 		export {http,https,ftp}_proxy=$all_proxy
 		export {HTTP,HTTPS,FTP}_PROXY=$all_proxy
 	}
-	function unproxy() {
+	function noproxy() {
 		unset {http,https,ftp}_proxy
 		unset {HTTP,HTTPS,FTP}_PROXY
 		unset ALL_PROXY

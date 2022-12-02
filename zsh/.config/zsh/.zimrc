@@ -1,3 +1,5 @@
+#!/bin/sh
+
 zmodule Aloxaf/fzf-tab
 zmodule zsh-users/zsh-completions --fpath src
 zmodule zsh-users/zsh-syntax-highlighting
@@ -8,10 +10,10 @@ case "$(uname -s)" in
 
 Darwin)
 	# echo 'Mac OS X'
+  zmodule sukkaw/zsh-proxy
 	;;
 
 Linux)
-  zmodule sukkaw/zsh-proxy
 	;;
 
 CYGWIN* | MINGW32* | MSYS* | MINGW*)
