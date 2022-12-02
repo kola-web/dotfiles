@@ -32,7 +32,7 @@ return {
 		end,
 	},
 	["williamboman/mason.nvim"] = {},
-  ["jayp0521/mason-null-ls.nvim"] = {},
+	["jayp0521/mason-null-ls.nvim"] = {},
 	["williamboman/mason-lspconfig.nvim"] = {
 		after = "nvim-lspconfig",
 		config = function()
