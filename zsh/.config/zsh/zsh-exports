@@ -12,7 +12,6 @@ Darwin)
 	;;
 
 Linux)
-	# alias ls='ls --color=auto'
 	;;
 
 CYGWIN* | MINGW32* | MSYS* | MINGW*)

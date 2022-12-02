@@ -1,6 +1,23 @@
-zmodule sukkaw/zsh-proxy
 zmodule Aloxaf/fzf-tab
 zmodule zsh-users/zsh-completions --fpath src
 zmodule zsh-users/zsh-syntax-highlighting
 zmodule zsh-users/zsh-autosuggestions
 zmodule jeffreytse/zsh-vi-mode
+
+case "$(uname -s)" in
+
+Darwin)
+	# echo 'Mac OS X'
+	;;
+
+Linux)
+  zmodule sukkaw/zsh-proxy
+	;;
+
+CYGWIN* | MINGW32* | MSYS* | MINGW*)
+	# echo 'MS Windows'
+	;;
+*)
+	# echo 'Other OS'
+	;;
+esac
