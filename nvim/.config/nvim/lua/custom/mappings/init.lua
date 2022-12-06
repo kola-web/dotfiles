@@ -70,12 +70,6 @@ M.disabled = {
 
 M.general = {
 	n = {
-		["<C-m>"] = { "<Ignore><Plug>(matchup-%)", "%" },
-		["<C-z>"] = { "<nop>", "nop" },
-		["<S-l>"] = { "$", "$" },
-		["<S-h>"] = { "^", "^" },
-		["+"] = { '<C-a>', "+" },
-		["-"] = { '<C-x>', "-" },
 		["]h"] = { '/<templacet<cr>', "jump tem" },
 		["]H"] = { '/</templacet<cr>', "jump tem end" },
 		["]s"] = { '/<script<cr>', "jump script" },
