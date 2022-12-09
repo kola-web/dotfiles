@@ -10,20 +10,20 @@ Darwin)
 	;;
 
 Linux)
-	function proxy() {
-		export windows_host=`cat /etc/resolv.conf|grep nameserver|awk '{print $2}'`
-		export ALL_PROXY=socks5://$windows_host:1090
-		export all_proxy=$ALL_PROXY
-		export {http,https,ftp}_proxy=$all_proxy
-		export {HTTP,HTTPS,FTP}_PROXY=$all_proxy
-	}
-	function noproxy() {
-		unset {http,https,ftp}_proxy
-		unset {HTTP,HTTPS,FTP}_PROXY
-		unset ALL_PROXY
-		unset all_proxy
-	}
-	proxy
+	# function proxy() {
+	# 	export windows_host=`cat /etc/resolv.conf|grep nameserver|awk '{print $2}'`
+	# 	export ALL_PROXY=socks5://$windows_host:1090
+	# 	export all_proxy=$ALL_PROXY
+	# 	export {http,https,ftp}_proxy=$all_proxy
+	# 	export {HTTP,HTTPS,FTP}_PROXY=$all_proxy
+	# }
+	# function noproxy() {
+	# 	unset {http,https,ftp}_proxy
+	# 	unset {HTTP,HTTPS,FTP}_PROXY
+	# 	unset ALL_PROXY
+	# 	unset all_proxy
+	# }
+	# proxy
 	;;
 
 CYGWIN* | MINGW32* | MSYS* | MINGW*)

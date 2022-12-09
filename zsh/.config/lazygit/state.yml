@@ -1,6 +1,7 @@
 lastupdatecheck: 0
 recentrepos:
 - /home/kola/dotfiles
+- /home/kola/suckless/dwm
 startuppopupversion: 5
 customcommandshistory: []
 hidecommandlog: false

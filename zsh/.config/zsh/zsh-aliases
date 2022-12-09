@@ -66,9 +66,7 @@ Darwin)
 
 Linux)
 	# alias ls='ls --color=auto'
-	alias open='explorer.exe'
-	alias win='cd /mnt/c/Users/l1556/'
-	alias project='cd /mnt/c/Users/l1556/project/'
+	alias open='nautilus'
 	;;
 
 CYGWIN* | MINGW32* | MSYS* | MINGW*)
