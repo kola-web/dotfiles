@@ -32,8 +32,8 @@ alt - return : open -na /Applications/Alacritty.app/Contents/MacOS/alacritty
 f1 : /Applications/Alacritty.app/Contents/MacOS/alacritty --working-directory ~/note -e nvim 
 
 ##全屏
-alt - z : yabai -m window --toggle zoom-fullscreen; sketchybar --trigger window_focus
-alt + shift - z : yabai -m window --toggle native-fullscreen; sketchybar --trigger window_focus
+alt - z : yabai -m window --toggle zoom-fullscreen
+alt + shift - z : yabai -m window --toggle zoom-parent
 
 ## 切换窗口布局
 alt - s : yabai -m space --layout stack

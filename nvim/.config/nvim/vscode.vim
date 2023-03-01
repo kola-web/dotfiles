@@ -52,11 +52,13 @@ noremap <C-m> :vsc workbench.action.minimizeOtherEditors<CR>
 noremap gB :vsc selectAllSearchEditorMatches<CR>
 noremap ga :vsc extension.alignTokens<CR>
 " 打开侧边定义
-noremap gi :vsc editor.action.goToImplementation<CR>
+noremap gI :vsc editor.action.goToImplementation<CR>
 noremap gd :vsc editor.action.goToDeclaration<CR>
 noremap gD :vsc editor.action.revealDefinitionAside<CR>
 noremap gp :vsc references-view.showSupertypes<CR>
 " noremap gr :vsc editor.action.goToReferences<CR>
+noremap gi :vsc references-view.showIncomingCalls<CR>
+noremap go :vsc references-view.showOutgoingCalls<CR>
 
 noremap B :enew<cr>
 
