@@ -10,7 +10,8 @@
 # to the user's home directory starting with `~/`.
 import:
   # - /path/to/alacritty.yml
-  - ~/.config/alacritty/catppuccin/catppuccin-frappe.yml
+  # - ~/.config/alacritty/catppuccin-macchiato.yml
+  - ~/.config/alacritty/solarized-dark.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -304,7 +305,7 @@ font:
 #  white:   '#eaeaea'
 
 # Dim colors
-#
+# 
 # If the dim colors are not set, they will be calculated automatically based
 # on the `normal` colors.
 #dim:

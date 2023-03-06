@@ -29,7 +29,11 @@ alt + shift - e :  cd ~ && kitty -e ranger
 alt - return : open -na /Applications/Alacritty.app/Contents/MacOS/alacritty
 # alt - return : open -na /Applications/kitty.app/Contents/MacOS/kitty
 # alt + shift - return : /Applications/Alacritty.app/Contents/MacOS/alacritty -e tmux
-f1 : /Applications/Alacritty.app/Contents/MacOS/alacritty --working-directory ~/note -e nvim 
+
+f1 : yabai -m space --focus 5 ; /Applications/Alacritty.app/Contents/MacOS/alacritty --working-directory ~/note -e nvim 
+
+# '
+# cmd + shift - 0x27 :  ~/.config/skhd/trans.sh
 
 ##全屏
 alt - z : yabai -m window --toggle zoom-fullscreen
@@ -37,7 +41,7 @@ alt + shift - z : yabai -m window --toggle zoom-parent
 
 ## 切换窗口布局
 alt - s : yabai -m space --layout stack
-alt - t : yabai -m space --layout bsp
+alt - t : yabai -m space --layout bsinstallp
 alt - f : yabai -m space --layout float; sketchybar --trigger window_focus
 
 alt - o : yabai -m space --toggle padding; yabai -m space --toggle gap
