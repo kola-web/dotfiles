@@ -28,7 +28,7 @@ yabai -m config window_origin_display focused
 
 # general space settings
 yabai -m config layout bsp
-yabai -m config top_padding $gap
+yabai -m config top_padding 50
 yabai -m config bottom_padding $gap
 yabai -m config left_padding $gap
 yabai -m config right_padding $gap
@@ -74,5 +74,9 @@ yabai -m rule --add app="^预览$" layer=normal manage=off grid=$grid
 yabai -m rule --add app="^WebStorm$" manage=off
 yabai -m rule --add app="^WebStorm$" title="( – )" manage=onj
 yabai -m rule --add app="^Snipaste$" manage=off
+
+yabai -m signal --add event=window_focused action="sketchybar --trigger window_focus"
+yabai -m signal --add event=window_created action="sketchybar --trigger windows_on_spaces"
+yabai -m signal --add event=window_destroyed action="sketchybar --trigger windows_on_spaces"
 
 echo "yabai configuration loaded.."
