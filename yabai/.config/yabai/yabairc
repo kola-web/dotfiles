@@ -7,41 +7,52 @@
 #    ██║         ██║  ██║      ██████╔╝      ██║  ██║      ██║
 #    ╚═╝         ╚═╝  ╚═╝      ╚═════╝       ╚═╝  ╚═╝      ╚═╝
 
-# necessary to load scripting-addition during startup on macOS Big Sur
-# *yabai --load-sa* is configured to run through sudo without a password
+# Unload the macOS WindowManager process
+launchctl unload -F /System/Library/LaunchAgents/com.apple.WindowManager.plist >/dev/null 2>&1 &
+
 sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
-yabai -m signal --add event=window_focused action="sketchybar --trigger window_focus"
+
+yabai -m signal --add event=mission_control_exit action='echo "refresh" | nc -U /tmp/yabai-indicator.socket'
+yabai -m signal --add event=display_added action='echo "refresh" | nc -U /tmp/yabai-indicator.socket'
+yabai -m signal --add event=display_removed action='echo "refresh" | nc -U /tmp/yabai-indicator.socket'
+yabai -m signal --add event=window_created action='echo "refresh windows" | nc -U /tmp/yabai-indicator.socket'
+yabai -m signal --add event=window_destroyed action='echo "refresh windows" | nc -U /tmp/yabai-indicator.socket'
+yabai -m signal --add event=window_focused action='echo "refresh windows" | nc -U /tmp/yabai-indicator.socket'
+yabai -m signal --add event=window_moved action='echo "refresh windows" | nc -U /tmp/yabai-indicator.socket'
+yabai -m signal --add event=window_resized action='echo "refresh windows" | nc -U /tmp/yabai-indicator.socket'
+yabai -m signal --add event=window_minimized action='echo "refresh windows" | nc -U /tmp/yabai-indicator.socket'
+yabai -m signal --add event=window_deminimized action='echo "refresh windows" | nc -U /tmp/yabai-indicator.socket'
 
 gap=12
 grid=24:24:2:2:20:20
 
 # global settings
-# yabai -m config external_bar all:32:0
+# yabai -m config external_bar all:40:0
 yabai -m config external_bar all:0:0
 yabai -m config mouse_modifier ctrl
 yabai -m config window_topmost off
-yabai -m config window_shadow off
+yabai -m config window_shadow float
 
 yabai -m config window_placement second_child
 yabai -m config window_origin_display focused
 
 # general space settings
 yabai -m config layout bsp
-yabai -m config top_padding 50
+yabai -m config top_padding $gap
 yabai -m config bottom_padding $gap
 yabai -m config left_padding $gap
 yabai -m config right_padding $gap
 yabai -m config window_gap $gap
 
-yabai -m config window_border off
-yabai -m config window_border_hidpi on
-yabai -m config window_border_blur on
-yabai -m config window_border_radius 10
-yabai -m config window_border_width 5
-yabai -m config active_window_border_color 0xff775759
-yabai -m config normal_window_border_color 0xff555555
-yabai -m config insert_feedback_color 0xffd75f5f
+yabai -m config window_border on
+yabai -m config window_border_hidpi off
+yabai -m config window_border_blur off
+yabai -m config window_border_radius 11
+yabai -m config window_border_width 2
+yabai -m config active_window_border_color 0xffe1e3e4
+yabai -m config normal_window_border_color 0xff494d64
+yabai -m config insert_feedback_color 0xff9dd274
 
 # yabai -m config --space Code layout stack
 yabai -m config --space 3 layout stack
@@ -55,18 +66,11 @@ yabai -m rule --add app="^webstorm$" layer=normal space=2
 
 yabai -m rule --add app="^微信开发者工具$" space=3
 
-yabai -m rule --add app="^企业微信$" space=4 layer=normal manage=off grid=$grid
-yabai -m rule --add app="^网易云音乐$" space=4 layer=normal manage=off grid=$grid
-yabai -m rule --add app="^喜马拉雅$" space=4 layer=normal manage=off grid=$grid
-yabai -m rule --add app="^QQ$" space=4 layer=normal manage=off grid=$grid
-yabai -m rule --add app="^QQ音乐$" space=4 layer=normal manage=off grid=$grid
-yabai -m rule --add app="^微信$" space=4 layer=normal manage=off grid=$grid
-yabai -m rule --add app="^Listen1$" space=4 layer=normal manage=off grid=$grid
+yabai -m rule --add app="^(企业微信|网易云音乐|喜马拉雅|QQ|QQ音乐|微信|Listen1)$" space=4 layer=normal manage=off grid=$grid
 
 yabai -m rule --add app="^访达$" manage=off grid=$grid border=off
 yabai -m rule --add app="^系统偏好设置$" manage=off layer=normal sticky=on grid=$grid
 yabai -m rule --add app="^mpv$" manage=off layer=normal sticky=on grid=3:1:2:0:3:1
-yabai -m rule --add app="^Panda$" manage=off
 yabai -m rule --add app="^Rime$" manage=off
 
 yabai -m rule --add app="^预览$" layer=normal manage=off grid=$grid
@@ -74,9 +78,5 @@ yabai -m rule --add app="^预览$" layer=normal manage=off grid=$grid
 yabai -m rule --add app="^WebStorm$" manage=off
 yabai -m rule --add app="^WebStorm$" title="( – )" manage=onj
 yabai -m rule --add app="^Snipaste$" manage=off
-
-yabai -m signal --add event=window_focused action="sketchybar --trigger window_focus"
-yabai -m signal --add event=window_created action="sketchybar --trigger windows_on_spaces"
-yabai -m signal --add event=window_destroyed action="sketchybar --trigger windows_on_spaces"
 
 echo "yabai configuration loaded.."
