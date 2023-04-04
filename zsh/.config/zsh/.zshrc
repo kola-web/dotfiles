@@ -45,3 +45,5 @@ zsh_add_file "scripts/completion.zsh"
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
