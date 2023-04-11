@@ -23,7 +23,6 @@ CYGWIN* | MINGW32* | MSYS* | MINGW*)
 	;;
 esac
 
-
 # HISTFILE="$XDG_DATA_HOME"/zsh/history
 export PATH="$HOME/.local/bin":$PATH
 export PATH="$HOME/.local/share/neovim/bin":$PATH

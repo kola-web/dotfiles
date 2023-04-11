@@ -10,15 +10,17 @@
 # to the user's home directory starting with `~/`.
 import:
   # - /path/to/alacritty.yml
-  - ~/.config/alacritty/catppuccin-macchiato.yml
+  - ~/.config/alacritty/gruvbox-material.yml
+  # - ~/.config/alacritty/catppuccin-macchiato.yml
+  # - ~/.config/alacritty/kanagawa.yml
   # - ~/.config/alacritty/catppuccin-latte.yml
   # - ~/.config/alacritty/solarized-dark.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty itself.
-env:
-  TERM: alacritty
+# env:
+#   TERM: alacritty
 
 # This value is used to set the `$TERM` environment variable for
 # each instance of Alacritty. If it is not present, alacritty will
@@ -51,7 +53,7 @@ window:
     y: 10
 
   # Spread additional padding evenly around the terminal content.
-  dynamic_padding: false
+  dynamic_padding: true
 
   # Window decorations
   #
@@ -98,6 +100,17 @@ window:
   # the default theme variant.
   #decorations_theme_variant: None
 
+  # Resize increments
+  #
+  # Prefer resizing window by discrete steps equal to cell dimensions.
+  resize_increments: true
+
+  # Make `Option` key behave as `Alt` (macOS only):
+  #   - OnlyLeft
+  #   - OnlyRight
+  #   - Both
+  #   - None (default)
+  #option_as_alt: None
 #scrolling:
 # Maximum number of lines in the scrollback buffer.
 # Specifying '0' will disable scrolling.
@@ -146,7 +159,7 @@ font:
   # The `style` can be specified to pick a specific face.
   #style: Bold Italic
   # Point size
-  size: 14.0
+  size: 15.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -712,7 +725,6 @@ key_bindings:
   # tmux
   - { key: T, mods: Command, chars: "\x02c" }
   - { key: W, mods: Command, chars: "\x02x" }
-  - { key: L, mods: Command, chars: "\x02\f\n" }
   - { key: D, mods: Command, chars: "\x02%" }
   - { key: D, mods: Command|Shift, chars: "\x02\"" }
   - { key: U, mods: Command, chars: "\x02u" }
@@ -728,7 +740,6 @@ key_bindings:
 
   - { key: T, mods: Alt, chars: "\x02c" }
   - { key: W, mods: Alt, chars: "\x02x" }
-  - { key: L, mods: Alt, chars: "\x02\f\n" }
   - { key: D, mods: Alt, chars: "\x02%" }
   - { key: D, mods: Alt|Shift, chars: "\x02\"" }
   - { key: U, mods: Alt, chars: "\x02u" }
