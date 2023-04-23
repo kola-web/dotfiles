@@ -19,14 +19,15 @@ import:
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty itself.
-# env:
-#   TERM: alacritty
-
+env:
+# TERM variable
+#
 # This value is used to set the `$TERM` environment variable for
 # each instance of Alacritty. If it is not present, alacritty will
 # check the local terminfo database and use `alacritty` if it is
 # available, otherwise `xterm-256color` is used.
-#TERM: alacritty
+  TERM: alacritty
+
 window:
   # Window dimensions (changes require restart)
   #
@@ -37,6 +38,7 @@ window:
   #dimensions:
   #  columns: 0
   #  lines: 0
+
   # Window position (changes require restart)
   #
   # Specified in number of pixels.
@@ -44,6 +46,7 @@ window:
   #position:
   #  x: 0
   #  y: 0
+
   # Window padding (changes require restart)
   #
   # Blank space added around the window in pixels. This padding is scaled
@@ -53,7 +56,7 @@ window:
     y: 10
 
   # Spread additional padding evenly around the terminal content.
-  dynamic_padding: true
+  #dynamic_padding: false
 
   # Window decorations
   #
@@ -82,22 +85,25 @@ window:
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
   #startup_mode: Windowed
+
   # Window title
-  title: Alacritty
+  #title: Alacritty
 
   # Allow terminal applications to change Alacritty's window title.
-  dynamic_title: true
+  #dynamic_title: true
+
   # Window class (Linux/BSD only):
   #class:
   # Application instance name
   #instance: Alacritty
   # General application class
   #general: Alacritty
-  # Decorations theme variant (Linux/BSD only)
+
+  # Decorations theme variant
   #
-  # Override the variant of the GTK theme/Wayland client side decorations.
-  # Commonly supported values are `dark` and `light`. Set this to `None` to use
-  # the default theme variant.
+  # Override the variant of the System theme/GTK theme/Wayland client side
+  # decorations. Commonly supported values are `Dark`, `Light`, and `None` for
+  # auto pick-up. Set this to `None` to use the default theme variant.
   #decorations_theme_variant: None
 
   # Resize increments
@@ -111,12 +117,15 @@ window:
   #   - Both
   #   - None (default)
   #option_as_alt: None
+
 #scrolling:
 # Maximum number of lines in the scrollback buffer.
 # Specifying '0' will disable scrolling.
 #history: 10000
+
 # Scrolling distance multiplier.
 #multiplier: 3
+
 # Font configuration
 font:
   # Normal (roman) font face
@@ -128,6 +137,7 @@ font:
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
     family: FiraCode Nerd Font
+
     # The `style` can be specified to pick a specific face.
     #style: Regular
 
@@ -138,8 +148,10 @@ font:
   # If the bold family is not specified, it will fall back to the
   # value specified for the normal font.
   #family: monospace
+
   # The `style` can be specified to pick a specific face.
   #style: Bold
+
   # Italic font face
   #italic:
   # Font family
@@ -147,8 +159,10 @@ font:
   # If the italic family is not specified, it will fall back to the
   # value specified for the normal font.
   #family: monospace
+
   # The `style` can be specified to pick a specific face.
   #style: Italic
+
   # Bold italic font face
   #bold_italic:
   # Font family
@@ -156,8 +170,10 @@ font:
   # If the bold italic family is not specified, it will fall back to the
   # value specified for the normal font.
   #family: monospace
+
   # The `style` can be specified to pick a specific face.
   #style: Bold Italic
+
   # Point size
   size: 15.0
 
@@ -180,16 +196,18 @@ font:
   # If `true`, Alacritty will use a custom built-in font for box drawing
   # characters (Unicode points 2500 - 259f).
   #
-  builtin_box_drawing: true
+  #builtin_box_drawing: true
 
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
+
 # Colors (Tomorrow Night)
 #colors:
 # Default colors
 #primary:
 #  background: '#1d1f21'
 #  foreground: '#c5c8c6'
+
 # Bright and dim foreground colors
 #
 # The dimmed foreground color is calculated automatically if it is not
@@ -198,6 +216,7 @@ font:
 # color will be used.
 #dim_foreground: '#828482'
 #bright_foreground: '#eaeaea'
+
 # Cursor colors
 #
 # Colors which should be used to draw the terminal cursor.
@@ -207,6 +226,7 @@ font:
 #cursor:
 #  text: CellBackground
 #  cursor: CellForeground
+
 # Vi mode cursor colors
 #
 # Colors for the cursor when the vi mode is active.
@@ -216,6 +236,7 @@ font:
 #vi_mode_cursor:
 #  text: CellBackground
 #  cursor: CellForeground
+
 # Search colors
 #
 # Colors used for the search bar and match highlighting.
@@ -228,6 +249,7 @@ font:
 #focused_match:
 #  foreground: '#ffffff'
 #  background: '#000000'
+
 # Keyboard hints
 #hints:
 # First character in the hint label
@@ -237,6 +259,7 @@ font:
 #start:
 #  foreground: '#1d1f21'
 #  background: '#e9ff5e'
+
 # All characters after the first one in the hint label
 #
 # Allowed values are CellForeground/CellBackground, which reference the
@@ -244,6 +267,7 @@ font:
 #end:
 #  foreground: '#e9ff5e'
 #  background: '#1d1f21'
+
 # Line indicator
 #
 # Color used for the indicator displaying the position in history during
@@ -253,6 +277,7 @@ font:
 #line_indicator:
 #  foreground: None
 #  background: None
+
 # Footer bar
 #
 # Color used for the footer bar on the bottom, used by search regex input,
@@ -261,6 +286,7 @@ font:
 #footer_bar:
 #  background: '#c5c8c6'
 #  foreground: '#1d1f21'
+
 # Selection colors
 #
 # Colors which should be used to draw the selection area.
@@ -270,6 +296,7 @@ font:
 #selection:
 #  text: CellBackground
 #  background: CellForeground
+
 # Normal colors
 #normal:
 #  black:   '#1d1f21'
@@ -280,6 +307,7 @@ font:
 #  magenta: '#b294bb'
 #  cyan:    '#8abeb7'
 #  white:   '#c5c8c6'
+
 # Bright colors
 #bright:
 #  black:   '#666666'
@@ -290,6 +318,7 @@ font:
 #  magenta: '#c397d8'
 #  cyan:    '#70c0b1'
 #  white:   '#eaeaea'
+
 # Dim colors
 #
 # If the dim colors are not set, they will be calculated automatically based
@@ -303,6 +332,7 @@ font:
 #  magenta: '#75617b'
 #  cyan:    '#5b7d78'
 #  white:   '#828482'
+
 # Indexed Colors
 #
 # The indexed colors include all colors from 16 to 256.
@@ -312,12 +342,14 @@ font:
 #   `- { index: 16, color: '#ff00ff' }`
 #
 #indexed_colors: []
+
 # Transparent cell backgrounds
 #
 # Whether or not `window.opacity` applies to all cell backgrounds or only to
 # the default background. When set to `true` all cells will be transparent
 # regardless of their background color.
 #transparent_background_colors: false
+
 # Bell
 #
 # The bell is rung every time the BEL control character is received.
@@ -338,11 +370,14 @@ font:
 #   - EaseOutCirc
 #   - Linear
 #animation: EaseOutExpo
+
 # Duration of the visual bell flash in milliseconds. A `duration` of `0` will
 # disable the visual bell animation.
 #duration: 0
+
 # Visual bell animation color.
 #color: '#ffffff'
+
 # Bell Command
 #
 # This program is executed whenever the bell is rung.
@@ -355,12 +390,15 @@ font:
 #     args: ["Hello, World!"]
 #
 #command: None
+
 #selection:
 # This string contains all characters that are used as separators for
 # "semantic words" in Alacritty.
 #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+
 # When set to `true`, selected text will be copied to the primary clipboard.
 #save_to_clipboard: false
+
 #cursor:
 # Cursor style
 #style:
@@ -371,6 +409,7 @@ font:
 #   - _ Underline
 #   - | Beam
 #shape: Block
+
 # Cursor blinking state
 #
 # Values for `blinking`:
@@ -379,6 +418,7 @@ font:
 #   - On: Enable blinking by default
 #   - Always: Force the cursor to always blink
 #blinking: Off
+
 # Vi mode cursor style
 #
 # If the vi mode cursor style is `None` or not specified, it will fall back to
@@ -386,20 +426,26 @@ font:
 #
 # See `cursor.style` for available options.
 #vi_mode_style: None
+
 # Cursor blinking interval in milliseconds.
 #blink_interval: 750
+
 # Time after which cursor stops blinking, in seconds.
 #
 # Specifying '0' will disable timeout for blinking.
 #blink_timeout: 5
+
 # If this is `true`, the cursor will be rendered as a hollow box when the
 # window is not focused.
 #unfocused_hollow: true
+
 # Thickness of the cursor relative to the cell width as floating point number
 # from `0.0` to `1.0`.
 #thickness: 0.15
+
 # Live config reload (changes require restart)
 #live_config_reload: true
+
 # Shell
 #
 # You can set `shell.program` to the path of your favorite shell, e.g.
@@ -413,15 +459,16 @@ font:
 #  program: /bin/bash
 #  args:
 #    - --login
+
 # Startup directory
 #
 # Directory the shell is started in. If this is unset, or `None`, the working
 # directory of the parent process will be used.
 #working_directory: None
-# Send ESC (\x1b) before characters when alt is pressed.
-#alt_send_esc: true
+
 # Offer IPC using `alacritty msg` (unix only)
 #ipc_socket: true
+
 #mouse:
 # Click settings
 #
@@ -430,8 +477,9 @@ font:
 # or triple click.
 #double_click: { threshold: 300 }
 #triple_click: { threshold: 300 }
+
 # If this is `true`, the cursor is temporarily hidden when typing.
-hide_when_typing: false
+#hide_when_typing: false
 
 # Hints
 #
@@ -440,6 +488,7 @@ hide_when_typing: false
 #hints:
 # Keys used for the hint labels.
 #alphabet: "jfkdls;ahgurieowpq"
+
 # List with all available hints
 #
 # Each hint must have any of `regex` or `hyperlinks` field and either an
@@ -481,6 +530,7 @@ hide_when_typing: false
 #   binding:
 #     key: U
 #     mods: Control|Shift
+
 # Mouse bindings
 #
 # Mouse bindings are specified as a list of objects, much like the key
@@ -513,6 +563,7 @@ hide_when_typing: false
 #  - { mouse: Right,                 action: ExpandSelection }
 #  - { mouse: Right,  mods: Control, action: ExpandSelection }
 #  - { mouse: Middle, mode: ~Vi,     action: PasteSelection  }
+
 # Key bindings
 #
 # Key bindings are specified as a list of objects. For example, this is the
@@ -529,7 +580,7 @@ hide_when_typing: false
 #    - Key0-Key9
 #
 #    A full list with available key codes can be found here:
-#    https://docs.rs/glutin/*/glutin/event/enum.VirtualKeyCode.html#variants
+#    https://docs.rs/winit/*/winit/event/enum.VirtualKeyCode.html#variants
 #
 #    Instead of using the name of the keys, the `key` field also supports using
 #    the scancode of the desired key. Scancodes have to be specified as a
@@ -578,6 +629,7 @@ hide_when_typing: false
 #   - Quit
 #       Quit Alacritty.
 #   - ToggleFullscreen
+#   - ToggleMaximized
 #   - SpawnNewInstance
 #       Spawn a new instance of Alacritty.
 #   - CreateNewWindow
@@ -722,7 +774,7 @@ hide_when_typing: false
 # If the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
 key_bindings:
-  # tmux
+  # tmux-macOS
   - { key: T, mods: Command, chars: "\x02c" }
   - { key: W, mods: Command, chars: "\x02x" }
   - { key: D, mods: Command, chars: "\x02%" }
@@ -738,20 +790,22 @@ key_bindings:
   - { key: Key8, mods: Command, chars: "\x028" }
   - { key: Key9, mods: Command, chars: "\x029" }
 
-  - { key: T, mods: Alt, chars: "\x02c" }
-  - { key: W, mods: Alt, chars: "\x02x" }
-  - { key: D, mods: Alt, chars: "\x02%" }
-  - { key: D, mods: Alt|Shift, chars: "\x02\"" }
-  - { key: U, mods: Alt, chars: "\x02u" }
-  - { key: Key1, mods: Alt, chars: "\x021" }
-  - { key: Key2, mods: Alt, chars: "\x022" }
-  - { key: Key3, mods: Alt, chars: "\x023" }
-  - { key: Key4, mods: Alt, chars: "\x024" }
-  - { key: Key5, mods: Alt, chars: "\x025" }
-  - { key: Key6, mods: Alt, chars: "\x026" }
-  - { key: Key7, mods: Alt, chars: "\x027" }
-  - { key: Key8, mods: Alt, chars: "\x028" }
-  - { key: Key9, mods: Alt, chars: "\x029" }
+  # window-macOS
+  # - { key: T, mods: Alt, chars: "\x02c" }
+  # - { key: W, mods: Alt, chars: "\x02x" }
+  # - { key: D, mods: Alt, chars: "\x02%" }
+  # - { key: D, mods: Alt|Shift, chars: "\x02\"" }
+  # - { key: U, mods: Alt, chars: "\x02u" }
+  # - { key: Key1, mods: Alt, chars: "\x021" }
+  # - { key: Key2, mods: Alt, chars: "\x022" }
+  # - { key: Key3, mods: Alt, chars: "\x023" }
+  # - { key: Key4, mods: Alt, chars: "\x024" }
+  # - { key: Key5, mods: Alt, chars: "\x025" }
+  # - { key: Key6, mods: Alt, chars: "\x026" }
+  # - { key: Key7, mods: Alt, chars: "\x027" }
+  # - { key: Key8, mods: Alt, chars: "\x028" }
+  # - { key: Key9, mods: Alt, chars: "\x029" }
+
   #- { key: Paste,                                       action: Paste          }
   #- { key: Copy,                                        action: Copy           }
   #- { key: L,         mods: Control,                    action: ClearLogNotice }
@@ -760,6 +814,7 @@ key_bindings:
   #- { key: PageDown,  mods: Shift,   mode: ~Alt,        action: ScrollPageDown }
   #- { key: Home,      mods: Shift,   mode: ~Alt,        action: ScrollToTop    }
   #- { key: End,       mods: Shift,   mode: ~Alt,        action: ScrollToBottom }
+
   # Vi Mode
   #- { key: Space,  mods: Shift|Control, mode: ~Search,    action: ToggleViMode            }
   #- { key: Space,  mods: Shift|Control, mode: Vi|~Search, action: ScrollToBottom          }
@@ -809,6 +864,7 @@ key_bindings:
   #- { key: Slash,  mods: Shift,         mode: Vi|~Search, action: SearchBackward          }
   #- { key: N,                           mode: Vi|~Search, action: SearchNext              }
   #- { key: N,      mods: Shift,         mode: Vi|~Search, action: SearchPrevious          }
+
   # Search Mode
   #- { key: Return,                mode: Search|Vi,  action: SearchConfirm         }
   #- { key: Escape,                mode: Search,     action: SearchCancel          }
@@ -821,6 +877,7 @@ key_bindings:
   #- { key: Down,                  mode: Search,     action: SearchHistoryNext     }
   #- { key: Return,                mode: Search|~Vi, action: SearchFocusNext       }
   #- { key: Return, mods: Shift,   mode: Search|~Vi, action: SearchFocusPrevious   }
+
   # (Windows, Linux, and BSD only)
   #- { key: V,              mods: Control|Shift, mode: ~Vi,        action: Paste            }
   #- { key: C,              mods: Control|Shift,                   action: Copy             }
@@ -834,8 +891,10 @@ key_bindings:
   #- { key: NumpadAdd,      mods: Control,                         action: IncreaseFontSize }
   #- { key: Minus,          mods: Control,                         action: DecreaseFontSize }
   #- { key: NumpadSubtract, mods: Control,                         action: DecreaseFontSize }
+
   # (Windows only)
   #- { key: Return,   mods: Alt,           action: ToggleFullscreen }
+
   # (macOS only)
   #- { key: K,              mods: Command, mode: ~Vi|~Search, chars: "\x0c"                 }
   #- { key: K,              mods: Command, mode: ~Vi|~Search, action: ClearHistory          }
@@ -853,15 +912,17 @@ key_bindings:
   #- { key: M,              mods: Command,                    action: Minimize              }
   #- { key: Q,              mods: Command,                    action: Quit                  }
   #- { key: W,              mods: Command,                    action: Quit                  }
-  #- { key: N,              mods: Command,                    action: SpawnNewInstance      }
+  #- { key: N,              mods: Command,                    action: CreateNewWindow       }
   #- { key: F,              mods: Command|Control,            action: ToggleFullscreen      }
   #- { key: F,              mods: Command, mode: ~Search,     action: SearchForward         }
   #- { key: B,              mods: Command, mode: ~Search,     action: SearchBackward        }
 #debug:
 # Display the time it takes to redraw each frame.
 #render_timer: false
+
 # Keep the log file after quitting Alacritty.
 #persistent_logging: false
+
 # Log level
 #
 # Values for `log_level`:
@@ -872,7 +933,15 @@ key_bindings:
 #   - Debug
 #   - Trace
 #log_level: Warn
+
+# Renderer override.
+#   - glsl3
+#   - gles2
+#   - gles2_pure
+#renderer: None
+
 # Print all received window events.
 #print_events: false
+
 # Highlight window damage information.
 #highlight_damage: false

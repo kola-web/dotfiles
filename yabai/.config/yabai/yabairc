@@ -66,7 +66,11 @@ yabai -m rule --add app="^Rime$" manage=off
 yabai -m rule --add app="^预览$" layer=normal manage=off grid=$grid
 
 yabai -m rule --add app="^WebStorm$" manage=off
-yabai -m rule --add app="^WebStorm$" title="( – )" manage=onj
+yabai -m rule --add app="^WebStorm$" title="( – )" manage=on
 yabai -m rule --add app="^Snipaste$" manage=off
+
+# yabai -m rule --add app="^Alacritty$" opacity=0.8
+
+yabai -m rule --add app="^DeepL$" layer=normal manage=off grid=$grid
 
 echo "yabai configuration loaded.."

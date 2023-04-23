@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# ---- system -----------------------------------------
 case "$(uname -s)" in
 
 Darwin)
@@ -9,6 +10,7 @@ Darwin)
   export PATH=/opt/homebrew/bin:$PATH
   export PATH="/opt/homebrew/sbin:$PATH"
   export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+  export PATH="/Users/lijialin/Library/Rime/plum:$PATH"
 	;;
 
 Linux)
@@ -23,14 +25,12 @@ CYGWIN* | MINGW32* | MSYS* | MINGW*)
 	;;
 esac
 
-# HISTFILE="$XDG_DATA_HOME"/zsh/history
+
+export LANG="en_US.UTF-8"
 export PATH="$HOME/.local/bin":$PATH
 export PATH="$HOME/.local/share/neovim/bin":$PATH
-# eval "$(fnm env --use-on-cd)"
 eval "$(zoxide init zsh)"
-# eval "$(starship init zsh)"
 
 # nvm 
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
-
