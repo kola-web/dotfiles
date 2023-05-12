@@ -26,7 +26,7 @@ CYGWIN* | MINGW32* | MSYS* | MINGW*)
 esac
 
 
-export LANG="en_US.UTF-8"
+# export LC_ALL=C
 export PATH="$HOME/.local/bin":$PATH
 export PATH="$HOME/.local/share/neovim/bin":$PATH
 eval "$(zoxide init zsh)"
