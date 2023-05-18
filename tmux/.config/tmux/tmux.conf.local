@@ -429,6 +429,8 @@ set -g @tmux-nvim-navigation-keybinding-down 'C-j'
 set -g @tmux-nvim-navigation-keybinding-up 'C-k' 
 set -g @tmux-nvim-navigation-keybinding-right 'C-l' 
 
+set -g default-terminal "xterm-256color" #!important
+
 # -- custom variables ----------------------------------------------------------
 
 # to define a custom #{foo} variable, define a POSIX shell function between the

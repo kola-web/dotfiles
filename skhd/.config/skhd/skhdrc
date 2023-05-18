@@ -25,8 +25,8 @@ alt + shift - e :  cd ~ && kitty -e ranger
 # alt + shift - w : /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome
 
 ## 打开终端
-# alt - return : open -na /Applications/iTerm.app/Contents/MacOS/iTerm2
-alt - return : open -na /Applications/Alacritty.app/Contents/MacOS/alacritty
+alt - return : open -na /Applications/iTerm.app/Contents/MacOS/iTerm2
+# alt - return : open -na /Applications/Alacritty.app/Contents/MacOS/alacritty
 # alt - return : open -na /Applications/kitty.app/Contents/MacOS/kitty
 # alt + shift - return : /Applications/Alacritty.app/Contents/MacOS/alacritty -e tmux
 
@@ -131,7 +131,7 @@ alt + shift - 9 : DISPLAY="$(yabai -m query --displays --display | jq '.index')"
 # 重置窗口大小
 alt + shift - 0 : yabai -m space --balance
 
-alt + shift - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
+alt + shift - r : yabai --restart-service
 
 
 alt - left   : yabai -m window west --resize right:-40:0 2> /dev/null || yabai -m window --resize right:-40:0

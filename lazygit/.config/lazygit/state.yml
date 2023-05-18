@@ -1,8 +1,10 @@
 lastupdatecheck: 0
 recentrepos:
 - /Users/lijialin/dotfiles
-- /Users/lijialin/dotfiles.bak
 - /Users/lijialin/.config/nvim
+- /Users/lijialin/note
+- /Users/lijialin/Library/Rime
+- /Users/lijialin/dotfiles.bak
 startuppopupversion: 5
 customcommandshistory: []
 hidecommandlog: false

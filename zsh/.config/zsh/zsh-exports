@@ -11,6 +11,8 @@ Darwin)
   export PATH="/opt/homebrew/sbin:$PATH"
   export PATH="/opt/homebrew/opt/curl/bin:$PATH"
   export PATH="/Users/lijialin/Library/Rime/plum:$PATH"
+  export PATH=/opt/local/bin:$PATH
+  export PATH=/opt/local/sbin:$PATH
 	;;
 
 Linux)

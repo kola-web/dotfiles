@@ -770,7 +770,7 @@ font:
 # Bindings are always filled by default, but will be replaced when a new
 # binding with the same triggers is defined. To unset a default binding, it can
 # be mapped to the `ReceiveChar` action. Alternatively, you can use `None` for
-# a no-op if you do not wish to receive input characters for that binding.
+# a no-op if you do not wish to receive input characters for that biqcl3927nding.
 #
 # If the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
