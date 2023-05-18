@@ -6,6 +6,7 @@
 
 
 # -- session creation ----------------------------------------------------------
+set -g default-terminal "xterm-256color" #!important
 
 # prompt for session name when creating a new session, possible values are:
 #   - true
@@ -428,8 +429,6 @@ set -g @tmux-nvim-navigation-keybinding-left 'C-h'
 set -g @tmux-nvim-navigation-keybinding-down 'C-j' 
 set -g @tmux-nvim-navigation-keybinding-up 'C-k' 
 set -g @tmux-nvim-navigation-keybinding-right 'C-l' 
-
-set -g default-terminal "xterm-256color" #!important
 
 # -- custom variables ----------------------------------------------------------
 
