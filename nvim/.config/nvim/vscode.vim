@@ -44,9 +44,8 @@ noremap gi :vsc editor.action.goToImplementation<CR>
 noremap gd :vsc editor.action.goToDeclaration<CR>
 noremap gD :vsc editor.action.revealDefinitionAside<CR>
 noremap gp :vsc references-view.showSupertypes<CR>
-" noremap gr :vsc editor.action.gotoreferences<CR>
-noremap gi :vsc references-view.showIncomingCalls<CR>
-noremap go :vsc references-view.showOutgoingCalls<CR>
+" noremap gi :vsc references-view.showIncomingCalls<CR>
+" noremap go :vsc references-view.showOutgoingCalls<CR>
 
 
 noremap ]h /<template<cr>

@@ -3,8 +3,13 @@ recentrepos:
 - /Users/lijialin/dotfiles
 - /Users/lijialin/.config/nvim
 - /Users/lijialin/note
+- /Users/lijialin/nvim-plugin/nvim-various-textobjs
+- /Users/lijialin/.config/nvim.bak
+- /Users/lijialin/learn/painter-custom-poster
+- /Users/lijialin/.local/share/lunarvim/lvim
 - /Users/lijialin/Library/Rime
 - /Users/lijialin/dotfiles.bak
 startuppopupversion: 5
-customcommandshistory: []
+customcommandshistory:
+- q
 hidecommandlog: false

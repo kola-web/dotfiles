@@ -791,6 +791,7 @@ key_bindings:
   - { key: Key8, mods: Command, chars: "\x028" }
   - { key: Key9, mods: Command, chars: "\x029" }
 
+
   # window-macOS
   # - { key: T, mods: Alt, chars: "\x02c" }
   # - { key: W, mods: Alt, chars: "\x02x" }

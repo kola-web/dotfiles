@@ -7,9 +7,6 @@
 #    ██║         ██║  ██║      ██████╔╝      ██║  ██║      ██║
 #    ╚═╝         ╚═╝  ╚═╝      ╚═════╝       ╚═╝  ╚═╝      ╚═╝
 
-# Unload the macOS WindowManager process
-launchctl unload -F /System/Library/LaunchAgents/com.apple.WindowManager.plist >/dev/null 2>&1 &
-
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
 
@@ -73,3 +70,6 @@ yabai -m rule --add app="^Snipaste$" manage=off
 yabai -m rule --add app="^DeepL$" layer=normal manage=off grid=$grid
 
 echo "yabai configuration loaded.."
+
+# Unload the macOS WindowManager process
+launchctl unload -F /System/Library/LaunchAgents/com.apple.WindowManager.plist >/dev/null 2>&1 &
