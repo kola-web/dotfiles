@@ -1,5 +1,5 @@
 #!/bin/sh
-alias n='neofetch'
+alias e='neofetch'
 alias f='zi'
 alias r='TERM=screen-256color ranger'
 # alias r='joshuto'
