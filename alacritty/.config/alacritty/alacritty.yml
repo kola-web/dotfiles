@@ -10,7 +10,8 @@
 # to the user's home directory starting with `~/`.
 import:
   # - /path/to/alacritty.yml
-  - ~/.config/alacritty/gruvbox-material.yml
+  - ~/.config/alacritty/dracula.yml
+  # - ~/.config/alacritty/gruvbox-material.yml
   # - ~/.config/alacritty/catppuccin-macchiato.yml
   # - ~/.config/alacritty/kanagawa.yml
   # - ~/.config/alacritty/catppuccin-latte.yml
@@ -138,6 +139,7 @@ font:
     #   - (Windows) Consolas
     # family: FiraCode Nerd Font
     family: FiraCode Nerd Font
+    # family: BlexMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
@@ -790,6 +792,10 @@ key_bindings:
   - { key: Key7, mods: Command, chars: "\x027" }
   - { key: Key8, mods: Command, chars: "\x028" }
   - { key: Key9, mods: Command, chars: "\x029" }
+
+  - { key: Period, mods: Control, chars: "\x1b[46;5u" }
+  - { key: Comma, mods: Control, chars: "\x1b[44;5u" }
+  - { key: Semicolon, mods: Control, chars: "\x1b[59;5u" }
     
   - { key: Comma,     mods: Command,      command:
       {program: "sh", args: ["-c","open ~/.config/alacritty/alacritty.yml"]}     }
