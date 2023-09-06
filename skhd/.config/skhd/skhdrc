@@ -15,8 +15,8 @@ ctrl - p [
 # ctrl - return : skhd --key "escape"
 ctrl - 0x21 : skhd --key "escape"
 
-# alt + shift - c : /Applications/Snipaste.app/Contents/MacOS/Snipaste pick-color
-# alt + shift - s : /Applications/Snipaste.app/Contents/MacOS/Snipaste snip 
+alt + shift - c : /Applications/Snipaste.app/Contents/MacOS/Snipaste pick-color
+alt + shift - s : /Applications/Snipaste.app/Contents/MacOS/Snipaste snip 
 
 ## 关闭当前窗口
 alt - q : $(yabai -m window $(yabai -m query --windows --window | jq -re ".id") --close)
@@ -136,10 +136,10 @@ alt + shift - 0 : yabai -m space --balance
 alt + shift - r : yabai --restart-service
 
 
-alt - left   : yabai -m window west --resize right:-40:0 2> /dev/null || yabai -m window --resize right:-40:0
-alt - down   : yabai -m window north --resize bottom:0:40 2> /dev/null || yabai -m window --resize bottom:0:40
-alt - up     : yabai -m window south --resize top:0:-40 2> /dev/null || yabai -m window --resize top:0:-40
-alt - right : yabai -m window east --resize left:40:0 2> /dev/null || yabai -m window --resize left:40:0
+alt - left : yabai -m window --resize right:-100:0 || yabai -m window --resize left:-100:0
+alt - up    : yabai -m window --resize bottom:0:100 || yabai -m window --resize top:0:100
+alt - down    : yabai -m window --resize bottom:0:-100 || yabai -m window --resize top:0:-100
+alt - right : yabai -m window --resize right:100:0 || yabai -m window --resize left:100:0
 
 # 移动窗口
 # shift + alt - left : yabai -m window --move rel:-20:0

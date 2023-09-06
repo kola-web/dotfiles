@@ -2,6 +2,7 @@ lastupdatecheck: 0
 recentrepos:
 - /Users/lijialin/dotfiles
 - /Users/lijialin/.config/nvim
+- /Users/lijialin/.config/nvchad
 - /Users/lijialin/Library/Rime
 - /Users/lijialin/note
 - /Users/lijialin/nvim-plugin/nvim-various-textobjs
@@ -12,3 +13,4 @@ startuppopupversion: 5
 customcommandshistory:
 - q
 hidecommandlog: false
+ignorewhitespaceindiffview: false

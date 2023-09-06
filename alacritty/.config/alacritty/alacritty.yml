@@ -10,12 +10,14 @@
 # to the user's home directory starting with `~/`.
 import:
   # - /path/to/alacritty.yml
-  - ~/.config/alacritty/dracula.yml
+  # - ~/.config/alacritty/dracula.yml
   # - ~/.config/alacritty/gruvbox-material.yml
   # - ~/.config/alacritty/catppuccin-macchiato.yml
   # - ~/.config/alacritty/kanagawa.yml
   # - ~/.config/alacritty/catppuccin-latte.yml
   # - ~/.config/alacritty/solarized-dark.yml
+  - ~/.config/alacritty/gruvbox_material_medium_dark.yaml
+#
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
