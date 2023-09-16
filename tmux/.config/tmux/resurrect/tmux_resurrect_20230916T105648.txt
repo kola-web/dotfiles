@@ -1,0 +1,22 @@
+pane	0	1	0	:	1	bogon	:/Users/lijialin/project/szjs-system/web_src	0	node	:node /usr/local/bin/pnpm dev
+pane	0	1	0	:	2	bogon	:/Users/lijialin/project/szjs-system	0	zsh	:
+pane	0	1	0	:	3	bogon	:/Users/lijialin/project/zhongchi-system/web_src	1	zsh	:
+pane	0	1	0	:	4	bogon	:/Users/lijialin/project/zaiding-system/web_src	0	zsh	:
+pane	0	1	0	:	5	bogon	:/Users/lijialin/project/zaiding-system	0	zsh	:
+pane	0	1	0	:	6	MacBook-Pro.local	:/Users/lijialin/project/szjs-h5/web_src	0	zsh	:
+pane	0	1	0	:	7	localhost	:/Users/lijialin/project/szjs-h5	0	zsh	:
+pane	0	2	0	:	1	localhost	:/Users/lijialin/project/szjs-system/web_src	1	nvim	:nvim
+pane	0	3	1	:*	1	bogon	:/Users/lijialin/project/nuohe-test	1	zsh	:
+pane	0	4	0	:##	1	bogon	:/Users/lijialin/project/zaiding-system/web_src	1	nvim	:nvim
+pane	0	5	0	:##	1	bogon	:/Users/lijialin/project/zaiding-miniprogram	1	nvim	:nvim
+pane	0	6	0	:##	1	localhost	:/Users/lijialin/.config/wezterm	1	nvim	:nvim
+pane	0	6	0	:##	2	localhost	:/Users/lijialin/.config/nvim	0	nvim	:nvim
+pane	0	7	0	:-	1	localhost	:/Users/lijialin/project/nuohe-image-test	1	zsh	:
+window	0	1	:zsh	0	:	a8e0,223x42,0,0{109x42,0,0[109x20,0,0{54x20,0,0,1,54x20,55,0,2},109x21,0,21,3],113x42,110,0[113x20,110,0{56x20,110,0,5,56x20,167,0,6},113x21,110,21{56x21,110,21,7,56x21,167,21,8}]}	off
+window	0	2	:nvim	0	:	b4a6,223x42,0,0,9	:
+window	0	3	:zsh	1	:*	5a85,223x42,0,0,16	:
+window	0	4	:nvim	0	:##	5a80,223x42,0,0,11	:
+window	0	5	:nvim	0	:##	5a81,223x42,0,0,12	:
+window	0	6	:nvim	0	:##	409b,223x42,0,0{111x42,0,0,13,111x42,112,0,14}	:
+window	0	7	:zsh	0	:-	5a84,223x42,0,0,15	:
+state	0	
