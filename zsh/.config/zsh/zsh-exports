@@ -13,6 +13,7 @@ Darwin)
   export PATH="/Users/lijialin/Library/Rime/plum:$PATH"
   export PATH=/opt/local/bin:$PATH
   export PATH=/opt/local/sbin:$PATH
+  export PATH=/Users/lijialin/.config/zsh/joshtro.sh:$PATH
   # export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
 	;;
 
