@@ -42,4 +42,3 @@ esac
 export PATH="$HOME/.local/bin":$PATH
 export PATH="$HOME/.local/share/neovim/bin":$PATH
 eval "$(zoxide init zsh)"
-

@@ -1,4 +1,9 @@
 #!/bin/sh
+# Download zimfw plugin manager if missing.
+if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
+	curl -fsSL --create-dirs -o "${ZIM_HOME}"/zimfw.zsh \
+		https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
+fi
 
 zmodule sukkaw/zsh-proxy
 zmodule Aloxaf/fzf-tab
@@ -6,16 +11,16 @@ zmodule zsh-users/zsh-completions --fpath src
 zmodule zsh-users/zsh-syntax-highlighting
 zmodule zsh-users/zsh-autosuggestions
 zmodule jeffreytse/zsh-vi-mode
+zmodule sindresorhus/pure --source async.zsh --source pure.zsh
 
 case "$(uname -s)" in
 
 Darwin)
 	# echo 'Mac OS X'
-  # zmodule sukkaw/zsh-proxy
+	# zmodule sukkaw/zsh-proxy
 	;;
 
-Linux)
-	;;
+Linux) ;;
 
 CYGWIN* | MINGW32* | MSYS* | MINGW*)
 	# echo 'MS Windows'

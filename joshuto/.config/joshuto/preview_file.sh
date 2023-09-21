@@ -208,7 +208,7 @@ handle_mime() {
 		## Image
 	image/*)
 		## Preview as text conversion
-		# exiftool "${FILE_PATH}" && exit 0
+		exiftool "${FILE_PATH}" && exit 0
 		exit 0
 		;;
 
