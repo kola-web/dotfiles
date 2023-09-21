@@ -1,0 +1,28 @@
+pane	0	1	0	:-	1	web_src: pnpm dev	:/Users/lijialin/project/szjs-system/web_src	0	node	:node /usr/local/bin/pnpm dev
+-zsh
+pane	0	1	0	:-	2	~/project/szjs-system	:/Users/lijialin/project/szjs-system	1	zsh	:-zsh
+pane	0	1	0	:-	3	web_src: pnpm dev	:/Users/lijialin/project/kanghong-system/web_src	0	node	:node /usr/local/bin/pnpm dev
+-zsh
+pane	0	1	0	:-	4	web_src: pnpm dev	:/Users/lijialin/project/zaiding-system/web_src	0	node	:node /usr/local/bin/pnpm dev
+-zsh
+pane	0	1	0	:-	5	~/project/zaiding-system	:/Users/lijialin/project/zaiding-system	0	zsh	:-zsh
+pane	0	1	0	:-	6	~/project/szjs-h5/web_src	:/Users/lijialin/project/szjs-h5/web_src	0	zsh	:-zsh
+pane	0	1	0	:-	7	~/project/szjs-h5	:/Users/lijialin/project/szjs-h5	0	zsh	:-zsh
+pane	0	2	1	:*	1	web_src: nvim	:/Users/lijialin/project/szjs-system/web_src	1	nvim	:nvim
+-zsh
+pane	0	3	0	:##	1	kanghong: nvim	:/Users/lijialin/project/kanghong	1	nvim	:nvim
+-zsh
+pane	0	4	0	:##	1	zaiding-miniprogram: nvim	:/Users/lijialin/project/zaiding-miniprogram	1	nvim	:nvim
+-zsh
+pane	0	5	0	:##	1	web_src: nvim	:/Users/lijialin/project/zaiding-system/web_src	1	nvim	:nvim
+nvim
+-zsh
+pane	0	6	0	:##	1	nvim: nvim	:/Users/lijialin/.config/nvim	1	nvim	:nvim
+-zsh
+window	0	1	:zsh	0	:-	e23f,251x46,0,0{124x46,0,0[124x22,0,0{69x22,0,0,1,54x22,70,0,2},124x23,0,23,3],126x46,125,0[126x22,125,0{69x22,125,0,4,56x22,195,0,5},126x23,125,23{69x23,125,23,6,56x23,195,23,7}]}	off
+window	0	2	:nvim	1	:*	e269,251x46,0,0,49	:
+window	0	3	:nvim	0	:##	c466,251x46,0,0,9	:
+window	0	4	:nvim	0	:##	625f,251x46,0,0,10	:
+window	0	5	:nvim	0	:##	6260,251x46,0,0,11	:
+window	0	6	:nvim	0	:##	6261,251x46,0,0,12	:
+state	0	
