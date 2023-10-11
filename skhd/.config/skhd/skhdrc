@@ -32,6 +32,7 @@ alt + shift - e :  cd ~ && kitty -e ranger
 # alt - return : open -na /Applications/kitty.app/Contents/MacOS/kitty
 # alt + shift - return : /Applications/Alacritty.app/Contents/MacOS/alacritty -e tmux
 alt - return [
+    # * : open -na /Applications/WezTerm.app/Contents/MacOS/wezterm
     * : open -na /Applications/Alacritty.app/Contents/MacOS/alacritty
     # * : open -na /Applications/kitty.app/Contents/MacOS/kitty
     # * : open -na /Applications/iTerm.app/Contents/MacOS/iTerm2
@@ -40,10 +41,10 @@ alt - return [
 
 f1 : yabai -m space --focus 5 ; /Applications/Alacritty.app/Contents/MacOS/alacritty --working-directory ~/note -e nvim 
 
-cmd - 0x27 : open -ja /Applications/DeepL.app/Contents/MacOS/DeepL
+# cmd - 0x27 : open -ja /Applications/DeepL.app/Contents/MacOS/DeepL
 
 # '
-# cmd + shift - 0x27 :  ~/.config/skhd/trans.sh
+# cmd + shift - 0x27 :  /Users/lijialin/.config/skhd/trans.sh
 
 ##全屏
 alt - z : yabai -m window --toggle zoom-fullscreen
@@ -99,15 +100,15 @@ alt - j : yabai -m query --spaces --space \
 alt - m : yabai -m window --focus mouse
 
 # 空间变化
-# alt - 1 : DISPLAY="$(yabai -m query --displays --display | jq '.index')"; yabai -m space --focus $((1+4*($DISPLAY - 1)))
-# alt - 2 : DISPLAY="$(yabai -m query --displays --display | jq '.index')"; yabai -m space --focus $((2+4*($DISPLAY - 1)))
-# alt - 3 : DISPLAY="$(yabai -m query --displays --display | jq '.index')"; yabai -m space --focus $((3+4*($DISPLAY - 1)))
-# alt - 4 : DISPLAY="$(yabai -m query --displays --display | jq '.index')"; yabai -m space --focus $((4+4*($DISPLAY - 1)))
-# alt - 5 : DISPLAY="$(yabai -m query --displays --display | jq '.index')"; yabai -m space --focus $((5+4*($DISPLAY - 1)))
-# alt - 6 : DISPLAY="$(yabai -m query --displays --display | jq '.index')"; yabai -m space --focus $((6+4*($DISPLAY - 1)))
-# alt - 7 : DISPLAY="$(yabai -m query --displays --display | jq '.index')"; yabai -m space --focus $((7+4*($DISPLAY - 1)))
-# alt - 8 : DISPLAY="$(yabai -m query --displays --display | jq '.index')"; yabai -m space --focus $((8+4*($DISPLAY - 1)))
-# alt - 9 : DISPLAY="$(yabai -m query --displays --display | jq '.index')"; yabai -m space --focus $((9+4*($DISPLAY - 1)))
+alt - 1 : yabai -m space --focus 1
+alt - 2 : yabai -m space --focus 2
+alt - 3 : yabai -m space --focus 3
+alt - 4 : yabai -m space --focus 4
+alt - 5 : yabai -m space --focus 5
+alt - 6 : yabai -m space --focus 6
+alt - 7 : yabai -m space --focus 7
+alt - 8 : yabai -m space --focus 8
+alt - 9 : yabai -m space --focus 9
 alt - tab : yabai -m space --focus recent 
 
 # 窗口空间变换

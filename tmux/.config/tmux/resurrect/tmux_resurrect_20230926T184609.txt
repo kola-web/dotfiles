@@ -1,0 +1,22 @@
+pane	0	1	0	:##	1	web_src: pnpm dev	:/Users/lijialin/project/zaiding-system/web_src	0	node	:node /usr/local/bin/pnpm dev
+-zsh
+pane	0	1	0	:##	2	~/project/zaiding-system/web_src	:/Users/lijialin/project/zaiding-system/web_src	0	zsh	:-zsh
+pane	0	1	0	:##	3	~/project/kanghong-system/web_src	:/Users/lijialin/project/kanghong-system/web_src	0	zsh	:-zsh
+pane	0	1	0	:##	4	~/project/kanghong-system	:/Users/lijialin/project/kanghong-system	0	zsh	:-zsh
+pane	0	1	0	:##	5	~/project/tangyou-system/web_src	:/Users/lijialin/project/tangyou-system/web_src	0	zsh	:-zsh
+pane	0	1	0	:##	6	~/project/tangyou-system/web_src	:/Users/lijialin/project/tangyou-system/web_src	0	zsh	:-zsh
+pane	0	1	0	:##	7	web_src: pnpm dev	:/Users/lijialin/project/zaiding-h5/web_src	1	node	:node /usr/local/bin/pnpm dev
+-zsh
+pane	0	1	0	:##	8	~/project/zaiding-h5/web_src	:/Users/lijialin/project/zaiding-h5/web_src	0	zsh	:-zsh
+pane	0	2	0	:	1	~/project/zaiding-system/web_src	:/Users/lijialin/project/zaiding-system/web_src	1	zsh	:-zsh
+pane	0	3	0	:##	1	nuohe: nvim	:/Users/lijialin/project/nuohe	1	nvim	:nvim
+-zsh
+pane	0	4	0	:##-	1	web_src: nvim	:/Users/lijialin/project/zaiding-h5/web_src	1	nvim	:nvim
+-zsh
+pane	0	5	1	:*	1	~/project/nuohe-pro	:/Users/lijialin/project/nuohe-pro	1	zsh	:-zsh
+window	0	1	:zsh	0	:##	6d27,251x46,0,0{125x46,0,0[125x22,0,0{62x22,0,0,1,62x22,63,0,31},125x23,0,23{62x23,0,23,3,62x23,63,23,4}],125x46,126,0[125x22,126,0{62x22,126,0,5,62x22,189,0,30},125x23,126,23{62x23,126,23,7,62x23,189,23,29}]}	off
+window	0	2	:zsh	0	:	c466,251x46,0,0,9	:
+window	0	3	:nvim	0	:##	e25f,251x46,0,0,20	:
+window	0	4	:nvim	0	:##-	6268,251x46,0,0,38	:
+window	0	5	:zsh	1	:*	e264,251x46,0,0,44	:
+state	0	

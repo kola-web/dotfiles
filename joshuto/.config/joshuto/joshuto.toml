@@ -35,10 +35,10 @@ directories_first = true
 reverse = false
 
 [preview]
-max_preview_size            = 999999999  # I prefer to limit it in the scripts for various file types
+max_preview_size = 50000097152
 preview_script = "~/.config/joshuto/preview_file.sh"                    # make sure it's marked as executable
 # preview_shown_hook_script = "~/.config/joshuto/on_preview_shown"
-# preview_removed_hook_script = "~/.config/joshuto/on_preview_removed"
+# preview_removed_hook_script = "~/.config/joshuto/on_preview_removed.sh"
 
 [search]
 # insensitive, sensitive, smart

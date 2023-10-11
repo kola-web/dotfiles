@@ -1,6 +1,7 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
 local keymaps = require("keymaps")
+local keymapsTmux = require("keymaps-tmux")
 require("events")
 
 -- This table will hold the configuration.
@@ -14,7 +15,7 @@ end
 config.window_close_confirmation = "NeverPrompt"
 config.window_decorations = "RESIZE"
 config.tab_bar_at_bottom = true
-config.underline_position = "-4pt"
+-- config.underline_position = "-4pt"
 
 -- This is where you actually apply your config choices
 
@@ -30,9 +31,12 @@ config.font = wezterm.font_with_fallback({
 })
 
 config.font_size = 14
-config.line_height = 1.4
 config.front_end = "WebGpu"
+config.line_height = 1.4
 
 config.keys = keymaps
+-- config.keys = keymapsTmux
+-- config.enable_tab_bar = false
+-- config.hide_tab_bar_if_only_one_tab = true
 
 return config

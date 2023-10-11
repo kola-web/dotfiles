@@ -37,3 +37,5 @@ zsh_add_file "zsh-aliases"
 
 zsh_add_file "scripts/completion.zsh"
 
+
+test -e /Users/lijialin/.config/zsh/.iterm2_shell_integration.zsh && source /Users/lijialin/.config/zsh/.iterm2_shell_integration.zsh || true
