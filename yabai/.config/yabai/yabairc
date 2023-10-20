@@ -22,7 +22,6 @@ grid=24:24:2:2:20:20
 # yabai -m config external_bar all:35:0
 yabai -m config external_bar all:0:0
 yabai -m config mouse_modifier ctrl
-yabai -m config window_topmost off
 yabai -m config window_shadow float
 
 yabai -m config window_placement second_child
@@ -53,30 +52,10 @@ yabai -m config --space 2 layout stack
 
 # rule
 yabai -m rule --add app="^Code$" space=2
-yabai -m rule --add app="^webstorm$" layer=normal space=2
-
 yabai -m rule --add app="^微信开发者工具$" space=3
-
-yabai -m rule --add app="^(企业微信|网易云音乐|喜马拉雅|QQ|QQ音乐|微信|Listen1|Spotify)$" space=4 layer=normal manage=off grid=$grid
-
-yabai -m rule --add app="^访达$" manage=off grid=$grid border=off
-yabai -m rule --add app="^系统偏好设置$" manage=off layer=normal sticky=on grid=$grid
-yabai -m rule --add app="^mpv$" manage=off layer=normal sticky=on grid=3:1:2:0:3:1
-yabai -m rule --add app="^Rime$" manage=off
-
-yabai -m rule --add app="^预览$" layer=normal manage=off grid=$grid
-
+yabai -m rule --add app="^(企业微信|网易云音乐|喜马拉雅|QQ|QQ音乐|微信|Listen1|Spotify)$" space=4 layer=below manage=off grid=$grid
+yabai -m rule --add app="^(预览|pot|访达|系统设置)$" layer=below manage=off grid=$grid
+yabai -m rule --add app="^mpv$" manage=off layer=below sticky=on grid=3:1:2:0:3:1
 yabai -m rule --add app="^SnailSVN$" manage=off
 
-yabai -m rule --add app="^WebStorm$" manage=off
-yabai -m rule --add app="^WebStorm$" title="( – )" manage=on
-yabai -m rule --add app="^Snipaste$" manage=off
-
-# yabai -m rule --add app="^Alacritty$" opacity=0.8
-
-yabai -m rule --add app="^DeepL$" layer=normal manage=off grid=$grid
-
 echo "yabai configuration loaded.."
-
-# Unload the macOS WindowManager process
-launchctl unload -F /System/Library/LaunchAgents/com.apple.WindowManager.plist >/dev/null 2>&1 &
