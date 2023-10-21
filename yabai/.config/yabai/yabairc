@@ -10,8 +10,8 @@
 # for this to work you must configure sudo such that
 # it will be able to run the command without password
 
-yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
 # .. more yabai startup stuff
 
@@ -21,11 +21,10 @@ grid=24:24:2:2:20:20
 # global settings
 # yabai -m config external_bar all:35:0
 yabai -m config external_bar all:0:0
-yabai -m config mouse_modifier ctrl
-yabai -m config window_shadow float
+yabai -m config mouse_modifier fn
+yabai -m config window_shadow off
 
 yabai -m config window_placement second_child
-yabai -m config window_origin_display focused
 
 # general space settings
 yabai -m config layout bsp
@@ -35,27 +34,23 @@ yabai -m config left_padding $gap
 yabai -m config right_padding $gap
 yabai -m config window_gap $gap
 
-yabai -m config window_border off
-yabai -m config window_border_hidpi off
-yabai -m config window_border_blur off
-yabai -m config window_border_radius 11
-yabai -m config window_border_width 2
-yabai -m config active_window_border_color 0xffe1e3e4
-yabai -m config normal_window_border_color 0xff494d64
-yabai -m config insert_feedback_color 0xff9dd274
-
-# yabai -m config --space Code layout stack
 yabai -m config --space 3 layout stack
 yabai -m config --space 2 layout stack
-# yabai -m config --space 4 layout float
-# yabai -m config --space other layout float
 
 # rule
 yabai -m rule --add app="^Code$" space=2
 yabai -m rule --add app="^微信开发者工具$" space=3
-yabai -m rule --add app="^(企业微信|网易云音乐|喜马拉雅|QQ|QQ音乐|微信|Listen1|Spotify)$" space=4 layer=below manage=off grid=$grid
-yabai -m rule --add app="^(预览|pot|访达|系统设置)$" layer=below manage=off grid=$grid
-yabai -m rule --add app="^mpv$" manage=off layer=below sticky=on grid=3:1:2:0:3:1
+# yabai -m rule --add app="^(企业微信|网易云音乐|喜马拉雅|QQ|QQ音乐|微信|Listen1|Spotify)$" space=4 layer=below manage=off grid=$grid
+# yabai -m rule --add app="^(预览|pot|访达|系统设置)$" layer=below manage=off grid=$grid
+# yabai -m rule --add app="^mpv$" manage=off layer=below sticky=on grid=3:1:2:0:3:1
+yabai -m rule --add app="^(企业微信|网易云音乐|喜马拉雅|QQ|QQ音乐|微信|Listen1|Spotify)$" space=4 manage=off grid=$grid
+yabai -m rule --add app="^(预览|pot|访达|系统设置)$" manage=off grid=$grid
+yabai -m rule --add app="^mpv$" manage=off sticky=on grid=3:1:2:0:3:1
 yabai -m rule --add app="^SnailSVN$" manage=off
+
+# signal
+yabai -m signal --add event=application_front_switched action="yabai -m window --layer normal"
+yabai -m signal --add event=window_destroyed active=yes action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse &> /dev/null || yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id) &> /dev/null"
+yabai -m signal --add event=window_minimized active=yes action="if \$(yabai -m query --windows --window \$YABAI_WINDOW_ID | jq -r '.\"is-floating\"'); then yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse &> /dev/null || yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id) &> /dev/null; fi"
 
 echo "yabai configuration loaded.."

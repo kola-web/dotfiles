@@ -6,12 +6,12 @@ alias f='zi'
 alias r='joshuto'
 alias g='lazygit'
 alias lzd='lazydocker'
-alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
+alias zsh-update-plugins="find ""$ZDOTDIR"/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
 alias nvimrc='nvim ~/.config/nvim/'
 
 # exa
-if [ $(command -v "exa") ]; then
-    alias ls='exa --icons'
+if [ $(command -v "eza") ]; then
+    alias ls='eza --icons'
 fi
 
 # alias d='duf'
@@ -51,7 +51,7 @@ alias archlinx-fix-keys="sudo pacman-key --init && sudo pacman-key --populate ar
 # systemd
 alias mach_list_systemctl="systemctl list-unit-files --state=enabled"
 
-alias mach_java_mode="export SDKMAN_DIR="$HOME/.sdkman" && [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh""
+alias mach_java_mode="export SDKMAN_DIR=""$HOME"/.sdkman" && [[ -s ""$HOME"/.sdkman/bin/sdkman-init.sh" ]] && source ""$HOME"/.sdkman/bin/sdkman-init.sh""
 
 alias m="git checkout master"
 alias s="git checkout stable"
