@@ -9,6 +9,11 @@ alias lzd='lazydocker'
 alias zsh-update-plugins="find ""$ZDOTDIR"/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
 alias nvimrc='nvim ~/.config/nvim/'
 
+# NVIM_APPNAME
+
+# alias nvim="NVIM_APPNAME=nvim nvim"
+alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
+
 # exa
 if [ $(command -v "eza") ]; then
     alias ls='eza --icons'

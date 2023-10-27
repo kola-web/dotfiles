@@ -23,21 +23,21 @@ import:
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty itself.
-# env:
+#env:
 # TERM variable
 #
 # This value is used to set the `$TERM` environment variable for
 # each instance of Alacritty. If it is not present, alacritty will
 # check the local terminfo database and use `alacritty` if it is
 # available, otherwise `xterm-256color` is used.
-# TERM: alacritty
-# TERM: xterm-256color
+#TERM: alacritty
+#TERM: xterm-256color
 
 window:
   # Window dimensions (changes require restart)
   #
-  # Specified in number of columns/lines, not pixels.
-  # If both are `0`, this setting is ignored.
+  # Number of lines/columns (not pixels) in the terminal. Both lines and columns
+  # must be non-zero for this to take effect. The number of columns must be at
   # least `2`, while using a value of `0` for columns and lines will fall back
   # to the window manager's recommended size
   #dimensions:
@@ -78,7 +78,7 @@ window:
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  opacity: 1
+  opacity: 1.0
 
   # Startup Mode (changes require restart)
   #
@@ -114,7 +114,7 @@ window:
   # Resize increments
   #
   # Prefer resizing window by discrete steps equal to cell dimensions.
-  # resize_increments: true
+  #resize_increments: false
 
   # Make `Option` key behave as `Alt` (macOS only):
   #   - OnlyLeft
@@ -798,6 +798,7 @@ key_bindings:
   - { key: Period, mods: Control, chars: "\x1b[46;5u" }
   - { key: Comma, mods: Control, chars: "\x1b[44;5u" }
   - { key: Semicolon, mods: Control, chars: "\x1b[59;5u" }
+  - { key: Minus, mods: Control, chars: "\x1b[45;5u" }
 
   - {
       key: Comma,

@@ -48,7 +48,7 @@ f1 : yabai -m space --focus 5 ; /Applications/Alacritty.app/Contents/MacOS/alacr
 
 ##全屏
 alt - z : yabai -m window --toggle zoom-fullscreen
-alt + shift - z : yabai -m window --toggle zoom-parent
+alt + shift - z : yabai -m window --toggle native-fullscreen
 
 ## 切换窗口布局
 alt - s : yabai -m space --layout stack
@@ -100,15 +100,15 @@ alt - j : yabai -m query --spaces --space \
 alt - m : yabai -m window --focus mouse
 
 # 空间变化
-alt - 1 : yabai -m space --focus 1
-alt - 2 : yabai -m space --focus 2
-alt - 3 : yabai -m space --focus 3
-alt - 4 : yabai -m space --focus 4
-alt - 5 : yabai -m space --focus 5
-alt - 6 : yabai -m space --focus 6
-alt - 7 : yabai -m space --focus 7
-alt - 8 : yabai -m space --focus 8
-alt - 9 : yabai -m space --focus 9
+# alt - 1 : yabai -m space --focus 1
+# alt - 2 : yabai -m space --focus 2
+# alt - 3 : yabai -m space --focus 3
+# alt - 4 : yabai -m space --focus 4
+# alt - 5 : yabai -m space --focus 5
+# alt - 6 : yabai -m space --focus 6
+# alt - 7 : yabai -m space --focus 7
+# alt - 8 : yabai -m space --focus 8
+# alt - 9 : yabai -m space --focus 9
 alt - tab : yabai -m space --focus recent 
 
 # 窗口空间变换

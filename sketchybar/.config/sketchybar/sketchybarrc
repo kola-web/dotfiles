@@ -25,12 +25,13 @@ bar=(
   border_width=2
   border_color=$BAR_BORDER_COLOR
   shadow=off
-  position=top
+  position=bottom
   sticky=on
   padding_right=10
   padding_left=10
   y_offset=-5
   margin=-2
+  topmost=window
 )
 
 sketchybar --bar "${bar[@]}"
@@ -74,9 +75,12 @@ source "$ITEM_DIR/spotify.sh"
 source "$ITEM_DIR/calendar.sh"
 source "$ITEM_DIR/brew.sh"
 source "$ITEM_DIR/github.sh"
+source "$ITEM_DIR/wifi.sh"
 source "$ITEM_DIR/battery.sh"
 source "$ITEM_DIR/volume.sh"
 source "$ITEM_DIR/cpu.sh"
+
+sketchybar --hotload on
 
 # Forcing all item scripts to run (never do this outside of sketchybarrc)
 sketchybar --update

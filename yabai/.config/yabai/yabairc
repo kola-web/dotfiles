@@ -48,8 +48,14 @@ yabai -m rule --add app="^(预览|pot|访达|系统设置)$" manage=off grid=$gr
 yabai -m rule --add app="^mpv$" manage=off sticky=on grid=3:1:2:0:3:1
 yabai -m rule --add app="^SnailSVN$" manage=off
 
+Second_Window_Apps='^(CLion|PyCharm|IntelliJ IDEA|WebStorm-EAP|网易邮箱大师)$'
+yabai -m rule --add app="${Second_Window_Apps}" manage=off
+# If `Open last project when launch` is checked, add this rule. And make sure `always show project path` is also checked.
+# yabai -m rule --add app="${JB_Apps}" title=".*\[.*\].*" manage=on 
+yabai -m rule --add app="${Second_Window_Apps}" title="^$"  manage=on
+
 # signal
-yabai -m signal --add event=application_front_switched action="yabai -m window --layer normal"
+# yabai -m signal --add event=application_front_switched action="yabai -m window --layer normal"
 yabai -m signal --add event=window_destroyed active=yes action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse &> /dev/null || yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id) &> /dev/null"
 yabai -m signal --add event=window_minimized active=yes action="if \$(yabai -m query --windows --window \$YABAI_WINDOW_ID | jq -r '.\"is-floating\"'); then yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse &> /dev/null || yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id) &> /dev/null; fi"
 
