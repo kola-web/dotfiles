@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 # ██╗   ██╗       █████╗       ██████╗        █████╗       ██╗
 # ╚██╗ ██╔╝      ██╔══██╗      ██╔══██╗      ██╔══██╗      ██║
@@ -9,54 +9,119 @@
 
 # for this to work you must configure sudo such that
 # it will be able to run the command without password
-
-sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+yabai -m signal --add event=window_focused action="sketchybar --trigger window_focus"
+yabai -m signal --add event=window_created action="sketchybar --trigger windows_on_spaces"
+yabai -m signal --add event=window_destroyed action="sketchybar --trigger windows_on_spaces"
 
 # .. more yabai startup stuff
 
-gap=10
+GAP=10
 grid=24:24:2:2:20:20
+BAR_HEIGHT=$(sketchybar -m --query bar | jq -r '.height')
 
 # global settings
-# yabai -m config external_bar all:35:0
-yabai -m config external_bar all:0:0
-yabai -m config mouse_modifier fn
+yabai -m config external_bar all:"${BAR_HEIGHT}":0
+yabai -m config mouse_modifier super
 yabai -m config window_shadow off
+yabai -m config auto_balance off
 
 yabai -m config window_placement second_child
 
 # general space settings
 yabai -m config layout bsp
-yabai -m config top_padding $gap
-yabai -m config bottom_padding $gap
-yabai -m config left_padding $gap
-yabai -m config right_padding $gap
-yabai -m config window_gap $gap
+yabai -m config top_padding "$GAP"
+yabai -m config bottom_padding "$GAP"
+yabai -m config left_padding "$GAP"
+yabai -m config right_padding "$GAP"
+yabai -m config window_gap "$GAP"
 
-yabai -m config --space 3 layout stack
-yabai -m config --space 2 layout stack
+# SPACE LABELS
+LABELS=(
+  info
+  code
+  preview
+  comms
+  other
+)
+
+for ((i = 1; i <= "${#LABELS[@]}"; i++)); do
+  yabai -m space "${i}" --label "${LABELS[(($i - 1))]}"
+done
+
+yabai -m config --space code layout stack
+yabai -m config --space preview layout stack
+yabai -m config --space comms layout stack
 
 # rule
-yabai -m rule --add app="^Code$" space=2
-yabai -m rule --add app="^微信开发者工具$" space=3
-# yabai -m rule --add app="^(企业微信|网易云音乐|喜马拉雅|QQ|QQ音乐|微信|Listen1|Spotify)$" space=4 layer=below manage=off grid=$grid
-# yabai -m rule --add app="^(预览|pot|访达|系统设置)$" layer=below manage=off grid=$grid
-# yabai -m rule --add app="^mpv$" manage=off layer=below sticky=on grid=3:1:2:0:3:1
-yabai -m rule --add app="^(企业微信|网易云音乐|喜马拉雅|QQ|QQ音乐|微信|Listen1|Spotify)$" space=4 manage=off grid=$grid
-yabai -m rule --add app="^(预览|pot|访达|系统设置)$" manage=off grid=$grid
-yabai -m rule --add app="^mpv$" manage=off sticky=on grid=3:1:2:0:3:1
-yabai -m rule --add app="^SnailSVN$" manage=off
+MANAGEOFF=(
+  SnailSVN
+  pot
+  预览
+  系统设置
+  mpv
+  访达
+)
 
-Second_Window_Apps='^(CLion|PyCharm|IntelliJ IDEA|WebStorm-EAP|网易邮箱大师)$'
-yabai -m rule --add app="${Second_Window_Apps}" manage=off
-# If `Open last project when launch` is checked, add this rule. And make sure `always show project path` is also checked.
-# yabai -m rule --add app="${JB_Apps}" title=".*\[.*\].*" manage=on 
-yabai -m rule --add app="${Second_Window_Apps}" title="^$"  manage=on
+for ((i = 1; i <= "${#MANAGEOFF[@]}"; i++)); do
+  yabai -m rule --add label="manageoff_${MANAGEOFF[(($i - 1))]}" app="^${MANAGEOFF[(($i - 1))]}.*$" manage=off
+done
+
+COMMS=(
+  企业微信
+  网易云音乐
+  喜马拉雅
+  QQ
+  QQ音乐
+  微信
+  Listen1
+  Spotify
+)
+
+for ((i = 1; i <= "${#COMMS[@]}"; i++)); do
+  yabai -m rule --add label="comms_${COMMS[(($i - 1))]}" app="^${COMMS[(($i - 1))]}.*$" space=comms manage=off grid=$grid
+done
+
+PREVIEW=(
+  微信开发者工具
+)
+
+for ((i = 1; i <= "${#PREVIEW[@]}"; i++)); do
+  yabai -m rule --add label="preview_${PREVIEW[(($i - 1))]}" app="^${PREVIEW[(($i - 1))]}.*$" space=preview
+done
+
+CODE=(
+  Code
+)
+
+for ((i = 1; i <= "${#CODE[@]}"; i++)); do
+  yabai -m rule --add label="code_${CODE[(($i - 1))]}" app="^${CODE[(($i - 1))]}.*$" space=code
+done
+
+# Second_Window_Apps
+SWA=(
+  CLion
+  PyCharm
+  IntelliJ IDEA
+  WebStorm-EAP
+  网易邮箱大师
+)
+
+for ((i = 1; i <= "${#SWA[@]}"; i++)); do
+  yabai -m rule --add label="swa_${SWA[(($i - 1))]}" app="^${SWA[(($i - 1))]}.*$" manage=off
+done
+
+yabai -m rule --add label="*" app="^${SWA[(($i - 1))]}.*$" layer=below
+yabai -m rule --add app="^通知中心.*$" layer=above
+# yabai -m rule --add app="鼠须管" layer=above
 
 # signal
+# yabai -m signal --add event=window_created action="yabai -m window --layer normal"
 # yabai -m signal --add event=application_front_switched action="yabai -m window --layer normal"
 yabai -m signal --add event=window_destroyed active=yes action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse &> /dev/null || yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id) &> /dev/null"
 yabai -m signal --add event=window_minimized active=yes action="if \$(yabai -m query --windows --window \$YABAI_WINDOW_ID | jq -r '.\"is-floating\"'); then yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse &> /dev/null || yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id) &> /dev/null; fi"
 
 echo "yabai configuration loaded.."
+
+# alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`~-_=+\|]}[{;:'",<.>/?

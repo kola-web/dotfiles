@@ -1,0 +1,17 @@
+pane	0	1	0	:##-	1	~/project/szjs-system/web_src	:/Users/lijialin/project/szjs-system/web_src	0	zsh	:/bin/zsh
+pane	0	1	0	:##-	2	~/project/szjs-system	:/Users/lijialin/project/szjs-system	0	zsh	:/bin/zsh
+pane	0	1	0	:##-	3	~/project/zaiding-h5/web_src	:/Users/lijialin/project/zaiding-h5/web_src	0	zsh	:/bin/zsh
+pane	0	1	0	:##-	4	~/project/zaiding-h5	:/Users/lijialin/project/zaiding-h5	0	zsh	:/bin/zsh
+pane	0	1	0	:##-	5	web_src: pnpm dev	:/Users/lijialin/project/zaiding-system/web_src	0	node	:node /usr/local/bin/pnpm dev
+/bin/zsh
+pane	0	1	0	:##-	6	~/project/zaiding-system	:/Users/lijialin/project/zaiding-system	1	zsh	:/bin/zsh
+pane	0	1	0	:##-	7	~/project/nuohe-ciie-2023/web_src	:/Users/lijialin/project/nuohe-ciie-2023/web_src	0	zsh	:/bin/zsh
+pane	0	1	0	:##-	8	~/project/nuohe-ciie-2023	:/Users/lijialin/project/nuohe-ciie-2023	0	zsh	:/bin/zsh
+pane	0	2	1	:*	1	web_src: nvim	:/Users/lijialin/project/zaiding-system/web_src	1	nvim	:nvim
+/bin/zsh
+pane	0	3	0	:##	1	web_src: nvim	:/Users/lijialin/project/kanghong-system/web_src	1	nvim	:nvim
+-zsh
+window	0	1	:zsh	0	:##-	f4b0,251x43,0,0{126x43,0,0[126x21,0,0{63x21,0,0,1,62x21,64,0,2},126x21,0,22{63x21,0,22,3,62x21,64,22,4}],124x43,127,0[124x21,127,0{61x21,127,0,5,62x21,189,0,6},124x21,127,22{61x21,127,22,7,62x21,189,22,8}]}	off
+window	0	2	:nvim	1	:*	5c5f,251x43,0,0,10	:
+window	0	3	:nvim	0	:##	5c61,251x43,0,0,12	:
+state	0	

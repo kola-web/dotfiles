@@ -1,6 +1,7 @@
 lastupdatecheck: 0
 recentrepos:
 - /Users/lijialin/dotfiles
+- /Users/lijialin/Library/Rime
 - /Users/lijialin/.config/nvim
 - /Users/lijialin/.local/share/LazyVim/lazy/LazyVim
 - /Users/lijialin/.local/share/lunarvim/lvim
@@ -9,7 +10,6 @@ recentrepos:
 - /Users/lijialin/.local/share/nvim/lazy/typescript-tools.nvim
 - /Users/lijialin/.local/share/nvim/lazy/cmp-path
 - /Users/lijialin/project-git-svn/raredcare
-- /Users/lijialin/Library/Rime
 - /Users/lijialin/.config/nvchad
 - /Users/lijialin/note
 - /Users/lijialin/nvim-plugin/nvim-various-textobjs

@@ -25,7 +25,7 @@ bar=(
   border_width=2
   border_color=$BAR_BORDER_COLOR
   shadow=off
-  position=bottom
+  position=top
   sticky=on
   padding_right=10
   padding_left=10
@@ -74,7 +74,6 @@ source "$ITEM_DIR/spotify.sh"
 # Right
 source "$ITEM_DIR/calendar.sh"
 source "$ITEM_DIR/brew.sh"
-source "$ITEM_DIR/github.sh"
 source "$ITEM_DIR/wifi.sh"
 source "$ITEM_DIR/battery.sh"
 source "$ITEM_DIR/volume.sh"
