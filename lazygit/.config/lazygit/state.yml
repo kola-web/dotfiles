@@ -1,14 +1,15 @@
 lastupdatecheck: 0
 recentrepos:
 - /Users/lijialin/dotfiles
-- /Users/lijialin/Library/Rime
-- /Users/lijialin/.config/nvim
+- /Users/lijialin/project/novo-micro-web2
 - /Users/lijialin/.local/share/LazyVim/lazy/LazyVim
+- /Users/lijialin/.config/nvim
+- /Users/lijialin/.local/share/nvim/lazy/cmp-path
+- /Users/lijialin/Library/Rime
 - /Users/lijialin/.local/share/lunarvim/lvim
 - /Users/lijialin/.config/LazyVim
 - /Users/lijialin/project/nuohe-ciie-2023/web_src
 - /Users/lijialin/.local/share/nvim/lazy/typescript-tools.nvim
-- /Users/lijialin/.local/share/nvim/lazy/cmp-path
 - /Users/lijialin/project-git-svn/raredcare
 - /Users/lijialin/.config/nvchad
 - /Users/lijialin/note

@@ -8,6 +8,9 @@ PLUGIN_DIR="$CONFIG_DIR/plugins" # Directory where all the plugin scripts are st
 
 FONT="SF Pro" # Needs to have Regular, Bold, Semibold, Heavy and Black variants
 PADDINGS=3 # All paddings use this value (icon, label, background)
+BACKGROUND_COLOR=0xff252731
+BACKGROUND_HEIGHT=33
+BACKGROUND_CORNER_RADIUS=20
 
 # Setting up and starting the helper process
 HELPER=git.felix.helper
@@ -69,7 +72,7 @@ source "$ITEM_DIR/yabai.sh"
 source "$ITEM_DIR/front_app.sh"
 
 # Center
-source "$ITEM_DIR/spotify.sh"
+source "$ITEM_DIR/music.sh"
 
 # Right
 source "$ITEM_DIR/calendar.sh"

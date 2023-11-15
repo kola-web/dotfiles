@@ -1,0 +1,23 @@
+pane	0	1	0	:##	1	my-app: pnpm dev	:/Users/lijialin/learn/my-app	0	node	:node /usr/local/bin/pnpm dev
+/bin/zsh
+pane	0	1	0	:##	2	~/learn/my-app	:/Users/lijialin/learn/my-app	0	zsh	:/bin/zsh
+pane	0	1	0	:##	3	~/project/zaiding-h5/web_src	:/Users/lijialin/project/zaiding-h5/web_src	0	zsh	:/bin/zsh
+pane	0	1	0	:##	4	~/project/zaiding-h5	:/Users/lijialin/project/zaiding-h5	0	zsh	:/bin/zsh
+pane	0	1	0	:##	5	web_src: pnpm dev	:/Users/lijialin/project/zaiding-system/web_src	1	node	:node /usr/local/bin/pnpm dev
+/bin/zsh
+pane	0	1	0	:##	6	~/project/zaiding-system	:/Users/lijialin/project/zaiding-system	0	zsh	:/bin/zsh
+pane	0	1	0	:##	7	~/project/nuohe-ciie-2023/web_src	:/Users/lijialin/project/nuohe-ciie-2023/web_src	0	zsh	:/bin/zsh
+pane	0	1	0	:##	8	~/project/nuohe-ciie-2023	:/Users/lijialin/project/nuohe-ciie-2023	0	zsh	:/bin/zsh
+pane	0	2	0	:-	1	my-app: nvim	:/Users/lijialin/learn/my-app	1	nvim	:nvim
+/bin/zsh
+pane	0	3	0	:	1	web_src: nvim	:/Users/lijialin/project/zaiding-system/web_src	1	nvim	:nvim
+-zsh
+pane	0	4	1	:*	1	nvim: nvim	:/Users/lijialin/.config/nvim	0	nvim	:nvim
+-zsh
+pane	0	4	1	:*	2	LazyVim: nvim	:/Users/lijialin/.local/share/LazyVim/lazy/LazyVim	1	nvim	:nvim
+-zsh
+window	0	1	:zsh	0	:##	756d,251x44,0,0{125x44,0,0[125x22,0,0{62x22,0,0,1,62x22,63,0,2},125x21,0,23{62x21,0,23,3,62x21,63,23,4}],125x44,126,0[125x22,126,0{76x22,126,0,5,48x22,203,0,6},125x21,126,23{76x21,126,23,7,48x21,203,23,8}]}	off
+window	0	2	:nvim	0	:-	bc66,251x44,0,0,9	:
+window	0	3	:nvim	0	:	de5f,251x44,0,0,20	:
+window	0	4	:nvim	1	:*	53ce,251x44,0,0{125x44,0,0,21,125x44,126,0,22}	:
+state	0	

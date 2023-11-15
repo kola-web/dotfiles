@@ -11,9 +11,6 @@
 # it will be able to run the command without password
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 sudo yabai --load-sa
-yabai -m signal --add event=window_focused action="sketchybar --trigger window_focus"
-yabai -m signal --add event=window_created action="sketchybar --trigger windows_on_spaces"
-yabai -m signal --add event=window_destroyed action="sketchybar --trigger windows_on_spaces"
 
 # .. more yabai startup stuff
 
@@ -24,7 +21,8 @@ BAR_HEIGHT=$(sketchybar -m --query bar | jq -r '.height')
 # global settings
 yabai -m config external_bar all:"${BAR_HEIGHT}":0
 yabai -m config mouse_modifier super
-yabai -m config window_shadow off
+yabai -m config window_shadow on
+yabai -m config window_zoom_persist on
 yabai -m config auto_balance off
 
 yabai -m config window_placement second_child
@@ -39,15 +37,15 @@ yabai -m config window_gap "$GAP"
 
 # SPACE LABELS
 LABELS=(
-  info
-  code
-  preview
-  comms
-  other
+	info
+	code
+	preview
+	comms
+	other
 )
 
 for ((i = 1; i <= "${#LABELS[@]}"; i++)); do
-  yabai -m space "${i}" --label "${LABELS[(($i - 1))]}"
+	yabai -m space "${i}" --label "${LABELS[(($i - 1))]}"
 done
 
 yabai -m config --space code layout stack
@@ -56,64 +54,64 @@ yabai -m config --space comms layout stack
 
 # rule
 MANAGEOFF=(
-  SnailSVN
-  pot
-  预览
-  系统设置
-  mpv
-  访达
+	SnailSVN
+	pot
+	预览
+	系统设置
+	mpv
+	访达
 )
 
 for ((i = 1; i <= "${#MANAGEOFF[@]}"; i++)); do
-  yabai -m rule --add label="manageoff_${MANAGEOFF[(($i - 1))]}" app="^${MANAGEOFF[(($i - 1))]}.*$" manage=off
+	yabai -m rule --add label="manageoff_${MANAGEOFF[(($i - 1))]}" app="^${MANAGEOFF[(($i - 1))]}.*$" manage=off
 done
 
 COMMS=(
-  企业微信
-  网易云音乐
-  喜马拉雅
-  QQ
-  QQ音乐
-  微信
-  Listen1
-  Spotify
+	企业微信
+	网易云音乐
+	喜马拉雅
+	QQ
+	QQ音乐
+	微信
+	Listen1
+	Spotify
 )
 
 for ((i = 1; i <= "${#COMMS[@]}"; i++)); do
-  yabai -m rule --add label="comms_${COMMS[(($i - 1))]}" app="^${COMMS[(($i - 1))]}.*$" space=comms manage=off grid=$grid
+	yabai -m rule --add label="comms_${COMMS[(($i - 1))]}" app="^${COMMS[(($i - 1))]}$" space=comms manage=off grid=$grid
 done
 
 PREVIEW=(
-  微信开发者工具
+	微信开发者工具
 )
 
 for ((i = 1; i <= "${#PREVIEW[@]}"; i++)); do
-  yabai -m rule --add label="preview_${PREVIEW[(($i - 1))]}" app="^${PREVIEW[(($i - 1))]}.*$" space=preview
+	yabai -m rule --add label="preview_${PREVIEW[(($i - 1))]}" app="^${PREVIEW[(($i - 1))]}.*$" space=preview
 done
 
 CODE=(
-  Code
+	Code
 )
 
 for ((i = 1; i <= "${#CODE[@]}"; i++)); do
-  yabai -m rule --add label="code_${CODE[(($i - 1))]}" app="^${CODE[(($i - 1))]}.*$" space=code
+	yabai -m rule --add label="code_${CODE[(($i - 1))]}" app="^${CODE[(($i - 1))]}.*$" space=code
 done
 
 # Second_Window_Apps
 SWA=(
-  CLion
-  PyCharm
-  IntelliJ IDEA
-  WebStorm-EAP
-  网易邮箱大师
+	CLion
+	PyCharm
+	IntelliJ IDEA
+	WebStorm-EAP
+	网易邮箱大师
 )
 
 for ((i = 1; i <= "${#SWA[@]}"; i++)); do
-  yabai -m rule --add label="swa_${SWA[(($i - 1))]}" app="^${SWA[(($i - 1))]}.*$" manage=off
+	yabai -m rule --add label="swa_${SWA[(($i - 1))]}" app="^${SWA[(($i - 1))]}.*$" manage=off
 done
 
-yabai -m rule --add label="*" app="^${SWA[(($i - 1))]}.*$" layer=below
-yabai -m rule --add app="^通知中心.*$" layer=above
+# yabai -m rule --add label="*" app="^${SWA[(($i - 1))]}.*$" layer=below
+# yabai -m rule --add app="^通知中心.*$" layer=above
 # yabai -m rule --add app="鼠须管" layer=above
 
 # signal
