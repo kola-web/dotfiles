@@ -2,7 +2,6 @@
 local wezterm = require("wezterm")
 local keymaps = require("keymaps")
 local keymapsTmux = require("keymaps-tmux")
-require("events")
 
 -- This table will hold the configuration.
 local config = {}
@@ -24,17 +23,21 @@ config.color_scheme = "Gruvbox Material (Gogh)"
 -- config.color_scheme = "Solarized Dark (Gogh)"
 -- config.color_scheme = "Catppuccin Mocha"
 
-config.font = wezterm.font("JetBrains Mono")
-config.font = wezterm.font_with_fallback({
-	"FiraCode Nerd Font",
-	"Yuppy Sc",
-})
+config.font = wezterm.font("JetBrainsMono Nerd Font")
 
 config.font_size = 14
 config.front_end = "WebGpu"
 config.line_height = 1.4
 
+config.unix_domains = {
+	{
+		name = "unix",
+	},
+}
+config.default_gui_startup_args = { "connect", "unix" }
+
 config.keys = keymaps
+
 -- config.keys = keymapsTmux
 -- config.enable_tab_bar = false
 -- config.hide_tab_bar_if_only_one_tab = true

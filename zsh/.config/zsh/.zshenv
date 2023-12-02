@@ -3,7 +3,6 @@
 # XDG
 export XDG_CONFIG_HOME="$HOME/.config"
 
-
 # editor
 export EDITOR="nvim"
 export VISUAL="nvim"

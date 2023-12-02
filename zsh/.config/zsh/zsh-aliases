@@ -12,7 +12,8 @@ alias nvimrc='nvim ~/.config/nvim/'
 # NVIM_APPNAME
 
 # alias nvim="NVIM_APPNAME=nvim nvim"
-alias anvim="NVIM_APPNAME=LazyVim nvim"
+alias lnvim="NVIM_APPNAME=LazyVim nvim"
+alias nnvim="NVIM_APPNAME=NvChad nvim"
 alias nvim-dot="NVIM_APPNAME=nvim-dot nvim"
 
 # exa

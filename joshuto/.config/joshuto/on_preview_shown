@@ -6,6 +6,8 @@ PREVIEW_Y_COORD="$3"		# y coordinate of upper left cell of preview area
 PREVIEW_WIDTH="$4"		# Width of the preview pane (number of fitting characters)
 PREVIEW_HEIGHT="$5"		# Height of the preview pane (number of fitting characters)
 
+TMP_FILE="$HOME/.cache/joshuto/thumbcache.png"
+
 mimetype=$(file --mime-type -Lb "$FILE_PATH")
 
 function image {
@@ -18,9 +20,17 @@ function image {
 		"$1" 2>/dev/null
 }
 
+function video {
+    ffmpegthumbnailer -i "$1" -o "${TMP_FILE}" -s 0 2>/dev/null
+    image "${TMP_FILE}"
+}
+
 case "$mimetype" in
 	image/*)
 		image "${FILE_PATH}"
+		;;
+	video/*)
+		video "${FILE_PATH}"
 		;;
 	*)
 		kitty +kitten icat \
