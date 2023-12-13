@@ -51,67 +51,15 @@ done
 yabai -m config --space code layout stack
 yabai -m config --space preview layout stack
 yabai -m config --space comms layout float
+yabai -m config --space other layout float
 
 # rule
-COMMS=(
-	企业微信
-	网易云音乐
-	喜马拉雅
-	QQ
-	QQ音乐
-	微信
-	Listen1
-	Spotify
-	音乐
-)
-
-for ((i = 1; i <= "${#COMMS[@]}"; i++)); do
-	yabai -m rule --add label="comms_${COMMS[(($i - 1))]}" app="^${COMMS[(($i - 1))]}$" space=comms grid=$grid
-done
-
-PREVIEW=(
-	微信开发者工具
-)
-
-for ((i = 1; i <= "${#PREVIEW[@]}"; i++)); do
-	yabai -m rule --add label="preview_${PREVIEW[(($i - 1))]}" app="^${PREVIEW[(($i - 1))]}.*$" space=preview
-done
-
-CODE=(
-	Code
-)
-
-for ((i = 1; i <= "${#CODE[@]}"; i++)); do
-	yabai -m rule --add label="code_${CODE[(($i - 1))]}" app="^${CODE[(($i - 1))]}.*$" space=code
-done
-
-# Second_Window_Apps
-SWA=(
-	CLion
-	PyCharm
-	IntelliJ IDEA
-	WebStorm-EAP
-	WebStorm
-	网易邮箱大师
-)
-
-for ((i = 1; i <= "${#SWA[@]}"; i++)); do
-	yabai -m rule --add label="swa_${SWA[(($i - 1))]}" app="^${SWA[(($i - 1))]}.*$" manage=off
-done
-
-MANAGEOFF=(
-	SnailSVN
-	pot
-	预览
-	系统设置
-	mpv
-	访达
-	网易邮箱大师
-)
-
-for ((i = 1; i <= "${#MANAGEOFF[@]}"; i++)); do
-	yabai -m rule --add label="manageoff_${MANAGEOFF[(($i - 1))]}" app="^${MANAGEOFF[(($i - 1))]}.*$" manage=off grid=$grid
-done
+yabai -m rule --add app="^(企业微信|QQ|微信)" space=comms grid=$grid
+yabai -m rule --add app="^(网易云音乐|喜马拉雅|QQ音乐|Listen1|Spotify|音乐|mpv|IINA)" space=other grid=$grid
+yabai -m rule --add app="^(微信开发者工具)" space=preview
+yabai -m rule --add app="^(Code)" space=code
+yabai -m rule --add app="^(CLion|PyCharm|IntelliJ IDEA|WebStorm-EAP|WebStorm|网易邮箱大师)" manage=off
+yabai -m rule --add app="^(SnailSVN|pot|预览|系统设置|mpv|访达|网易邮箱大师|LiberOffice)" manage=off grid=$grid layer=below
 
 # yabai -m rule --add app=".*" layer=below
 # yabai -m rule --add app="^通知中心.*$" layer=above
@@ -121,7 +69,7 @@ done
 # Always show notification centre above all windows
 yabai -m rule --add app="^Notification Cent.*$" layer=above
 # Set all windows layer to normal
-yabai -m signal --add event=application_front_switched action="yabai -m window --layer normal"
+# yabai -m signal --add event=application_front_switched action="yabai -m window --layer normal"
 
 yabai -m signal --add event=window_destroyed active=yes action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse &> /dev/null || yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id) &> /dev/null"
 yabai -m signal --add event=window_minimized active=yes action="if \$(yabai -m query --windows --window \$YABAI_WINDOW_ID | jq -r '.\"is-floating\"'); then yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse &> /dev/null || yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id) &> /dev/null; fi"

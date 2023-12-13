@@ -1,0 +1,20 @@
+pane	0	1	0	:##	1	~/project/zaiding-system/web_src	:/Users/lijialin/project/zaiding-system/web_src	0	zsh	:/bin/zsh
+pane	0	1	0	:##	2	~/project/zaiding-system	:/Users/lijialin/project/zaiding-system	0	zsh	:/bin/zsh
+pane	0	1	0	:##	3	web_src: pnpm dev	:/Users/lijialin/project/zhongchi-system/web_src	1	node	:node /Users/lijialin/.n/bin/pnpm dev
+/bin/zsh
+pane	0	1	0	:##	4	~/project/zhongchi-system	:/Users/lijialin/project/zhongchi-system	0	zsh	:/bin/zsh
+pane	0	1	0	:##	5	~/project/nuohe-system/web_src	:/Users/lijialin/project/nuohe-system/web_src	0	zsh	:/bin/zsh
+pane	0	1	0	:##	6	~/project/nuohe-system	:/Users/lijialin/project/nuohe-system	0	zsh	:/bin/zsh
+pane	0	1	0	:##	7	~/project/devRed-systeam/web_src	:/Users/lijialin/project/devRed-systeam/web_src	0	zsh	:/bin/zsh
+pane	0	1	0	:##	8	~/project/devRed-systeam	:/Users/lijialin/project/devRed-systeam	0	zsh	:/bin/zsh
+pane	0	2	0	:	1	zaiding-miniprogram: nvim	:/Users/lijialin/project/zaiding-miniprogram	1	nvim	:nvim
+/bin/zsh
+pane	0	3	0	:-	1	web_src: nvim README.md	:/Users/lijialin/project/zhongchi-system/web_src	1	nvim	:nvim README.md
+/bin/zsh
+pane	0	4	1	:*	1	kitty: nvim	:/Users/lijialin/dotfiles/kitty/.config/kitty	1	nvim	:nvim
+-zsh
+window	0	1	:zsh	0	:##	4c13,223x42,0,0{111x42,0,0[111x21,0,0{48x21,0,0,1,62x21,49,0,2},111x20,0,22{48x20,0,22,3,62x20,49,22,4}],111x42,112,0[111x21,112,0{48x21,112,0,5,62x21,161,0,6},111x20,112,22{48x20,112,22,7,62x20,161,22,8}]}	off
+window	0	2	:nvim	0	:	b4a6,223x42,0,0,9	:
+window	0	3	:nvim	0	:-	5a7f,223x42,0,0,10	:
+window	0	4	:nvim	1	:*	da84,223x42,0,0,25	:
+state	0	

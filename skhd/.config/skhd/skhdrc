@@ -2,10 +2,12 @@
 ctrl - n [
   "微信" : skhd --key "down"
   "Obsidian" : skhd --key "down"
+  "Google Chrome" : skhd --key "down"
 ] 
 ctrl - p [
   "微信" : skhd --key "up"
   "Obsidian" : skhd --key "up"
+  "Google Chrome" : skhd --key "up"
 ] 
 
 # ctrl - p : skhd -k "up"
@@ -33,8 +35,8 @@ alt + shift - e :  cd ~ && kitty -e ranger
 # alt + shift - return : /Applications/Alacritty.app/Contents/MacOS/alacritty -e tmux
 alt - return [
     # * : open -na /Applications/WezTerm.app/Contents/MacOS/wezterm
-    # * : open -na /Applications/Alacritty.app/Contents/MacOS/alacritty
-    * : open -na /Applications/kitty.app/Contents/MacOS/kitty
+    * : open -na /Applications/Alacritty.app/Contents/MacOS/alacritty
+    # * : open -na /Applications/kitty.app/Contents/MacOS/kitty
     # * : open -na /Applications/iTerm.app/Contents/MacOS/iTerm2
     "WPS Office" ~
 ]

@@ -30,8 +30,8 @@ import:
 # each instance of Alacritty. If it is not present, alacritty will
 # check the local terminfo database and use `alacritty` if it is
 # available, otherwise `xterm-256color` is used.
-  # TERM: alacritty
-  # TERM: xterm-256color
+# TERM: alacritty
+# TERM: xterm-256color
 
 window:
   # Window dimensions (changes require restart)
@@ -187,14 +187,16 @@ font:
   # spacing.
   offset:
     x: 0
-    y: 6
+    y: 0
+    # y: 6
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the
   # right, increasing `y` moves the glyph upward.
   glyph_offset:
     x: 0
-    y: 3
+    y: 0
+    # y: 3
 
   # Use built-in font for box drawing characters.
   #
