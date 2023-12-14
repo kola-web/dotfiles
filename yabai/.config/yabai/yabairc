@@ -67,6 +67,7 @@ yabai -m rule --add app="^(SnailSVN|pot|预览|系统设置|mpv|访达|网易邮
 
 # signal
 # Always show notification centre above all windows
+yabai -m rule --add app!="^Notification Cent.*$" layer=below
 yabai -m rule --add app="^Notification Cent.*$" layer=above
 # Set all windows layer to normal
 # yabai -m signal --add event=application_front_switched action="yabai -m window --layer normal"
