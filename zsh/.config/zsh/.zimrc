@@ -11,7 +11,7 @@ zmodule zsh-users/zsh-completions --fpath src
 zmodule zsh-users/zsh-syntax-highlighting
 zmodule zsh-users/zsh-autosuggestions
 zmodule jeffreytse/zsh-vi-mode
-zmodule sindresorhus/pure --source async.zsh --source pure.zsh
+# zmodule sindresorhus/pure --source async.zsh --source pure.zsh
 
 case "$(uname -s)" in
 
