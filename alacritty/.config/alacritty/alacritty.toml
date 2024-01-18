@@ -14,7 +14,7 @@ offset = { x = 0, y = 6 }
 
 [window]
 decorations = "buttonless"
-opacity = 0.8
+opacity = 0.94
 padding = { x = 10, y = 10 }
 blur = false
 
@@ -39,7 +39,9 @@ bindings = [
   { chars = "\u00027", key = "Key7", mods = "Command" },
   { chars = "\u00028", key = "Key8", mods = "Command" },
   { chars = "\u00029", key = "Key9", mods = "Command" },
-  { chars = "\u001B[44;5u", key = "Comma", mods = "Control" },
+
+  # { chars = "\u0000", key = "Space", mods = "Control" },
+
   { chars = "\u001B[59;5u", key = "Semicolon", mods = "Control" },
   { chars = "\u001B[45;5u", key = "Minus", mods = "Control" },
   { key = "Comma", mods = "Command", command = { args = [

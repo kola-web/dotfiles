@@ -33,17 +33,19 @@ case "$(uname -s)" in
 Darwin)
 	# echo 'Mac OS X'
   # function proxy(){
-		# export ALL_PROXY=socks5://127.0.0.1:1090
-		# export all_proxy=$ALL_PROXY
-		# export {http,https,ftp}_proxy=$all_proxy
-		# export {HTTP,HTTPS,FTP}_PROXY=$all_proxy
+  # export ALL_PROXY=socks5://127.0.0.1:8080
+  # export all_proxy=$ALL_PROXY
+  # export {http,https,ftp}_proxy=$all_proxy
+  # export {HTTP,HTTPS,FTP}_PROXY=$all_proxy
   # }
   # function noproxy(){
-		# unset {http,https,ftp}_proxy
-		# unset {HTTP,HTTPS,FTP}_PROXY
-		# unset ALL_PROXY
-		# unset all_proxy
+  # unset {http,https,ftp}_proxy
+  # unset {HTTP,HTTPS,FTP}_PROXY
+  # unset ALL_PROXY
+  # unset all_proxy
   # }
+  # proxy
+
   if [ -d "/opt/homebrew/opt/ruby/bin" ]; then
     export PATH=/opt/homebrew/opt/ruby/bin:$PATH
     export PATH=`gem environment gemdir`/bin:$PATH

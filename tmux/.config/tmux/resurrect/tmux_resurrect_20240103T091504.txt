@@ -1,0 +1,22 @@
+pane	0	1	0	:	1	zaiding-system: exec zsh	:/Users/lijialin/project/zaiding-system/web_src	0	zsh	:
+pane	0	1	0	:	2	bogon	:/Users/lijialin/project/zaiding-system	1	zsh	:
+pane	0	1	0	:	3	bogon	:/Users/lijialin/project/zhongchi-system/web_src	0	zsh	:
+pane	0	1	0	:	4	~/project/zhongchi-system	:/Users/lijialin/project/zhongchi-system	0	zsh	:
+pane	0	1	0	:	5	~/project/nuohe-system/web_src	:/Users/lijialin/project/nuohe-system/web_src	0	zsh	:
+pane	0	1	0	:	6	bogon	:/Users/lijialin/project/nuohe-system	0	zsh	:
+pane	0	1	0	:	7	~/project/devRed-systeam/web_src	:/Users/lijialin/project/devRed-systeam/web_src	0	zsh	:
+pane	0	1	0	:	8	bogon	:/Users/lijialin/project/devRed-systeam	0	zsh	:
+pane	0	2	0	:##	1	bogon	:/Users/lijialin/project/zaiding-system/web_src	1	nvim	:nvim
+pane	0	3	1	:*	1	localhost	:/Users/lijialin/project/nuohe	1	nvim	:nvim
+pane	0	4	0	:-Z	1	bogon	:/Users/lijialin/project/zaiding-miniprogram	0	nvim	:nvim
+pane	0	4	0	:-Z	2	bogon	:/Users/lijialin/project/zaiding-miniprogram	1	nvim	:nvim
+pane	0	5	0	:	1	bogon	:/Users/lijialin/dotfiles/skhd/.config/skhd	1	zsh	:
+pane	0	6	0	:	1	bogon	:/Users/lijialin/Music/周杰伦	1	zsh	:
+pane	0	6	0	:	2	bogon	:/Users/lijialin/.config/mpv	0	nvim	:nvim mpv.conf
+window	0	1	:zsh	0	:	488a,251x44,0,0{124x44,0,0[124x22,0,0{78x22,0,0,1,45x22,79,0,2},124x21,0,23{78x21,0,23,3,45x21,79,23,4}],126x44,125,0[126x22,125,0{63x22,125,0,5,62x22,189,0,6},126x21,125,23{78x21,125,23,7,47x21,204,23,8}]}	on
+window	0	2	:nvim	0	:##	bc66,251x44,0,0,9	on
+window	0	3	:nvim	1	:*	5e5f,251x44,0,0,10	on
+window	0	4	:nvim	0	:-Z	d3cd,251x44,0,0{125x44,0,0,11,125x44,126,0,12}	:
+window	0	5	:zsh	0	:	5e62,251x44,0,0,13	:
+window	0	6	:zsh	0	:	d3d0,251x44,0,0{125x44,0,0,14,125x44,126,0,15}	:
+state	0	

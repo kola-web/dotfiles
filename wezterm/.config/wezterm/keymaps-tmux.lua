@@ -23,7 +23,7 @@ return {
 		mods = "CMD",
 		action = act.Multiple({
 			act.SendKey({ key = "b", mods = "CTRL" }),
-			act.SendKey({ key = "\"" }),
+			act.SendKey({ key = '"' }),
 		}),
 	},
 	{
@@ -40,6 +40,22 @@ return {
 		action = act.Multiple({
 			act.SendKey({ key = "b", mods = "CTRL" }),
 			act.SendKey({ key = "u" }),
+		}),
+	},
+	{
+		key = "[",
+		mods = "CMD",
+		action = act.Multiple({
+			act.SendKey({ key = "b", mods = "CTRL" }),
+			act.SendKey({ key = "[" }),
+		}),
+	},
+	{
+		key = "]",
+		mods = "CMD",
+		action = act.Multiple({
+			act.SendKey({ key = "b", mods = "CTRL" }),
+			act.SendKey({ key = "]" }),
 		}),
 	},
 	{

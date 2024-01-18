@@ -1,0 +1,18 @@
+pane	0	1	0	:##	1	Ga=d,d=A	:/Users/lijialin/project/zaiding-system/web_src	1	node	:node /Users/lijialin/.n/bin/pnpm dev
+pane	0	1	0	:##	2	bogon	:/Users/lijialin/project/zaiding-system	0	zsh	:
+pane	0	1	0	:##	3	bogon	:/Users/lijialin/project/devRed-question/web_src	0	zsh	:
+pane	0	1	0	:##	4	localhost	:/Users/lijialin/project/devRed-question	0	zsh	:
+pane	0	1	0	:##	5	~/project/nuohe-system/web_src	:/Users/lijialin/project/nuohe-system/web_src	0	zsh	:
+pane	0	1	0	:##	6	localhost	:/Users/lijialin/project/nuohe-system	0	zsh	:
+pane	0	1	0	:##	7	bogon	:/Users/lijialin/project/devRed-systeam/web_src	0	zsh	:
+pane	0	1	0	:##	8	localhost	:/Users/lijialin/project/devRed-systeam	0	zsh	:
+pane	0	2	1	:*	1	bogon	:/Users/lijialin/project/zaiding-system/web_src	1	nvim	:nvim
+pane	0	3	0	:	1	bogon	:/Users/lijialin/project/zaiding-miniprogram	1	nvim	:nvim
+pane	0	4	0	:	1	bogon	:/Users/lijialin/project/nuohe-system/web_src	1	nvim	:nvim
+pane	0	5	0	:-	1	localhost	:/Users/lijialin/dotfiles/wezterm/.config/wezterm	1	nvim	:nvim
+window	0	1	:node	0	:##	8293,251x40,0,0{124x40,0,0[124x20,0,0{78x20,0,0,1,45x20,79,0,2},124x19,0,21{72x19,0,21,3,51x19,73,21,4}],126x40,125,0[126x20,125,0{70x20,125,0,5,55x20,196,0,6},126x19,125,21{71x19,125,21,7,54x19,197,21,8}]}	on
+window	0	2	:nvim	1	:*	ac66,251x40,0,0,9	on
+window	0	3	:nvim	0	:	565f,251x40,0,0,10	:
+window	0	4	:nvim	0	:	5660,251x40,0,0,11	:
+window	0	5	:nvim	0	:-	d661,251x40,0,0,22	:
+state	0	

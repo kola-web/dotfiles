@@ -1,0 +1,21 @@
+pane	0	1	0	:##	1	zaiding-system: exec zsh	:/Users/lijialin/project/zaiding-system/web_src	0	node	:node /Users/lijialin/.n/bin/pnpm dev
+pane	0	1	0	:##	2	bogon	:/Users/lijialin/project/zaiding-system	1	zsh	:
+pane	0	1	0	:##	3	bogon	:/Users/lijialin/project/zhongchi-system/web_src	0	node	:node /Users/lijialin/.n/bin/pnpm dev
+pane	0	1	0	:##	4	~/project/zhongchi-system	:/Users/lijialin/project/zhongchi-system	0	zsh	:
+pane	0	1	0	:##	5	~/project/nuohe-system/web_src	:/Users/lijialin/project/nuohe-system/web_src	0	zsh	:
+pane	0	1	0	:##	6	bogon	:/Users/lijialin/project/nuohe-system	0	zsh	:
+pane	0	1	0	:##	7	~/project/devRed-systeam/web_src	:/Users/lijialin/project/devRed-systeam/web_src	0	zsh	:
+pane	0	1	0	:##	8	bogon	:/Users/lijialin/project/devRed-systeam	0	zsh	:
+pane	0	2	0	:##	1	bogon	:/Users/lijialin/project/zaiding-miniprogram	1	nvim	:nvim
+pane	0	3	0	:##	1	bogon	:/Users/lijialin/project/zhongchi-system/web_src	1	nvim	:nvim
+pane	0	4	0	:	1	bogon	:/Users/lijialin/project/zaiding-system/web_src	1	zsh	:
+pane	0	5	0	:##-	1	localhost	:/Users/lijialin/project/devRed-systeam/web_src	1	zsh	:
+pane	0	6	1	:*	1	localhost	:/Users/lijialin/dotfiles/yabai/.config/yabai	0	nvim	:nvim
+pane	0	6	1	:*	2	localhost	:/Users/lijialin/dotfiles/yabai/.config/yabai	1	zsh	:
+window	0	1	:zsh	0	:##	1832,251x44,0,0{125x44,0,0[125x22,0,0{62x22,0,0,1,62x22,63,0,2},125x21,0,23{62x21,0,23,3,62x21,63,23,4}],125x44,126,0[125x22,126,0{62x22,126,0,5,62x22,189,0,6},125x21,126,23{62x21,126,23,7,62x21,189,23,8}]}	on
+window	0	2	:nvim	0	:##	bc66,251x44,0,0,9	on
+window	0	3	:nvim	0	:##	5e5f,251x44,0,0,10	on
+window	0	4	:zsh	0	:	5e60,251x44,0,0,11	on
+window	0	5	:zsh	0	:##-	5e61,251x44,0,0,12	on
+window	0	6	:zsh	1	:*	d1c5,251x44,0,0{115x44,0,0,13,135x44,116,0,18}	on
+state	0	

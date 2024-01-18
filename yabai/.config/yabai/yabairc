@@ -21,11 +21,14 @@ BAR_HEIGHT=$(sketchybar -m --query bar | jq -r '.height')
 # global settings
 yabai -m config external_bar all:"${BAR_HEIGHT}":0
 yabai -m config mouse_modifier super
-yabai -m config window_shadow on
 yabai -m config window_zoom_persist on
 yabai -m config auto_balance off
 
+yabai -m config mouse_follows_focus off
+yabai -m config focus_follows_mouse off
 yabai -m config window_placement second_child
+yaml -m config window_topmost off
+yabai -m config window_shadow off
 
 # general space settings
 yabai -m config layout bsp
@@ -51,31 +54,24 @@ done
 yabai -m config --space code layout stack
 yabai -m config --space preview layout stack
 yabai -m config --space comms layout float
-yabai -m config --space other layout float
+
+# Refocus windows with window is closed or app destroyed
+# yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
+# yabai -m signal --add event=application_terminated action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
 
 # rule
-yabai -m rule --add app="^(企业微信|QQ|微信)" space=comms grid=$grid
-yabai -m rule --add app="^(网易云音乐|喜马拉雅|QQ音乐|Listen1|Spotify|音乐|mpv|IINA)" space=other grid=$grid
+yabai -m rule --add app="^(企业微信|QQ|微信|网易云音乐|喜马拉雅|QQ音乐|Listen1|Spotify|音乐|mpv|IINA)" space=comms grid=$grid
 yabai -m rule --add app="^(微信开发者工具)" space=preview
 yabai -m rule --add app="^(Code)" space=code
 yabai -m rule --add app="^(CLion|PyCharm|IntelliJ IDEA|WebStorm-EAP|WebStorm|网易邮箱大师)" manage=off
 yabai -m rule --add app="^(SnailSVN|pot|预览|系统设置|mpv|访达|网易邮箱大师|LiberOffice)" manage=off grid=$grid
+yabai -m rule --add app="^(Calculator|System Preferences|Archive Utility)$" manage=off
 
-# yabai -m rule --add app=".*" layer=below
-# yabai -m rule --add app="^通知中心.*$" layer=above
-# yabai -m rule --add app="鼠须管" layer=above
+yabai -m rule --add app=".*" layer=normal
+yabai -m rule --add app="^通知.*$" sticky=on layer=above
 
-# signal
-# Always show notification centre above all windows
-yabai -m rule --add app!="^Notification Cent.*$" layer=below
-yabai -m rule --add app="^Notification Cent.*$" layer=above
-# Set all windows layer to normal
-# yabai -m signal --add event=application_front_switched action="yabai -m window --layer normal"
-
-yabai -m signal --add event=window_destroyed active=yes action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse &> /dev/null || yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id) &> /dev/null"
-yabai -m signal --add event=window_minimized active=yes action="if \$(yabai -m query --windows --window \$YABAI_WINDOW_ID | jq -r '.\"is-floating\"'); then yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse &> /dev/null || yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id) &> /dev/null; fi"
+yabai -m space --balance
 
 echo "yabai configuration loaded.."
 
 # alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`~-_=+\|]}[{;:'",<.>/?
-

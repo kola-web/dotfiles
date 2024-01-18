@@ -801,6 +801,7 @@ key_bindings:
   - { key: Comma, mods: Control, chars: "\x1b[44;5u" }
   - { key: Semicolon, mods: Control, chars: "\x1b[59;5u" }
   - { key: Minus, mods: Control, chars: "\x1b[45;5u" }
+  - { key: Space, mods: Control, chars: "\x00" }
 
   - {
       key: Comma,

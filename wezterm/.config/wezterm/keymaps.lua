@@ -1,4 +1,6 @@
+local M = {}
 local wezterm = require("wezterm")
+local act = wezterm.action
 
 -- if you are *NOT* lazy-loading smart-splits.nvim (recommended)
 local function is_vim(pane)
@@ -39,7 +41,7 @@ local function split_nav(resize_or_move, key)
 	}
 end
 
-return {
+M.keys = {
 	-- move between split panes
 	split_nav("move", "h"),
 	split_nav("move", "j"),
@@ -50,29 +52,142 @@ return {
 	split_nav("resize", "j"),
 	split_nav("resize", "k"),
 	split_nav("resize", "l"),
+
+	{
+		key = "c",
+		mods = "CMD",
+		action = act.CopyTo("Clipboard"),
+	},
+	{
+		key = "v",
+		mods = "CMD",
+		action = act.PasteFrom("Clipboard"),
+	},
+
+	{
+		key = "t",
+		mods = "CMD",
+		action = act.SpawnTab("CurrentPaneDomain"),
+	},
 	{
 		key = "D",
 		mods = "CMD",
-		action = wezterm.action.SplitVertical,
+		action = act.SplitVertical,
 	},
 	{
 		key = "d",
 		mods = "CMD",
-		action = wezterm.action.SplitHorizontal,
+		action = act.SplitHorizontal,
 	},
 	{
 		key = "w",
 		mods = "CMD",
-		action = wezterm.action.CloseCurrentPane({ confirm = true }),
+		action = act.CloseCurrentPane({ confirm = true }),
 	},
 	{
 		key = "z",
 		mods = "CMD",
-		action = wezterm.action.TogglePaneZoomState,
+		action = act.TogglePaneZoomState,
 	},
 	{
 		key = ".",
 		mods = "CMD",
-		action = wezterm.action.ReloadConfiguration,
+		action = act.ReloadConfiguration,
+	},
+	{
+		key = "[",
+		mods = "CMD",
+		action = act.MoveTabRelative(-1),
+	},
+	{
+		key = "]",
+		mods = "CMD",
+		action = act.MoveTabRelative(1),
+	},
+	{
+		key = "1",
+		mods = "CMD",
+		action = act.ActivateTab(0),
+	},
+	{
+		key = "2",
+		mods = "CMD",
+		action = act.ActivateTab(1),
+	},
+	{
+		key = "3",
+		mods = "CMD",
+		action = act.ActivateTab(2),
+	},
+	{
+		key = "4",
+		mods = "CMD",
+		action = act.ActivateTab(3),
+	},
+	{
+		key = "5",
+		mods = "CMD",
+		action = act.ActivateTab(4),
+	},
+	{
+		key = "6",
+		mods = "CMD",
+		action = act.ActivateTab(5),
+	},
+	{
+		key = "7",
+		mods = "CMD",
+		action = act.ActivateTab(6),
+	},
+	{
+		key = "8",
+		mods = "CMD",
+		action = act.ActivateTab(7),
+	},
+	{
+		key = "9",
+		mods = "CMD",
+		action = act.ActivateTab(8),
+	},
+	{
+		key = "0",
+		mods = "CMD",
+		action = act.ActivateTab(-1),
+	},
+	{
+		key = "P",
+		mods = "CMD",
+		action = act.ActivateCommandPalette,
+	},
+	{
+		key = " ",
+		mods = "CMD",
+		action = act.ActivateCopyMode,
 	},
 }
+
+M.key_tables = {
+	resize_pane = {
+		{ key = "LeftArrow", action = act.AdjustPaneSize({ "Left", 1 }) },
+		{ key = "h", action = act.AdjustPaneSize({ "Left", 1 }) },
+
+		{ key = "RightArrow", action = act.AdjustPaneSize({ "Right", 1 }) },
+		{ key = "l", action = act.AdjustPaneSize({ "Right", 1 }) },
+
+		{ key = "UpArrow", action = act.AdjustPaneSize({ "Up", 1 }) },
+		{ key = "k", action = act.AdjustPaneSize({ "Up", 1 }) },
+
+		{ key = "DownArrow", action = act.AdjustPaneSize({ "Down", 1 }) },
+		{ key = "j", action = act.AdjustPaneSize({ "Down", 1 }) },
+
+		-- Cancel the mode by pressing escape
+		{ key = "Escape", action = "PopKeyTable" },
+	},
+}
+
+M.setup = function(config)
+	config.disable_default_key_bindings = true
+	config.keys = M.keys
+end
+
+return M

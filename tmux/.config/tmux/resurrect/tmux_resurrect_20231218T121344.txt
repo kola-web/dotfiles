@@ -1,0 +1,17 @@
+pane	0	1	0	:##	1	zaiding-system: exec zsh	:/Users/lijialin/project/zaiding-system/web_src	0	zsh	:
+pane	0	1	0	:##	2	bogon	:/Users/lijialin/project/zaiding-system	0	zsh	:
+pane	0	1	0	:##	3	~/project/zhongchi-system/web_src	:/Users/lijialin/project/zhongchi-system/web_src	0	node	:node /Users/lijialin/.n/bin/pnpm dev
+pane	0	1	0	:##	4	~/project/zhongchi-system	:/Users/lijialin/project/zhongchi-system	0	zsh	:
+pane	0	1	0	:##	5	~/project/nuohe-system/web_src	:/Users/lijialin/project/nuohe-system/web_src	0	node	:node /Users/lijialin/.n/bin/pnpm dev
+pane	0	1	0	:##	6	~/project/nuohe-system	:/Users/lijialin/project/nuohe-system	0	zsh	:
+pane	0	1	0	:##	7	~/project/devRed-systeam/web_src	:/Users/lijialin/project/kanghong-system/web_src	1	node	:node /Users/lijialin/.n/bin/nr dev
+pane	0	1	0	:##	8	bogon	:/Users/lijialin/project/kanghong-system	0	zsh	:
+pane	0	2	0	:	1	bogon	:/Users/lijialin/project/nuohe-system/web_src	1	zsh	:
+pane	0	3	0	:##-	1	bogon	:/Users/lijialin/project/nuohe	1	nvim	:nvim
+pane	0	4	1	:*	1	bogon	:/Users/lijialin/.config/nvim	1	nvim	:nvim
+pane	0	4	1	:*	2	bogon	:/Users/lijialin/.local/share/LazyVim/lazy/LazyVim	0	nvim	:nvim
+window	0	1	:zsh	0	:##	fc84,251x44,0,0{125x44,0,0[125x22,0,0{62x22,0,0,1,62x22,63,0,2},125x21,0,23{62x21,0,23,3,62x21,63,23,4}],125x44,126,0[125x22,126,0{62x22,126,0,5,62x22,189,0,6},125x21,126,23{62x21,126,23,7,62x21,189,23,18}]}	off
+window	0	2	:zsh	0	:	bc66,251x44,0,0,9	:
+window	0	3	:nvim	0	:##-	5e5f,251x44,0,0,10	:
+window	0	4	:nvim	1	:*	13cf,251x44,0,0{125x44,0,0,11,125x44,126,0,24}	:
+state	0	

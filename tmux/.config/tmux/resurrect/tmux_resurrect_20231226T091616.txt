@@ -1,0 +1,20 @@
+pane	0	1	0	:##-	1	zaiding-system: exec zsh	:/Users/lijialin/project/zaiding-system/web_src	0	zsh	:
+pane	0	1	0	:##-	2	bogon	:/Users/lijialin/project/zaiding-system	0	zsh	:
+pane	0	1	0	:##-	3	bogon	:/Users/lijialin/project/zhongchi-system/web_src	0	node	:node /Users/lijialin/.n/bin/pnpm dev
+pane	0	1	0	:##-	4	~/project/zhongchi-system	:/Users/lijialin/project/zhongchi-system	1	zsh	:
+pane	0	1	0	:##-	5	~/project/nuohe-system/web_src	:/Users/lijialin/project/nuohe-system/web_src	0	node	:node /Users/lijialin/.n/bin/pnpm dev
+pane	0	1	0	:##-	6	bogon	:/Users/lijialin/project/nuohe-system	0	zsh	:
+pane	0	1	0	:##-	7	~/project/devRed-systeam/web_src	:/Users/lijialin/project/devRed-systeam/web_src	0	zsh	:
+pane	0	1	0	:##-	8	bogon	:/Users/lijialin/project/devRed-systeam	0	zsh	:
+pane	0	2	0	:##	1	bogon	:/Users/lijialin/project/zaiding-system/web_src	1	nvim	:nvim
+pane	0	3	0	:##	1	bogon	:/Users/lijialin/project/nuohe-system/web_src	1	nvim	:nvim
+pane	0	4	1	:*	1	bogon	:/Users/lijialin/project/nuohe	1	nvim	:nvim
+pane	0	5	0	:##	1	localhost	:/Users/lijialin/project/devRed-systeam/web_src	1	nvim	:nvim
+pane	0	6	0	:	1	localhost	:/Users/lijialin/project/devRed-question/web_src	1	zsh	:
+window	0	1	:zsh	0	:##-	bfc9,251x44,0,0{124x44,0,0[124x22,0,0{78x22,0,0,1,45x22,79,0,2},124x21,0,23{78x21,0,23,3,45x21,79,23,4}],126x44,125,0[126x22,125,0{78x22,125,0,5,47x22,204,0,6},126x21,125,23{78x21,125,23,7,47x21,204,23,8}]}	on
+window	0	2	:nvim	0	:##	b226,97x23,0,0,9	on
+window	0	3	:nvim	0	:##	593f,97x23,0,0,10	on
+window	0	4	:nvim	1	:*	5e60,251x44,0,0,11	on
+window	0	5	:nvim	0	:##	5941,97x23,0,0,12	on
+window	0	6	:zsh	0	:	5e62,251x44,0,0,13	:
+state	0	
