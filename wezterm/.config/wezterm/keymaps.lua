@@ -164,6 +164,7 @@ M.keys = {
 		mods = "CMD",
 		action = act.ActivateCopyMode,
 	},
+	{ key = "l", mods = "CMD", action = wezterm.action.ShowDebugOverlay },
 }
 
 M.key_tables = {
