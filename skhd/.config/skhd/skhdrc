@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # remap keybind
 ctrl - n [
   "微信" : skhd --key "down"
@@ -15,7 +16,7 @@ ctrl - p [
 
 # ctrl - g : skhd --key "escape"
 # ctrl - return : skhd --key "escape"
-ctrl - 0x21 : skhd --key "escape"
+# ctrl - 0x21 : skhd --key "escape"
 
 alt + shift - c : /Applications/Snipaste.app/Contents/MacOS/Snipaste pick-color
 alt + shift - s : /Applications/Snipaste.app/Contents/MacOS/Snipaste snip 

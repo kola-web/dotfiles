@@ -195,3 +195,22 @@ format = '\[[$symbol($version)]($style)\]'
 
 [solidity]
 format = '\[[$symbol($version)]($style)\]'
+
+
+# [custom.svn_V]
+# command = "svn info | grep -E 'Revision:[ ]+[0-9]+' | cut -f 2 -d ':' "
+# when = 'svn info'
+# format = 'at rev [$output](bold blue) '
+#
+# [custom.svn_Q]
+# when = "svn --non-interactive info >/dev/null 2>&1"
+# command = "svn status | grep '^?' | wc -l"
+# format = "[?$output](green) "
+#
+#
+# [custom.svn_M]
+# when = "svn --non-interactive info >/dev/null 2>&1"
+# command = "svn status | grep '^M' | wc -l"
+# format = "[M$output](green) "
+#
+#

@@ -1,8 +1,9 @@
 lastupdatecheck: 0
 recentrepos:
 - /Users/lijialin/dotfiles
-- /Users/lijialin/project/zaiding-miniprogram
 - /Users/lijialin/.config/nvim
+- /Users/lijialin/.local/share/nvim/lazy/smart-splits.nvim
+- /Users/lijialin/project/zaiding-miniprogram
 - /Users/lijialin/Library/Rime
 - /Users/lijialin/Music/网易云MP3
 - /Users/lijialin/project/novo-micro-web2

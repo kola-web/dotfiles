@@ -18,7 +18,7 @@ config.color_scheme = "GruvboxDark"
 -- config.color_scheme = "GruvboxDark"
 -- config.window_background_image = "/Users/lijialin/Pictures/wallpapers/ghibili/(1988) My Neighbour Totoro/A Bridge.png"
 
--- config.font = wezterm.font("JetBrainsMono Nerd Font")
+config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.allow_square_glyphs_to_overflow_width = "Always"
 config.bold_brightens_ansi_colors = true
 config.window_background_opacity = 0.94
@@ -32,5 +32,6 @@ config.line_height = 1.4
 
 require("keymaps").setup(config)
 require("tabs")
+require("event")
 
 return config
