@@ -165,6 +165,13 @@ M.keys = {
 		action = act.ActivateCopyMode,
 	},
 	{ key = "l", mods = "CMD", action = wezterm.action.ShowDebugOverlay },
+
+	-- fix neovim keybind
+	{
+		key = "-",
+		mods = "CTRL",
+		action = act.SendKey({ key = "-", mods = "CTRL" }),
+	},
 }
 
 M.key_tables = {

@@ -7,7 +7,7 @@ wezterm.log_info("reloading")
 config.window_close_confirmation = "NeverPrompt"
 config.window_decorations = "RESIZE"
 config.tab_bar_at_bottom = true
-config.tab_max_width = 26
+config.tab_max_width = 40
 config.enable_tab_bar = true
 config.use_fancy_tab_bar = false
 
@@ -18,12 +18,15 @@ config.bold_brightens_ansi_colors = true
 config.window_background_opacity = 0.94
 
 config.font = wezterm.font("JetBrainsMono Nerd Font")
+-- config.font = wezterm.font("Maple Mono")
 config.font_size = 14
 config.line_height = 1.4
 
 -- config.underline_thickness = 3
 -- config.cursor_thickness = 2
 config.underline_position = -6
+
+config.use_dead_keys = false
 
 require("keymaps").setup(config)
 require("tabs")
