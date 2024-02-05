@@ -13,20 +13,21 @@ config.use_fancy_tab_bar = false
 
 config.color_scheme = "GruvboxDark"
 
-config.allow_square_glyphs_to_overflow_width = "Always"
-config.bold_brightens_ansi_colors = true
 config.window_background_opacity = 0.94
 
-config.font = wezterm.font("JetBrainsMono Nerd Font")
--- config.font = wezterm.font("Maple Mono")
+config.font = wezterm.font_with_fallback({
+	{
+		family = "JetBrains Mono",
+		weight = "Medium",
+	},
+	"Sarasa Term Slab SC",
+})
 config.font_size = 14
 config.line_height = 1.4
 
 -- config.underline_thickness = 3
 -- config.cursor_thickness = 2
 config.underline_position = -6
-
-config.use_dead_keys = false
 
 require("keymaps").setup(config)
 require("tabs")
