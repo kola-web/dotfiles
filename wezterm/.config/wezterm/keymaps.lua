@@ -54,6 +54,12 @@ M.keys = {
 	split_nav("resize", "l"),
 
 	{
+		key = "q",
+		mods = "CMD",
+		action = act.QuitApplication,
+	},
+
+	{
 		key = "c",
 		mods = "CMD",
 		action = act.CopyTo("Clipboard"),
