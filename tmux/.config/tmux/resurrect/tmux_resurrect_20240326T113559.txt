@@ -1,0 +1,14 @@
+pane	0	1	0	:	1	Ga=d,d=A	:/Users/lijialin/project/moke-system/web_src	0	node	:node /Users/lijialin/.n/bin/pnpm dev
+pane	0	1	0	:	2	MacBook-Pro.local	:/Users/lijialin/project/moke-system	0	zsh	:
+pane	0	1	0	:	3	bogon	:/Users/lijialin/project/moke-h5/web_src	1	node	:node /Users/lijialin/.n/bin/pnpm dev
+pane	0	1	0	:	4	~/project/nuohe-system/web_src	:/Users/lijialin	0	zsh	:
+pane	0	1	0	:	5	bogon	:/Users/lijialin	0	zsh	:
+pane	0	2	0	:##	1	MacBook-Pro.local	:/Users/lijialin/project/moke-h5/web_src	1	nvim	:nvim
+pane	0	3	0	:-	1	MacBook-Pro.local	:/Users/lijialin/project/moke-system/web_src	1	zsh	:
+pane	0	4	1	:*	1	MacBook-Pro.local	:/Users/lijialin/.config/nvim	1	nvim	:nvim
+pane	0	4	1	:*	2	MacBook-Pro.local	:/Users/lijialin/dotfiles/tmux/.config/tmux	0	nvim	:nvim
+window	0	1	:node	0	:	4571,175x37,0,0{85x37,0,0[85x17,0,0{42x17,0,0,1,42x17,43,0,7},85x19,0,18,2],89x37,86,0[89x17,86,0,3,89x19,86,18,4]}	on
+window	0	2	:nvim	0	:##	c8c5,175x37,0,0,8	:
+window	0	3	:zsh	0	:-	c8c6,175x37,0,0,9	:
+window	0	4	:nvim	1	:*	b95c,175x33,0,0{87x33,0,0,10,87x33,88,0,16}	:
+state	0	

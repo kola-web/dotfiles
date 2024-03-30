@@ -1,0 +1,10 @@
+pane	0	1	0	:##	1	Ga=d,d=A	:/Users/lijialin/project/tangwang-h5	0	node	:node /Users/lijialin/.n/bin/pnpm dev
+pane	0	1	0	:##	2	bogon	:/Users/lijialin/project/devRed-question/web_src	0	zsh	:
+pane	0	1	0	:##	3	~/project/nuohe-system/web_src	:/Users/lijialin/learn/douyin	1	zsh	:
+pane	0	1	0	:##	4	bogon	:/Users/lijialin/project/devRed-systeam/web_src	0	zsh	:
+pane	0	2	1	:*	1	localhost	:/Users/lijialin/project/tangwang-h5	1	zsh	:
+pane	0	3	0	:##-	1	bogon	:/Users/lijialin/learn/douyin	1	nvim	:nvim
+window	0	1	:zsh	0	:##	9a48,235x41,0,0{115x41,0,0[115x19,0,0,1,115x21,0,20,2],119x41,116,0[119x19,116,0,3,119x21,116,20,4]}	on
+window	0	2	:zsh	1	:*	b1e2,235x41,0,0,5	:
+window	0	3	:nvim	0	:##-	b1e4,235x41,0,0,7	:
+state	0	

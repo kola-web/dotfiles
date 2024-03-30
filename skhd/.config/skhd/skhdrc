@@ -2,11 +2,13 @@
 # remap keybind
 ctrl - n [
   "微信" : skhd --key "down"
+  "He3" : skhd --key "down"
   "Obsidian" : skhd --key "down"
   "Google Chrome" : skhd --key "down"
 ] 
 ctrl - p [
   "微信" : skhd --key "up"
+  "He3" : skhd --key "up"
   "Obsidian" : skhd --key "up"
   "Google Chrome" : skhd --key "up"
 ] 
@@ -36,8 +38,8 @@ alt + shift - e :  cd ~ && kitty -e ranger
 # alt + shift - return : /Applications/Alacritty.app/Contents/MacOS/alacritty -e tmux
 alt - return [
     # * : open -na /Applications/WezTerm.app/Contents/MacOS/wezterm
-    # * : open -na /Applications/Alacritty.app/Contents/MacOS/alacritty
-    * : open -na /Applications/kitty.app/Contents/MacOS/kitty
+    * : open -na /Applications/Alacritty.app/Contents/MacOS/alacritty
+    # * : open -na /Applications/kitty.app/Contents/MacOS/kitty
     # * : open -na /Applications/iTerm.app/Contents/MacOS/iTerm2
     "WPS Office" ~
 ]
@@ -64,7 +66,7 @@ alt + shift - o : yabai -m window --toggle border
 alt - r : yabai -m space --rotate 90
 
 ## 缺划浮动
-alt - space : yabai -m window --toggle float --grid 24:24:2:2:20:20 --layer normal
+alt - space : yabai -m window --toggle float --grid 24:24:2:2:20:20
 
 
 # alt-, 上一个屏幕
@@ -93,15 +95,15 @@ alt - k : yabai -m query --spaces --space \
   | xargs -I{} yabai -m query --windows --space {} \
   | jq -sre 'add | map(select(."is-minimized"==false)) | sort_by(.display, .frame.y, .frame.x, .id) | . as $array | length as $array_length | index(map(select(."has-focus"==true))) as $has_index | if $has_index > 0 then nth($has_index - 1).id else nth($array_length - 1).id end'  \
   | xargs -I{} yabai -m window --focus {}
-  # --layer normal
+  #  --sub-layer normal
 
 # alt-j
 alt - j : yabai -m query --spaces --space \
   | jq -re ".index" \
   | xargs -I{} yabai -m query --windows --space {} \
   | jq -sre 'add | map(select(."is-minimized"==false)) | sort_by(.display, .frame.y, .frame.x, .id) | . as $array | length as $array_length | index(map(select(."has-focus"==true))) as $has_index | if $array_length - 1 > $has_index then nth($has_index + 1).id else nth(0).id end' \
-  | xargs -I{} yabai -m window --focus {} 
-  # --layer normal
+  | xargs -I{} yabai -m window --focus {}
+  # --sub-layer normal
 
 alt - m : yabai -m window --focus mouse
 

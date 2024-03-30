@@ -1,0 +1,14 @@
+pane	0	1	0	:##	1	Ga=d,d=A	:/Users/lijialin/project/moke-system/web_src	0	node	:node /Users/lijialin/.n/bin/pnpm dev
+pane	0	1	0	:##	2	MacBook-Pro.local	:/Users/lijialin/project/moke-system	1	zsh	:
+pane	0	1	0	:##	3	bogon	:/Users/lijialin/project/moke-h5/web_src	0	node	:node /Users/lijialin/.n/bin/pnpm dev
+pane	0	1	0	:##	4	MacBook-Pro.local	:/Users/lijialin/project/moke-h5/web_src	0	zsh	:
+pane	0	1	0	:##	5	~/project/nuohe-system/web_src	:/Users/lijialin	0	zsh	:
+pane	0	1	0	:##	6	bogon	:/Users/lijialin	0	zsh	:
+pane	0	2	1	:*	1	MacBook-Pro.local	:/Users/lijialin/project/moke-h5/web_src	1	nvim	:nvim
+pane	0	3	0	:##-	1	MacBook-Pro.local	:/Users/lijialin/project/moke-system/web_src	1	nvim	:nvim
+pane	0	4	0	:	1	MacBook-Pro.local	:/Users/lijialin/dotfiles/alacritty/.config/alacritty	1	nvim	:nvim
+window	0	1	:zsh	0	:##	fd8a,235x41,0,0{115x41,0,0[115x19,0,0{57x19,0,0,1,57x19,58,0,20},115x21,0,20{57x21,0,20,2,57x21,58,20,19}],119x41,116,0[119x19,116,0,3,119x21,116,20,4]}	on
+window	0	2	:nvim	1	:*	b1e5,235x41,0,0,8	:
+window	0	3	:nvim	0	:##-	b1e6,235x41,0,0,9	:
+window	0	4	:nvim	0	:	591f,235x41,0,0,10	:
+state	0	

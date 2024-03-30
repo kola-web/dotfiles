@@ -1,0 +1,8 @@
+pane	0	1	0	:##-	1	Ga=d,d=A	:/Users/lijialin/project/tangwang-h5	1	node	:node /Users/lijialin/.n/bin/pnpm dev
+pane	0	1	0	:##-	2	bogon	:/Users/lijialin/project/devRed-question/web_src	0	zsh	:
+pane	0	1	0	:##-	3	~/project/nuohe-system/web_src	:/Users/lijialin/project/nuohe-system/web_src	0	zsh	:
+pane	0	1	0	:##-	4	bogon	:/Users/lijialin/project/devRed-systeam/web_src	0	zsh	:
+pane	0	2	1	:*	1	localhost	:/Users/lijialin/project/tangwang-h5	1	nvim	:nvim
+window	0	1	:[tmux]	0	:##-	fe3f,235x41,0,0{116x41,0,0[116x20,0,0,1,116x20,0,21,3],118x41,117,0[118x20,117,0,5,118x20,117,21,7]}	on
+window	0	2	:nvim	1	:*	5921,235x41,0,0,12	:
+state	0	

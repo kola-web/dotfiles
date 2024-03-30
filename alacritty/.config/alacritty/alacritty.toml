@@ -1,4 +1,5 @@
 import = ["/Users/lijialin/.config/alacritty/gruvbox-material.toml"]
+
 [env]
 TERM = "xterm-256color"
 
@@ -23,6 +24,7 @@ save_to_clipboard = true
 
 [keyboard]
 bindings = [
+  # tmux
   { chars = "\u0002c", key = "T", mods = "Command" },
   { chars = "\u0002x", key = "W", mods = "Command" },
   { chars = "\u0002%", key = "D", mods = "Command" },
@@ -39,6 +41,25 @@ bindings = [
   { chars = "\u00027", key = "Key7", mods = "Command" },
   { chars = "\u00028", key = "Key8", mods = "Command" },
   { chars = "\u00029", key = "Key9", mods = "Command" },
+
+  # zellij
+  # { chars = "\u0002c", key = "T", mods = "Command" },
+  # { chars = "\u0002x", key = "W", mods = "Command" },
+  # { chars = "\u0002%", key = "D", mods = "Command" },
+  # { chars = "\u0002\"", key = "D", mods = "Command|Shift" },
+  # { chars = "\u0002u", key = "U", mods = "Command" },
+  # { chars = "\u0002[", key = "LBracket", mods = "Command" },
+  # { chars = "\u0002]", key = "RBracket", mods = "Command" },
+  # { chars = "\u00021", key = "Key1", mods = "Command" },
+  # { chars = "\u00022", key = "Key2", mods = "Command" },
+  # { chars = "\u00023", key = "Key3", mods = "Command" },
+  # { chars = "\u00024", key = "Key4", mods = "Command" },
+  # { chars = "\u00025", key = "Key5", mods = "Command" },
+  # { chars = "\u00026", key = "Key6", mods = "Command" },
+  # { chars = "\u00027", key = "Key7", mods = "Command" },
+  # { chars = "\u00028", key = "Key8", mods = "Command" },
+  # { chars = "\u00029", key = "Key9", mods = "Command" },
+  # { action = "CreateNewTab", key = "A", mods = "Command" },
 
   # { chars = "\u0000", key = "Space", mods = "Control" },
 
