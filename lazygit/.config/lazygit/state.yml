@@ -1,8 +1,14 @@
 lastupdatecheck: 0
 recentrepos:
 - /Users/lijialin/dotfiles
-- /Users/lijialin/Library/Rime
+- /Users/lijialin/docker/tangyou/code_src/nn_diabetes_main
+- /Users/lijialin/project/nuohe
 - /Users/lijialin/.config/nvim
+- /Users/lijialin/project/tangwang-h5
+- /Users/lijialin/Library/Rime
+- /Users/lijialin/project/zaiding-miniprogram
+- /Users/lijialin/learn/douyin
+- /Users/lijialin/project/tangwang-system
 - /Users/lijialin/.local/share/LazyVim/lazy/LazyVim
 - /Users/lijialin/.config/LazyVim
 - /Users/lijialin/.local/share/nvim/lazy/smart-splits.nvim
@@ -20,7 +26,13 @@ recentrepos:
 - /Users/lijialin/learn/painter-custom-poster
 - /Users/lijialin/dotfiles.bak
 startuppopupversion: 5
+lastversion: 0.41.0
 customcommandshistory:
 - q
 hidecommandlog: false
 ignorewhitespaceindiffview: false
+diffcontextsize: 3
+localbranchsortorder: recency
+remotebranchsortorder: alphabetical
+gitlogorder: topo-order
+gitlogshowgraph: when-maximised

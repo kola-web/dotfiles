@@ -12,7 +12,7 @@ config.tab_bar_at_bottom = true
 config.tab_max_width = 40
 config.enable_tab_bar = true
 
-config.color_scheme = "Solarized Dark Higher Contrast"
+config.color_scheme = "Gruvbox Material (Gogh)"
 
 config.window_background_opacity = 0.94
 
@@ -21,7 +21,7 @@ config.window_background_opacity = 0.94
 --   "Iosevka"
 -- })
 
-config.font = wezterm.font("JetBrainsMonoNL Nerd Font Mono", { weight = "Regular" })
+config.font = wezterm.font("JetBrainsMonoNL Nerd Font Mono")
 config.font_rules = {
 	{
 		italic = true,

@@ -38,8 +38,8 @@ alt + shift - e :  cd ~ && kitty -e ranger
 # alt + shift - return : /Applications/Alacritty.app/Contents/MacOS/alacritty -e tmux
 alt - return [
     # * : open -na /Applications/WezTerm.app/Contents/MacOS/wezterm
-    * : open -na /Applications/Alacritty.app/Contents/MacOS/alacritty
-    # * : open -na /Applications/kitty.app/Contents/MacOS/kitty
+    # * : open -na /Applications/Alacritty.app/Contents/MacOS/alacritty
+    * : open -na /Applications/kitty.app/Contents/MacOS/kitty
     # * : open -na /Applications/iTerm.app/Contents/MacOS/iTerm2
     "WPS Office" ~
 ]
