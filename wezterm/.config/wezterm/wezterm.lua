@@ -12,7 +12,7 @@ config.enable_tab_bar = true
 config.color_scheme = "Gruvbox Material (Gogh)"
 
 -- Ⅳa
-config.freetype_load_flags = "NO_AUTOHINT"
+config.freetype_load_flags = "NO_HINTING|NO_AUTOHINT"
 config.font = wezterm.font_with_fallback({
 	{ family = "JetBrainsMono Nerd Font" },
 	{ family = "Maple Mono SC NF" },
