@@ -170,6 +170,11 @@ M.keys = {
 		mods = "CMD",
 		action = act.ActivateCopyMode,
 	},
+	{
+		key = "f",
+		mods = "CMD",
+		action = act.Search({ CaseSensitiveString = "" }),
+	},
 	{ key = "l", mods = "CMD", action = wezterm.action.ShowDebugOverlay },
 
 	-- fix neovim keybind

@@ -2,10 +2,10 @@ lastupdatecheck: 0
 recentrepos:
 - /Users/lijialin/dotfiles
 - /Users/lijialin/docker/tangyou/code_src/nn_diabetes_main
-- /Users/lijialin/project/tangwang-h5
-- /Users/lijialin/.config/nvim-plugins/cmp-path
 - /Users/lijialin/Library/Rime
+- /Users/lijialin/project/tangwang-h5
 - /Users/lijialin/project/nuohe
+- /Users/lijialin/.config/nvim-plugins/cmp-path
 - /Users/lijialin/.config/nvim
 - /Users/lijialin/project/zaiding-miniprogram
 - /Users/lijialin/learn/douyin
