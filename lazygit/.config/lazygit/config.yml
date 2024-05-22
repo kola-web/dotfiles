@@ -46,11 +46,11 @@ gui:
   showPanelJumps: true # for showing the jump-to-panel keybindings as panel subtitles
   showCommandLog: true
   showIcons: false # deprecated: use nerdFontsVersion instead
-  nerdFontsVersion: "" # nerd fonts version to use ("2" or "3"); empty means don't show nerd font icons
+  nerdFontsVersion: "3" # nerd fonts version to use ("2" or "3"); empty means don't show nerd font icons
   showFileIcons: true # for hiding file icons in the file views
   commitHashLength: 8 # length of commit hash in commits view. 0 shows '*' if NF icons aren't enabled
   commandLogSize: 8
-  splitDiff: 'auto' # one of 'auto' | 'always'
+  splitDiff: 'always' # one of 'auto' | 'always'
   skipRewordInEditorWarning: false # for skipping the confirmation before launching the reword editor
   border: 'rounded' # one of 'single' | 'double' | 'rounded' | 'hidden'
   animateExplosion: true # shows an explosion animation when nuking the working tree
@@ -64,6 +64,7 @@ git:
   paging:
     colorArg: always
     useConfig: false
+    pager: delta --dark --paging=never 
   commit:
     signOff: false
     autoWrapCommitMessage: true # automatic WYSIWYG wrapping of the commit message as you type
@@ -103,10 +104,10 @@ git:
 os:
   copyToClipboardCmd: '' # See 'Custom Command for Copying to Clipboard' section
   editPreset: '' # see 'Configuring File Editing' section
-  edit: ''
-  editAtLine: ''
-  editAtLineAndWait: ''
-  open: ''
+  edit: 'nvim {{filename}}'
+  editAtLine: 'nvim +{{line}} {{filename}}'
+  editAtLineAndWait: 'nvim --remote-wait +{{line}} {{filename}}'
+  open: 'code {{filename}}'
   openLink: ''
 refresher:
   refreshInterval: 10 # File/submodule refresh interval in seconds. Auto-refresh can be disabled via option 'git.autoRefresh'.
@@ -131,8 +132,8 @@ keybinding:
     nextItem: '<down>' # go one line down
     prevItem-alt: 'k' # go one line up
     nextItem-alt: 'j' # go one line down
-    prevPage: ',' # go to next page in list
-    nextPage: '.' # go to previous page in list
+    prevPage: '<c-u>' # go to next page in list
+    nextPage: '<c-d>' # go to previous page in list
     gotoTop: '<' # go to top of list
     gotoBottom: '>' # go to bottom of list
     scrollLeft: 'H' # scroll left within list view

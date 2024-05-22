@@ -22,3 +22,5 @@ function fish_user_key_bindings
 end
 
 fzf_configure_bindings --directory=\cf --variables=\e\cv
+set -gx VOLTA_HOME "$HOME/.volta"
+set -gx PATH "$VOLTA_HOME/bin" $PATH
