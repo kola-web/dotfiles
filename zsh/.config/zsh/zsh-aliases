@@ -3,7 +3,7 @@ alias e='fastfetch'
 alias f='zi'
 # alias r='TERM=screen-256color ranger'
 # alias r='ranger'
-alias r='yazi'
+alias r='yy'
 alias g='lazygit'
 alias lzd='lazydocker'
 alias zsh-update-plugins="find ""$ZDOTDIR"/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
