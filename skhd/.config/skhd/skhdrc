@@ -20,7 +20,7 @@ ctrl - p [
 # ctrl - return : skhd --key "escape"
 # ctrl - 0x21 : skhd --key "escape"
 
-alt + shift - c : /Applications/Snipaste.app/Contents/MacOS/Snipaste pick-color
+# alt + shift - c : /Applications/Snipaste.app/Contents/MacOS/Snipaste pick-color
 alt + shift - s : /Applications/Snipaste.app/Contents/MacOS/Snipaste snip 
 
 ## 关闭当前窗口

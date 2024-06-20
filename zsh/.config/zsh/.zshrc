@@ -37,9 +37,6 @@ zsh_add_file "kitty"
 
 zsh_add_file "scripts/completion.zsh"
 
-
-test -e /Users/lijialin/.config/zsh/.iterm2_shell_integration.zsh && source /Users/lijialin/.config/zsh/.iterm2_shell_integration.zsh || true
-
 # pnpm
 export PNPM_HOME="/Users/lijialin/Library/pnpm"
 case ":$PATH:" in
