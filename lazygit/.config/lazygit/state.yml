@@ -1,38 +1,42 @@
 lastupdatecheck: 0
 recentrepos:
-- /Users/lijialin/dotfiles
-- /Users/lijialin/docker/tangyou/code_src/nn_diabetes_main
-- /Users/lijialin/project/tangwang-h5
-- /Users/lijialin/.config/nvim
-- /Users/lijialin/note
-- /Users/lijialin/project/nuohe
-- /Users/lijialin/Library/Rime
-- /Users/lijialin/project/tangwang-system
-- /Users/lijialin/.config/LazyVim
-- /Users/lijialin/project/zaiding-miniprogram
-- /Users/lijialin/.local/share/LazyVim/lazy/LazyVim
-- /Users/lijialin/learn/learngit
-- /Users/lijialin/.config/nvim-plugins/cmp-path
-- /Users/lijialin/.local/share/nvim/lazy/smart-splits.nvim
-- /Users/lijialin/Music/网易云MP3
-- /Users/lijialin/project/novo-micro-web2
-- /Users/lijialin/.local/share/lunarvim/lvim
-- /Users/lijialin/.config/NvChad
-- /Users/lijialin/Pictures/wallpapers
-- /Users/lijialin/.local/share/nvim/lazy/conform.nvim
-- /Users/lijialin/project/nuohe-ciie-2023/web_src
-- /Users/lijialin/project-git-svn/raredcare
-- /Users/lijialin/.config/nvchad
-- /Users/lijialin/nvim-plugin/nvim-various-textobjs
-- /Users/lijialin/dotfiles.bak
+    - /Users/lijialin/dotfiles
+    - /Users/lijialin/.config/nvim
+    - /Users/lijialin/project/tangwang-h5
+    - /Users/lijialin/Library/Rime
+    - /Users/lijialin/project/tangwang-system
+    - /Users/lijialin/docker/tangyou/code_src/nn_diabetes_main
+    - /Users/lijialin/project/tangwang-h5-bak
+    - /Users/lijialin/.config/nvim-plugins/emmet-vim
+    - /Users/lijialin/.vim/plugged/emmet-vim
+    - /Users/lijialin/project/zaiding-miniprogram
+    - /Users/lijialin/project/nuohe
+    - /Users/lijialin/note
+    - /Users/lijialin/.local/share/LazyVim/lazy/LazyVim
+    - /Users/lijialin/.config/LazyVim
+    - /Users/lijialin/learn/learngit
+    - /Users/lijialin/.config/nvim-plugins/cmp-path
+    - /Users/lijialin/.local/share/nvim/lazy/smart-splits.nvim
+    - /Users/lijialin/Music/网易云MP3
+    - /Users/lijialin/project/novo-micro-web2
+    - /Users/lijialin/.local/share/lunarvim/lvim
+    - /Users/lijialin/.config/NvChad
+    - /Users/lijialin/Pictures/wallpapers
+    - /Users/lijialin/.local/share/nvim/lazy/conform.nvim
+    - /Users/lijialin/project/nuohe-ciie-2023/web_src
+    - /Users/lijialin/project-git-svn/raredcare
+    - /Users/lijialin/.config/nvchad
+    - /Users/lijialin/nvim-plugin/nvim-various-textobjs
+    - /Users/lijialin/dotfiles.bak
 startuppopupversion: 5
-lastversion: 0.41.0
+lastversion: 0.43.1
 customcommandshistory:
-- qa
-- q
+    - qa
+    - q
 hidecommandlog: false
 ignorewhitespaceindiffview: false
 diffcontextsize: 7
+renamesimilaritythreshold: 50
 localbranchsortorder: recency
 remotebranchsortorder: alphabetical
 gitlogorder: topo-order

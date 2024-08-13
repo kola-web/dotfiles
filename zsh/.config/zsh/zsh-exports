@@ -51,4 +51,3 @@ export PATH="$HOME/.local/bin":$PATH
 export PATH="$HOME/.local/share/neovim/bin":$PATH
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
-eval "$(vfox activate zsh)"

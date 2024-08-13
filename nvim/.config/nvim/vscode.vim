@@ -54,3 +54,6 @@ noremap ]s /<script<cr>
 noremap ]S /<\/script<cr>
 noremap ]c /<style<cr>
 noremap ]C /<\/style<cr>
+
+noremap <C-w>v :vs<cr>
+noremap <C-w>s :sp<cr>
