@@ -2,20 +2,20 @@ lastupdatecheck: 0
 recentrepos:
     - /Users/lijialin/dotfiles
     - /Users/lijialin/.config/nvim
-    - /Users/lijialin/project/tangwang-h5
     - /Users/lijialin/Library/Rime
-    - /Users/lijialin/project/tangwang-system
+    - /Users/lijialin/project/tangwang-h5
     - /Users/lijialin/docker/tangyou/code_src/nn_diabetes_main
+    - /Users/lijialin/project/nuohe
+    - /Users/lijialin/project/tangwang-system
+    - /Users/lijialin/project/zaiding-miniprogram
     - /Users/lijialin/project/tangwang-h5-bak
+    - /Users/lijialin/note
+    - /Users/lijialin/.config/nvim-plugins/cmp-path
     - /Users/lijialin/.config/nvim-plugins/emmet-vim
     - /Users/lijialin/.vim/plugged/emmet-vim
-    - /Users/lijialin/project/zaiding-miniprogram
-    - /Users/lijialin/project/nuohe
-    - /Users/lijialin/note
     - /Users/lijialin/.local/share/LazyVim/lazy/LazyVim
     - /Users/lijialin/.config/LazyVim
     - /Users/lijialin/learn/learngit
-    - /Users/lijialin/.config/nvim-plugins/cmp-path
     - /Users/lijialin/.local/share/nvim/lazy/smart-splits.nvim
     - /Users/lijialin/Music/网易云MP3
     - /Users/lijialin/project/novo-micro-web2
