@@ -5,7 +5,7 @@
     . git
     . stow
 
-Clone into your `$HOME` directory or `~`
+克隆到你的 `$HOME` 目录或 `~`
 
 ```bash
 git clone --recurse-submodules https://github.com/kola-web/dotfiles.git ~
