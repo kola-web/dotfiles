@@ -11,7 +11,8 @@
 # Aliases 🔗
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 Set-Alias -Name cat -Value bat
-Set-Alias -Name g -Value lazygit
+Set-Alias -Name g   -Value lazygit
+Set-Alias -Name r   -Value yazi
 
 
 # Putting the FUN in Functions 🎉
