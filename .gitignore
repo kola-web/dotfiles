@@ -19,3 +19,5 @@ zsh/.config/zsh/.zsh_sessions/835DF63F-D927-444E-9A9D-42213054A04F.session
 tmux/.tmux/plugins
 tmux/.config/tmux/plugins
 lazygit/.config/lazygit/state.yml
+
+.DS_Store
