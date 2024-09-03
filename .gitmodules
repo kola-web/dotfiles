@@ -3,13 +3,13 @@
 	url = https://github.com/catppuccin/alacritty.git
 [submodule "sketchybar/.config/sketchybar"]
 	path = sketchybar/.config/SketchyBar
-	url = git@github.com:FelixKratz/SketchyBar.git
+	url = https://github.com/FelixKratz/SketchyBar.git
 [submodule "iterm"]
 	path = iterm
-	url = git@github.com:catppuccin/iterm.git
+	url = https://github.com/catppuccin/iterm.git
 [submodule "ranger/.config/ranger/plugins/ranger-zoxide"]
 	path = ranger/.config/ranger/plugins/ranger-zoxide
-	url = git@github.com:jchook/ranger-zoxide.git
+	url = https://github.com/jchook/ranger-zoxide.git
 [submodule "nvim/.config/nvim"]
 	path = nvim/.config/nvim
 	url = https://github.com/kola-web/nvim.git

@@ -9,6 +9,7 @@ config.window_close_confirmation = "NeverPrompt" -- 禁用窗口关闭提示
 config.window_background_opacity = 0.9
 config.tab_bar_at_bottom = true
 config.enable_tab_bar = true
+config.default_prog = { 'pwsh', '-l' }
 
 config.color_scheme = "Gruvbox Material (Gogh)"
 
