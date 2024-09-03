@@ -59,9 +59,6 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -n 10'"
 
 export NEOVIDE_FRAME='none'
 
-# openAI
-export OPENAI_API_KEY="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"
-
 # starship.toml
 export STARSHIP_CONFIG=$XDG_CONFIG_HOME/zsh/startship.toml
 . "$HOME/.cargo/env"
