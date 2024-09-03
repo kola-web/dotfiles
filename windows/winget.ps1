@@ -17,6 +17,7 @@ $wingetDeps = @(
     "junegunn.fzf"
     "ajeetdsouza.zoxide"
     "jesseDuffield.lazygit"
+    "wez.wezterm"
 )
 
 Write-Host "Installing missing dependencies..."
