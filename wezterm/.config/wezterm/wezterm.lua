@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
-config.window_decorations = "RESIZE" -- 禁用标题栏
+-- config.window_decorations = "RESIZE" -- 禁用标题栏
 config.hide_tab_bar_if_only_one_tab = true
 
 config.window_close_confirmation = "NeverPrompt" -- 禁用窗口关闭提示
