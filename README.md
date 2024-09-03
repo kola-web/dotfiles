@@ -1,25 +1,30 @@
-# Machfiles
+## 安装
 
-## Installing
+### 必需品
 
-You will need `git` and GNU `stow`
+    . git
+    . stow
 
 Clone into your `$HOME` directory or `~`
 
 ```bash
-git clone git@github.com:kola-web/dotfiles.git ~
+git clone --recurse-submodules https://github.com/kola-web/dotfiles.git ~
 ```
 
-Run `stow` to symlink everything or just select what you want
+运行`stow`对所有内容进行符号链接或仅选择您想要的内容
 
 ```bash
-stow */ # Everything (the '/' ignores the README)
+stow */ 映射所有目录
 ```
 
 ```bash
-stow zsh # Just my zsh config
+stow zsh # 仅使用zsh
 ```
 
-## Programs
+## 手动初始化和更新子模块
 
-An updated list of all the programs I use can be found in the `programs` directory
+如果你已经克隆了主仓库，并且想在之后克隆所有子模块，可以使用以下命令：
+
+```bash
+git submodule update --init --recursive
+```
