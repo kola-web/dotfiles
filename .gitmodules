@@ -10,3 +10,6 @@
 [submodule "ranger/.config/ranger/plugins/ranger-zoxide"]
 	path = ranger/.config/ranger/plugins/ranger-zoxide
 	url = git@github.com:jchook/ranger-zoxide.git
+[submodule "nvim/.config/nvim"]
+	path = nvim/.config/nvim
+	url = https://github.com/kola-web/nvim.git
