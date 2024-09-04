@@ -106,152 +106,152 @@ binding_modes:
       - commands: ["wm-disable-binding-mode --name resize"]
         bindings: ["escape", "enter"]
 
-  # 启用后，所有键绑定都将被禁用，除非按下 lwin+shift+p 来返回默认键绑定。
+  # 启用后，所有键绑定都将被禁用，除非按下 scroll_lock+shift+p 来返回默认键绑定。
   - name: "pause"
     keybindings:
       - commands: ["wm-disable-binding-mode --name pause"]
-        bindings: ["lwin+shift+p"]
+        bindings: ["scroll_lock+shift+p"]
 
 keybindings:
   # 将焦点移向指定方向。
   - commands: ["focus --direction left"]
-    bindings: ["lwin+h", "lwin+left"]
+    bindings: ["scroll_lock+h", "scroll_lock+left"]
   - commands: ["focus --direction right"]
-    bindings: ["lwin+l", "lwin+right"]
+    bindings: ["scroll_lock+l", "scroll_lock+right"]
   - commands: ["focus --direction up"]
-    bindings: ["lwin+k", "lwin+up"]
+    bindings: ["scroll_lock+k", "scroll_lock+up"]
   - commands: ["focus --direction down"]
-    bindings: ["lwin+j", "lwin+down"]
+    bindings: ["scroll_lock+j", "scroll_lock+down"]
 
   # 将聚焦的窗口移动到指定方向。
   - commands: ["move --direction left"]
-    bindings: ["lwin+shift+h", "lwin+shift+left"]
+    bindings: ["scroll_lock+shift+h", "scroll_lock+shift+left"]
   - commands: ["move --direction right"]
-    bindings: ["lwin+shift+l", "lwin+shift+right"]
+    bindings: ["scroll_lock+shift+l", "scroll_lock+shift+right"]
   - commands: ["move --direction up"]
-    bindings: ["lwin+shift+k", "lwin+shift+up"]
+    bindings: ["scroll_lock+shift+k", "scroll_lock+shift+up"]
   - commands: ["move --direction down"]
-    bindings: ["lwin+shift+j", "lwin+shift+down"]
+    bindings: ["scroll_lock+shift+j", "scroll_lock+shift+down"]
 
   # 按百分比或像素量调整聚焦窗口的大小。
   - commands: ["resize --width -2%"]
-    bindings: ["lwin+u"]
+    bindings: ["scroll_lock+u"]
   - commands: ["resize --width +2%"]
-    bindings: ["lwin+p"]
+    bindings: ["scroll_lock+p"]
   - commands: ["resize --height +2%"]
-    bindings: ["lwin+o"]
+    bindings: ["scroll_lock+o"]
   - commands: ["resize --height -2%"]
-    bindings: ["lwin+i"]
+    bindings: ["scroll_lock+i"]
 
   # 作为上述调整大小键绑定的替代方法，调整大小模式允许通过箭头键或 HJKL 键进行调整。绑定模式在上面定义，名称为 'resize'。
   - commands: ["wm-enable-binding-mode --name resize"]
-    bindings: ["lwin+r"]
+    bindings: ["scroll_lock+r"]
 
-  # 禁用所有键绑定，直到再次按下 lwin+shift+p。
+  # 禁用所有键绑定，直到再次按下 scroll_lock+shift+p。
   - commands: ["wm-enable-binding-mode --name pause"]
-    bindings: ["lwin+shift+p"]
+    bindings: ["scroll_lock+shift+p"]
 
   # 更改平铺方向。这决定了新平铺窗口将被插入的位置。
   - commands: ["toggle-tiling-direction"]
-    bindings: ["lwin+v"]
+    bindings: ["scroll_lock+v"]
 
   # 将焦点从平铺窗口更改为浮动窗口再到全屏窗口。
   - commands: ["wm-cycle-focus"]
-    bindings: ["lwin+space"]
+    bindings: ["scroll_lock+space"]
 
   # 将聚焦的窗口更改为浮动窗口。
   - commands: ["toggle-floating --centered"]
-    bindings: ["lwin+shift+space"]
+    bindings: ["scroll_lock+shift+space"]
 
   # 将聚焦的窗口更改为平铺窗口。
   - commands: ["toggle-tiling"]
-    bindings: ["lwin+t"]
+    bindings: ["scroll_lock+t"]
 
   # 将聚焦的窗口更改为全屏窗口。
   - commands: ["toggle-fullscreen"]
-    bindings: ["lwin+f"]
+    bindings: ["scroll_lock+f"]
 
   # 最小化聚焦窗口。
   - commands: ["toggle-minimized"]
-    bindings: ["lwin+m"]
+    bindings: ["scroll_lock+m"]
 
   # 关闭聚焦窗口。
   - commands: ["close"]
-    bindings: ["lwin+shift+q"]
+    bindings: ["scroll_lock+shift+q"]
 
   # 安全终止 GlazeWM 进程。
   - commands: ["wm-exit"]
-    bindings: ["lwin+shift+e"]
+    bindings: ["scroll_lock+shift+e"]
 
   # 重新评估配置文件。
   - commands: ["wm-reload-config"]
-    bindings: ["lwin+shift+r"]
+    bindings: ["scroll_lock+shift+r"]
 
   # 重新绘制所有窗口。
   - commands: ["wm-redraw"]
-    bindings: ["lwin+shift+w"]
+    bindings: ["scroll_lock+shift+w"]
 
   # 启动 CMD 终端。或者，使用 `shell-exec wt` 或 `shell-exec %ProgramFiles%/Git/git-bash.exe` 启动 Windows 终端或 Git Bash。
-  - commands: ["shell-exec cmd"]
-    bindings: ["lwin+enter"]
+  - commands: ["shell-exec wezterm-gui.exe"]
+    bindings: ["scroll_lock+enter"]
 
   # 聚焦配置文件中定义的下一个/上一个工作区。
   - commands: ["focus --next-workspace"]
-    bindings: ["lwin+s"]
+    bindings: ["scroll_lock+s"]
   - commands: ["focus --prev-workspace"]
-    bindings: ["lwin+a"]
+    bindings: ["scroll_lock+a"]
 
   # 聚焦上次聚焦的工作区。
   - commands: ["focus --recent-workspace"]
-    bindings: ["lwin+d"]
+    bindings: ["scroll_lock+d"]
 
   # 聚焦配置文件中定义的指定工作区。
   - commands: ["focus --workspace 1"]
-    bindings: ["lwin+1"]
+    bindings: ["scroll_lock+1"]
   - commands: ["focus --workspace 2"]
-    bindings: ["lwin+2"]
+    bindings: ["scroll_lock+2"]
   - commands: ["focus --workspace 3"]
-    bindings: ["lwin+3"]
+    bindings: ["scroll_lock+3"]
   - commands: ["focus --workspace 4"]
-    bindings: ["lwin+4"]
+    bindings: ["scroll_lock+4"]
   - commands: ["focus --workspace 5"]
-    bindings: ["lwin+5"]
+    bindings: ["scroll_lock+5"]
   - commands: ["focus --workspace 6"]
-    bindings: ["lwin+6"]
+    bindings: ["scroll_lock+6"]
   - commands: ["focus --workspace 7"]
-    bindings: ["lwin+7"]
+    bindings: ["scroll_lock+7"]
   - commands: ["focus --workspace 8"]
-    bindings: ["lwin+8"]
+    bindings: ["scroll_lock+8"]
   - commands: ["focus --workspace 9"]
-    bindings: ["lwin+9"]
+    bindings: ["scroll_lock+9"]
 
   # Move the focused window's parent workspace to a monitor in a given
   # direction.
   - commands: ["move-workspace --direction left"]
-    bindings: ["lwin+shift+a"]
+    bindings: ["scroll_lock+shift+a"]
   - commands: ["move-workspace --direction right"]
-    bindings: ["lwin+shift+f"]
+    bindings: ["scroll_lock+shift+f"]
   - commands: ["move-workspace --direction up"]
-    bindings: ["lwin+shift+d"]
+    bindings: ["scroll_lock+shift+d"]
   - commands: ["move-workspace --direction down"]
-    bindings: ["lwin+shift+s"]
+    bindings: ["scroll_lock+shift+s"]
 
   # Move focused window to a workspace defined in `workspaces` config.
   - commands: ["move --workspace 1", "focus --workspace 1"]
-    bindings: ["lwin+shift+1"]
+    bindings: ["scroll_lock+shift+1"]
   - commands: ["move --workspace 2", "focus --workspace 2"]
-    bindings: ["lwin+shift+2"]
+    bindings: ["scroll_lock+shift+2"]
   - commands: ["move --workspace 3", "focus --workspace 3"]
-    bindings: ["lwin+shift+3"]
+    bindings: ["scroll_lock+shift+3"]
   - commands: ["move --workspace 4", "focus --workspace 4"]
-    bindings: ["lwin+shift+4"]
+    bindings: ["scroll_lock+shift+4"]
   - commands: ["move --workspace 5", "focus --workspace 5"]
-    bindings: ["lwin+shift+5"]
+    bindings: ["scroll_lock+shift+5"]
   - commands: ["move --workspace 6", "focus --workspace 6"]
-    bindings: ["lwin+shift+6"]
+    bindings: ["scroll_lock+shift+6"]
   - commands: ["move --workspace 7", "focus --workspace 7"]
-    bindings: ["lwin+shift+7"]
+    bindings: ["scroll_lock+shift+7"]
   - commands: ["move --workspace 8", "focus --workspace 8"]
-    bindings: ["lwin+shift+8"]
+    bindings: ["scroll_lock+shift+8"]
   - commands: ["move --workspace 9", "focus --workspace 9"]
-    bindings: ["lwin+shift+9"]
+    bindings: ["scroll_lock+shift+9"]
