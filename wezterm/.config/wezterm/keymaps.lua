@@ -61,6 +61,7 @@ M.keys = {
 	split_nav("resize", "k"),
 	split_nav("resize", "l"),
 
+	{ key = "F12", mods = "NONE", action = wezterm.action.ShowDebugOverlay },
 	{
 		key = "q",
 		mods = mod.cmd,
@@ -77,7 +78,25 @@ M.keys = {
 		mods = mod.cmd,
 		action = act.PasteFrom("Clipboard"),
 	},
-
+	{
+		key = "u",
+		mods = mod.cmd,
+		action = wezterm.action.QuickSelectArgs({
+			label = "open url",
+			patterns = {
+				"\\((https?://\\S+)\\)",
+				"\\[(https?://\\S+)\\]",
+				"\\{(https?://\\S+)\\}",
+				"<(https?://\\S+)>",
+				"\\bhttps?://\\S+[)/a-zA-Z0-9-]+",
+			},
+			action = wezterm.action_callback(function(window, pane)
+				local url = window:get_selection_text_for_pane(pane)
+				wezterm.log_info("opening: " .. url)
+				wezterm.open_with(url)
+			end),
+		}),
+	},
 	{
 		key = "t",
 		mods = mod.cmd,
@@ -88,6 +107,7 @@ M.keys = {
 		mods = mod.cmd,
 		action = act.SplitVertical,
 	},
+	{ key = "n", mods = mod.cmd, action = act.SpawnWindow },
 	{
 		key = "d",
 		mods = mod.cmd,
@@ -169,11 +189,6 @@ M.keys = {
 		action = act.ActivateTab(-1),
 	},
 	{
-		key = "P",
-		mods = mod.cmd,
-		action = act.ActivateCommandPalette,
-	},
-	{
 		key = " ",
 		mods = mod.cmd,
 		action = act.ActivateCopyMode,
@@ -183,11 +198,20 @@ M.keys = {
 		mods = mod.cmd,
 		action = act.Search({ CaseSensitiveString = "" }),
 	},
-	{ key = "l", mods = mod.cmd, action = wezterm.action.ShowDebugOverlay },
 	{
 		key = "T",
 		mods = mod.cmd,
 		action = act.ShowLauncher,
+	},
+	{
+		key = "p",
+		mods = mod.cmd,
+		action = act.ShowLauncherArgs({ flags = "FUZZY|TABS" }),
+	},
+	{
+		key = "P",
+		mods = mod.cmd,
+		action = act.ActivateCommandPalette,
 	},
 
 	-- fix neovim keybind
