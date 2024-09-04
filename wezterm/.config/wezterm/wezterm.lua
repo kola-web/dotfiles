@@ -1,37 +1,38 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
-
--- config.window_decorations = "RESIZE" -- 禁用标题栏
-config.hide_tab_bar_if_only_one_tab = true
-
-config.window_close_confirmation = "NeverPrompt" -- 禁用窗口关闭提示
-
-config.window_background_opacity = 0.9
-config.tab_bar_at_bottom = true
-config.enable_tab_bar = true
-config.default_prog = { 'pwsh', '-l' }
-
-config.color_scheme = "Gruvbox Material (Gogh)"
-
--- Ⅳa
-config.font = wezterm.font_with_fallback({
-	{ family = "JetBrainsMono Nerd Font" },
-	{ family = "Maple Mono SC NF" },
-	{ family = "Iosevka Term" },
-})
-
-config.font_size = 14
-config.line_height = 1.1
-
-config.window_padding = {
-	left = 8,
-	right = 8,
-	top = 8,
-	bottom = 8,
-}
+wezterm.log_info("reloading")
 
 require("keymaps").setup(config)
-require("launch").setup(config)
-require("tabs")
+require("tabs").setup(config)
+
+config.font = wezterm.font("JetBrainsMono Nerd Font Mono")
+config.font_size = 14
+config.bold_brightens_ansi_colors = true
+config.color_scheme = "Solarized Dark (Gogh)"
+config.line_height = 1.2
+
+-- Cursor
+config.default_cursor_style = "BlinkingBar"
+config.force_reverse_video_cursor = true
+config.window_padding = { left = 0, right = 0, top = 0, bottom = 0 }
+-- window_background_opacity = 0.9,
+-- cell_width = 0.9,
+config.scrollback_lines = 10000
+
+if wezterm.target_triple:find("windows") then
+	config.default_prog = { "pwsh" }
+	config.window_decorations = "RESIZE|TITLE"
+	wezterm.on("gui-startup", function(cmd)
+		local screen = wezterm.gui.screens().active
+		local tab, pane, window = wezterm.mux.spawn_window(cmd or {})
+		local gui = window:gui_window()
+		local width = 0.7 * screen.width
+		local height = 0.7 * screen.height
+		gui:set_inner_size(width, height)
+		gui:set_position((screen.width - width) / 2, (screen.height - height) / 2)
+	end)
+else
+	config.window_decorations = "NONE"
+end
 
 return config

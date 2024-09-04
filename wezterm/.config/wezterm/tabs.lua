@@ -1,16 +1,13 @@
-local wezterm = require("wezterm")
+local M = {}
+M.arrow_solid = ""
+M.arrow_thin = ""
 
-local HOME_DIR = string.format("file://%s", os.getenv("HOME"))
-
-local function get_current_working_dir(tab)
-	local current_dir = tostring(tab.active_pane.current_working_dir) or ""
-	return current_dir == HOME_DIR and "~" or string.match(current_dir, ".*/([^/]+/[^/]+)$")
+function M.setup(config)
+	config.use_fancy_tab_bar = false
+	config.tab_bar_at_bottom = true
+	config.hide_tab_bar_if_only_one_tab = true
+	config.tab_max_width = 32
+	config.unzoom_on_switch_pane = true
 end
 
-wezterm.on("format-tab-title", function(tab)
-	local tab_index = tab.tab_index + 1
-	local current_dir = get_current_working_dir(tab)
-	return {
-		{ Text = string.format(" %d %s ", tab_index, current_dir) },
-	}
-end)
+return M
