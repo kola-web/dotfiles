@@ -2,10 +2,16 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 wezterm.log_info("reloading")
 
+require("events.right-status").setup()
+require("events.left-status").setup()
+require("events.tab-title").setup()
+require("events.new-tab-button").setup()
+
 require("keymaps").setup(config)
 require("tabs").setup(config)
 
-config.font = wezterm.font("JetBrainsMono Nerd Font Mono")
+config.font = wezterm.font("JetBrainsMono Nerd Font")
+
 config.font_size = 14
 config.bold_brightens_ansi_colors = true
 config.color_scheme = "Solarized Dark (Gogh)"
@@ -32,7 +38,7 @@ if wezterm.target_triple:find("windows") then
 		gui:set_position((screen.width - width) / 2, (screen.height - height) / 2)
 	end)
 else
-	config.window_decorations = "NONE"
+	config.window_decorations = "RESIZE"
 end
 
 return config

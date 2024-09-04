@@ -21,24 +21,32 @@ local direction_keys = {
 }
 
 local function split_nav(resize_or_move, key)
-  return {
-    key = key,
-    mods = resize_or_move == 'resize' and 'META' or 'CTRL',
-    action = wezterm.action_callback(function(win, pane)
-      if is_vim(pane) then
-        -- pass the keys through to vim/nvim
-        win:perform_action({
-          SendKey = { key = key, mods = resize_or_move == 'resize' and 'META' or 'CTRL' },
-        }, pane)
-      else
-        if resize_or_move == 'resize' then
-          win:perform_action({ AdjustPaneSize = { direction_keys[key], 3 } }, pane)
-        else
-          win:perform_action({ ActivatePaneDirection = direction_keys[key] }, pane)
-        end
-      end
-    end),
-  }
+	return {
+		key = key,
+		mods = resize_or_move == "resize" and "META" or "CTRL",
+		action = wezterm.action_callback(function(win, pane)
+			if is_vim(pane) then
+				-- pass the keys through to vim/nvim
+				win:perform_action({
+					SendKey = { key = key, mods = resize_or_move == "resize" and "META" or "CTRL" },
+				}, pane)
+			else
+				if resize_or_move == "resize" then
+					win:perform_action({ AdjustPaneSize = { direction_keys[key], 3 } }, pane)
+				else
+					win:perform_action({ ActivatePaneDirection = direction_keys[key] }, pane)
+				end
+			end
+		end),
+	}
+end
+
+local mod = {}
+
+if wezterm.target_triple:find("apple") then
+	mod.cmd = "CMD"
+else
+	mod.cmd = "ALT"
 end
 
 M.keys = {
@@ -55,127 +63,127 @@ M.keys = {
 
 	{
 		key = "q",
-		mods = "CMD",
+		mods = mod.cmd,
 		action = act.QuitApplication,
 	},
 
 	{
 		key = "c",
-		mods = "CMD",
+		mods = mod.cmd,
 		action = act.CopyTo("Clipboard"),
 	},
 	{
 		key = "v",
-		mods = "CMD",
+		mods = mod.cmd,
 		action = act.PasteFrom("Clipboard"),
 	},
 
 	{
 		key = "t",
-		mods = "CMD",
+		mods = mod.cmd,
 		action = act.SpawnTab("CurrentPaneDomain"),
 	},
 	{
 		key = "D",
-		mods = "CMD",
+		mods = mod.cmd,
 		action = act.SplitVertical,
 	},
 	{
 		key = "d",
-		mods = "CMD",
+		mods = mod.cmd,
 		action = act.SplitHorizontal,
 	},
 	{
 		key = "w",
-		mods = "CMD",
+		mods = mod.cmd,
 		action = act.CloseCurrentPane({ confirm = true }),
 	},
 	{
 		key = "z",
-		mods = "CMD",
+		mods = mod.cmd,
 		action = act.TogglePaneZoomState,
 	},
 	{
 		key = ".",
-		mods = "CMD",
+		mods = mod.cmd,
 		action = act.ReloadConfiguration,
 	},
 	{
 		key = "[",
-		mods = "CMD",
+		mods = mod.cmd,
 		action = act.MoveTabRelative(-1),
 	},
 	{
 		key = "]",
-		mods = "CMD",
+		mods = mod.cmd,
 		action = act.MoveTabRelative(1),
 	},
 	{
 		key = "1",
-		mods = "CMD",
+		mods = mod.cmd,
 		action = act.ActivateTab(0),
 	},
 	{
 		key = "2",
-		mods = "CMD",
+		mods = mod.cmd,
 		action = act.ActivateTab(1),
 	},
 	{
 		key = "3",
-		mods = "CMD",
+		mods = mod.cmd,
 		action = act.ActivateTab(2),
 	},
 	{
 		key = "4",
-		mods = "CMD",
+		mods = mod.cmd,
 		action = act.ActivateTab(3),
 	},
 	{
 		key = "5",
-		mods = "CMD",
+		mods = mod.cmd,
 		action = act.ActivateTab(4),
 	},
 	{
 		key = "6",
-		mods = "CMD",
+		mods = mod.cmd,
 		action = act.ActivateTab(5),
 	},
 	{
 		key = "7",
-		mods = "CMD",
+		mods = mod.cmd,
 		action = act.ActivateTab(6),
 	},
 	{
 		key = "8",
-		mods = "CMD",
+		mods = mod.cmd,
 		action = act.ActivateTab(7),
 	},
 	{
 		key = "9",
-		mods = "CMD",
+		mods = mod.cmd,
 		action = act.ActivateTab(8),
 	},
 	{
 		key = "0",
-		mods = "CMD",
+		mods = mod.cmd,
 		action = act.ActivateTab(-1),
 	},
 	{
 		key = "P",
-		mods = "CMD",
+		mods = mod.cmd,
 		action = act.ActivateCommandPalette,
 	},
 	{
 		key = " ",
-		mods = "CMD",
+		mods = mod.cmd,
 		action = act.ActivateCopyMode,
 	},
 	{
 		key = "f",
-		mods = "CMD",
+		mods = mod.cmd,
 		action = act.Search({ CaseSensitiveString = "" }),
 	},
-	{ key = "l", mods = "CMD", action = wezterm.action.ShowDebugOverlay },
+	{ key = "l", mods = mod.cmd, action = wezterm.action.ShowDebugOverlay },
 
 	-- fix neovim keybind
 	{
