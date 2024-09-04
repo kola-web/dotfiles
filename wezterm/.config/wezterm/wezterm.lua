@@ -4,7 +4,7 @@ local config = wezterm.config_builder()
 
 wezterm.log_info("reloading")
 
-require("events.right-status").setup()
+-- require("events.right-status").setup()
 require("events.left-status").setup()
 require("events.tab-title").setup()
 require("events.new-tab-button").setup()
@@ -19,7 +19,6 @@ config.webgpu_power_preference = "HighPerformance"
 
 config.enable_scroll_bar = true
 
-config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
 config.tab_max_width = 32

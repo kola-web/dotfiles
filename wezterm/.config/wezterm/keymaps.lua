@@ -220,6 +220,15 @@ M.keys = {
 		mods = "CTRL",
 		action = act.SendKey({ key = "-", mods = "CTRL" }),
 	},
+
+	{
+		key = "r",
+		mods = mod.cmd,
+		action = act.ActivateKeyTable({
+			name = "resize_pane",
+			one_shot = false,
+		}),
+	},
 }
 
 M.key_tables = {
@@ -244,6 +253,7 @@ M.key_tables = {
 M.setup = function(config)
 	config.disable_default_key_bindings = true
 	config.keys = M.keys
+	config.key_tables = M.key_tables
 end
 
 return M
