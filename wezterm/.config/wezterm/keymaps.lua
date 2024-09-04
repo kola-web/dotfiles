@@ -45,8 +45,10 @@ local mod = {}
 
 if wezterm.target_triple:find("apple") then
 	mod.cmd = "CMD"
+  mod.copy = 'CMD'
 else
 	mod.cmd = "ALT"
+  mod.copy = 'CTRL'
 end
 
 M.keys = {
@@ -70,12 +72,12 @@ M.keys = {
 
 	{
 		key = "c",
-		mods = mod.cmd,
+		mods = mod.copy,
 		action = act.CopyTo("Clipboard"),
 	},
 	{
 		key = "v",
-		mods = mod.cmd,
+		mods = mod.copy,
 		action = act.PasteFrom("Clipboard"),
 	},
 	{
