@@ -184,6 +184,11 @@ M.keys = {
 		action = act.Search({ CaseSensitiveString = "" }),
 	},
 	{ key = "l", mods = mod.cmd, action = wezterm.action.ShowDebugOverlay },
+	{
+		key = "T",
+		mods = mod.cmd,
+		action = act.ShowLauncher,
+	},
 
 	-- fix neovim keybind
 	{
