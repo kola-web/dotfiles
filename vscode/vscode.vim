@@ -18,9 +18,6 @@ noremap <C-l> <C-w>l
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>^
 
-noremap <C-u> Hzz
-noremap <C-d> Lzz
-
 map <CR> editor.action.smartSelect.expand
 map <bs> editor.action.smartSelect.shrink
 
