@@ -1,29 +1,25 @@
 local wezterm = require("wezterm")
 local platform = require("utils.platform")()
+
 local config = wezterm.config_builder()
+config.color_scheme = "Catppuccin Macchiato"
 
 wezterm.log_info("reloading")
 
--- require("events.right-status").setup()
-require("events.left-status").setup()
-require("events.tab-title").setup()
-require("events.new-tab-button").setup()
-
 require("keymaps").setup(config)
 require("launch").setup(config)
-
-config.color_scheme = "Catppuccin Macchiato"
+require("plugins").setup(config)
 
 config.front_end = "WebGpu"
 config.webgpu_power_preference = "HighPerformance"
 
 config.enable_scroll_bar = true
 
-config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
-config.tab_max_width = 32
-config.show_tab_index_in_tab_bar = false
-config.switch_to_last_active_tab_when_closing_tab = true
+-- config.use_fancy_tab_bar = false
+-- config.tab_max_width = 32
+-- config.show_tab_index_in_tab_bar = false
+-- config.switch_to_last_active_tab_when_closing_tab = true
 
 config.window_close_confirmation = "NeverPrompt"
 
