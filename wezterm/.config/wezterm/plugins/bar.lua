@@ -1,13 +1,6 @@
 local M = {}
 
 M.setup = function(wezterm, config)
-	-- local bar = wezterm.plugin.require("https://github.com/adriankarlen/bar.wezterm")
-	-- bar.apply_to_config(config, {
-	-- 	enabled_modules = {
-	-- 		clock = false,
-	-- 	},
-	-- })
-
 	local tabline = wezterm.plugin.require("https://github.com/michaelbrusegard/tabline.wez")
 	tabline.setup({
 		options = {
