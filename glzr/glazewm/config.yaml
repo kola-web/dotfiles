@@ -202,13 +202,13 @@ keybindings:
 
   # 聚焦配置文件中定义的下一个/上一个工作区。
   - commands: ["focus --next-workspace"]
-    bindings: ["alt+s"]
+    bindings: ["alt+]"]
   - commands: ["focus --prev-workspace"]
-    bindings: ["alt+a"]
+    bindings: ["alt+["]
 
   # 聚焦上次聚焦的工作区。
-  - commands: ["focus --recent-workspace"]
-    bindings: ["alt+d"]
+  # - commands: ["focus --recent-workspace"]
+  #   bindings: ["alt+d"]
 
   # 聚焦配置文件中定义的指定工作区。
   - commands: ["focus --workspace 1"]
