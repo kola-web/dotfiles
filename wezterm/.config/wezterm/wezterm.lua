@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 local platform = require("utils.platform")()
 
 local config = wezterm.config_builder()
-config.color_scheme = "Catppuccin Macchiato"
+config.color_scheme = "Kanagawa (Gogh)"
 
 wezterm.log_info("reloading")
 
@@ -28,6 +28,7 @@ config.window_close_confirmation = "NeverPrompt"
 config.font = wezterm.font_with_fallback({
 	"JetBrainsMono Nerd Font",
 	"Sarasa Fixed CL",
+	"Departure Mono",
 })
 config.font_size = 14
 config.line_height = 1.3
