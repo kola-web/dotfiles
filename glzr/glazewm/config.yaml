@@ -120,13 +120,13 @@ binding_modes:
 keybindings:
   # 将焦点移向指定方向。
   - commands: ["focus --direction left"]
-    bindings: ["lwin+alt+h", "alt+left"]
+    bindings: ["alt+h", "alt+left"]
   - commands: ["focus --direction right"]
-    bindings: ["lwin+alt+l", "alt+right"]
+    bindings: ["alt+l", "alt+right"]
   - commands: ["focus --direction up"]
-    bindings: ["lwin+alt+k", "alt+up"]
+    bindings: ["alt+k", "alt+up"]
   - commands: ["focus --direction down"]
-    bindings: ["lwin+alt+j", "alt+down"]
+    bindings: ["alt+j", "alt+down"]
 
   # 将聚焦的窗口移动到指定方向。
   - commands: ["move --direction left"]
