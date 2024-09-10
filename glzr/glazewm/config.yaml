@@ -24,9 +24,9 @@ gaps:
   # 窗口与屏幕边缘之间的间距。
   outer_gap:
     top: "60px"
-    right: "20px"
-    bottom: "20px"
-    left: "20px"
+    right: "10px"
+    bottom: "10px"
+    left: "10px"
 
 window_effects:
   # 应用于聚焦窗口的视觉效果。
@@ -66,10 +66,15 @@ window_behavior:
 
 workspaces:
   - name: "1"
+    keep_alive: true
   - name: "2"
+    keep_alive: true
   - name: "3"
+    keep_alive: true
   - name: "4"
+    keep_alive: true
   - name: "5"
+    keep_alive: true
   - name: "6"
   - name: "7"
   - name: "8"
@@ -192,18 +197,18 @@ keybindings:
     bindings: ["alt+shift+w"]
 
   # 启动 CMD 终端。或者，使用 `shell-exec wt` 或 `shell-exec %ProgramFiles%/Git/git-bash.exe` 启动 Windows 终端或 Git Bash。
-  - commands: ["shell-exec cmd"]
+  - commands: ["shell-exec wezterm-gui.exe"]
     bindings: ["alt+enter"]
 
   # 聚焦配置文件中定义的下一个/上一个工作区。
   - commands: ["focus --next-workspace"]
-    bindings: ["alt+s"]
+    bindings: ["alt+]"]
   - commands: ["focus --prev-workspace"]
-    bindings: ["alt+a"]
+    bindings: ["alt+["]
 
   # 聚焦上次聚焦的工作区。
-  - commands: ["focus --recent-workspace"]
-    bindings: ["alt+d"]
+  # - commands: ["focus --recent-workspace"]
+  #   bindings: ["alt+d"]
 
   # 聚焦配置文件中定义的指定工作区。
   - commands: ["focus --workspace 1"]
