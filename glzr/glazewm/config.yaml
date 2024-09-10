@@ -19,14 +19,14 @@ general:
 
 gaps:
   # 相邻窗口之间的间距。
-  inner_gap: "10px"
+  inner_gap: "20px"
 
   # 窗口与屏幕边缘之间的间距。
   outer_gap:
-    top: "50px"
-    right: "10px"
-    bottom: "10px"
-    left: "10px"
+    top: "60px"
+    right: "20px"
+    bottom: "20px"
+    left: "20px"
 
 window_effects:
   # 应用于聚焦窗口的视觉效果。
@@ -66,15 +66,10 @@ window_behavior:
 
 workspaces:
   - name: "1"
-    keep_alive: true
   - name: "2"
-    keep_alive: true
   - name: "3"
-    keep_alive: true
   - name: "4"
-    keep_alive: true
   - name: "5"
-    keep_alive: true
   - name: "6"
   - name: "7"
   - name: "8"
@@ -158,7 +153,7 @@ keybindings:
 
   # 更改平铺方向。这决定了新平铺窗口将被插入的位置。
   - commands: ["toggle-tiling-direction"]
-    bindings: ["lwin+\\"]
+    bindings: ["alt+v"]
 
   # 将焦点从平铺窗口更改为浮动窗口再到全屏窗口。
   - commands: ["wm-cycle-focus"]
@@ -170,65 +165,65 @@ keybindings:
 
   # 将聚焦的窗口更改为平铺窗口。
   - commands: ["toggle-tiling"]
-    bindings: ["lwin+shift+t"]
+    bindings: ["alt+t"]
 
   # 将聚焦的窗口更改为全屏窗口。
   - commands: ["toggle-fullscreen"]
-    bindings: ["lwin+shift+f"]
+    bindings: ["alt+f"]
 
   # 最小化聚焦窗口。
   - commands: ["toggle-minimized"]
-    bindings: ["lwin+m"]
+    bindings: ["alt+m"]
 
   # 关闭聚焦窗口。
   - commands: ["close"]
-    bindings: ["alt+q"]
+    bindings: ["alt+shift+q"]
 
   # 安全终止 GlazeWM 进程。
   - commands: ["wm-exit"]
-    bindings: ["lwin+shift+e"]
+    bindings: ["alt+shift+e"]
 
   # 重新评估配置文件。
   - commands: ["wm-reload-config"]
-    bindings: ["lwin+shift+."]
+    bindings: ["alt+shift+r"]
 
   # 重新绘制所有窗口。
   - commands: ["wm-redraw"]
-    bindings: ["lwin+shift+w"]
+    bindings: ["alt+shift+w"]
 
   # 启动 CMD 终端。或者，使用 `shell-exec wt` 或 `shell-exec %ProgramFiles%/Git/git-bash.exe` 启动 Windows 终端或 Git Bash。
-  - commands: ["shell-exec wezterm-gui.exe"]
-    bindings: ["lwin+enter"]
+  - commands: ["shell-exec cmd"]
+    bindings: ["alt+enter"]
 
   # 聚焦配置文件中定义的下一个/上一个工作区。
   - commands: ["focus --next-workspace"]
-    bindings: ["lwin+alt+]"]
+    bindings: ["alt+s"]
   - commands: ["focus --prev-workspace"]
-    bindings: ["lwin+alt+["]
+    bindings: ["alt+a"]
 
   # 聚焦上次聚焦的工作区。
-  # - commands: ["focus --recent-workspace"]
-  #   bindings: ["alt+d"]
+  - commands: ["focus --recent-workspace"]
+    bindings: ["alt+d"]
 
   # 聚焦配置文件中定义的指定工作区。
   - commands: ["focus --workspace 1"]
-    bindings: ["lwin+alt+1"]
+    bindings: ["alt+1"]
   - commands: ["focus --workspace 2"]
-    bindings: ["lwin+alt+2"]
+    bindings: ["alt+2"]
   - commands: ["focus --workspace 3"]
-    bindings: ["lwin+alt+3"]
+    bindings: ["alt+3"]
   - commands: ["focus --workspace 4"]
-    bindings: ["lwin+alt+4"]
+    bindings: ["alt+4"]
   - commands: ["focus --workspace 5"]
-    bindings: ["lwin+alt+5"]
+    bindings: ["alt+5"]
   - commands: ["focus --workspace 6"]
-    bindings: ["lwin+alt+6"]
+    bindings: ["alt+6"]
   - commands: ["focus --workspace 7"]
-    bindings: ["lwin+alt+7"]
+    bindings: ["alt+7"]
   - commands: ["focus --workspace 8"]
-    bindings: ["lwin+alt+8"]
+    bindings: ["alt+8"]
   - commands: ["focus --workspace 9"]
-    bindings: ["lwin+alt+9"]
+    bindings: ["alt+9"]
 
   # Move the focused window's parent workspace to a monitor in a given
   # direction.
@@ -243,20 +238,20 @@ keybindings:
 
   # Move focused window to a workspace defined in `workspaces` config.
   - commands: ["move --workspace 1", "focus --workspace 1"]
-    bindings: ["lwin+alt+shift+1"]
+    bindings: ["alt+shift+1"]
   - commands: ["move --workspace 2", "focus --workspace 2"]
-    bindings: ["lwin+alt+shift+2"]
+    bindings: ["alt+shift+2"]
   - commands: ["move --workspace 3", "focus --workspace 3"]
-    bindings: ["lwin+alt+shift+3"]
+    bindings: ["alt+shift+3"]
   - commands: ["move --workspace 4", "focus --workspace 4"]
-    bindings: ["lwin+alt+shift+4"]
+    bindings: ["alt+shift+4"]
   - commands: ["move --workspace 5", "focus --workspace 5"]
-    bindings: ["lwin+alt+shift+5"]
+    bindings: ["alt+shift+5"]
   - commands: ["move --workspace 6", "focus --workspace 6"]
-    bindings: ["lwin+alt+shift+6"]
+    bindings: ["alt+shift+6"]
   - commands: ["move --workspace 7", "focus --workspace 7"]
-    bindings: ["lwin+alt+shift+7"]
+    bindings: ["alt+shift+7"]
   - commands: ["move --workspace 8", "focus --workspace 8"]
-    bindings: ["lwin+alt+shift+8"]
+    bindings: ["alt+shift+8"]
   - commands: ["move --workspace 9", "focus --workspace 9"]
-    bindings: ["lwin+alt+shift+9"]
+    bindings: ["alt+shift+9"]
