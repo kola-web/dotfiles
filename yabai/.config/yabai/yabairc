@@ -44,7 +44,7 @@ yabai -m rule --add app="^(CLion|PyCharm|IntelliJ IDEA|WebStorm-EAP|WebStorm|网
 yabai -m rule --add app="^(SnailSVN|pot|预览|系统设置|mpv|访达|网易邮箱大师|LiberOffice)" manage=off grid=$grid
 yabai -m rule --add app="^(Calculator|System Preferences|Archive Utility)$" manage=off
 
-yabai -m rule --add app=".*" layer=normal
+# yabai -m rule --add app=".*" layer=normal
 # yabai -m rule --add app="^通知.*$" sticky=on layer=above
 
 # signals
