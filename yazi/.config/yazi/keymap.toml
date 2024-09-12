@@ -4,7 +4,11 @@
 
 [manager]
 
-prepend_keymap = [{ on = "<C-y>", run = ["plugin system-clipboard"], desc = "Yank file clipboard (copy)" }]
+prepend_keymap = [
+  { on = "<C-y>", run = [
+    "plugin system-clipboard",
+  ], desc = "Yank file clipboard (copy)" },
+]
 
 keymap = [
   { on = "<Esc>", run = "escape", desc = "Exit visual mode, clear selected, or cancel search" },
