@@ -37,12 +37,12 @@ yabai -m config --space 4 layout float
 # yabai -m signal --add event=application_terminated action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
 
 # rule
-yabai -m rule --add app="^(企业微信|QQ|微信|网易云音乐|喜马拉雅|QQ音乐|Listen1|Spotify|音乐|mpv|IINA)" space=4 grid=$grid
+yabai -m rule --add app="^(企业微信|QQ|微信|网易云音乐|喜马拉雅|QQ音乐|Listen1|Spotify|音乐|mpv|IINA)" sub-layer=below space=4 grid=$grid
 yabai -m rule --add app="^(微信开发者工具)" space=3
 yabai -m rule --add app="^(Code)" space=2
-yabai -m rule --add app="^(CLion|PyCharm|IntelliJ IDEA|WebStorm-EAP|WebStorm|网易邮箱大师)" manage=off
-yabai -m rule --add app="^(SnailSVN|pot|预览|系统设置|mpv|访达|网易邮箱大师|LiberOffice)" manage=off grid=$grid
-yabai -m rule --add app="^(Calculator|System Preferences|Archive Utility)$" manage=off
+
+yabai -m rule --add app="^(CLion|PyCharm|IntelliJ IDEA|WebStorm-EAP|WebStorm)" manage=off
+yabai -m rule --add app="^(SnailSVN|pot|预览|系统设置|mpv|访达|网易邮箱大师|LiberOffice)" manage=off sub-layer=below grid=$grid
 
 # yabai -m rule --add app=".*" layer=normal
 # yabai -m rule --add app="^通知.*$" sticky=on layer=above

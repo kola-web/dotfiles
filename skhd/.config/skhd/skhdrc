@@ -66,7 +66,7 @@ alt + shift - o : yabai -m window --toggle border
 alt - r : yabai -m space --rotate 90
 
 ## 缺划浮动
-alt - space : yabai -m window --toggle float --grid 24:24:2:2:20:20
+alt - space : yabai -m window --toggle float --grid 24:24:2:2:20:20 --sub-layer below
 
 
 # alt-, 上一个屏幕
