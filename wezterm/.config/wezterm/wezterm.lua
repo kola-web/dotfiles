@@ -26,7 +26,7 @@ config.window_close_confirmation = "NeverPrompt"
 -- config.font = wezterm.font("JetBrainsMono Nerd Font")
 
 config.font = wezterm.font_with_fallback({
-	"JetBrainsMono Nerd Font",
+	"Cascadia Code",
 	"Sarasa Fixed CL",
 	"Departure Mono",
 })
