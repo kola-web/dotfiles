@@ -32,10 +32,6 @@ yabai -m config --space 2 layout stack
 yabai -m config --space 3 layout stack
 yabai -m config --space 4 layout float
 
-# Refocus windows with window is closed or app destroyed
-# yabai -m signal --add event=window_destroyed action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
-# yabai -m signal --add event=application_terminated action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse"
-
 # rule
 yabai -m rule --add app="^(企业微信|QQ|微信|网易云音乐|喜马拉雅|QQ音乐|Listen1|Spotify|音乐|mpv|IINA)" sub-layer=below space=4 grid=$grid
 yabai -m rule --add app="^(微信开发者工具)" space=3
