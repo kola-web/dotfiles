@@ -84,7 +84,7 @@ window_rules:
   - commands: ["ignore"]
     match:
       # 忽略所有 Zebar 窗口。
-      - window_process: { equals: "zebar" }
+      - window_process: { equals: "zebar|原神|饥荒|英雄联盟" }
 
       # 忽略浏览器的画中画窗口。
       - window_title: { regex: "[Pp]icture.in.[Pp]icture" }
