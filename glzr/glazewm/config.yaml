@@ -84,7 +84,10 @@ window_rules:
   - commands: ["ignore"]
     match:
       # 忽略所有 Zebar 窗口。
-      - window_process: { equals: "zebar|原神|饥荒|英雄联盟" }
+      - window_process: { equals: "zebar" }
+      - window_process: { equals: "原神" }
+      - window_process: { equals: "英雄联盟" }
+      - window_process: { equals: "dontstarve_steam_x64" }
 
       # 忽略浏览器的画中画窗口。
       - window_title: { regex: "[Pp]icture.in.[Pp]icture" }
@@ -197,7 +200,8 @@ keybindings:
     bindings: ["alt+shift+w"]
 
   # 启动 CMD 终端。或者，使用 `shell-exec wt` 或 `shell-exec %ProgramFiles%/Git/git-bash.exe` 启动 Windows 终端或 Git Bash。
-  - commands: ["shell-exec wezterm-gui.exe"]
+  # - commands: ["shell-exec wezterm-gui.exe"]
+  - commands: ["shell-exec wt"]
     bindings: ["alt+enter"]
 
   # 聚焦配置文件中定义的下一个/上一个工作区。
