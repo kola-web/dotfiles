@@ -86,7 +86,8 @@ window_rules:
       # 忽略所有 Zebar 窗口。
       - window_process: { equals: "zebar" }
       - window_process: { equals: "原神" }
-      - window_process: { equals: "英雄联盟" }
+      - window_process: { equals: "LeagueClientUx" }
+      - window_process: { equals: "LeagueClient" }
       - window_process: { equals: "dontstarve_steam_x64" }
 
       # 忽略浏览器的画中画窗口。
