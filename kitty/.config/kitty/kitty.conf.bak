@@ -62,7 +62,7 @@ map control+; send_text all \u001B[59;5u
 
 
 # BEGIN_KITTY_THEME
-# Solarized Dark Higher Contrast
+# Solarized Dark - Patched
 include current-theme.conf
 # END_KITTY_THEME
 
