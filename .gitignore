@@ -21,3 +21,4 @@ tmux/.config/tmux/plugins
 lazygit/.config/lazygit/state.yml
 
 .DS_Store
+git/.gitconfig
