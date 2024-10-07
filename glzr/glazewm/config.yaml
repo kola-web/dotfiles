@@ -1,6 +1,6 @@
 general:
   # 在窗口管理器启动时运行的命令（例如运行脚本或启动其他应用程序）。这里我们运行一个批处理脚本来启动 Zebar。
-  startup_commands: ["shell-exec %userprofile%/.glzr/zebar/start.bat"]
+  startup_commands: ["shell-exec zebar"]
 
   # 是否自动将焦点聚焦到光标下的窗口。
   focus_follows_cursor: false
