@@ -8,7 +8,7 @@
 克隆到你的 `$HOME` 目录或 `~`
 
 ```bash
-git clone --recurse-submodules https://github.com/kola-web/dotfiles.git ~
+git clone --recurse-submodules https://github.com/kola-web/dotfiles.git ~/dotfiles
 ```
 
 运行`stow`对所有内容进行符号链接或仅选择您想要的内容
