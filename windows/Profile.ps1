@@ -14,14 +14,14 @@ Set-Alias -Name cat   -Value bat
 Set-Alias -Name g     -Value lazygit
 Set-Alias -Name r     -Value yazi
 Set-Alias -Name open  -Value explorer
-Set-Alias -Name ls    -Value new_ls
+#Set-Alias -Name ls    -Value new_ls
 
-function new_ls { eza --color=always --icons=always --group-directories-first @args }
+#function new_ls { eza --color=always --icons=always --group-directories-first @args }
 
 
 # Putting the FUN in Functions 🎉
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Invoke-Expression (&starship init powershell)
+#Invoke-Expression (&starship init powershell)
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
 
 

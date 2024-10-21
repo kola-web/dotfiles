@@ -9,6 +9,7 @@ $symlinks = @{
     "$HOME\AppData\Roaming\lazygit"                                                                  = ".\lazygit\.config\lazygit"
     "$HOME\.config\wezterm"                                                                          = ".\wezterm\.config\wezterm"
     "$HOME\.glzr"                                                                                    = ".\glzr"
+    "$HOME\AppData\Roaming\alacritty"                                                                        = ".\alacritty\.config\alacritty"
     #"$HOME\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" = ".\windowsterminal\settings.json"
 }
 
