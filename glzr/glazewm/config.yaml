@@ -46,7 +46,7 @@ window_effects:
 window_behavior:
   # 尽可能在此状态下创建新窗口。
   # 允许的值：'tiling'（平铺）、'floating'（浮动）。
-  initial_state: "floating"
+  initial_state: "tiling"
 
   # 设置创建新窗口时的默认选项。这也会更改使用状态更改命令（如 `set-floating`）而不带任何标志时的默认设置。
   state_defaults:
@@ -149,40 +149,40 @@ keybindings:
     bindings: ["alt+i"]
 
   # 作为上述调整大小键绑定的替代方法，调整大小模式允许通过箭头键或 HJKL 键进行调整。绑定模式在上面定义，名称为 'resize'。
-  - commands: ["wm-enable-binding-mode --name resize"]
-    bindings: ["alt+r"]
+  # - commands: ["wm-enable-binding-mode --name resize"]
+  #   bindings: ["alt+r"]
 
   # 禁用所有键绑定，直到再次按下 alt+shift+p。
-  - commands: ["wm-enable-binding-mode --name pause"]
-    bindings: ["alt+shift+p"]
+  # - commands: ["wm-enable-binding-mode --name pause"]
+  #   bindings: ["alt+shift+p"]
 
   # 更改平铺方向。这决定了新平铺窗口将被插入的位置。
-  - commands: ["toggle-tiling-direction"]
-    bindings: ["alt+v"]
+  # - commands: ["toggle-tiling-direction"]
+  #   bindings: ["alt+v"]
 
   # 将焦点从平铺窗口更改为浮动窗口再到全屏窗口。
-  - commands: ["wm-cycle-focus"]
-    bindings: ["alt+space"]
+  # - commands: ["wm-cycle-focus"]
+  #   bindings: ["alt+space"]
 
   # 将聚焦的窗口更改为浮动窗口。
   - commands: ["toggle-floating --centered"]
-    bindings: ["alt+shift+space"]
+    bindings: ["LWin+alt+ctrl+space"]
 
   # 将聚焦的窗口更改为平铺窗口。
   - commands: ["toggle-tiling"]
-    bindings: ["alt+t"]
+    bindings: ["LWin+alt+ctrl+t"]
 
   # 将聚焦的窗口更改为全屏窗口。
   - commands: ["toggle-fullscreen"]
-    bindings: ["alt+f"]
+    bindings: ["LWin+alt+ctrl+f"]
 
   # 最小化聚焦窗口。
-  - commands: ["toggle-minimized"]
-    bindings: ["alt+m"]
+  # - commands: ["toggle-minimized"]
+  #   bindings: ["alt+m"]
 
   # 关闭聚焦窗口。
   - commands: ["close"]
-    bindings: ["alt+shift+q"]
+    bindings: ["LWin+alt+ctrl+q"]
 
   # 安全终止 GlazeWM 进程。
   - commands: ["wm-exit"]
