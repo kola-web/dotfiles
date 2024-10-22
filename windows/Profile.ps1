@@ -21,12 +21,10 @@ Set-Alias -Name open  -Value explorer
 
 # Putting the FUN in Functions 🎉
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-#Invoke-Expression (&starship init powershell)
+Invoke-Expression (&starship init powershell)
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
 
 
 Import-Module PSReadLine
 Set-PSReadLineOption -EditMode Emacs
 Set-PSReadlineKeyHandler -Chord "Ctrl+e" -Function ForwardChar
-
-oh-my-posh init pwsh | Invoke-Expression

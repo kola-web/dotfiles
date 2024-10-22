@@ -40,7 +40,7 @@ config.window_padding = { left = 0, right = 0, top = 0, bottom = 0 }
 config.scrollback_lines = 10000
 
 if platform.is_win then
-	config.default_prog = { "wsl" }
+	config.default_prog = { "pwsh" }
 	config.window_decorations = "RESIZE|TITLE"
 else
 	config.window_decorations = "RESIZE"

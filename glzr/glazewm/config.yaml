@@ -46,7 +46,7 @@ window_effects:
 window_behavior:
   # 尽可能在此状态下创建新窗口。
   # 允许的值：'tiling'（平铺）、'floating'（浮动）。
-  initial_state: "tiling"
+  initial_state: "floating"
 
   # 设置创建新窗口时的默认选项。这也会更改使用状态更改命令（如 `set-floating`）而不带任何标志时的默认设置。
   state_defaults:
@@ -85,10 +85,6 @@ window_rules:
     match:
       # 忽略所有 Zebar 窗口。
       - window_process: { equals: "zebar" }
-      - window_process: { equals: "原神" }
-      - window_process: { equals: "LeagueClientUx" }
-      - window_process: { equals: "LeagueClient" }
-      - window_process: { equals: "dontstarve_steam_x64" }
 
       # 忽略浏览器的画中画窗口。
       - window_title: { regex: "[Pp]icture.in.[Pp]icture" }
@@ -115,11 +111,11 @@ binding_modes:
       - commands: ["wm-disable-binding-mode --name resize"]
         bindings: ["escape", "enter"]
 
-  # 启用后，所有键绑定都将被禁用，除非按下 alt+shift+p 来返回默认键绑定。
+  # 启用后，所有键绑定都将被禁用，除非按下 LWin+shift+p 来返回默认键绑定。
   - name: "pause"
     keybindings:
       - commands: ["wm-disable-binding-mode --name pause"]
-        bindings: ["alt+shift+p"]
+        bindings: ["LWin+shift+p"]
 
 keybindings:
   # 将焦点移向指定方向。
@@ -217,51 +213,51 @@ keybindings:
 
   # 聚焦配置文件中定义的指定工作区。
   - commands: ["focus --workspace 1"]
-    bindings: ["alt+1"]
+    bindings: ["LWin+alt+ctrl+1"]
   - commands: ["focus --workspace 2"]
-    bindings: ["alt+2"]
+    bindings: ["LWin+alt+ctrl+2"]
   - commands: ["focus --workspace 3"]
-    bindings: ["alt+3"]
+    bindings: ["LWin+alt+ctrl+3"]
   - commands: ["focus --workspace 4"]
-    bindings: ["alt+4"]
+    bindings: ["LWin+alt+ctrl+4"]
   - commands: ["focus --workspace 5"]
-    bindings: ["alt+5"]
+    bindings: ["LWin+alt+ctrl+5"]
   - commands: ["focus --workspace 6"]
-    bindings: ["alt+6"]
+    bindings: ["LWin+alt+ctrl+6"]
   - commands: ["focus --workspace 7"]
-    bindings: ["alt+7"]
+    bindings: ["LWin+alt+ctrl+7"]
   - commands: ["focus --workspace 8"]
-    bindings: ["alt+8"]
+    bindings: ["LWin+alt+ctrl+8"]
   - commands: ["focus --workspace 9"]
-    bindings: ["alt+9"]
+    bindings: ["LWin+alt+ctrl+9"]
 
   # Move the focused window's parent workspace to a monitor in a given
   # direction.
   - commands: ["move-workspace --direction left"]
-    bindings: ["alt+shift+a"]
+    bindings: ["LWin+shift+a"]
   - commands: ["move-workspace --direction right"]
-    bindings: ["alt+shift+f"]
+    bindings: ["LWin+shift+f"]
   - commands: ["move-workspace --direction up"]
-    bindings: ["alt+shift+d"]
+    bindings: ["LWin+shift+d"]
   - commands: ["move-workspace --direction down"]
-    bindings: ["alt+shift+s"]
+    bindings: ["LWin+shift+s"]
 
   # Move focused window to a workspace defined in `workspaces` config.
   - commands: ["move --workspace 1", "focus --workspace 1"]
-    bindings: ["alt+shift+1"]
+    bindings: ["LWin+shift+1"]
   - commands: ["move --workspace 2", "focus --workspace 2"]
-    bindings: ["alt+shift+2"]
+    bindings: ["LWin+shift+2"]
   - commands: ["move --workspace 3", "focus --workspace 3"]
-    bindings: ["alt+shift+3"]
+    bindings: ["LWin+shift+3"]
   - commands: ["move --workspace 4", "focus --workspace 4"]
-    bindings: ["alt+shift+4"]
+    bindings: ["LWin+shift+4"]
   - commands: ["move --workspace 5", "focus --workspace 5"]
-    bindings: ["alt+shift+5"]
+    bindings: ["LWin+shift+5"]
   - commands: ["move --workspace 6", "focus --workspace 6"]
-    bindings: ["alt+shift+6"]
+    bindings: ["LWin+shift+6"]
   - commands: ["move --workspace 7", "focus --workspace 7"]
-    bindings: ["alt+shift+7"]
+    bindings: ["LWin+shift+7"]
   - commands: ["move --workspace 8", "focus --workspace 8"]
-    bindings: ["alt+shift+8"]
+    bindings: ["LWin+shift+8"]
   - commands: ["move --workspace 9", "focus --workspace 9"]
-    bindings: ["alt+shift+9"]
+    bindings: ["LWin+shift+9"]
