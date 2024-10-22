@@ -28,3 +28,5 @@ Invoke-Expression (& { (zoxide init powershell | Out-String) })
 Import-Module PSReadLine
 Set-PSReadLineOption -EditMode Emacs
 Set-PSReadlineKeyHandler -Chord "Ctrl+e" -Function ForwardChar
+
+oh-my-posh init pwsh | Invoke-Expression

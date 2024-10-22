@@ -51,3 +51,12 @@ noremap ]s /<script<cr>
 noremap ]S /<\/script<cr>
 noremap ]c /<style<cr>
 noremap ]C /<\/style<cr>
+
+
+noremap <leader>e :vsc workbench.view.explorer<CR>
+noremap <leader>c :vsc workbench.action.closeActiveEditor<CR>
+noremap <leader>w :vsc workbench.action.files.save<CR>
+noremap <leader>h :nohlsearch<cr>
+noremap <leader>f :vsc workbench.action.quickOpen<cr>
+noremap <leader>m :vsc editor.action.formatDocument<cr>
+noremap <leader>rd :%s/div/view/g
