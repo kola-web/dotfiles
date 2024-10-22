@@ -25,16 +25,16 @@ Darwin)
 	;;
 
 Linux)
-  export hostip=$(cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }')
-  alias www="https_proxy=\"http://${hostip}:8080\" http_proxy=\"http://${hostip}:8080\""
-
-  # or set it global
-  export hostip=$(cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }')
-  export https_proxy="http://${hostip}:1080" 
-  export http_proxy="http://${hostip}:1080"
-
-
-  export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
+	#  export hostip=$(cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }')
+	#  alias www="https_proxy=\"http://${hostip}:8080\" http_proxy=\"http://${hostip}:8080\""
+	#
+	#  # or set it global
+	#  export hostip=$(cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }')
+	#  export https_proxy="http://${hostip}:1080" 
+	#  export http_proxy="http://${hostip}:1080"
+	#
+	#
+	#  export PATH=/home/linuxbrew/.linuxbrew/bin:$PATH
 	;;
 
 CYGWIN* | MINGW32* | MSYS* | MINGW*)

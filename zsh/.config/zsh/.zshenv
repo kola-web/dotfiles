@@ -61,4 +61,4 @@ export NEOVIDE_FRAME='none'
 
 # starship.toml
 export STARSHIP_CONFIG=$XDG_CONFIG_HOME/zsh/startship.toml
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
