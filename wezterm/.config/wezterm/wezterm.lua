@@ -23,15 +23,9 @@ config.tab_bar_at_bottom = true
 
 config.window_close_confirmation = "NeverPrompt"
 
--- config.font = wezterm.font("JetBrainsMono Nerd Font")
-
-config.font = wezterm.font_with_fallback({
-	"Cascadia Code NF",
-	"Sarasa Fixed CL",
-	"Departure Mono",
-})
-config.font_size = 14
-config.line_height = 1.3
+config.font = wezterm.font("Cascadia Code NF")
+config.font_size = 12
+config.line_height = 1.2
 
 -- Cursor
 config.window_padding = { left = 0, right = 0, top = 0, bottom = 0 }

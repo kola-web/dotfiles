@@ -1,263 +1,299 @@
 general:
-  # 在窗口管理器启动时运行的命令（例如运行脚本或启动其他应用程序）。这里我们运行一个批处理脚本来启动 Zebar。
-  startup_commands: ["shell-exec zebar"]
+  # Commands to run when the WM has started. This is useful for running a
+  # script or launching another application.
+  # Example: The below command launches Zebar.
+  startup_commands: ['shell-exec zebar']
 
-  # 是否自动将焦点聚焦到光标下的窗口。
+  # Commands to run just before the WM is shutdown.
+  # Example: The below command kills Zebar.
+  shutdown_commands: ['shell-exec taskkill /IM zebar.exe /F']
+
+  # Commands to run after the WM config is reloaded.
+  config_reload_commands: []
+
+  # Whether to automatically focus windows underneath the cursor.
   focus_follows_cursor: false
 
-  # 在聚焦当前工作区时，是否在之前聚焦的工作区之间来回切换。
+  # Whether to switch back and forth between the previously focused
+  # workspace when focusing the current workspace.
   toggle_workspace_on_refocus: false
 
   cursor_jump:
-    # 是否在指定的触发条件下自动移动光标。
+    # Whether to automatically move the cursor on the specified trigger.
     enabled: true
 
-    # 光标跳转的触发条件：
-    # - 'monitor_focus'：在显示器之间切换焦点时跳转。
-    # - 'window_focus'：在窗口之间切换焦点时跳转。
-    trigger: "monitor_focus"
+    # Trigger for cursor jump:
+    # - 'monitor_focus': Jump when focus changes between monitors.
+    # - 'window_focus': Jump when focus changes between windows.
+    trigger: 'monitor_focus'
 
 gaps:
-  # 相邻窗口之间的间距。
-  inner_gap: "20px"
+  # Whether to scale the gaps with the DPI of the monitor.
+  scale_with_dpi: true
 
-  # 窗口与屏幕边缘之间的间距。
+  # Gap between adjacent windows.
+  inner_gap: '20px'
+
+  # Gap between windows and the screen edge.
   outer_gap:
-    top: "60px"
-    right: "10px"
-    bottom: "10px"
-    left: "10px"
+    top: '60px'
+    right: '20px'
+    bottom: '20px'
+    left: '20px'
 
 window_effects:
-  # 应用于聚焦窗口的视觉效果。
+  # Visual effects to apply to the focused window.
   focused_window:
-    # 使用彩色边框高亮窗口。
-    # ** 由于 API 限制，仅限 Windows 11。
+    # Highlight the window with a colored border.
+    # ** Exclusive to Windows 11 due to API limitations.
     border:
       enabled: true
-      color: "#8dbcff"
+      color: '#8dbcff'
 
-  # 应用于非聚焦窗口的视觉效果。
+    # Remove the title bar from the window's frame. Note that this can
+    # cause rendering issues for some applications.
+    hide_title_bar:
+      enabled: false
+
+    # Change the corner style of the window's frame.
+    # ** Exclusive to Windows 11 due to API limitations.
+    corner_style:
+      enabled: false
+      # Allowed values: 'square', 'rounded', 'small_rounded'.
+      style: 'square'
+
+  # Visual effects to apply to non-focused windows.
   other_windows:
     border:
       enabled: true
-      color: "#a1a1a1"
+      color: '#a1a1a1'
+    hide_title_bar:
+      enabled: false
+    corner_style:
+      enabled: false
+      style: 'square'
 
 window_behavior:
-  # 尽可能在此状态下创建新窗口。
-  # 允许的值：'tiling'（平铺）、'floating'（浮动）。
-  initial_state: "tiling"
+  # New windows are created in this state whenever possible.
+  # Allowed values: 'tiling', 'floating'.
+  initial_state: 'tiling'
 
-  # 设置创建新窗口时的默认选项。这也会更改使用状态更改命令（如 `set-floating`）而不带任何标志时的默认设置。
+  # Sets the default options for when a new window is created. This also
+  # changes the defaults for when the state change commands, like
+  # `set-floating`, are used without any flags.
   state_defaults:
     floating:
-      # 是否默认将浮动窗口居中。
+      # Whether to center floating windows by default.
       centered: true
 
-      # 是否将浮动窗口显示为总是位于最上层。
+      # Whether to show floating windows as always on top.
       shown_on_top: false
 
     fullscreen:
-      # 如果可能，将窗口最大化。如果窗口没有最大化按钮，则以正常全屏模式显示。
+      # Maximize the window if possible. If the window doesn't have a
+      # maximize button, then it'll be fullscreen'ed normally instead.
       maximized: false
 
-      # 是否将全屏窗口显示为总是位于最上层。
+      # Whether to show fullscreen windows as always on top.
       shown_on_top: false
 
 workspaces:
-  - name: "1"
-    keep_alive: true
-  - name: "2"
-    keep_alive: true
-  - name: "3"
-    keep_alive: true
-  - name: "4"
-    keep_alive: true
-  - name: "5"
-    keep_alive: true
-  - name: "6"
-  - name: "7"
-  - name: "8"
-  - name: "9"
+  - name: '1'
+  - name: '2'
+  - name: '3'
+  - name: '4'
+  - name: '5'
+  - name: '6'
+  - name: '7'
+  - name: '8'
+  - name: '9'
 
 window_rules:
-  - commands: ["ignore"]
+  - commands: ['ignore']
     match:
-      # 忽略所有 Zebar 窗口。
-      - window_process: { equals: "zebar" }
+      # Ignores any Zebar windows.
+      - window_process: { equals: 'zebar' }
 
-      # 忽略浏览器的画中画窗口。
-      - window_title: { regex: "[Pp]icture.in.[Pp]icture" }
-        window_class: { regex: "Chrome_WidgetWin_1|MozillaDialogClass" }
+      # Ignores picture-in-picture windows for browsers.
+      - window_title: { regex: '[Pp]icture.in.[Pp]icture' }
+        window_class: { regex: 'Chrome_WidgetWin_1|MozillaDialogClass' }
 
-      # 忽略各种第三方应用程序的窗口。
-      - window_process: { equals: "PowerToys.PowerAccent" }
-      - window_process: { equals: "Lively" }
-        window_class: { regex: "HwndWrapper*" }
+      # Ignore rules for various 3rd-party apps.
+      - window_process: { equals: 'PowerToys' }
+        window_class: { regex: 'HwndWrapper\[PowerToys\.PowerAccent.*?\]' }
+      - window_process: { equals: 'PowerToys' }
+        window_title: { regex: '.*? - Peek' }
+      - window_process: { equals: 'Lively' }
+        window_class: { regex: 'HwndWrapper' }
 
 binding_modes:
-  # 启用后，可以通过箭头键或 HJKL 键调整聚焦窗口的大小。
-  - name: "resize"
+  # When enabled, the focused window can be resized via arrow keys or HJKL.
+  - name: 'resize'
     keybindings:
-      - commands: ["resize --width -2%"]
-        bindings: ["h", "left"]
-      - commands: ["resize --width +2%"]
-        bindings: ["l", "right"]
-      - commands: ["resize --height +2%"]
-        bindings: ["k", "up"]
-      - commands: ["resize --height -2%"]
-        bindings: ["j", "down"]
-      # 按下回车键或 Escape 键返回默认键绑定。
-      - commands: ["wm-disable-binding-mode --name resize"]
-        bindings: ["escape", "enter"]
+      - commands: ['resize --width -2%']
+        bindings: ['h', 'left']
+      - commands: ['resize --width +2%']
+        bindings: ['l', 'right']
+      - commands: ['resize --height +2%']
+        bindings: ['k', 'up']
+      - commands: ['resize --height -2%']
+        bindings: ['j', 'down']
+      # Press enter/escape to return to default keybindings.
+      - commands: ['wm-disable-binding-mode --name resize']
+        bindings: ['escape', 'enter']
 
-  # 启用后，所有键绑定都将被禁用，除非按下 LWin+shift+p 来返回默认键绑定。
-  - name: "pause"
+  # When enabled, all keybindings are disabled except for alt+shift+p which
+  # returns to default keybindings.
+  - name: 'pause'
     keybindings:
-      - commands: ["wm-disable-binding-mode --name pause"]
-        bindings: ["LWin+shift+p"]
+      - commands: ['wm-disable-binding-mode --name pause']
+        bindings: ['alt+shift+p']
 
 keybindings:
-  # 将焦点移向指定方向。
-  - commands: ["focus --direction left"]
-    bindings: ["alt+h", "alt+left"]
-  - commands: ["focus --direction right"]
-    bindings: ["alt+l", "alt+right"]
-  - commands: ["focus --direction up"]
-    bindings: ["alt+k", "alt+up"]
-  - commands: ["focus --direction down"]
-    bindings: ["alt+j", "alt+down"]
+  # Shift focus in a given direction.
+  - commands: ['focus --direction left']
+    bindings: ['alt+h', 'alt+left']
+  - commands: ['focus --direction right']
+    bindings: ['alt+l', 'alt+right']
+  - commands: ['focus --direction up']
+    bindings: ['alt+k', 'alt+up']
+  - commands: ['focus --direction down']
+    bindings: ['alt+j', 'alt+down']
 
-  # 将聚焦的窗口移动到指定方向。
-  - commands: ["move --direction left"]
-    bindings: ["alt+shift+h", "alt+shift+left"]
-  - commands: ["move --direction right"]
-    bindings: ["alt+shift+l", "alt+shift+right"]
-  - commands: ["move --direction up"]
-    bindings: ["alt+shift+k", "alt+shift+up"]
-  - commands: ["move --direction down"]
-    bindings: ["alt+shift+j", "alt+shift+down"]
+  # Move focused window in a given direction.
+  - commands: ['move --direction left']
+    bindings: ['alt+shift+h', 'alt+shift+left']
+  - commands: ['move --direction right']
+    bindings: ['alt+shift+l', 'alt+shift+right']
+  - commands: ['move --direction up']
+    bindings: ['alt+shift+k', 'alt+shift+up']
+  - commands: ['move --direction down']
+    bindings: ['alt+shift+j', 'alt+shift+down']
 
-  # 按百分比或像素量调整聚焦窗口的大小。
-  - commands: ["resize --width -2%"]
-    bindings: ["alt+u"]
-  - commands: ["resize --width +2%"]
-    bindings: ["alt+p"]
-  - commands: ["resize --height +2%"]
-    bindings: ["alt+o"]
-  - commands: ["resize --height -2%"]
-    bindings: ["alt+i"]
+  # Resize focused window by a percentage or pixel amount.
+  - commands: ['resize --width -2%']
+    bindings: ['alt+u']
+  - commands: ['resize --width +2%']
+    bindings: ['alt+p']
+  - commands: ['resize --height +2%']
+    bindings: ['alt+o']
+  - commands: ['resize --height -2%']
+    bindings: ['alt+i']
 
-  # 作为上述调整大小键绑定的替代方法，调整大小模式允许通过箭头键或 HJKL 键进行调整。绑定模式在上面定义，名称为 'resize'。
-  # - commands: ["wm-enable-binding-mode --name resize"]
-  #   bindings: ["alt+r"]
+  # As an alternative to the resize keybindings above, resize mode enables
+  # resizing via arrow keys or HJKL. The binding mode is defined above with
+  # the name 'resize'.
+  - commands: ['wm-enable-binding-mode --name resize']
+    bindings: ['alt+r']
 
-  # 禁用所有键绑定，直到再次按下 alt+shift+p。
-  # - commands: ["wm-enable-binding-mode --name pause"]
-  #   bindings: ["alt+shift+p"]
+  # Disables all keybindings until alt+shift+p is pressed again.
+  - commands: ['wm-enable-binding-mode --name pause']
+    bindings: ['alt+shift+p']
 
-  # 更改平铺方向。这决定了新平铺窗口将被插入的位置。
-  # - commands: ["toggle-tiling-direction"]
-  #   bindings: ["alt+v"]
+  # Change tiling direction. This determines where new tiling windows will
+  # be inserted.
+  - commands: ['toggle-tiling-direction']
+    bindings: ['alt+v']
 
-  # 将焦点从平铺窗口更改为浮动窗口再到全屏窗口。
-  # - commands: ["wm-cycle-focus"]
-  #   bindings: ["alt+space"]
+  # Change focus from tiling windows -> floating -> fullscreen.
+  - commands: ['wm-cycle-focus']
+    bindings: ['alt+space']
 
-  # 将聚焦的窗口更改为浮动窗口。
-  - commands: ["toggle-floating --centered"]
-    bindings: ["LWin+alt+ctrl+space"]
+  # Change the focused window to be floating.
+  - commands: ['toggle-floating --centered']
+    bindings: ['alt+shift+space']
 
-  # 将聚焦的窗口更改为平铺窗口。
-  - commands: ["toggle-tiling"]
-    bindings: ["LWin+alt+ctrl+t"]
+  # Change the focused window to be tiling.
+  - commands: ['toggle-tiling']
+    bindings: ['alt+t']
 
-  # 将聚焦的窗口更改为全屏窗口。
-  - commands: ["toggle-fullscreen"]
-    bindings: ["LWin+alt+ctrl+f"]
+  # Change the focused window to be fullscreen.
+  - commands: ['toggle-fullscreen']
+    bindings: ['alt+f']
 
-  # 最小化聚焦窗口。
-  # - commands: ["toggle-minimized"]
-  #   bindings: ["alt+m"]
+  # Minimize focused window.
+  - commands: ['toggle-minimized']
+    bindings: ['alt+m']
 
-  # 关闭聚焦窗口。
-  - commands: ["close"]
-    bindings: ["LWin+alt+ctrl+q"]
+  # Close focused window.
+  - commands: ['close']
+    bindings: ['alt+q']
 
-  # 安全终止 GlazeWM 进程。
-  - commands: ["wm-exit"]
-    bindings: ["alt+shift+e"]
+  # Kill GlazeWM process safely.
+  - commands: ['wm-exit']
+    bindings: ['alt+shift+e']
 
-  # 重新评估配置文件。
-  - commands: ["wm-reload-config"]
-    bindings: ["alt+shift+r"]
+  # Re-evaluate configuration file.
+  - commands: ['wm-reload-config']
+    bindings: ['alt+shift+r']
 
-  # 重新绘制所有窗口。
-  - commands: ["wm-redraw"]
-    bindings: ["alt+shift+w"]
+  # Redraw all windows.
+  - commands: ['wm-redraw']
+    bindings: ['alt+shift+w']
 
-  # 启动 CMD 终端。或者，使用 `shell-exec wt` 或 `shell-exec %ProgramFiles%/Git/git-bash.exe` 启动 Windows 终端或 Git Bash。
-  # - commands: ["shell-exec wezterm-gui.exe"]
-  - commands: ["shell-exec wt"]
-    bindings: ["alt+enter"]
+  # Launch CMD terminal. Alternatively, use `shell-exec wt` or
+  # `shell-exec %ProgramFiles%/Git/git-bash.exe` to start Windows
+  # Terminal and Git Bash respectively.
+  - commands: ['shell-exec wt']
+    bindings: ['alt+enter']
 
-  # 聚焦配置文件中定义的下一个/上一个工作区。
-  - commands: ["focus --next-workspace"]
-    bindings: ["alt+]"]
-  - commands: ["focus --prev-workspace"]
-    bindings: ["alt+["]
+  # Focus the next/previous workspace defined in `workspaces` config.
+  - commands: ['focus --next-workspace']
+    bindings: ['alt+s']
+  - commands: ['focus --prev-workspace']
+    bindings: ['alt+a']
 
-  # 聚焦上次聚焦的工作区。
-  # - commands: ["focus --recent-workspace"]
-  #   bindings: ["alt+d"]
+  # Focus the workspace that last had focus.
+  - commands: ['focus --recent-workspace']
+    bindings: ['alt+d']
 
-  # 聚焦配置文件中定义的指定工作区。
-  - commands: ["focus --workspace 1"]
-    bindings: ["LWin+alt+ctrl+1"]
-  - commands: ["focus --workspace 2"]
-    bindings: ["LWin+alt+ctrl+2"]
-  - commands: ["focus --workspace 3"]
-    bindings: ["LWin+alt+ctrl+3"]
-  - commands: ["focus --workspace 4"]
-    bindings: ["LWin+alt+ctrl+4"]
-  - commands: ["focus --workspace 5"]
-    bindings: ["LWin+alt+ctrl+5"]
-  - commands: ["focus --workspace 6"]
-    bindings: ["LWin+alt+ctrl+6"]
-  - commands: ["focus --workspace 7"]
-    bindings: ["LWin+alt+ctrl+7"]
-  - commands: ["focus --workspace 8"]
-    bindings: ["LWin+alt+ctrl+8"]
-  - commands: ["focus --workspace 9"]
-    bindings: ["LWin+alt+ctrl+9"]
+  # Change focus to a workspace defined in `workspaces` config.
+  - commands: ['focus --workspace 1']
+    bindings: ['alt+1']
+  - commands: ['focus --workspace 2']
+    bindings: ['alt+2']
+  - commands: ['focus --workspace 3']
+    bindings: ['alt+3']
+  - commands: ['focus --workspace 4']
+    bindings: ['alt+4']
+  - commands: ['focus --workspace 5']
+    bindings: ['alt+5']
+  - commands: ['focus --workspace 6']
+    bindings: ['alt+6']
+  - commands: ['focus --workspace 7']
+    bindings: ['alt+7']
+  - commands: ['focus --workspace 8']
+    bindings: ['alt+8']
+  - commands: ['focus --workspace 9']
+    bindings: ['alt+9']
 
   # Move the focused window's parent workspace to a monitor in a given
   # direction.
-  - commands: ["move-workspace --direction left"]
-    bindings: ["LWin+shift+a"]
-  - commands: ["move-workspace --direction right"]
-    bindings: ["LWin+shift+f"]
-  - commands: ["move-workspace --direction up"]
-    bindings: ["LWin+shift+d"]
-  - commands: ["move-workspace --direction down"]
-    bindings: ["LWin+shift+s"]
+  - commands: ['move-workspace --direction left']
+    bindings: ['alt+shift+a']
+  - commands: ['move-workspace --direction right']
+    bindings: ['alt+shift+f']
+  - commands: ['move-workspace --direction up']
+    bindings: ['alt+shift+d']
+  - commands: ['move-workspace --direction down']
+    bindings: ['alt+shift+s']
 
   # Move focused window to a workspace defined in `workspaces` config.
-  - commands: ["move --workspace 1", "focus --workspace 1"]
-    bindings: ["LWin+shift+1"]
-  - commands: ["move --workspace 2", "focus --workspace 2"]
-    bindings: ["LWin+shift+2"]
-  - commands: ["move --workspace 3", "focus --workspace 3"]
-    bindings: ["LWin+shift+3"]
-  - commands: ["move --workspace 4", "focus --workspace 4"]
-    bindings: ["LWin+shift+4"]
-  - commands: ["move --workspace 5", "focus --workspace 5"]
-    bindings: ["LWin+shift+5"]
-  - commands: ["move --workspace 6", "focus --workspace 6"]
-    bindings: ["LWin+shift+6"]
-  - commands: ["move --workspace 7", "focus --workspace 7"]
-    bindings: ["LWin+shift+7"]
-  - commands: ["move --workspace 8", "focus --workspace 8"]
-    bindings: ["LWin+shift+8"]
-  - commands: ["move --workspace 9", "focus --workspace 9"]
-    bindings: ["LWin+shift+9"]
+  - commands: ['move --workspace 1', 'focus --workspace 1']
+    bindings: ['alt+shift+1']
+  - commands: ['move --workspace 2', 'focus --workspace 2']
+    bindings: ['alt+shift+2']
+  - commands: ['move --workspace 3', 'focus --workspace 3']
+    bindings: ['alt+shift+3']
+  - commands: ['move --workspace 4', 'focus --workspace 4']
+    bindings: ['alt+shift+4']
+  - commands: ['move --workspace 5', 'focus --workspace 5']
+    bindings: ['alt+shift+5']
+  - commands: ['move --workspace 6', 'focus --workspace 6']
+    bindings: ['alt+shift+6']
+  - commands: ['move --workspace 7', 'focus --workspace 7']
+    bindings: ['alt+shift+7']
+  - commands: ['move --workspace 8', 'focus --workspace 8']
+    bindings: ['alt+shift+8']
+  - commands: ['move --workspace 9', 'focus --workspace 9']
+    bindings: ['alt+shift+9']
