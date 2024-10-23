@@ -1,0 +1,3 @@
+[2m2024-10-23T15:24:56.008884Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m missing field `window_behavior`
+[2m2024-10-23T15:25:19.107683Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m missing field `window_effects`
+[2m2024-10-23T15:27:18.825957Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m window_effects.focused_window.corner_style.enabled: invalid type: string "rtrue", expected a boolean at line 61 column 16
