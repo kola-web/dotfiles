@@ -16,5 +16,5 @@
   ignore = dirty
 [submodule "nvim/.config/nvim"]
 	path = nvim/.config/nvim
-	url = https://github.com/kola-web/nvim.git
+	url = git@github.com:kola-web/nvim.git
   ignore = dirty
