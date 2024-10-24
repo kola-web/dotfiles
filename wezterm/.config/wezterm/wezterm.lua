@@ -8,7 +8,7 @@ wezterm.log_info("reloading")
 
 require("keymaps").setup(config)
 require("launch").setup(config)
-require("plugins").setup(config)
+-- require("plugins").setup(config)
 
 config.front_end = "WebGpu"
 config.webgpu_power_preference = "HighPerformance"
@@ -23,7 +23,6 @@ config.tab_bar_at_bottom = true
 
 config.window_close_confirmation = "NeverPrompt"
 
-config.font = wezterm.font("Cascadia Code NF")
 config.font_size = 12
 config.line_height = 1.2
 
