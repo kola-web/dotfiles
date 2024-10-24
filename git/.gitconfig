@@ -4,6 +4,7 @@
 [core]
     pager = delta
 
+	autocrlf = 0
 [interactive]
     diffFilter = delta --color-only
 
