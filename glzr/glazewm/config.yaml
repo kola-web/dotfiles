@@ -212,19 +212,19 @@ keybindings:
 
   # Change the focused window to be tiling.
   - commands: ['toggle-tiling']
-    bindings: ['alt+t']
+    bindings: ['lwin+t']
 
   # Change the focused window to be fullscreen.
   - commands: ['toggle-fullscreen']
-    bindings: ['alt+f']
+    bindings: ['lwin+f']
 
   # Minimize focused window.
-  - commands: ['toggle-minimized']
-    bindings: ['alt+m']
+  # - commands: ['toggle-minimized']
+  #   bindings: ['alt+m']
 
   # Close focused window.
   - commands: ['close']
-    bindings: ['alt+q']
+    bindings: ['lwin+q']
 
   # Kill GlazeWM process safely.
   - commands: ['wm-exit']
