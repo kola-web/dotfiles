@@ -241,7 +241,7 @@ keybindings:
   # `shell-exec %ProgramFiles%/Git/git-bash.exe` to start Windows
   # Terminal and Git Bash respectively.
   - commands: ['shell-exec wt']
-    bindings: ['alt+enter']
+    bindings: ['lwin+enter']
 
   # Focus the next/previous workspace defined in `workspaces` config.
   - commands: ['focus --next-workspace']
@@ -258,7 +258,7 @@ keybindings:
     bindings: ['lwin+1']
   - commands: ['focus --workspace 2']
     bindings: ['lwin+2']
-  - commands: ['focus --workspace 3']
+  - commands: ['focus --workspace 3','wm-redraw']
     bindings: ['lwin+3']
   - commands: ['focus --workspace 4']
     bindings: ['lwin+4']
