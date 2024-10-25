@@ -32,11 +32,21 @@ Invoke-Expression (& { (zoxide init powershell | Out-String) })
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 Set-Alias -Name cat   -Value bat
 Set-Alias -Name g     -Value lazygit
-Set-Alias -Name r     -Value yazi
+Set-Alias -Name r     -Value yy
 Set-Alias -Name open  -Value explorer
 
 # Utilities
 function which ($command) {
   Get-Command -Name $command -ErrorAction SilentlyContinue |
     Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
+}
+
+function yy {
+    $tmp = [System.IO.Path]::GetTempFileName()
+    yazi $args --cwd-file="$tmp"
+    $cwd = Get-Content -Path $tmp
+    if (-not [String]::IsNullOrEmpty($cwd) -and $cwd -ne $PWD.Path) {
+        Set-Location -LiteralPath $cwd
+    }
+    Remove-Item -Path $tmp
 }

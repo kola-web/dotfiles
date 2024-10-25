@@ -1,181 +1,35 @@
-7-Zip 24.08 (x64)                     7zip.7zip                              24.08                               winget
-Bandizip                              Bandisoft.Bandizip                     7.36                                winget
-BetterGI                              ARP\Machine\X64\BetterGI               0.0.0.0                             
-Clash Verge                           ClashVergeRev.ClashVergeRev            1.7.7                               winget
-Git                                   Git.Git                                2.47.0                              winget
-米哈游启动器                          ARP\Machine\X64\HYP_1_1_cn             1.2.2.159                           
-Microsoft Office 家庭和学生版 2021 -… ARP\Machine\X64\HomeStudent2021Retail… 16.0.18025.20160                    
-微软OfficePLUS                        ARP\Machine\X64\MSOfficePLUS           3.4.0.42510                         
-Microsoft OneDrive                    Microsoft.OneDrive                     24.186.0915.0004                    winget
-Terraria                              ARP\Machine\X64\Steam App 105600       Unknown                             
-Ori and the Will of the Wisps         ARP\Machine\X64\Steam App 1057090      Unknown                             
-Hades                                 ARP\Machine\X64\Steam App 1145360      Unknown                             
-Red Dead Redemption 2                 ARP\Machine\X64\Steam App 1174180      Unknown                             
-逃出地牢                              ARP\Machine\X64\Steam App 1209490      Unknown                             
-艾尔登法环                            ARP\Machine\X64\Steam App 1245620      Unknown                             
-ENDER LILIES: Quietus of the Knights  ARP\Machine\X64\Steam App 1369630      Unknown                             
-《恶意不息》                          ARP\Machine\X64\Steam App 1371980      Unknown                             
-碳酸危机                              ARP\Machine\X64\Steam App 1592670      Unknown                             
-饥荒                                  ARP\Machine\X64\Steam App 219740       Unknown                             
-黑神话:悟空                           ARP\Machine\X64\Steam App 2358720      Unknown                             
-Mandragora Demo                       ARP\Machine\X64\Steam App 2423720      Unknown                             
-巫师 3:狂猎                           ARP\Machine\X64\Steam App 292030       Unknown                             
-挺进地牢                              ARP\Machine\X64\Steam App 311690       Unknown                             
-饥荒联机版                            ARP\Machine\X64\Steam App 322330       Unknown                             
-Hollow Knight                         ARP\Machine\X64\Steam App 367520       Unknown                             
-Ori and the Blind Forest: Definitive… ARP\Machine\X64\Steam App 387290       Unknown                             
-无主之地3                             ARP\Machine\X64\Steam App 397540       Unknown                             
-Stardew Valley                        ARP\Machine\X64\Steam App 413150       Unknown                             
-Little Nightmares                     ARP\Machine\X64\Steam App 424840       Unknown                             
-Wallpaper Engine:壁纸引擎             ARP\Machine\X64\Steam App 431960       Unknown                             
-缺氧                                  ARP\Machine\X64\Steam App 457140       Unknown                             
-深岩银河                              ARP\Machine\X64\Steam App 548430       Unknown                             
-Left 4 Dead 2                         ARP\Machine\X64\Steam App 550          Unknown                             
-Assassin's Creed Origins              ARP\Machine\X64\Steam App 582160       Unknown                             
-Dead Cells                            ARP\Machine\X64\Steam App 588650       Unknown                             
-雨中冒险 2                            ARP\Machine\X64\Steam App 632360       Unknown                             
-SekiroTM: Shadows Die Twice           ARP\Machine\X64\Steam App 814380       Unknown                             
-pot                                   Pylogmon.pot                           3.0.5                               winget
-哔哩哔哩直播姬                        Bilibili.Livehime                      6.3.0.7419               6.9.0.7708 winget
-GitHub CLI                            GitHub.cli                             2.55.0                   2.59.0     winget
-Neovim                                Neovim.Neovim                          0.10.1                   0.10.2     winget
-Microsoft Visual C++ 2008 Redistribu… Microsoft.VCRedist.2008.x64            9.0.30729.6161                      winget
-Volta                                 Volta.Volta                            2.0.1                               winget
-Zebar                                 glzr-io.zebar                          > 1.8.1                             winget
-GlazeWM                               glzr-io.glazewm                        3.4.0                               winget
-NVIDIA 图形驱动程序 561.03            ARP\Machine\X64\{B2FE1952-0186-46C3-B… 561.03                              
-WezTerm version 20240203-110809-5046… wez.wezterm                            20240203-110809-5046fc22            winget
-starship                              Starship.Starship                      1.20.1                   1.21.1     winget
-PowerShell 7-x64                      Microsoft.PowerShell                   7.4.5.0                             winget
-Microsoft Update Health Tools         ARP\Machine\X64\{C6FD611E-7EFE-488C-A… 5.72.0.0                            
-LuaJIT                                DEVCOM.LuaJIT                          2.1.19907                           winget
-gsudo v2.5.1                          gerardog.gsudo                         2.5.1                               winget
-TortoiseSVN 1.14.8.29723 (64 bit)     TortoiseSVN.TortoiseSVN                1.14.29723                          winget
-CMake                                 Kitware.CMake                          3.30.3                   3.30.5     winget
-Google Chrome                         Google.Chrome.EXE                      130.0.6723.59            130.0.672… winget
-Microsoft Edge                        Microsoft.Edge                         130.0.2849.52                       winget
-Microsoft Edge Update                 ARP\Machine\X86\Microsoft Edge Update  1.3.195.25                          
-Microsoft Edge WebView2 Runtime       Microsoft.EdgeWebView2Runtime          130.0.2849.52                       winget
-QQ音乐                                Tencent.QQMusic                        20.22                               winget
-Rockstar Games Launcher               ARP\Machine\X86\Rockstar Games Launch… 1.0.94.2130_S9_R11                  
-Rockstar Games Social Club            ARP\Machine\X86\Rockstar Games Social… 2.3.4.3                             
-Steam                                 Valve.Steam                            2.10.91.91                          winget
-微信                                  Tencent.WeChat                         3.9.12.17                           winget
-WeGame                                XP8LZ3XFW0JQLZ                         Unknown                             mssto…
-小狼毫输入法                          Rime.Weasel                            0.16.3.0                            winget
-Python Launcher                       Python.Launcher                        < 3.12.0                 3.12.0     winget
-Windows Virtual Desktop Helper        ARP\Machine\X86\{205FF07F-8652-49D5-A… 1.17                                
-JetBrainsMono Nerd Font               DEVCOM.JetBrainsMonoNerdFont           3.2.1                               winget
-Microsoft Visual C++ 2015-2022 Redis… Microsoft.VCRedist.2015+.x86           14.40.33810.0            14.40.338… winget
-Microsoft Visual C++ 2015-2022 Redis… Microsoft.VCRedist.2015+.x64           14.40.33810.0            14.40.338… winget
-Microsoft Visual C++ 2008 Redistribu… Microsoft.VCRedist.2008.x86            9.0.30729.6161                      winget
-Microsoft Windows Desktop Runtime - … Microsoft.DotNet.DesktopRuntime.8      8.0.10                              winget
-网易云音乐                            NetEase.CloudMusic                     2.10.13.202675                      winget
-英雄联盟                              ARP\Machine\X86\英雄联盟               Unknown                             
-AutoHotkey (user)                     AutoHotkey.AutoHotkey                  2.0.18                              winget
-RipGrep MSVC                          BurntSushi.ripgrep.MSVC                14.1.1                              winget
-fastfetch                             Fastfetch-cli.Fastfetch                2.22.0                   2.28.0     winget
-lazygit                               JesseDuffield.lazygit                  0.43.1                   0.44.1     winget
-Oh My Posh version 23.20.2            JanDeDobbeleer.OhMyPosh                23.20.2                  23.20.3    winget
-zoxide                                ajeetdsouza.zoxide                     0.9.4                    0.9.6      winget
-eza                                   eza-community.eza                      0.19.1                   0.19.4     winget
-ezwinports: make                      ezwinports.make                        4.4.1                               winget
-jq                                    jqlang.jq                              1.7.1                               winget
-fzf                                   junegunn.fzf                           0.55.0                              winget
-fd                                    sharkdp.fd                             10.2.0                              winget
-Yazi                                  sxyazi.yazi                            0.3.2                    0.3.3      winget
-Zig                                   zig.zig                                0.13.0                              winget
-Microsoft Visual Studio Code (User)   Microsoft.VisualStudioCode             1.94.2                              winget
-PowerToys (Preview) x64               Microsoft.PowerToys                    0.85.0                   0.85.1     winget
-Python 3.9.13 (64-bit)                Python.Python.3.9                      3.9.13                              winget
-TortoiseSVN                           MSIX\3A48D7FC-AEE2-4CBC-91D1-0007951B… 1.14.8.29723                        
-ShellBandizip                         MSIX\BandizipShellext2_1.0.0.2_x64__y… 1.0.0.2                             
-Microsoft Clipchamp                   MSIX\Clipchamp.Clipchamp_3.1.11820.0_… 3.1.11820.0                         
-Cortana                               MSIX\Microsoft.549981C3F5F10_4.2308.1… 4.2308.1005.0                       
-资讯                                  MSIX\Microsoft.BingNews_4.55.62231.0_… 4.55.62231.0                        
-Microsoft 必应的 Web 搜索             MSIX\Microsoft.BingSearch_1.0.95.0_x6… 1.0.95.0                            
-MSN 天气                              MSIX\Microsoft.BingWeather_4.53.62621… 4.53.62621.0                        
-应用安装程序                          Microsoft.AppInstaller                 1.24.2411.0                         winget
-DirectX                               MSIX\Microsoft.DirectXRuntime_9.29.19… 9.29.1974.0                         
-DirectX                               MSIX\Microsoft.DirectXRuntime_9.29.19… 9.29.1974.0                         
-Xbox                                  MSIX\Microsoft.GamingApp_2410.1001.55… 2410.1001.55.0                      
-游戏服务                              MSIX\Microsoft.GamingServices_24.93.1… 24.93.16001.0                       
-获取帮助                              MSIX\Microsoft.GetHelp_10.2407.22431.… 10.2407.22431.0                     
-Microsoft 使用技巧                    MSIX\Microsoft.Getstarted_10.2312.1.0… 10.2312.1.0                         
-HEIF Image Extensions                 MSIX\Microsoft.HEIFImageExtension_1.1… 1.1.2631.0                          
-来自设备制造商的 HEVC 视频扩展        MSIX\Microsoft.HEVCVideoExtension_2.2… 2.2.9.0                             
-English (United States) Local Experi… MSIX\Microsoft.LanguageExperiencePack… 22621.87.334.0                      
-中文(简体)本地体验包                  MSIX\Microsoft.LanguageExperiencePack… 22621.81.326.0                      
-Microsoft Edge                        MSIX\Microsoft.MicrosoftEdge.Stable_1… 128.0.2739.54                       
-Microsoft 365 (Office)                MSIX\Microsoft.MicrosoftOfficeHub_18.… 18.2410.1081.0                      
-Solitaire & Casual Games              MSIX\Microsoft.MicrosoftSolitaireColl… 4.20.9120.0                         
-Microsoft 便笺                        MSIX\Microsoft.MicrosoftStickyNotes_6… 6.1.3.0                             
-Microsoft .Net Native Framework Pack… MSIX\Microsoft.NET.Native.Framework.2… 2.2.29512.0                         
-Microsoft .Net Native Framework Pack… MSIX\Microsoft.NET.Native.Framework.2… 2.2.29512.0                         
-Microsoft .Net Native Runtime Packag… MSIX\Microsoft.NET.Native.Runtime.2.2… 2.2.28604.0                         
-Microsoft .Net Native Runtime Packag… MSIX\Microsoft.NET.Native.Runtime.2.2… 2.2.28604.0                         
-OneDrive                              MSIX\Microsoft.OneDriveSync_24186.915… 24186.915.4.0                       
-Outlook for Windows                   MSIX\Microsoft.OutlookForWindows_1.20… 1.2024.327.300                      
-画图                                  MSIX\Microsoft.Paint_11.2408.30.0_x64… 11.2408.30.0                        
-Microsoft 人脉                        MSIX\Microsoft.People_10.2202.100.0_x… 10.2202.100.0                       
-Power Automate                        MSIX\Microsoft.PowerAutomateDesktop_1… 11.2410.202.0                       
-PowerToys FileLocksmith Context Menu  MSIX\Microsoft.PowerToys.FileLocksmit… 1.0.0.0                             
-PowerToys ImageResizer Context Menu   MSIX\Microsoft.PowerToys.ImageResizer… 0.83.0.0                            
-PowerToys PowerRename Context Menu    MSIX\Microsoft.PowerToys.PowerRenameC… 0.83.0.0                            
-Raw Image Extension                   MSIX\Microsoft.RawImageExtension_2.3.… 2.3.2051.0                          
-截图工具                              MSIX\Microsoft.ScreenSketch_11.2407.3… 11.2407.3.0                         
-Windows 安全中心                      MSIX\Microsoft.SecHealthUI_1000.25992… 1000.25992.9000.0                   
-Microsoft Engagement Framework        MSIX\Microsoft.Services.Store.Engagem… 10.0.23012.0                        
-Microsoft Engagement Framework        MSIX\Microsoft.Services.Store.Engagem… 10.0.23012.0                        
-Microsoft Store 体验主机              MSIX\Microsoft.StorePurchaseApp_22408… 22408.1401.0.0                      
-Microsoft To Do                       MSIX\Microsoft.Todos_2.114.7122.0_x64… 2.114.7122.0                        
-Microsoft.UI.Xaml.2.7                 Microsoft.UI.Xaml.2.7                  7.2409.9001.0                       winget
-Microsoft.UI.Xaml.2.7                 Microsoft.UI.Xaml.2.7                  7.2409.9001.0                       winget
-Microsoft.UI.Xaml.2.7                 Microsoft.UI.Xaml.2.7                  7.2208.15002.0                      winget
-Microsoft.UI.Xaml.2.8                 Microsoft.UI.Xaml.2.8                  8.2310.30001.0                      winget
-Microsoft.UI.Xaml.2.8                 Microsoft.UI.Xaml.2.8                  8.2310.30001.0                      winget
-Microsoft Visual C++ 2012 UWP Deskto… MSIX\Microsoft.VCLibs.110.00.UWPDeskt… 11.0.61135.0                        
-Microsoft Visual C++ 2012 UWP Deskto… MSIX\Microsoft.VCLibs.110.00.UWPDeskt… 11.0.61135.0                        
-Microsoft Visual C++ 2015 UWP Deskto… Microsoft.VCLibs.Desktop.14            14.0.33728.0                        winget
-Microsoft Visual C++ 2015 UWP Deskto… Microsoft.VCLibs.Desktop.14            14.0.33728.0                        winget
-Microsoft Visual C++ 2015 UWP Runtim… MSIX\Microsoft.VCLibs.140.00_14.0.335… 14.0.33519.0                        
-Microsoft Visual C++ 2015 UWP Runtim… MSIX\Microsoft.VCLibs.140.00_14.0.335… 14.0.33519.0                        
-VP9 Video Extensions                  MSIX\Microsoft.VP9VideoExtensions_1.1… 1.1.451.0                           
-Web 媒体扩展                          MSIX\Microsoft.WebMediaExtensions_1.1… 1.1.1295.0                          
-Webp Image Extensions                 MSIX\Microsoft.WebpImageExtension_1.1… 1.1.1711.0                          
-Widgets Platform Runtime              MSIX\Microsoft.WidgetsPlatformRuntime… 1.4.0.0                             
-Dev Home (Preview)                    Microsoft.DevHome                      0.1801.640.0                        winget
-Microsoft 照片                        MSIX\Microsoft.Windows.Photos_2024.11… 2024.11070.31001.0                  
-Windows 时钟                          MSIX\Microsoft.WindowsAlarms_11.2408.… 11.2408.9.0                         
-Microsoft.WindowsAppRuntime.1.1       MSIX\Microsoft.WindowsAppRuntime.1.1_… 1005.616.1651.0                     
-Microsoft.WindowsAppRuntime.1.1       MSIX\Microsoft.WindowsAppRuntime.1.1_… 1005.616.1651.0                     
-Microsoft.WindowsAppRuntime.1.4       MSIX\Microsoft.WindowsAppRuntime.1.4_… 4000.1309.2056.0                    
-Microsoft.WindowsAppRuntime.1.4       MSIX\Microsoft.WindowsAppRuntime.1.4_… 4000.1309.2056.0                    
-WindowsAppRuntime.1.5                 MSIX\Microsoft.WindowsAppRuntime.1.5_… 5001.275.500.0                      
-WindowsAppRuntime.1.5                 MSIX\Microsoft.WindowsAppRuntime.1.5_… 5001.275.500.0                      
-Windows 计算器                        MSIX\Microsoft.WindowsCalculator_11.2… 11.2409.0.0                         
-Windows 相机                          MSIX\Microsoft.WindowsCamera_2024.240… 2024.2408.1.0                       
-反馈中心                              MSIX\Microsoft.WindowsFeedbackHub_1.2… 1.2410.16101.0                      
-Windows 地图                          MSIX\Microsoft.WindowsMaps_11.2403.4.… 11.2403.4.0                         
-Windows 记事本                        MSIX\Microsoft.WindowsNotepad_11.2409… 11.2409.9.0                         
-Windows 录音机                        MSIX\Microsoft.WindowsSoundRecorder_1… 11.2408.6.0                         
-Microsoft Store                       MSIX\Microsoft.WindowsStore_22409.140… 22409.1401.5.0                      
-Windows 终端                          Microsoft.WindowsTerminal              1.21.2911.0                         winget
-Windows Package Manager Source (wing… MSIX\Microsoft.Winget.Source_2024.102… 2024.1024.1221.1                    
-Xbox TCUI                             MSIX\Microsoft.Xbox.TCUI_1.24.10001.0… 1.24.10001.0                        
-Xbox Game Bar Plugin                  MSIX\Microsoft.XboxGameOverlay_1.54.4… 1.54.4001.0                         
-Game Bar                              MSIX\Microsoft.XboxGamingOverlay_7.22… 7.224.9242.0                        
-Xbox Identity Provider                MSIX\Microsoft.XboxIdentityProvider_1… 12.115.1001.0                       
-Xbox Game Speech Window               MSIX\Microsoft.XboxSpeechToTextOverla… 1.21.13002.0                        
-手机连接                              MSIX\Microsoft.YourPhone_1.24092.78.0… 1.24092.78.0                        
-Windows 媒体播放器                    MSIX\Microsoft.ZuneMusic_11.2409.11.0… 11.2409.11.0                        
-电影和电视                            MSIX\Microsoft.ZuneVideo_10.24081.101… 10.24081.10111.0                    
-Microsoft Family                      MSIX\MicrosoftCorporationII.Microsoft… 0.2.40.0                            
-快速助手                              MSIX\MicrosoftCorporationII.QuickAssi… 2.0.32.0                            
-Windows Web Experience Pack           MSIX\MicrosoftWindows.Client.WebExper… 524.24900.130.0                     
-跨设备体验主机                        MSIX\MicrosoftWindows.CrossDevice_1.2… 1.24092.24.0                        
-Speech Pack - Chinese (Simplified)    MSIX\MicrosoftWindows.Speech.zh-CN.1_… 1.0.14.0                            
-Microsoft Yunxi (Natural) - Chinese … MSIX\MicrosoftWindows.Voice.zh-CN.Yun… 1.0.4.0                             
-NVIDIA Control Panel                  MSIX\NVIDIACorp.NVIDIAControlPanel_8.… 8.1.966.0                           
-PDFToolExtension                      MSIX\PDFShellExt_3.0.0.0_x64__8wekyb3… 3.0.0.0                             
-Realtek Audio Control                 MSIX\RealtekSemiconductorCorp.Realtek… 1.48.311.0                          
+
+"7zip.7zip"
+"Bandisoft.Bandizip"
+"ClashVergeRev.ClashVergeRev"
+"Git.Git"
+"Pylogmon.pot"
+"GitHub.cli"
+"Neovim.Neovim"
+"Volta.Volta"
+"glzr-io.zebar"
+"glzr-io.glazewm"
+"wez.wezterm"
+"Starship.Starship"
+"Microsoft.PowerShell"
+"DEVCOM.LuaJIT"
+"gerardog.gsudo"
+"TortoiseSVN.TortoiseSVN"
+"Kitware.CMake"
+"Google.Chrome.EXE"
+"Tencent.QQMusic"
+"Tencent.WeChat"
+"Rime.Weasel"
+"Python.Launcher"
+"DEVCOM.JetBrainsMonoNerdFont"
+"AutoHotkey.AutoHotkey"
+"JesseDuffield.lazygit"
+"JanDeDobbeleer.OhMyPosh"
+"ajeetdsouza.zoxide"
+"eza-community.eza"
+"ezwinports.make"
+"jqlang.jq"
+"junegunn.fzf"
+"sharkdp.fd"
+"sxyazi.yazi"
+"zig.zig"

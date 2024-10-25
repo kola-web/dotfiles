@@ -16,7 +16,7 @@ general:
 
   # Whether to switch back and forth between the previously focused
   # workspace when focusing the current workspace.
-  toggle_workspace_on_refocus: false
+  toggle_workspace_on_refocus: true
 
   cursor_jump:
     # Whether to automatically move the cursor on the specified trigger.
@@ -127,10 +127,18 @@ window_rules:
         window_title: { regex: '.*? - Peek' }
       - window_process: { equals: 'Lively' }
         window_class: { regex: 'HwndWrapper' }
+  - commands: ["move --workspace 3"]
+    match:
+      # Move browsers to workspace 3.
+      - window_process: { regex: "微信开发者工具" }
   - commands: ["move --workspace 4"]
     match:
       # Move browsers to workspace 4.
       - window_process: { regex: "WeChat|QQMusic" }
+  - commands: ["move --workspace 5"]
+    match:
+      # Move browsers to workspace 5.
+      - window_process: { regex: "Docker Desktop" }
 
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
@@ -244,33 +252,33 @@ keybindings:
     bindings: ['lwin+enter']
 
   # Focus the next/previous workspace defined in `workspaces` config.
-  - commands: ['focus --next-workspace']
-    bindings: ['alt+s']
-  - commands: ['focus --prev-workspace']
-    bindings: ['alt+a']
+  # - commands: ['focus --next-workspace']
+  #   bindings: ['alt+s']
+  # - commands: ['focus --prev-workspace']
+  #   bindings: ['alt+a']
 
   # Focus the workspace that last had focus.
-  - commands: ['focus --recent-workspace']
-    bindings: ['alt+d']
+  # - commands: ['focus --recent-workspace']
+  #   bindings: ['alt+d']
 
   # Change focus to a workspace defined in `workspaces` config.
-  - commands: ['focus --workspace 1','wm-redraw']
+  - commands: ['focus --workspace 1']
     bindings: ['lwin+1']
-  - commands: ['focus --workspace 2','wm-redraw']
+  - commands: ['focus --workspace 2']
     bindings: ['lwin+2']
-  - commands: ['focus --workspace 3','wm-redraw']
+  - commands: ['focus --workspace 3']
     bindings: ['lwin+3']
-  - commands: ['focus --workspace 4','wm-redraw']
+  - commands: ['focus --workspace 4']
     bindings: ['lwin+4']
-  - commands: ['focus --workspace 5','wm-redraw']
+  - commands: ['focus --workspace 5']
     bindings: ['lwin+5']
-  - commands: ['focus --workspace 6','wm-redraw']
+  - commands: ['focus --workspace 6']
     bindings: ['lwin+6']
-  - commands: ['focus --workspace 7','wm-redraw']
+  - commands: ['focus --workspace 7']
     bindings: ['lwin+7']
-  - commands: ['focus --workspace 8','wm-redraw']
+  - commands: ['focus --workspace 8']
     bindings: ['lwin+8']
-  - commands: ['focus --workspace 9','wm-redraw']
+  - commands: ['focus --workspace 9']
     bindings: ['lwin+9']
 
   # Move the focused window's parent workspace to a monitor in a given
