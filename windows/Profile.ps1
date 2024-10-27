@@ -20,7 +20,7 @@ oh-my-posh --init --shell pwsh --config $omp_config | Invoke-Expression
 # PSReadLine
 Import-Module PSReadLine
 Set-PSReadLineOption -EditMode Vi
-Set-PSReadLineKeyHandler -Chord Tab -Function Complete
+Set-PSReadLineKeyHandler -Chord Tab -Function MenuComplete
 Set-PSReadLineKeyHandler -Chord Ctrl-r -Function ReverseSearchHistory -ViMode Insert
 Set-PSReadLineKeyHandler -Chord Ctrl-r -Function ReverseSearchHistory -ViMode Command
 $OnViModeChange = [scriptblock]{
@@ -36,8 +36,11 @@ $OnViModeChange = [scriptblock]{
 Set-PSReadLineOption -ViModeIndicator Script -ViModeChangeHandler $OnViModeChange
 
 Set-PSReadLineOption -BellStyle None
-Set-PSReadlineKeyHandler -Chord "Ctrl+e" -Function ForwardChar
 Set-PSReadLineOption -PredictionSource History
+Set-PSReadlineKeyHandler -Chord "Ctrl+e" -Function ForwardChar
+Set-PSReadLineKeyHandler -Chord "Ctrl+p" -Function HistorySearchBackward
+Set-PSReadLineKeyHandler -Chord "Ctrl+n" -Function HistorySearchForward
+#Set-PSReadLineKeyHandler -Key Tab -Function Complete
 
 # Putting the FUN in Functions 🎉
 #Invoke-Expression (&starship init powershell)
