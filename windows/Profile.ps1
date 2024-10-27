@@ -10,6 +10,7 @@
 # set PowerShell to UTF-8
 [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
 
+$env:YAZI_FILE_ONE="C:\Program Files\Git\usr\bin\file.exe"
 $env:HTTP_PROXY="http://127.0.0.1:1080"
 $env:HTTPS_PROXY="http://127.0.0.1:1080"
 
