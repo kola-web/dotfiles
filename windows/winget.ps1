@@ -3,6 +3,7 @@
 
 # Winget dependencies
 $wingetDeps = @(
+    "sharkdp.bat"
     "eza-community.eza"
     "ezwinports.make"
     "kitware.cmake"

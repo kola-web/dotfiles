@@ -1,5 +1,5 @@
 [plugin]
-deps = [{ use = "orhnk/system-clipboard", rev = "7775a80" }]
+deps = [{ use = "orhnk/system-clipboard", rev = "7775a80" }, { use = "Reledia/glow", rev = "f52b382" }]
 
 [flavor]
 deps = []

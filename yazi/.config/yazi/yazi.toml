@@ -161,6 +161,11 @@ previewers = [
   { name = "*", run = "file" },
 ]
 
+prepend_previewers = [
+  { name = "*.md", run = "glow" },
+]
+
+
 [input]
 cursor_blink = false
 
