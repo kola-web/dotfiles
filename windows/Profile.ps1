@@ -19,7 +19,22 @@ oh-my-posh --init --shell pwsh --config $omp_config | Invoke-Expression
 
 # PSReadLine
 Import-Module PSReadLine
-Set-PSReadLineOption -EditMode Emacs
+Set-PSReadLineOption -EditMode Vi
+Set-PSReadLineKeyHandler -Chord Tab -Function Complete
+Set-PSReadLineKeyHandler -Chord Ctrl-r -Function ReverseSearchHistory -ViMode Insert
+Set-PSReadLineKeyHandler -Chord Ctrl-r -Function ReverseSearchHistory -ViMode Command
+$OnViModeChange = [scriptblock]{
+    if ($args[0] -eq 'Command') {
+        # Set the cursor to a blinking block.
+        Write-Host -NoNewLine "`e[1 q"
+    }
+    else {
+        # Set the cursor to a blinking line.
+        Write-Host -NoNewLine "`e[5 q"
+    }
+}
+Set-PSReadLineOption -ViModeIndicator Script -ViModeChangeHandler $OnViModeChange
+
 Set-PSReadLineOption -BellStyle None
 Set-PSReadlineKeyHandler -Chord "Ctrl+e" -Function ForwardChar
 Set-PSReadLineOption -PredictionSource History
