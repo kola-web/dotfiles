@@ -54,6 +54,7 @@ $wingetDeps = @(
     "sxyazi.yazi"
     "zig.zig"
     "ImageMagick.ImageMagick"
+    "Microsoft.VisualStudio.2022.Community"
 )
 
 Write-Host "Installing missing dependencies..."
