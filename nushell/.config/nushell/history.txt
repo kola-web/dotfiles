@@ -1,0 +1,46 @@
+ls
+clear
+nvim
+cd dot
+ls
+cd dotfiles\
+ls
+clear
+r
+ls
+clear
+bash 
+ls
+clear
+ls
+clear
+ls
+pwd
+ls
+clear
+cd dot
+cd dotfiles\
+lazygit.exe 
+g
+lazygit.exe 
+ls
+clear
+$nu.config-path
+ls
+r
+lazy
+$nu.config-path
+cd AppData\Roaming\
+ls
+cd nushell\
+ls
+ls -a
+ls
+yazi
+cd nushell\
+ls
+ls -a
+mkdir .config
+ls
+cd .config\
+ls
