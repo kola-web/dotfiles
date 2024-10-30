@@ -122,3 +122,8 @@ g
 r
 ls
 zi dot
+g
+r
+ls
+cd
+zi dot
