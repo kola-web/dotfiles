@@ -63,4 +63,5 @@ map <leader>h :noh<cr>
 map <leader>w <action>(SaveAll)
 map <leader>c :q<cr>
 map <leader>o <action>(ActivateStructureToolWindow)
+map <leader>m <action>(ReformatCode)
 
