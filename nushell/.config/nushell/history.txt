@@ -44,3 +44,13 @@ mkdir .config
 ls
 cd .config\
 ls
+zu nushell
+cd dotfiles\
+ls
+l
+ls
+cd nushell\
+ls
+cd .config\
+cd nushell\
+nvim $PROFILE
