@@ -99,3 +99,24 @@ $env.NU_PLUGIN_DIRS = [
 
 # To load from a custom file you can use:
 # source ($nu.default-config-dir | path join 'custom.nu')
+
+$env.YAZI_FILE_ONE = 'C:\Program Files\Git\usr\bin\file.exe'
+
+def --env yy [...args] {
+	let tmp = (mktemp -t "yazi-cwd.XXXXXX")
+	yazi ...$args --cwd-file $tmp
+	let cwd = (open $tmp)
+	if $cwd != "" and $cwd != $env.PWD {
+		cd $cwd
+	}
+	rm -fp $tmp
+}
+
+
+
+alias g    = lazygit
+alias r    = yy
+alias open = explorer
+
+zoxide init nushell | save -f ~/.zoxide.nu
+starship init nu | save -f ~/.cache/starship/init.nu
