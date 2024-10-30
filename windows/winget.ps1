@@ -55,6 +55,7 @@ $wingetDeps = @(
     "zig.zig"
     "ImageMagick.ImageMagick"
     "Microsoft.VisualStudio.2022.Community"
+    "Notion.Notion"
 )
 
 Write-Host "Installing missing dependencies..."
