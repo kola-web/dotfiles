@@ -57,6 +57,9 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+map ]s /<script<cr>
+map ]c ]<script<cr>
+
 map <leader>e :NERDTreeFocus<cr>
 map <leader>f <action>(GotoFile)
 map <leader>h :noh<cr>
