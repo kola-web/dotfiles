@@ -100,6 +100,8 @@ $env.NU_PLUGIN_DIRS = [
 # To load from a custom file you can use:
 # source ($nu.default-config-dir | path join 'custom.nu')
 
+$env.http_proxy = 'http://127.0.0.1:7897'
+$env.https_proxy = 'http://127.0.0.1:7897'
 $env.YAZI_FILE_ONE = 'C:\Program Files\Git\usr\bin\file.exe'
 
 def --env yy [...args] {
@@ -111,8 +113,6 @@ def --env yy [...args] {
 	}
 	rm -fp $tmp
 }
-
-
 
 alias g    = lazygit
 alias r    = yy

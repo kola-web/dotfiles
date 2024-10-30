@@ -103,3 +103,22 @@ r
 nvim
 g
 zi dot
+g
+nvim
+s
+ls
+clear
+g
+ls
+zi nushell
+r
+cd nushell\
+ls
+cd .config\nushell\
+ls
+cd dot
+zi dot
+g
+r
+ls
+zi dot
