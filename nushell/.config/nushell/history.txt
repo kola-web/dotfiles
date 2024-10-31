@@ -1,0 +1,129 @@
+ls
+clear
+nvim
+cd dot
+ls
+cd dotfiles\
+ls
+clear
+r
+ls
+clear
+bash 
+ls
+clear
+ls
+clear
+ls
+pwd
+ls
+clear
+cd dot
+cd dotfiles\
+lazygit.exe 
+g
+lazygit.exe 
+ls
+clear
+$nu.config-path
+ls
+r
+lazy
+$nu.config-path
+cd AppData\Roaming\
+ls
+cd nushell\
+ls
+ls -a
+ls
+yazi
+cd nushell\
+ls
+ls -a
+mkdir .config
+ls
+cd .config\
+ls
+zu nushell
+cd dotfiles\
+ls
+l
+ls
+cd nushell\
+ls
+cd .config\
+cd nushell\
+nvim $PROFILE
+ls
+cler
+zi nvim
+cd dotfiles\
+cd 
+zi dot
+zi 
+ls
+nvim ~/.zoxide.nu
+zi nvim
+z nvim
+zi nvim
+zi dot
+cd dotfiles\
+ls
+pwd
+cd ..
+ls
+clear
+fzf
+zi dot
+r
+zi dot
+ls
+zi nvim
+ls
+pwd
+cd dotfiles\
+ls
+winget install --id Starship.Starship
+ls
+clear
+ls
+clear
+mkdir ~/.cache/starship
+ls
+ls -l
+ll
+cd dot
+cd dotfiles\
+g
+r
+yy
+r
+zi dot
+r
+nvim
+g
+zi dot
+g
+nvim
+s
+ls
+clear
+g
+ls
+zi nushell
+r
+cd nushell\
+ls
+cd .config\nushell\
+ls
+cd dot
+zi dot
+g
+r
+ls
+zi dot
+g
+r
+ls
+cd
+zi dot
