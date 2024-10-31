@@ -44,6 +44,8 @@ noremap gp :vsc references-view.showSupertypes<CR>
 " noremap gi :vsc references-view.showIncomingCalls<CR>
 " noremap go :vsc references-view.showOutgoingCalls<CR>
 
+noremap ( :vsc workbench.action.moveEditorLeftInGroup<cr>
+noremap ) :vsc workbench.action.moveEditorRightInGroup<cr>
 
 noremap ]h /<template<cr>
 noremap ]H /<\/template<cr>

@@ -127,3 +127,153 @@ r
 ls
 cd
 zi dot
+ls
+clear
+ls
+r
+ls
+zi pro
+mkdir ~/.cache/starship
+ls
+clear
+ls
+cd project\
+ls
+cd wutian-system\
+ls
+./dist.sh
+ls
+clea
+clear
+nvim dist.sh
+nvim dist.nu
+source dist.nu
+nvim dist.nu
+source dist.nu
+r
+cd ..
+nvim dist.nu
+source dist.nu
+ls
+cd ..
+nvim dist.nu
+open .
+source dist.nu
+cd ..
+nvim dist.nu
+cp -r ./feimeibj打包/* ./web_dist/
+cd web_dist\
+ls
+cd ..
+nvim dist.nu
+source dist.nu
+r
+open .
+ls
+source dist.nu
+ls
+open .
+nvim dist.nu
+ls
+clear
+winget search powertoys
+cd project\
+ls
+cd zaiding-miniprogram\
+ls
+cp ~/project/wutian-system/dist.nu ./
+nvim
+oepn .
+nvim
+pnpm i
+ls
+source dist.nu
+zi zaiding
+source dist.nu
+nvim dist.nu
+source dist.nu
+cd ..
+source dist.nu
+nvim
+code .
+zi wutian
+ls
+code .
+ls
+cd ..
+cd wutian-system\
+r
+pnpm dev
+pnpm i
+cd project\
+cd zaiding-miniprogram\
+code .
+source dist.nu
+cd project\
+cd wutian-system\
+r
+code .
+cd ..
+source dist.nu
+cd ..
+nvim dist.nu
+open .
+nvim dist.nu
+source dist.nu
+open .
+cd ..
+nvim dist.nu
+source dist.nu
+open .
+cd ..
+nvim dist.nu
+source dist.nu
+nvim dist.nu
+source dist.nu
+cd ..
+nvim dist.nu
+source dist.nu
+cd ..
+nvim dist.nu
+open .
+source dist.nu
+zi wutain
+zi wutian
+nvim dist.nu
+cd ..
+source dist.nu
+cd ..
+source dist.nu
+ls
+cp -r ./feimeibj打包/* ./web_dist/
+ls
+source dist.nu
+nvim dist.nu
+zi wutian
+source dist.nu
+ls
+cp ~/project/zaiding-miniprogram/dist.nu ./
+source dist.nu
+nvim dist.nu
+source dist.nu
+ls
+source dist.nu
+cd .glzr\
+winget search powertoys
+cd AppData\Roaming\nushell\
+nvim config.nu
+pnpm dev
+winget install --id Microsoft.PowerToys --source winget
+cd ~/.glzr/
+nvim 
+cd 
+cd Pictures\
+git clone https://github.com/kola-web/wallpapers.git
+zi zaiding
+nvim
+code .
+source dist.nu
+open .
+cd 
+cd .glzr\
+nvim
