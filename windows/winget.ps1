@@ -20,7 +20,7 @@ $wingetDeps = @(
     "jesseDuffield.lazygit"
     "wez.wezterm"
     "7zip.7zip"
-    "Bandisoft.Bandizip"
+    "BurntSushi.ripgrep.MSVC"
     "ClashVergeRev.ClashVergeRev"
     "Git.Git"
     "Pylogmon.pot"

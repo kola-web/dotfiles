@@ -3,3 +3,5 @@
 	email = l15567540858@gmail.com
 [credential]
 	helper = cache
+[credential "http://39.106.86.127:3000"]
+	provider = generic
