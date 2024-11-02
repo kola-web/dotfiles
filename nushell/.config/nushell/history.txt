@@ -277,3 +277,49 @@ open .
 cd 
 cd .glzr\
 nvim
+g
+zi wutian
+source dist.nu
+g
+zi wutian
+ls
+lw
+ls
+g
+opne .
+open .
+zi zaiding
+ls
+g
+ls
+zi wutian
+g
+r
+svn up
+open .
+cd ..
+ls
+clear
+zi wutian
+ls
+pnpm i
+nvim
+zi dot
+zi wutian
+source dist.nu
+zi wutian
+source dist.nu
+wsl --shutdown
+winget install LGUG2Z.komorebi
+ls
+zi wutian
+r
+ls
+cd ..
+cd web_src\
+zi wutian
+nvim
+pnpm dev
+ls
+zi wutian
+nvim
