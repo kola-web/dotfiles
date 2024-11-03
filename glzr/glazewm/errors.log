@@ -5,3 +5,7 @@
 [2m2024-10-30T08:36:18.718849Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
 [2m2024-10-31T02:12:43.600090Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m 拒绝访问。 (0x80070005)
 [2m2024-10-31T10:56:55.507538Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m 拒绝访问。 (0x80070005)
+[2m2024-11-03T04:45:30.818038Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[2].commands: unrecognized subcommand
+ at line 176 column 15
+[2m2024-11-03T04:45:33.612257Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[2].commands: unrecognized subcommand
+ at line 176 column 15

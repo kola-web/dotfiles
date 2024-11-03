@@ -92,7 +92,7 @@ window_behavior:
     fullscreen:
       # Maximize the window if possible. If the window doesn't have a
       # maximize button, then it'll be fullscreen'ed normally instead.
-      maximized: false
+      maximized: true
 
       # Whether to show fullscreen windows as always on top.
       shown_on_top: false
@@ -101,6 +101,8 @@ workspaces:
   - name: "1"
   - name: "2"
   - name: "3"
+    # Optionally prevent workspace from being deactivated when empty.
+    keep_alive: true
   - name: "4"
   - name: "5"
   - name: "6"
@@ -113,7 +115,6 @@ window_rules:
     match:
       # Ignores any Zebar windows.
       - window_process: { equals: "zebar" }
-      - window_process: { equals: "explorer" }
       - window_process: { equals: "pot" }
 
       # Ignores picture-in-picture windows for browsers.
@@ -129,16 +130,19 @@ window_rules:
         window_class: { regex: "HwndWrapper" }
   - commands: ["move --workspace 3"]
     match:
-      # Move browsers to workspace 3.
       - window_process: { regex: "微信开发者工具" }
   - commands: ["move --workspace 4"]
     match:
-      # Move browsers to workspace 4.
-      - window_process: { regex: "微信|WeChat|QQMusic" }
+      - window_class:
+          {
+            regex: "QMShadowWndClass|TXGuiFoundation|WeChatMainWndForPC|popupshadow",
+          }
   - commands: ["move --workspace 5"]
     match:
-      # Move browsers to workspace 5.
       - window_process: { regex: "Docker Desktop" }
+  - commands: ["set-floating"]
+    match:
+      - window_class: { regex: "ApplicationFrameWindow|CabinetWClass" }
 
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
@@ -226,8 +230,8 @@ keybindings:
     bindings: ["lwin+f"]
 
   # Minimize focused window.
-  # - commands: ['toggle-minimized']
-  #   bindings: ['alt+m']
+  - commands: ['toggle-minimized']
+    bindings: ['lwin+m']
 
   # Close focused window.
   - commands: ["close"]
@@ -235,7 +239,7 @@ keybindings:
 
   # Kill GlazeWM process safely.
   - commands: ["wm-exit"]
-    bindings: ["alt+shift+e"]
+    bindings: ["lwin+shift+e"]
 
   # Re-evaluate configuration file.
   - commands: ["wm-reload-config"]
@@ -243,7 +247,7 @@ keybindings:
 
   # Redraw all windows.
   - commands: ["wm-redraw"]
-    bindings: ["alt+shift+w"]
+    bindings: ["lwin+shift+w"]
 
   # Launch CMD terminal. Alternatively, use `shell-exec wt` or
   # `shell-exec %ProgramFiles%/Git/git-bash.exe` to start Windows
@@ -258,8 +262,8 @@ keybindings:
   #   bindings: ['alt+a']
 
   # Focus the workspace that last had focus.
-  # - commands: ['focus --recent-workspace']
-  #   bindings: ['alt+d']
+  - commands: ["focus --recent-workspace"]
+    bindings: ["lwin+tab"]
 
   # Change focus to a workspace defined in `workspaces` config.
   - commands: ["focus --workspace 1"]

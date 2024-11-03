@@ -323,3 +323,35 @@ pnpm dev
 ls
 zi wutian
 nvim
+g
+zi rime
+ls
+g
+zi nivm
+zi nvim
+ls
+pwd
+g
+ls
+clear
+nvim
+zi glzr
+ls
+nvim
+ls
+clear
+ls
+kls
+ls
+clear
+ls
+clea
+ls
+clear
+winget search winlister
+scoop install winlister
+zi glzr
+vnim
+zi glzr
+ls
+nvim
