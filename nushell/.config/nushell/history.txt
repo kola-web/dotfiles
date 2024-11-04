@@ -355,3 +355,80 @@ vnim
 zi glzr
 ls
 nvim
+g
+ls
+zi nvim
+g
+ls
+zi nvim
+zi wutian
+nvim
+zi fzf
+zi nvim
+nvim
+fzf -v
+fzf -V
+fzf -h
+fzf --version
+winget upgrade fzf
+winget upgrade 
+winget upgrade -h
+winget upgrade all
+zi dot
+ls
+nvim
+cd windows\
+nvim README.md
+ls
+ls -l
+clear
+zi nvim
+winget upgrade --all
+winget search wechat
+winget install Tencent.WeixinDevTools
+ls
+zi project
+ls
+zi pro
+zi wutian
+g
+r
+zi wutian
+ls
+r
+svn up
+open .
+svn up
+cd D:/DevDrives/
+ls
+cd K:\project\
+ls
+cd wutian-miniprogram\
+pnpm i
+ls
+clear
+ls
+rm -rf node_modules\
+pnpm i
+nvim
+fzf 
+fzf --delimiter '/' --nth -1
+zi nvim
+nvim
+nvm
+nvim
+g
+g
+ls
+open .
+zo rime
+cd ~/AppData/Roaming/Rime/
+g
+wsl --install
+wsl --install --web-download
+wsl --install
+ls
+wsl --list -v
+wsl list -v
+wsl --list -v
+wsl.exe --list -v
