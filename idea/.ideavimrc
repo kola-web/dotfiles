@@ -48,6 +48,8 @@ nmap s gr
 
 omap ii iI
 omap ai aI
+map ai aI
+map ii iI
 
 map H ^
 map L $

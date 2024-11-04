@@ -355,3 +355,22 @@ vnim
 zi glzr
 ls
 nvim
+g
+zi wutian
+ls
+clea
+clear
+r
+ls
+zi wutian
+nvim
+zi wutian
+source dist.nu
+opne .
+open .
+zi glzr
+ls
+cler
+clear
+nvim
+ls
