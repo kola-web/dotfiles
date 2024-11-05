@@ -434,3 +434,51 @@ wsl --list -v
 wsl.exe --list -v
 zi dot
 ls
+g
+ls
+clear
+nvim
+zi null
+zi nushell
+ls
+clear
+ls
+nvim
+zi wutian
+nvim
+zi web_src\
+cd web_src\
+nvim
+open .
+ls
+zi wutian
+ls
+g
+ls
+rm .git\index.lock
+ls
+g
+zi tangwang
+ls
+g
+zi php
+ls
+g
+ls
+zi proje
+ls
+r
+ls
+clear
+code .
+pnpm dev
+http://app.diabetes.hbraas.com:18081/v2_h5
+ls
+cd project\
+ls
+cd wutian-system\
+ls
+g
+open .
+ls
+clear

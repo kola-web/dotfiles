@@ -119,4 +119,3 @@ alias r    = yy
 alias open = explorer
 
 zoxide init nushell | save -f ~/.zoxide.nu
-starship init nu | save -f ~/.cache/starship/init.nu
