@@ -432,3 +432,5 @@ wsl --list -v
 wsl list -v
 wsl --list -v
 wsl.exe --list -v
+zi dot
+ls
