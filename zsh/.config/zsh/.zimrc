@@ -5,7 +5,6 @@ if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
 		https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
 fi
 
-zmodule sukkaw/zsh-proxy
 zmodule Aloxaf/fzf-tab
 zmodule zsh-users/zsh-completions --fpath src
 zmodule zsh-users/zsh-syntax-highlighting
@@ -17,7 +16,7 @@ case "$(uname -s)" in
 
 Darwin)
 	# echo 'Mac OS X'
-	# zmodule sukkaw/zsh-proxy
+	zmodule sukkaw/zsh-proxy
 	;;
 
 Linux) ;;

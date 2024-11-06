@@ -25,6 +25,7 @@ Darwin)
 	;;
 
 Linux)
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 	;;
 
 CYGWIN* | MINGW32* | MSYS* | MINGW*)
