@@ -22,3 +22,4 @@ tmux/.tmux/plugins
 tmux/.config/tmux/plugins
 lazygit/.config/lazygit/state.yml
 
+nushell/.config/nushell/history.txt
