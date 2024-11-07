@@ -46,8 +46,8 @@ noremap gp :vsc references-view.showSupertypes<CR>
 
 noremap ( :vsc workbench.action.moveEditorLeftInGroup<cr>
 noremap ) :vsc workbench.action.moveEditorRightInGroup<cr>
-noremap 15gjzz
-noremap 15gkzz
+noremap 15jzz
+noremap 15kzz
 
 noremap ]h /<template<cr>
 noremap ]H /<\/template<cr>
