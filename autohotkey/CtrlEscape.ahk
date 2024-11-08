@@ -2,7 +2,7 @@ g_LastCtrlKeyDownTime := 0
 g_AbortSendEsc := false
 g_ControlRepeatDetected := false
 
-*CapsLock::
+*Ctrl::
     if (g_ControlRepeatDetected)
     {
         return
@@ -15,7 +15,7 @@ g_ControlRepeatDetected := false
 
     return
 
-*CapsLock Up::
+*Ctrl Up::
     send,{Ctrl up}
     g_ControlRepeatDetected := false
     if (g_AbortSendEsc)

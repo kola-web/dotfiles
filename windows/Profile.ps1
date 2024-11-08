@@ -13,9 +13,9 @@
 $env:YAZI_FILE_ONE="C:\Program Files\Git\usr\bin\file.exe"
 $env:HTTP_PROXY="http://127.0.0.1:7897"
 $env:HTTPS_PROXY="http://127.0.0.1:7897"
-Import-Module posh-git
-$omp_config = "C:\Users\l1556\dotfiles\windows\takuya.omp.json"
-oh-my-posh --init --shell pwsh --config $omp_config | Invoke-Expression
+#Import-Module posh-git
+#$omp_config = "C:\Users\l1556\dotfiles\windows\takuya.omp.json"
+#oh-my-posh --init --shell pwsh --config $omp_config | Invoke-Expression
 
 # PSReadLine
 Import-Module PSReadLine
