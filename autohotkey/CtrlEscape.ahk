@@ -102,6 +102,3 @@ g_ControlRepeatDetected := false
     g_AbortSendEsc := true
     return
 
-;~LWin::Send {Blind}{vkE8}
-;#1::Send {Blind}{LWin Down}1{LWin Up}
-;#s::Send, {LWin}
