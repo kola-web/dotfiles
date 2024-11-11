@@ -28,8 +28,8 @@ noremap K :vsc editor.action.showHover<CR>
 " noremap <S-tab> :vsc workbench.action.previousEditor<CR>
 
 " 多光标
-noremap <C-n>  editor.action.addSelectionToNextFindMatch
-vnoremap <C-x>  editor.action.moveSelectionToNextFindMatch
+" noremap <C-n>  editor.action.addSelectionToNextFindMatch
+" vnoremap <C-x>  editor.action.moveSelectionToNextFindMatch
 
 
 noremap <C-m> :vsc workbench.action.minimizeOtherEditors<CR>
@@ -44,10 +44,14 @@ noremap gp :vsc references-view.showSupertypes<CR>
 " noremap gi :vsc references-view.showIncomingCalls<CR>
 " noremap go :vsc references-view.showOutgoingCalls<CR>
 
+" noremap u :vsc undo<cr>
+" noremap <C-r> :vsc redo<cr>
+
+
 noremap ( :vsc workbench.action.moveEditorLeftInGroup<cr>
 noremap ) :vsc workbench.action.moveEditorRightInGroup<cr>
-noremap 15jzz
-noremap 15kzz
+" noremap 15jzz
+" noremap 15kzz
 
 noremap ]h /<template<cr>
 noremap ]H /<\/template<cr>
