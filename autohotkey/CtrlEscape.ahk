@@ -106,3 +106,7 @@ g_ControlRepeatDetected := false
 ~LWin::Send {Blind}{vkE8}
 #1::Send {Blind}{LWin Down}1{LWin Up}{Esc}
 ;#s::Send, {LWin}
+
+#+s::
+    Run, Snipaste.exe snip
+return
