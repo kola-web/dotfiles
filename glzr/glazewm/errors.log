@@ -10,3 +10,11 @@
 [2m2024-11-03T04:45:33.612257Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[2].commands: unrecognized subcommand
  at line 176 column 15
 [2m2024-11-12T00:55:42.106842Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2024-11-12T03:15:19.737115Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[12].commands: unexpected argument found
+ at line 272 column 15
+[2m2024-11-12T03:15:21.536203Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[12].commands: unexpected argument found
+ at line 272 column 15
+[2m2024-11-12T03:15:29.451867Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[12].commands: unexpected argument found
+ at line 272 column 15
+[2m2024-11-12T03:15:31.299735Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[12].commands: unexpected argument found
+ at line 272 column 15
