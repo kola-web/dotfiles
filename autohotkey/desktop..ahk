@@ -63,6 +63,7 @@ GoToNextDesktop() {
 
 GoToDesktopNumber(num) {
     DllCall("user32\AllowSetForegroundWindow", Int, - 1)
+    Sleep, 50
     global GoToDesktopNumberProc
     DllCall(GoToDesktopNumberProc, "Int", num, "Int")
     ;Send !{Esc}
