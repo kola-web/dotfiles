@@ -2,10 +2,10 @@
 let mapleader=" "
 
 """ Plugins  --------------------------------
+set easymotion
 set surround
 set commentary
 set argtextobj
-set easymotion
 set highlightedyank
 set textobj-entire
 set ReplaceWithRegister
@@ -14,6 +14,9 @@ set matchit
 set NERDTree
 set which-key
 set textobj-indent
+set peekaboo
+set vim-paragraph-motion
+set quickscope
 
 """ Plugin settings -------------------------
 let g:argtextobj_pairs="[:],(:),<:>"
@@ -46,10 +49,8 @@ nmap <S-tab> gT
 
 nmap s gr
 
-omap ii iI
-omap ai aI
-map ai aI
-map ii iI
+omap ii <Plug>textobj-indent-ii
+omap ai <Plug>textobj-indent-aI
 
 map H ^
 map L $
@@ -69,4 +70,5 @@ map <leader>w <action>(SaveAll)
 map <leader>c :q<cr>
 map <leader>o <action>(ActivateStructureToolWindow)
 map <leader>m <action>(ReformatCode)
+map <leader>, :source  ~/.ideavimrc <cr>
 

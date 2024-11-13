@@ -18,9 +18,6 @@ noremap <C-l> <C-w>l
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>^
 
-noremap <C-d> :vsc cursorPageDown<cr>
-noremap <C-u> :vsc cursorPageUp<cr>
-
 map <CR> editor.action.smartSelect.expand
 map <bs> editor.action.smartSelect.shrink
 
