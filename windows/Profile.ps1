@@ -69,7 +69,7 @@ function yy {
     Remove-Item -Path $tmp
 }
 
-function git-bash {
-    param([string]$scriptPath)
-       & "C:\Program Files\Git\bin\bash.exe" -c $scriptPath
+function lnvim() {
+  $env:NVIM_APPNAME="LazyVim"
+  nvim $args
 }

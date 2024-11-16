@@ -47,7 +47,7 @@ set visualbell
 nmap <tab> gt
 nmap <S-tab> gT
 
-nmap s gr
+map s gr
 
 omap ii <Plug>textobj-indent-ii
 omap ai <Plug>textobj-indent-aI
@@ -65,10 +65,12 @@ map ]c ]<script<cr>
 
 map <leader>e :NERDTreeFocus<cr>
 map <leader>f <action>(GotoFile)
+map <leader>F <action>(FindInPath)
 map <leader>h :noh<cr>
 map <leader>w <action>(SaveAll)
 map <leader>c :q<cr>
 map <leader>o <action>(ActivateStructureToolWindow)
 map <leader>m <action>(ReformatCode)
 map <leader>, :source  ~/.ideavimrc <cr>
+map <leader>pp <action>(ManageRecentProjects)
 
