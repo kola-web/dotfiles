@@ -43,7 +43,7 @@ Set-PSReadLineKeyHandler -Chord "Ctrl+n" -Function HistorySearchForward
 #Set-PSReadLineKeyHandler -Key Tab -Function Complete
 
 # Putting the FUN in Functions 🎉
-#Invoke-Expression (&starship init powershell)
+Invoke-Expression (&starship init powershell)
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
 
 # Aliases 🔗
@@ -72,4 +72,16 @@ function yy {
 function lnvim() {
   $env:NVIM_APPNAME="LazyVim"
   nvim $args
+  $env:NVIM_APPNAME=""
+}
+
+# https://learn.microsoft.com/zh-cn/windows/terminal/tutorials/new-tab-same-directory
+function Invoke-Starship-PreCommand {
+  $loc = $executionContext.SessionState.Path.CurrentLocation;
+  $prompt = "$([char]27)]9;12$([char]7)"
+  if ($loc.Provider.Name -eq "FileSystem")
+  {
+    $prompt += "$([char]27)]9;9;`"$($loc.ProviderPath)`"$([char]27)\"
+  }
+  $host.ui.Write($prompt)
 }
