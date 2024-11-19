@@ -1,9 +1,3 @@
 [user]
 	name = kola-web
 	email = l15567540858@gmail.com
-[credential]
-	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
-[credential "http://39.106.86.127:3000"]
-	provider = generic
-[credential "http://ops.dev.dnurse.cn"]
-	provider = generic
