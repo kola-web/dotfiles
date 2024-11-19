@@ -36,6 +36,7 @@ $OnViModeChange = [scriptblock]{
 Set-PSReadLineOption -ViModeIndicator Script -ViModeChangeHandler $OnViModeChange
 
 Set-PSReadLineOption -BellStyle None
+Set-PSReadLineOption -HistorySearchCursorMovesToEnd
 Set-PSReadLineOption -PredictionSource History
 Set-PSReadlineKeyHandler -Chord "Ctrl+e" -Function ForwardChar
 Set-PSReadLineKeyHandler -Chord "Ctrl+p" -Function HistorySearchBackward
@@ -43,7 +44,7 @@ Set-PSReadLineKeyHandler -Chord "Ctrl+n" -Function HistorySearchForward
 #Set-PSReadLineKeyHandler -Key Tab -Function Complete
 
 # Putting the FUN in Functions 🎉
-Invoke-Expression (&starship init powershell)
+#Invoke-Expression (&starship init powershell)
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
 
 # Aliases 🔗
@@ -76,12 +77,13 @@ function lnvim() {
 }
 
 # https://learn.microsoft.com/zh-cn/windows/terminal/tutorials/new-tab-same-directory
-function Invoke-Starship-PreCommand {
+function prompt {
   $loc = $executionContext.SessionState.Path.CurrentLocation;
-  $prompt = "$([char]27)]9;12$([char]7)"
-  if ($loc.Provider.Name -eq "FileSystem")
-  {
-    $prompt += "$([char]27)]9;9;`"$($loc.ProviderPath)`"$([char]27)\"
+
+  $out = ""
+  if ($loc.Provider.Name -eq "FileSystem") {
+    $out += "$([char]27)]9;9;`"$($loc.ProviderPath)`"$([char]27)\"
   }
-  $host.ui.Write($prompt)
+  $out += "PS $loc$('>' * ($nestedPromptLevel + 1)) ";
+  return $out
 }
