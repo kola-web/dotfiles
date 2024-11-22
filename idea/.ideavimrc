@@ -63,10 +63,13 @@ map <C-l> <C-w>l
 map ]s /<script<cr>
 map ]c ]<script<cr>
 
-map <leader>e :NERDTreeFocus<cr>
+map ) <action>(com.mnw.tabmover.actions.MoveTabDownAction)
+map ( <action>(com.mnw.tabmover.actions.MoveTabUpAction)
+
+map <leader>e :NERDTreeToggle<cr><action>(SelectInProjectView)
 map <leader>f <action>(GotoFile)
 map <leader>F <action>(FindInPath)
-map <leader>h :noh<cr>
+map <leader>h :nohl<cr>
 map <leader>w <action>(SaveAll)
 map <leader>c :q<cr>
 map <leader>o <action>(ActivateStructureToolWindow)
@@ -74,3 +77,11 @@ map <leader>m <action>(ReformatCode)
 map <leader>, :source  ~/.ideavimrc <cr>
 map <leader>pp <action>(ManageRecentProjects)
 
+
+map gac  <action>(StringManipulation.ToCamelCase)
+map gad <action>(StringManipulation.ToKebabCase)
+map gal <action>(osmedile.intellij.stringmanip.ToLowerCaseAction)
+map gau <action>(osmedile.intellij.stringmanip.ToUpperCaseAction)
+map gap <action>(StringManipulation.ToPascalCase)
+map gas <action>(StringManipulation.ToSnakeCase)
+map gan <action>(StringManipulation.ToScreamingSnakeCase)
