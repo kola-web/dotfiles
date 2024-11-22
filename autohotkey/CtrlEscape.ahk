@@ -1,3 +1,9 @@
+; AHK脚本以管理员权限自启
+if !(A_IsAdmin || InStr(DllCall("GetCommandLine", "Str"), ".exe /r"))
+  RunWait % "*RunAs " (_:=A_IsCompiled ? """" : A_AhkPath " /r """) A_ScriptFullPath (_ ? """" : """ /r")
+
+MsgBox % "当前" (A_IsAdmin=1 ? "管理员权限" : "普通权限")
+
 g_LastCtrlKeyDownTime := 0
 g_AbortSendEsc := false
 g_ControlRepeatDetected := false
