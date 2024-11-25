@@ -18,6 +18,9 @@ set peekaboo
 set vim-paragraph-motion
 set quickscope
 
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapJumpParent='h'
+
 """ Plugin settings -------------------------
 let g:argtextobj_pairs="[:],(:),<:>"
 
@@ -33,7 +36,8 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-
+set ideamarks
+set iskeyword+=#
 
 """ Idea specific settings ------------------
 set ideamarks
@@ -48,6 +52,8 @@ nmap <tab> gt
 nmap <S-tab> gT
 
 map s gr
+map ss grr
+map S grr
 
 omap ii <Plug>textobj-indent-ii
 omap ai <Plug>textobj-indent-aI
@@ -63,10 +69,18 @@ map <C-l> <C-w>l
 map ]s /<script<cr>
 map ]c ]<script<cr>
 
+nmap <A-n> <Plug>NextWholeOccurrence
+xmap <A-n> <Plug>NextWholeOccurrence
+nmap g<A-n> <Plug>NextOccurrence
+xmap g<A-n> <Plug>NextOccurrence
+xmap <A-x> <Plug>SkipOccurrence
+xmap <A-p> <Plug>RemoveOccurrence
+
 map ) <action>(com.mnw.tabmover.actions.MoveTabDownAction)
 map ( <action>(com.mnw.tabmover.actions.MoveTabUpAction)
 
-map <leader>e :NERDTreeToggle<cr><action>(SelectInProjectView)
+map <leader>E :NERDTreeToggle<cr>
+map <leader>e :NERDTreeFind<cr>
 map <leader>f <action>(GotoFile)
 map <leader>F <action>(FindInPath)
 map <leader>h :nohl<cr>
@@ -76,6 +90,7 @@ map <leader>o <action>(ActivateStructureToolWindow)
 map <leader>m <action>(ReformatCode)
 map <leader>, :source  ~/.ideavimrc <cr>
 map <leader>pp <action>(ManageRecentProjects)
+map <leader>rd :%s/<div/<view/g<cr>:%s/<\/div/<\/view/g<cr>
 
 
 map gac  <action>(StringManipulation.ToCamelCase)
