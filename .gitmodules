@@ -14,10 +14,6 @@
 	path = ranger/.config/ranger/plugins/ranger-zoxide
 	url = https://github.com/jchook/ranger-zoxide.git
   ignore = dirty
-[submodule "nvim/.config/nvim"]
-	path = nvim/.config/nvim
-	url = https://github.com/kola-web/nvim.git
-  ignore = dirty
 [submodule "Rime"]
 	path = Rime/.config/Rime
 	url = https://github.com/kola-web/Rime.git
