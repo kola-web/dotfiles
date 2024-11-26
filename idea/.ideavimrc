@@ -91,6 +91,7 @@ map <leader>m <action>(ReformatCode)
 map <leader>, :source  ~/.ideavimrc <cr>
 map <leader>pp <action>(ManageRecentProjects)
 map <leader>rd :%s/<div/<view/g<cr>:%s/<\/div/<\/view/g<cr>
+map <leader>bo <action>(CloseAllEditorsButActive)
 
 
 map gac  <action>(StringManipulation.ToCamelCase)
