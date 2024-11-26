@@ -4,7 +4,6 @@
 # Linked Files (Destination => Source)
 $symlinks = @{
     $PROFILE                                                                                         = ".\windows\Profile.ps1"
-    "$HOME\AppData\Local\nvim"                                                                       = ".\nvim\.config\nvim"
     "$HOME\.gitconfig"                                                                               = ".\git\.gitconfig"
     "$HOME\AppData\Roaming\lazygit"                                                                  = ".\lazygit\.config\lazygit"
     "$HOME\.config\wezterm"                                                                          = ".\wezterm\.config\wezterm"
