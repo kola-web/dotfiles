@@ -13,6 +13,8 @@
 $env:YAZI_FILE_ONE="C:\Program Files\Git\usr\bin\file.exe"
 $env:HTTP_PROXY="http://127.0.0.1:7897"
 $env:HTTPS_PROXY="http://127.0.0.1:7897"
+$env:Path += ";C:\Users\user\AppData\Local\Programs\oh-my-posh\bin"
+
 #Import-Module posh-git
 #$omp_config = "C:\Users\l1556\dotfiles\windows\takuya.omp.json"
 #oh-my-posh --init --shell pwsh --config $omp_config | Invoke-Expression
@@ -77,12 +79,17 @@ function lnvim() {
 }
 
 # https://learn.microsoft.com/zh-cn/windows/terminal/tutorials/new-tab-same-directory
-function Invoke-Starship-PreCommand {
-  $loc = $executionContext.SessionState.Path.CurrentLocation;
-  $prompt = "$([char]27)]9;12$([char]7)"
-  if ($loc.Provider.Name -eq "FileSystem")
-  {
-    $prompt += "$([char]27)]9;9;`"$($loc.ProviderPath)`"$([char]27)\"
-  }
-  $host.ui.Write($prompt)
-}
+#function prompt {
+#  $loc = $executionContext.SessionState.Path.CurrentLocation;
+#
+#  $out = ""
+#  if ($loc.Provider.Name -eq "FileSystem") {
+#    $out += "$([char]27)]9;9;`"$($loc.ProviderPath)`"$([char]27)\"
+#  }
+#  $out += "PS $loc$('>' * ($nestedPromptLevel + 1)) ";
+#  return $out
+#}
+
+
+#oh-my-posh
+oh-my-posh init pwsh --config "$HOME/dotfiles/windows/kola.omp.json" | Invoke-Expression
