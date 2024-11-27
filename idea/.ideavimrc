@@ -67,7 +67,7 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 map ]s /<script<cr>
-map ]c ]<script<cr>
+map ]c /<style<cr>
 
 nmap <A-n> <Plug>NextWholeOccurrence
 xmap <A-n> <Plug>NextWholeOccurrence
