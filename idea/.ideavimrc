@@ -20,6 +20,9 @@ set quickscope
 
 let g:NERDTreeMapActivateNode='l'
 let g:NERDTreeMapJumpParent='h'
+let g:NERDTreeMapNewDir = 'A'
+let g:NERDTreeMapNewFile = 'a'
+let g:NERDTreeMapToggleZoom = 'Z'
 
 """ Plugin settings -------------------------
 let g:argtextobj_pairs="[:],(:),<:>"
@@ -38,6 +41,7 @@ set ignorecase
 set smartcase
 set ideamarks
 set iskeyword+=#
+set iskeyword+=-
 
 """ Idea specific settings ------------------
 set ideamarks
