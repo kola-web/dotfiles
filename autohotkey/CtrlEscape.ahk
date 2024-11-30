@@ -109,6 +109,3 @@ g_ControlRepeatDetected := false
     g_AbortSendEsc := true
     return
 
-#+s::
-    Run, Snipaste.exe snip
-return

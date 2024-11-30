@@ -83,6 +83,9 @@ xmap <A-p> <Plug>RemoveOccurrence
 map ) <action>(com.mnw.tabmover.actions.MoveTabDownAction)
 map ( <action>(com.mnw.tabmover.actions.MoveTabUpAction)
 
+map <CR> <action>(EditorSelectWord)
+map <bs> <action>(EditorUnSelectWord)
+
 map <leader>E :NERDTreeToggle<cr>
 map <leader>e :NERDTreeFind<cr>
 map <leader>f <action>(GotoFile)

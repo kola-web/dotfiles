@@ -5,9 +5,8 @@
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability
 
-if not A_IsAdmin
-	Run *RunAs "%A_ScriptFullPath%" ; (A_AhkPath is usually optional if the script has the .ahk extension.) You would typically check  first.
 
-Run, C:\Users\l1556\dotfiles\autohotkey\desktop.ahk,, Hide
-Run, C:\Users\l1556\dotfiles\autohotkey\CtrlEscape.ahk,, Hide
-Run, C:\Users\l1556\dotfiles\autohotkey\customKeymap.ahk,, Hide
+#+s:: ; 截图
+    Run, Snipaste.exe snip
+return
+
