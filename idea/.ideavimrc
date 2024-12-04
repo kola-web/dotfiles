@@ -73,6 +73,9 @@ map <C-l> <C-w>l
 map ]s /<script<cr>
 map ]c /<style<cr>
 
+map ]d <action>(GotoNextError)
+map [d <action>(GotoPreviousError)
+
 nmap <A-n> <Plug>NextWholeOccurrence
 xmap <A-n> <Plug>NextWholeOccurrence
 nmap g<A-n> <Plug>NextOccurrence
@@ -86,6 +89,8 @@ map ( <action>(com.mnw.tabmover.actions.MoveTabUpAction)
 map <CR> <action>(EditorSelectWord)
 map <bs> <action>(EditorUnSelectWord)
 
+map K <action>(ShowHoverInfo)
+
 map <leader>E :NERDTreeToggle<cr>
 map <leader>e :NERDTreeFind<cr>
 map <leader>f <action>(GotoFile)
@@ -94,11 +99,14 @@ map <leader>h :nohl<cr>
 map <leader>w <action>(SaveAll)
 map <leader>c :q<cr>
 map <leader>o <action>(ActivateStructureToolWindow)
-map <leader>m <action>(ReformatCode)
+map <leader>m <action>(ReformatWithPrettierAction)<action>(Javascript.Linters.EsLint.Fix)
+map <leader>M <action>(ReformatCode)
 map <leader>, :source  ~/.ideavimrc <cr>
-map <leader>pp <action>(ManageRecentProjects)
-map <leader>rd :%s/<div/<view/g<cr>:%s/<\/div/<\/view/g<cr>
 map <leader>bo <action>(CloseAllEditorsButActive)
+map <leader>rd :%s/<div/<view/g<cr>:%s/<\/div/<\/view/g<cr>
+map <leader>rr <action>(Json2ts)
+map <leader>pp <action>(ManageRecentProjects)
+map <leader>le <action>(ShowErrorDescription)
 
 
 map gac  <action>(StringManipulation.ToCamelCase)
@@ -108,3 +116,5 @@ map gau <action>(osmedile.intellij.stringmanip.ToUpperCaseAction)
 map gap <action>(StringManipulation.ToPascalCase)
 map gas <action>(StringManipulation.ToSnakeCase)
 map gan <action>(StringManipulation.ToScreamingSnakeCase)
+
+imap <C-l> <action>(copilot.applyInlays)

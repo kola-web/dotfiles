@@ -53,12 +53,13 @@ noremap ) :vsc workbench.action.moveEditorRightInGroup<cr>
 " noremap 15jzz
 " noremap 15kzz
 
-noremap ]h /<template<cr>
-noremap ]H /<\/template<cr>
 noremap ]s /<script<cr>
 noremap ]S /<\/script<cr>
 noremap ]c /<style<cr>
 noremap ]C /<\/style<cr>
+
+noremap ]d :vsc editor.action.marker.next<CR>
+noremap [d :vsc editor.action.marker.prev<CR>
 
 
 noremap <leader>e :vsc workbench.view.explorer<CR>
@@ -67,4 +68,4 @@ noremap <leader>w :vsc workbench.action.files.save<CR>
 noremap <leader>h :nohlsearch<cr>
 noremap <leader>f :vsc workbench.action.quickOpen<cr>
 noremap <leader>m :vsc editor.action.formatDocument<cr>
-noremap <leader>rd :%s/div/view/g
+noremap <leader>rd :%s/<div/<view/g<cr>:%s/<\/div/<\/view/g<cr>
