@@ -11,7 +11,6 @@
                 "rules": [
                     {
                         "description": "Post escape if left_control is pressed alone.",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "from": {
