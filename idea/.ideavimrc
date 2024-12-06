@@ -109,12 +109,25 @@ map <leader>pp <action>(ManageRecentProjects)
 map <leader>le <action>(ShowErrorDescription)
 
 
-map gac  <action>(StringManipulation.ToCamelCase)
-map gad <action>(StringManipulation.ToKebabCase)
-map gal <action>(osmedile.intellij.stringmanip.ToLowerCaseAction)
-map gau <action>(osmedile.intellij.stringmanip.ToUpperCaseAction)
-map gap <action>(StringManipulation.ToPascalCase)
-map gas <action>(StringManipulation.ToSnakeCase)
-map gan <action>(StringManipulation.ToScreamingSnakeCase)
+nmap gac viw<action>(StringManipulation.ToCamelCase)
+vmap gac <action>(StringManipulation.ToCamelCase)
+
+nmap gad viw<action>(StringManipulation.ToKebabCase)
+vmap gad <action>(StringManipulation.ToKebabCase)
+
+nmap gal viw<action>(osmedile.intellij.stringmanip.ToLowerCaseAction)
+vmap gal <action>(osmedile.intellij.stringmanip.ToLowerCaseAction)
+
+nmap gau viw<action>(osmedile.intellij.stringmanip.ToUpperCaseAction)
+vmap gau <action>(osmedile.intellij.stringmanip.ToUpperCaseAction)
+
+nmap gap viw<action>(StringManipulation.ToPascalCase)
+vmap gap <action>(StringManipulation.ToPascalCase)
+
+nmap gas viw<action>(StringManipulation.ToSnakeCase)
+vmap gas <action>(StringManipulation.ToSnakeCase)
+
+nmap gan viw<action>(StringManipulation.ToScreamingSnakeCase)
+vmap gan <action>(StringManipulation.ToScreamingSnakeCase)
 
 imap <C-l> <action>(copilot.applyInlays)
