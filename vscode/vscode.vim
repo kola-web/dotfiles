@@ -69,3 +69,11 @@ noremap <leader>h :nohlsearch<cr>
 noremap <leader>f :vsc workbench.action.quickOpen<cr>
 noremap <leader>m :vsc editor.action.formatDocument<cr>
 noremap <leader>rd :%s/<div/<view/g<cr>:%s/<\/div/<\/view/g<cr>
+
+
+noremap gac :vsc extension.changeCase.camel<cr>
+noremap gau :vsc extension.changeCase.upper<cr>
+noremap gal :vsc extension.changeCase.lower<cr>
+noremap gas :vsc extension.changeCase.snake<cr>
+noremap gad :vsc extension.changeCase.dot<cr>
+noremap gan :vsc extension.changeCase.constant<cr>
