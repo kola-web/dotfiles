@@ -8,6 +8,6 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 if not A_IsAdmin
 	Run *RunAs "%A_ScriptFullPath%" ; (A_AhkPath is usually optional if the script has the .ahk extension.) You would typically check  first.
 
-Run, C:\Users\l1556\dotfiles\autohotkey\desktop.ahk,, Hide
-Run, C:\Users\l1556\dotfiles\autohotkey\CtrlEscape.ahk,, Hide
-Run, C:\Users\l1556\dotfiles\autohotkey\customKeymap.ahk,, Hide
+Run, C:\Users\kola\dotfiles\autohotkey\desktop.ahk,, Hide
+Run, C:\Users\kola\dotfiles\autohotkey\CtrlEscape.ahk,, Hide
+Run, C:\Users\kola\dotfiles\autohotkey\customKeymap.ahk,, Hide
