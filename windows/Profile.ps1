@@ -45,10 +45,6 @@ Set-PSReadLineKeyHandler -Chord "Ctrl+p" -Function HistorySearchBackward
 Set-PSReadLineKeyHandler -Chord "Ctrl+n" -Function HistorySearchForward
 #Set-PSReadLineKeyHandler -Key Tab -Function Complete
 
-# Putting the FUN in Functions 🎉
-#Invoke-Expression (&starship init powershell)
-Invoke-Expression (& { (zoxide init powershell | Out-String) })
-
 # Aliases 🔗
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 Set-Alias -Name cat   -Value bat
@@ -91,5 +87,8 @@ function lnvim() {
 #}
 
 
-#oh-my-posh
+# plugin
+#Invoke-Expression (&starship init powershell)
 oh-my-posh init pwsh --config "$HOME/dotfiles/windows/kola.omp.json" | Invoke-Expression
+Invoke-Expression (& { (zoxide init powershell | Out-String) })
+

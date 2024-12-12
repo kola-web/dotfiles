@@ -10,3 +10,7 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
     Run, Snipaste.exe snip
 return
 
+#Enter::  ; Win + Enter
+    Run, wt.exe
+return
+

@@ -8,6 +8,16 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 if not A_IsAdmin
 	Run *RunAs "%A_ScriptFullPath%" ; (A_AhkPath is usually optional if the script has the .ahk extension.) You would typically check  first.
 
-Run, C:\Users\kola\dotfiles\autohotkey\desktop.ahk,, Hide
-Run, C:\Users\kola\dotfiles\autohotkey\CtrlEscape.ahk,, Hide
-Run, C:\Users\kola\dotfiles\autohotkey\customKeymap.ahk,, Hide
+
+EnvGet, userDir, USERPROFILE  ; 获取用户目录
+scripts := []  ; 创建一个空数组
+
+; 将脚本路径添加到数组中
+scripts.Push(userDir . "\dotfiles\autohotkey\desktop.ahk")
+scripts.Push(userDir . "\dotfiles\autohotkey\CtrlEscape.ahk")
+scripts.Push(userDir . "\dotfiles\autohotkey\customKeymap.ahk")
+
+; 遍历脚本路径数组并运行每个脚本
+for index, scriptPath in scripts {
+    Run, % scriptPath, , Hide
+}
