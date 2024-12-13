@@ -55,6 +55,7 @@
       ]
     }
   ],
+  "console_title_template": "{{.Folder}}{{if .Root}} :: root{{end}} :: {{.Shell}}",
   "version": 3,
   "final_space": true,
   "pwd": "osc99"

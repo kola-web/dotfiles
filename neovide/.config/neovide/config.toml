@@ -1,3 +1,15 @@
+fork = false
+frame = "full"
+idle = true
+maximized = false
+no-multigrid = false
+srgb = false
+tabs = true
+theme = "auto"
+mouse-cursor-icon = "arrow"
+title-hidden = true
+vsync = true
+wsl = false
+
 [font]
-normal = [] # Will use the bundled Fira Code Nerd Font by default
-size = 8.0
+size = 14.0
