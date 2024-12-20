@@ -5,3 +5,5 @@
 	provider = generic
 [credential "http://ops.dev.dnurse.cn"]
 	provider = generic
+[core]
+	autocrlf = false
