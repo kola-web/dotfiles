@@ -294,11 +294,11 @@ git:
   autoStageResolvedConflicts: true
 
   # Command used when displaying the current branch git log in the main window
-  branchLogCmd: git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium {{branchName}} --
+  branchLogCmd: git log --graph --color=always --abbrev-commit --decorate --date=format:"%Y-%m-%d %H:%M" --pretty=medium {{branchName}} --
 
   # Command used to display git log of all branches in the main window.
   # Deprecated: Use `allBranchesLogCmds` instead.
-  allBranchesLogCmd: git log --graph --all --color=always --abbrev-commit --decorate --date=relative  --pretty=medium
+  allBranchesLogCmd: git log --graph --all --color=always --abbrev-commit --decorate --date=format:"%Y-%m-%d %H:%M"  --pretty=medium
 
   # If true, do not spawn a separate process when using GPG
   overrideGpg: false
