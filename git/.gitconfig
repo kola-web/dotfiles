@@ -7,3 +7,5 @@
 	provider = generic
 [core]
 	autocrlf = false
+[log]
+	date = format:%Y-%m-%d %H:%M:%S

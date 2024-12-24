@@ -5,7 +5,7 @@
 $symlinks = @{
     $PROFILE                                                                                         = ".\windows\Profile.ps1"
     "$HOME\.gitconfig"                                                                               = ".\git\.gitconfig"
-    "$HOME\AppData\Roaming\lazygit"                                                                  = ".\lazygit\.config\lazygit"
+    "$HOME\AppData\Local\lazygit"                                                                    = ".\lazygit\.config\lazygit"
     "$HOME\.config\wezterm"                                                                          = ".\wezterm\.config\wezterm"
     "$HOME\.glzr"                                                                                    = ".\glzr"
     "$HOME\AppData\Roaming\alacritty"                                                                = ".\alacritty\.config\alacritty"
