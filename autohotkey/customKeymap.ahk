@@ -15,6 +15,3 @@ return
 return
 
 CapsLock::Esc
-
-^n::Send, {Down}
-^p::Send, {Up}
