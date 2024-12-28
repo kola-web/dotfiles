@@ -1,0 +1,3 @@
+remap_key=CTRL
+when_alone=ESCAPE
+with_other=CTRL

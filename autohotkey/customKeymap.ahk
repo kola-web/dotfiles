@@ -14,4 +14,4 @@ return
     Run, wt.exe
 return
 
-CapsLock::Esc
+; CapsLock::Esc
