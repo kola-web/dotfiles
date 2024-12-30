@@ -8,12 +8,12 @@ $*LControl::{
   Send("{LControl Down}")
   KeyWait("LControl")
   Send("{LControl Up}")
-  if (A_PriorKey == "LControl"
-     && g_DoNotAbortSendEsc) {
+  if (A_PriorKey == "LControl" && g_DoNotAbortSendEsc) {
     Send("{Esc}")
   }
   return
 }
+
 
 ; capture any key with Ctrl key down
 ~^*a:: ; * means can be used with any modifier key, ~ means donot block the original key, ^ means Ctrl key, a means the key is a
