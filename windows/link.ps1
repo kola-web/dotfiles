@@ -12,7 +12,6 @@ $symlinks = @{
     "$HOME\AppData\Roaming\neovide"                                                                  = ".\neovide\.config\neovide"
     "$HOME\AppData\Roaming\yazi\config"                                                              = ".\yazi\.config\yazi"
     "$HOME\AppData\Roaming\nushell"                                                                  = ".\nushell\.config\nushell"
-    "$HOME\AppData\Roaming\Rime"                                                                     = ".\Rime\.config\Rime"
     "$HOME\.ideavimrc"                                                                               = ".\idea\.ideavimrc"
     #"$HOME\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" = ".\windowsterminal\settings.json"
 }
