@@ -10,6 +10,11 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
     Run, Snipaste.exe snip
 return
 
+#v:: ; 截图
+    Run, "C:\Program Files\Ditto\Ditto.exe"  /Open
+    ; Run, Ditto.exe /Open
+return
+
 #Enter::  ; Win + Enter
     Run, wt.exe
 return
