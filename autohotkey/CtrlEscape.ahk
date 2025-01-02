@@ -31,7 +31,7 @@ g_ControlRepeatDetected := false
     }
     current_time := A_TickCount
     time_elapsed := current_time - g_LastCtrlKeyDownTime
-    if (time_elapsed <= 250)
+    if (time_elapsed <= 500)
     {
         SendInput {Esc}
     }
