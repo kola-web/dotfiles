@@ -12,7 +12,6 @@ return
 
 #v:: ; 截图
     Run, "C:\Program Files\Ditto\Ditto.exe"  /Open
-    ; Run, Ditto.exe /Open
 return
 
 #Enter::  ; Win + Enter
@@ -20,3 +19,14 @@ return
 return
 
 ; CapsLock::Esc
+
+LWin & j::AltTab
+LWin & k::ShiftAltTab
+
+^n::
+   Send {Down}
+return
+
+^p::
+   Send {Up}
+return
