@@ -51,6 +51,16 @@
           "foreground": "#DCB977",
           "type": "status",
           "style": "plain"
+        },
+        {
+          "properties": {
+            "branch_icon": "",
+            "cache_duration": "none"
+          },
+          "type": "node",
+          "style": "plain",
+          "template": " <#DDB15F>node(</>{{ .Full }}<#DDB15F>)</>",
+          "foreground": "#D4AAFC"
         }
       ]
     }
