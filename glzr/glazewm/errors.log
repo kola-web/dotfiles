@@ -18,3 +18,7 @@
  at line 272 column 15
 [2m2024-11-12T03:15:31.299735Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[12].commands: unexpected argument found
  at line 272 column 15
+[2m2025-01-03T11:29:11.792724Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[17].commands: unexpected argument found
+ at line 214 column 15
+[2m2025-01-03T11:29:14.310841Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[17].commands: unexpected argument found
+ at line 214 column 15
