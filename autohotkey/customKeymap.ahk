@@ -18,7 +18,6 @@ return
     Run, wt.exe
 return
 
-; CapsLock::Esc
 
 LWin & j::AltTab
 LWin & k::ShiftAltTab
@@ -28,9 +27,15 @@ LWin & k::ShiftAltTab
 return
 
 ^p::
-   Send {Up}
+  Send {Up}
 return
 
+CapsLock::Ctrl
+
 $Ctrl::
+  Send {Escape}
+return
+
+$CapsLock::
   Send {Escape}
 return
