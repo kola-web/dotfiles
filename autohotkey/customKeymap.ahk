@@ -30,3 +30,7 @@ return
 ^p::
    Send {Up}
 return
+
+$Ctrl::
+  Send {Escape}
+return

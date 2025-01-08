@@ -131,3 +131,5 @@ nmap gan viw<action>(StringManipulation.ToScreamingSnakeCase)
 vmap gan <action>(StringManipulation.ToScreamingSnakeCase)
 
 imap <C-l> <action>(copilot.applyInlays)
+
+cmap <C-v> <C-r>*
