@@ -18,10 +18,6 @@ return
     Run, wt.exe
 return
 
-
-LWin & j::AltTab
-LWin & k::ShiftAltTab
-
 ^n::
    Send {Down}
 return

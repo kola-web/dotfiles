@@ -97,6 +97,7 @@ Set-PSReadLineOption -ViModeIndicator Script -ViModeChangeHandler $OnViModeChang
 Set-PSReadLineOption -BellStyle None
 Set-PSReadLineOption -HistorySearchCursorMovesToEnd
 Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineOption -PredictionViewStyle  InlineView
 
 Set-PSReadLineKeyHandler -Chord Tab -Function MenuComplete
 Set-PSReadLineKeyHandler -Chord Ctrl-r -Function ReverseSearchHistory -ViMode Insert
@@ -106,3 +107,6 @@ Set-PSReadLineKeyHandler -Chord "Ctrl+p" -Function HistorySearchBackward
 Set-PSReadLineKeyHandler -Chord "Ctrl+n" -Function HistorySearchForward
 
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
+
+
+#if ( Test-Path '~/.inshellisense/pwsh/init.ps1' -PathType Leaf ) { . ~/.inshellisense/pwsh/init.ps1 } 
