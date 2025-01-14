@@ -26,12 +26,12 @@ return
   Send {Up}
 return
 
-CapsLock::Ctrl
+CapsLock::Escape
 
 $Ctrl::
   Send {Escape}
 return
 
-$CapsLock::
-  Send {Escape}
-return
+; $CapsLock::
+;   Send {Escape}
+; return
