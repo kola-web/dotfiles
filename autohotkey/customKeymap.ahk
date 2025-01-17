@@ -36,16 +36,16 @@ SendMode("Input")  ; Recommended for new scripts due to its superior speed and r
     return
 }
 
-CapsLock::Escape
+; CapsLock::Escape
 
-$Ctrl:: {
-    global
-    Send("{Escape}")
-    return
-}
+; $Ctrl:: {
+;     global
+;     Send("{Escape}")
+;     return
+; }
 
-$CapsLock:: {
-    global
-    Send("{Escape}")
-    return
-}
+; $CapsLock:: {
+;     global
+;     Send("{Escape}")
+;     return
+; }
