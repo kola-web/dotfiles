@@ -24,17 +24,17 @@ SendMode("Input")  ; Recommended for new scripts due to its superior speed and r
     return
 }
 
-^n:: {
-    global
-    Send("{Down}")
-    return
-}
-
-^p:: {
-    global
-    Send("{Up}")
-    return
-}
+; ^n:: {
+;     global
+;     Send("{Down}")
+;     return
+; }
+;
+; ^p:: {
+;     global
+;     Send("{Up}")
+;     return
+; }
 
 ; CapsLock::Escape
 
