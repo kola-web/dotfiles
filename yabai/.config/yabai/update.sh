@@ -14,7 +14,7 @@ function suyabai () {
 
 # check & unpin yabai from brew
 if brew list --pinned | grep -q yabai; then
-    brew unpin yabai
+    brew unpi yabai
 fi
 
 # set cert & stop yabai services
