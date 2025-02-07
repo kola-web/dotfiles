@@ -6,6 +6,9 @@
 [credential "http://ops.dev.dnurse.cn"]
 	provider = generic
 [core]
+	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	editor = nvim
 	autocrlf = false
+	safecrlf = true
 [log]
 	date = format:%Y-%m-%d %H:%M:%S
