@@ -18,10 +18,10 @@ return
     Run, wt.exe
 return
 
-^n::
-   Send {Down}
-return
-
-^p::
-  Send {Up}
-return
+; ^n::
+;    Send {Down}
+; return
+;
+; ^p::
+;   Send {Up}
+; return
