@@ -108,3 +108,10 @@ g_ControlRepeatDetected := false
 ~*^F12::
     g_AbortSendEsc := true
     return
+
+^n::
+    Send {Down}
+    return
+^p::
+    Send {Up}
+    return
