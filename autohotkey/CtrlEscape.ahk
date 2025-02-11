@@ -110,8 +110,10 @@ g_ControlRepeatDetected := false
     return
 
 ^n::
+    g_AbortSendEsc := true
     Send {Down}
     return
 ^p::
+    g_AbortSendEsc := true
     Send {Up}
     return
