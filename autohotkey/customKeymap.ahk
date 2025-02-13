@@ -18,5 +18,4 @@ return
     Run, wt.exe
 return
 
-
 Pause::Media_Play_Pause
