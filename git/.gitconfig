@@ -1,14 +1,13 @@
+# Windows 特定配置
+[includeIf "gitdir/i:C:/"]
+    path = .gitconfig-windows
+
+# macOS 特定配置
+[includeIf "gitdir/i:/Users/"]
+    path = .gitconfig-macos
+
 [user]
 	name = kola-web
 	email = l15567540858@gmail.com
-[credential "http://39.106.86.127:3000"]
-	provider = generic
-[credential "http://ops.dev.dnurse.cn"]
-	provider = generic
-[core]
-	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	editor = nvim
-	autocrlf = false
-	safecrlf = true
 [log]
 	date = format:%Y-%m-%d %H:%M:%S
