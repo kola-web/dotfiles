@@ -11,3 +11,6 @@
 	email = l15567540858@gmail.com
 [log]
 	date = format:%Y-%m-%d %H:%M:%S
+
+[core]
+	whitespace = cr-at-eol
