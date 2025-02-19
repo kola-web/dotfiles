@@ -6,6 +6,7 @@
 [includeIf "gitdir/i:/Users/"]
     path = .gitconfig-macos
 
+# wsl 特定配置
 [includeIf "gitdir/i:$(bash -c 'grep -qi microsoft /proc/sys/kernel/osrelease && echo true')"]
     path = .gitconfig-wsl
 
