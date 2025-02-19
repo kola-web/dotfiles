@@ -86,3 +86,12 @@ CYGWIN* | MINGW32* | MSYS* | MINGW*)
 	# echo 'Other OS'
 	;;
 esac
+
+
+# wsl 环境
+# if grep -qi microsoft /proc/sys/kernel/osrelease || [ -n "$WSL_DISTRO_NAME" ]; then
+#   keep_current_path() {
+#     printf "\e]9;9;%s\e\\" "$(wslpath -w "$PWD")"
+#   }
+#   precmd_functions+=(keep_current_path)
+# fi
