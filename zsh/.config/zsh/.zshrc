@@ -38,7 +38,6 @@ zsh_add_file "kitty"
 zsh_add_file "scripts/completion.zsh"
 
 # pnpm
-export PNPM_HOME="/Users/lijialin/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
