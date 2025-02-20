@@ -20,14 +20,27 @@ setopt HIST_IGNORE_SPACE         # Do not record an event starting with a space.
 setopt HIST_SAVE_NO_DUPS         # Do not write a duplicate event to the history file.
 setopt HIST_VERIFY               # Do not execute immediately upon history expansion.
 
-# Useful Functions
 source "$ZDOTDIR/zsh-functions"
-
-# proxy
-zsh_add_file "zsh-exports"
 zsh_add_file "zsh-zimfw"
-zsh_add_file "zsh-aliases"
-zsh_add_file "kitty"
+
+os=$(uname)
+
+if [[ $os == "Darwin" ]]; then
+    # 这里可以添加 macOS 特有的操作
+    zsh_add_file "system/zsh-macos"
+fi
+
+if [[ $os == "Linux" && ! -f "$(command -v wslpath)"  ]]; then
+    # 这里可以添加 linux 特有的操作
+    zsh_add_file "system/zsh-linux"
+fi
+
+if [[ $os == "Linux" &&  -f "$(command -v wslpath)"  ]]; then
+    # 这里可以添加 wsl 特有的操作
+    zsh_add_file "system/zsh-wsl"
+fi
+
+
 # zsh_add_file "zsh-prompt"
 
 
@@ -37,12 +50,26 @@ zsh_add_file "kitty"
 
 zsh_add_file "scripts/completion.zsh"
 
-# pnpm
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
+alias e='fastfetch'
+alias f='zi'
+# alias r='TERM=screen-256color ranger'
+# alias r='ranger'
+alias r='yy' # yazi
+alias g='lazygit'
+alias lzd='lazydocker'
+alias zsh-update-plugins="find ""$ZDOTDIR"/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
+alias nvimrc='nvim ~/.config/nvim/'
+
+# NVIM_APPNAME
+# alias nvim="NVIM_APPNAME=nvim nvim"
+alias lnvim="NVIM_APPNAME=LazyVim nvim"
+alias nnvim="NVIM_APPNAME=NvChad nvim"
+alias tnvim="NVIM_APPNAME=NativeVim nvim"
 
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+export PATH="$HOME/.local/bin":$PATH
+export PATH="$HOME/.local/share/neovim/bin":$PATH
+
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
