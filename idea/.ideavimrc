@@ -14,9 +14,11 @@ set matchit
 set NERDTree
 set which-key
 set textobj-indent
+set functiontextobj
 set peekaboo
 set vim-paragraph-motion
 set quickscope
+set mini-ai
 
 let g:NERDTreeMapActivateNode='l'
 let g:NERDTreeMapJumpParent='h'
