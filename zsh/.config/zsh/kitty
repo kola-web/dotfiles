@@ -1,7 +1,0 @@
-#!/bin/zsh
-
-if [[ -n $TMUX ]]; then
-	export KITTY_MAP_NAME=macos-tmux
-else
-	export KITTY_MAP_NAME=macos
-fi
