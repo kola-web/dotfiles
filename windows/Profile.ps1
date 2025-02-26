@@ -14,6 +14,7 @@ $env:STARSHIP_CONFIG = "$HOME\dotfiles\windows\starship.toml"
 $env:YAZI_FILE_ONE="C:\Program Files\Git\usr\bin\file.exe"
 $env:HTTP_PROXY="http://127.0.0.1:7897"
 $env:HTTPS_PROXY="http://127.0.0.1:7897"
+$env:SVN_LOG_ENCODING = "utf-8"
 $HOSTS="C:\Windows\System32\drivers\etc\hosts"
 #$env:Path += ";C:\Users\user\AppData\Local\Programs\oh-my-posh\bin"
 
