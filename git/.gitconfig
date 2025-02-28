@@ -6,6 +6,7 @@
 
 [core]
 	whitespace = cr-at-eol
+
 [credential "http://39.106.86.127:3000"]
 	provider = generic
 
