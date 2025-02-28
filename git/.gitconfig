@@ -5,7 +5,30 @@
 	date = format:%Y-%m-%d %H:%M:%S
 
 [core]
+  ; 设置默认编辑器为 Neovim
+  editor = nvim
+  ; 自动转换换行符
+  autocrlf = input
 	whitespace = cr-at-eol
+
+[diff]
+  ; 使用 Neovim 作为默认差异工具
+  tool = nvim
+
+[difftool "neovim"]
+  cmd = nvim -d $LOCAL $REMOTE
+
+[merge]
+  ; 使用 Neovim 作为默认合并工具
+  tool = nvim
+
+[pull]
+  ; 默认使用 rebase 而不是 merge
+  rebase = true
+
+[push]
+  ; 推送当前分支
+  default = current
 
 [credential "http://39.106.86.127:3000"]
 	provider = generic
