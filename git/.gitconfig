@@ -1,16 +1,3 @@
-# Windows 特定配置
-[includeIf "gitdir/i:C:/"]
-    path = .gitconfig-windows
-
-# macOS 特定配置
-[includeIf "gitdir/i:/Users/"]
-    path = .gitconfig-macos
-
-# wsl 特定配置
-[includeIf "$(bash -c 'grep -qi microsoft /proc/sys/kernel/osrelease && echo true')"]
-    [credential]
-    	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
-
 [user]
 	name = kola-web
 	email = l15567540858@gmail.com
@@ -21,3 +8,8 @@
 	whitespace = cr-at-eol
 [credential "http://39.106.86.127:3000"]
 	provider = generic
+
+# wsl 特定配置
+[includeIf "gitdir/i:/mnt/"]
+    [credential]
+    	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
