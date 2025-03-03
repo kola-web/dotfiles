@@ -1,5 +1,5 @@
 # wsl 特定配置
-[includeIf "gitdir:%(prefix)//mnt/c/**"]
+[includeIf "gitdir:/mnt/c/"]
  path = ~/.gitconfig-wsl
 
 [user]
