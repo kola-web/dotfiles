@@ -23,3 +23,5 @@ tmux/.config/tmux/plugins
 lazygit/.config/lazygit/state.yml
 
 nushell/.config/nushell/history.txt
+tmux/.config/tmux/resurrect
+zsh/.config/zsh/.zcompdump.DESKTOP-KRIRLU9.14429
