@@ -5,35 +5,29 @@
 	date = format:%Y-%m-%d %H:%M:%S
 
 [core]
-  ; 设置默认编辑器为 Neovim
-  editor = nvim
-  ; 自动转换换行符
-  autocrlf = input
-	whitespace = cr-at-eol
+    pager = delta
 
-[diff]
-  ; 使用 Neovim 作为默认差异工具
-  tool = nvim
+[interactive]
+    diffFilter = delta --color-only
 
-[difftool "neovim"]
-  cmd = nvim -d $LOCAL $REMOTE
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    dark = true      # or light = true, or omit for auto-detection
 
 [merge]
-  ; 使用 Neovim 作为默认合并工具
-  tool = nvim
-
-[pull]
-  ; 默认使用 rebase 而不是 merge
-  rebase = true
-
-[push]
-  ; 推送当前分支
-  default = current
-
-[credential "http://39.106.86.127:3000"]
-	provider = generic
+    conflictstyle = zdiff3
 
 # wsl 特定配置
 [includeIf "gitdir/i:/mnt/"]
     [credential]
     	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
+
+[credential "http://39.106.86.127:3000"]
+	provider = generic
+
+[difftool "sourcetree"]
+	cmd = "'' "
+
+[mergetool "sourcetree"]
+	cmd = "'' "
+	trustExitCode = true
