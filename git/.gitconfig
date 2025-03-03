@@ -1,3 +1,7 @@
+# wsl 特定配置
+[includeIf "gitdir:%(prefix)//mnt/c/**"]
+ path = ~/.gitconfig-wsl
+
 [user]
 name = kola-web
 email = l15567540858@gmail.com
@@ -42,6 +46,3 @@ cmd = "'' "
 cmd = "'' "
 trustExitCode = true
 
-# wsl 特定配置
-[includeIf "gitdir/i:/mnt/"]
- path = ~/.gitconfig-wsl
