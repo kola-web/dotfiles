@@ -41,3 +41,7 @@ cmd = "'' "
 [mergetool "sourcetree"]
 cmd = "'' "
 trustExitCode = true
+
+# wsl 特定配置
+[includeIf "gitdir/i:/mnt/"]
+ path = ~/.gitconfig-wsl
