@@ -1,6 +1,6 @@
 # wsl 特定配置
-[includeIf "gitdir:/mnt/c/"]
- path = ~/.gitconfig-wsl
+[includeIf "gitdir:/home/kola-wsl"]
+ path = ~/.gitconfig_wsl
 
 [user]
 name = kola-web
