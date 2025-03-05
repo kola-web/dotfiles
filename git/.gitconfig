@@ -1,5 +1,5 @@
 # wsl 特定配置
-[includeIf "gitdir:/home/kola-wsl"]
+[includeIf "gitdir:/home/kola-wsl/"]
  path = ~/.gitconfig_wsl
 
 [user]
