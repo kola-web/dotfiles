@@ -59,6 +59,7 @@ alias g='lazygit'
 alias lzd='lazydocker'
 alias zsh-update-plugins="find ""$ZDOTDIR"/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
 alias nvimrc='nvim ~/.config/nvim/'
+alias ls='eza --icons'
 
 # NVIM_APPNAME
 # alias nvim="NVIM_APPNAME=nvim nvim"
