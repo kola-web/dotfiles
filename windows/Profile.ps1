@@ -16,6 +16,7 @@ $env:HTTP_PROXY = "http://127.0.0.1:7897"
 $env:HTTPS_PROXY = "http://127.0.0.1:7897"
 $env:SVN_LOG_ENCODING = "utf-8"
 $env:VOLTA_FEATURE_PNPM = 1
+$env:CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
 
 # Aliases 🔗
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -106,6 +107,7 @@ Set-PSReadLineOption -BellStyle None
 Set-PSReadLineOption -HistorySearchCursorMovesToEnd
 Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -PredictionViewStyle  InlineView
+Set-PSReadLineOption -Colors @{ "Selection" = "`e[7m" }
 
 Set-PSReadLineKeyHandler -Chord Tab -Function MenuComplete
 Set-PSReadLineKeyHandler -Chord Ctrl-r -Function ReverseSearchHistory -ViMode Insert
@@ -113,6 +115,8 @@ Set-PSReadLineKeyHandler -Chord Ctrl-r -Function ReverseSearchHistory -ViMode Co
 Set-PSReadlineKeyHandler -Chord "Ctrl+e" -Function ForwardChar
 Set-PSReadLineKeyHandler -Chord "Ctrl+p" -Function HistorySearchBackward
 Set-PSReadLineKeyHandler -Chord "Ctrl+n" -Function HistorySearchForward
+
+carapace _carapace | Out-String | Invoke-Expression
 
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
 
