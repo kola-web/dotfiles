@@ -67,6 +67,7 @@ alias lnvim="NVIM_APPNAME=LazyVim nvim"
 alias nnvim="NVIM_APPNAME=NvChad nvim"
 alias tnvim="NVIM_APPNAME=NativeVim nvim"
 
+export VOLTA_FEATURE_PNPM=1
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 export PATH="$HOME/.local/bin":$PATH
