@@ -11,13 +11,11 @@
 [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
 
 $env:STARSHIP_CONFIG = "$HOME\dotfiles\windows\starship.toml"
-$env:YAZI_FILE_ONE="C:\Program Files\Git\usr\bin\file.exe"
-$env:HTTP_PROXY="http://127.0.0.1:7897"
-$env:HTTPS_PROXY="http://127.0.0.1:7897"
+$env:YAZI_FILE_ONE = "C:\Program Files\Git\usr\bin\file.exe"
+$env:HTTP_PROXY = "http://127.0.0.1:7897"
+$env:HTTPS_PROXY = "http://127.0.0.1:7897"
 $env:SVN_LOG_ENCODING = "utf-8"
-$HOSTS="C:\Windows\System32\drivers\etc\hosts"
-#$env:Path += ";C:\Users\user\AppData\Local\Programs\oh-my-posh\bin"
-
+$env:VOLTA_FEATURE_PNPM = 1
 
 # Aliases 🔗
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -28,47 +26,50 @@ Set-Alias -Name open  -Value explorer
 Set-Alias -Name ls    -Value Invoke-Eza
 
 # Utilities
+function nvim_hosts {
+  nvim "C:\Windows\System32\drivers\etc\hosts"
+}
+
 function which ($command) {
   Get-Command -Name $command -ErrorAction SilentlyContinue |
-    Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
+  Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
 
 function yy {
-    $tmp = [System.IO.Path]::GetTempFileName()
-    yazi $args --cwd-file="$tmp"
-    $cwd = Get-Content -Path $tmp
-    if (-not [String]::IsNullOrEmpty($cwd) -and $cwd -ne $PWD.Path) {
-        Set-Location -LiteralPath $cwd
-    }
-    Remove-Item -Path $tmp
+  $tmp = [System.IO.Path]::GetTempFileName()
+  yazi $args --cwd-file="$tmp"
+  $cwd = Get-Content -Path $tmp
+  if (-not [String]::IsNullOrEmpty($cwd) -and $cwd -ne $PWD.Path) {
+    Set-Location -LiteralPath $cwd
+  }
+  Remove-Item -Path $tmp
 }
 
 function Script:Invoke-Eza {
-    eza $args --icons=auto
+  eza $args --icons=auto
 }
 
 function lnvim() {
-  $env:NVIM_APPNAME="LazyVim"
+  $env:NVIM_APPNAME = "LazyVim"
   nvim $args
-  $env:NVIM_APPNAME=""
+  $env:NVIM_APPNAME = ""
 }
 
 function Invoke-Starship-PreCommand {
-    # 修改窗口标题
-    $currentDirectory = $pwd.Path
-    $parentDirectory = Split-Path -Parent $currentDirectory
-    $currentDirectoryName = Split-Path -Leaf $currentDirectory
-    $parentDirectoryName = Split-Path -Leaf $parentDirectory
-    $host.ui.RawUI.WindowTitle = "$parentDirectoryName\$currentDirectoryName `a"
+  # 修改窗口标题
+  $currentDirectory = $pwd.Path
+  $parentDirectory = Split-Path -Parent $currentDirectory
+  $currentDirectoryName = Split-Path -Leaf $currentDirectory
+  $parentDirectoryName = Split-Path -Leaf $parentDirectory
+  $host.ui.RawUI.WindowTitle = "$parentDirectoryName\$currentDirectoryName `a"
 
-    # 兼容 starship 分割窗口保留当前路径
-    $loc = $executionContext.SessionState.Path.CurrentLocation;
-    $prompt = "$([char]27)]9;12$([char]7)"
-    if ($loc.Provider.Name -eq "FileSystem")
-    {
-      $prompt += "$([char]27)]9;9;`"$($loc.ProviderPath)`"$([char]27)\"
-    }
-    $host.ui.Write($prompt)
+  # 兼容 starship 分割窗口保留当前路径
+  $loc = $executionContext.SessionState.Path.CurrentLocation;
+  $prompt = "$([char]27)]9;12$([char]7)"
+  if ($loc.Provider.Name -eq "FileSystem") {
+    $prompt += "$([char]27)]9;9;`"$($loc.ProviderPath)`"$([char]27)\"
+  }
+  $host.ui.Write($prompt)
 }
 
 # https://learn.microsoft.com/zh-cn/windows/terminal/tutorials/new-tab-same-directory
@@ -90,15 +91,15 @@ Import-Module PSReadLine
 Invoke-Expression (&starship init powershell)
 
 Set-PSReadLineOption -EditMode Vi
-$OnViModeChange = [scriptblock]{
-    if ($args[0] -eq 'Command') {
-        # Set the cursor to a blinking block.
-        Write-Host -NoNewLine "`e[1 q"
-    }
-    else {
-        # Set the cursor to a blinking line.
-        Write-Host -NoNewLine "`e[5 q"
-    }
+$OnViModeChange = [scriptblock] {
+  if ($args[0] -eq 'Command') {
+    # Set the cursor to a blinking block.
+    Write-Host -NoNewLine "`e[1 q"
+  }
+  else {
+    # Set the cursor to a blinking line.
+    Write-Host -NoNewLine "`e[5 q"
+  }
 }
 Set-PSReadLineOption -ViModeIndicator Script -ViModeChangeHandler $OnViModeChange
 Set-PSReadLineOption -BellStyle None
@@ -114,9 +115,6 @@ Set-PSReadLineKeyHandler -Chord "Ctrl+p" -Function HistorySearchBackward
 Set-PSReadLineKeyHandler -Chord "Ctrl+n" -Function HistorySearchForward
 
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
-
-
-#if ( Test-Path '~/.inshellisense/pwsh/init.ps1' -PathType Leaf ) { . ~/.inshellisense/pwsh/init.ps1 } 
 
 
 #f45873b3-b655-43a6-b217-97c00aa0db58 PowerToys CommandNotFound module
