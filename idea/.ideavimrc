@@ -109,7 +109,7 @@ map <leader>rd :%s/<div/<view/g<cr>:%s/<\/div/<\/view/g<cr>
 map <leader>rr <action>(Json2ts)
 map <leader>pp <action>(ManageRecentProjects)
 map <leader>le <action>(ShowErrorDescription)
-
+map <leader><leader>w  <Plug>(easymotion-bd-w)
 
 nmap gac viw<action>(StringManipulation.ToCamelCase)
 vmap gac <action>(StringManipulation.ToCamelCase)

@@ -6,15 +6,11 @@
 #  ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝╚═════╝  ╚═════╝    ╚═╝   ╚══════╝
 # Profile.ps1 - Scott McKendry
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-# set PowerShell to UTF-8
-[console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
-
+$env:LANG="en_US.UTF-8"
 $env:STARSHIP_CONFIG = "$HOME\dotfiles\windows\starship.toml"
 $env:YAZI_FILE_ONE = "C:\Program Files\Git\usr\bin\file.exe"
 $env:HTTP_PROXY = "http://127.0.0.1:7897"
 $env:HTTPS_PROXY = "http://127.0.0.1:7897"
-$env:SVN_LOG_ENCODING = "utf-8"
 $env:VOLTA_FEATURE_PNPM = 1
 $env:CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
 
@@ -27,36 +23,43 @@ Set-Alias -Name open  -Value explorer
 Set-Alias -Name ls    -Value Invoke-Eza
 
 # Utilities
-function nvim_hosts {
+function nvim_hosts
+{
   nvim "C:\Windows\System32\drivers\etc\hosts"
 }
 
-function which ($command) {
+function which ($command)
+{
   Get-Command -Name $command -ErrorAction SilentlyContinue |
-  Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
+    Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
 
-function yy {
+function yy
+{
   $tmp = [System.IO.Path]::GetTempFileName()
   yazi $args --cwd-file="$tmp"
   $cwd = Get-Content -Path $tmp
-  if (-not [String]::IsNullOrEmpty($cwd) -and $cwd -ne $PWD.Path) {
+  if (-not [String]::IsNullOrEmpty($cwd) -and $cwd -ne $PWD.Path)
+  {
     Set-Location -LiteralPath $cwd
   }
   Remove-Item -Path $tmp
 }
 
-function Script:Invoke-Eza {
+function Script:Invoke-Eza
+{
   eza $args --icons=auto
 }
 
-function lnvim() {
+function lnvim()
+{
   $env:NVIM_APPNAME = "LazyVim"
   nvim $args
   $env:NVIM_APPNAME = ""
 }
 
-function Invoke-Starship-PreCommand {
+function Invoke-Starship-PreCommand
+{
   # 修改窗口标题
   $currentDirectory = $pwd.Path
   $parentDirectory = Split-Path -Parent $currentDirectory
@@ -67,7 +70,8 @@ function Invoke-Starship-PreCommand {
   # 兼容 starship 分割窗口保留当前路径
   $loc = $executionContext.SessionState.Path.CurrentLocation;
   $prompt = "$([char]27)]9;12$([char]7)"
-  if ($loc.Provider.Name -eq "FileSystem") {
+  if ($loc.Provider.Name -eq "FileSystem")
+  {
     $prompt += "$([char]27)]9;9;`"$($loc.ProviderPath)`"$([char]27)\"
   }
   $host.ui.Write($prompt)
@@ -93,11 +97,12 @@ Invoke-Expression (&starship init powershell)
 
 Set-PSReadLineOption -EditMode Vi
 $OnViModeChange = [scriptblock] {
-  if ($args[0] -eq 'Command') {
+  if ($args[0] -eq 'Command')
+  {
     # Set the cursor to a blinking block.
     Write-Host -NoNewLine "`e[1 q"
-  }
-  else {
+  } else
+  {
     # Set the cursor to a blinking line.
     Write-Host -NoNewLine "`e[5 q"
   }
