@@ -53,3 +53,5 @@ cmd = "'' "
 cmd = "'' "
 trustExitCode = true
 
+[diff]
+	ignoreCR = true
