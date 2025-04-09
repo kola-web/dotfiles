@@ -3,8 +3,8 @@
  path = ~/.gitconfig-wsl
 
 [user]
-name = kola-web
-email = l15567540858@gmail.com
+	name = kola-web
+	email = l15567540858@gmail.com
 
 [color]
 ui = true
@@ -20,6 +20,7 @@ l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(
 [core]
 pager = delta
 
+	autocrlf = true
 [interactive]
 diffFilter = delta --color-only
 
@@ -52,4 +53,7 @@ cmd = "'' "
 [mergetool "sourcetree"]
 cmd = "'' "
 trustExitCode = true
+keepBackup = false
 
+[diff]
+ignoreCR = true
