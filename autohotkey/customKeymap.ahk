@@ -19,3 +19,11 @@ return
 return
 
 Pause::Media_Play_Pause
+
+
+^n::
+    Send {Down}
+    return
+^p::
+    Send {Up}
+    return
