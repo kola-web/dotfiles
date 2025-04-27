@@ -310,7 +310,8 @@ git:
   autoStageResolvedConflicts: true
 
   # Command used when displaying the current branch git log in the main window
-  branchLogCmd: git log --graph --color=always --abbrev-commit --decorate --date=format:%Y年%m月%d日%H时%M分 --pretty=medium {{branchName}} --
+  # branchLogCmd: git log --graph --color=always --abbrev-commit --decorate --date=format:%Y年%m月%d日%H时%M分 --pretty=medium {{branchName}} --
+  branchLogCmd: git log --graph --color=always --abbrev-commit --decorate --date=iso --pretty=medium {{branchName}} --
 
   # Commands used to display git log of all branches in the main window, they will be cycled in order of appearance (array of strings)
   allBranchesLogCmds: []
