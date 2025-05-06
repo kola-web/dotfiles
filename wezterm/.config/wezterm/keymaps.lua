@@ -45,10 +45,10 @@ local mod = {}
 
 if wezterm.target_triple:find("apple") then
 	mod.cmd = "CMD"
-  mod.copy = 'CMD'
+	mod.copy = "CMD"
 else
 	mod.cmd = "ALT"
-  mod.copy = 'CTRL'
+	mod.copy = "CTRL"
 end
 
 M.keys = {
@@ -98,6 +98,11 @@ M.keys = {
 				wezterm.open_with(url)
 			end),
 		}),
+	},
+	{
+		key = "3",
+		mods = "CTRL",
+		action = act.SpawnTab({ DomainName = "WSL:Ubuntu-24.04" }),
 	},
 	{
 		key = "t",

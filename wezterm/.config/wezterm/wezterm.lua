@@ -1,10 +1,11 @@
 local wezterm = require("wezterm")
-local platform = require("utils.platform")()
 
 local config = wezterm.config_builder()
+require("events.window").setup(wezterm)
 require("keymaps").setup(config)
 require("config.launch").setup(config)
--- require("plugins").setup(config)
+require("config.domains").setup(config)
+require("plugins").setup(config)
 
 config.audible_bell = "Disabled"
 config.color_scheme = "Gruvbox Material (Gogh)"
@@ -21,7 +22,5 @@ config.enable_kitty_keyboard = true
 -- Cursor
 config.window_padding = { left = 0, right = 0, top = 0, bottom = 0 }
 config.window_background_opacity = 0.94
-
--- config.window_decorations = "RESIZE"
 
 return config
