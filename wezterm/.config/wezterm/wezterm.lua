@@ -3,7 +3,7 @@ local platform = require("utils.platform")()
 
 local config = wezterm.config_builder()
 require("keymaps").setup(config)
-require("launch").setup(config)
+require("config.launch").setup(config)
 -- require("plugins").setup(config)
 
 config.audible_bell = "Disabled"
