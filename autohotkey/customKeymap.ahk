@@ -17,8 +17,8 @@ return
 Pause::Media_Play_Pause
 
 ^n::
-    Send, {Down}
+    Send {Down}
     return
 ^p::
-    Send, {Up}
+    Send {Up}
     return
