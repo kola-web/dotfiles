@@ -13,7 +13,7 @@ scripts := []  ; 创建一个空数组
 
 ; 将脚本路径添加到数组中
 scripts.Push(userDir . "\dotfiles\autohotkey\desktop.ahk")
-; scripts.Push(userDir . "\dotfiles\autohotkey\customKeymap.ahk")
+scripts.Push(userDir . "\dotfiles\autohotkey\customKeymap.ahk")
 ; scripts.Push(userDir . "\dotfiles\autohotkey\CtrlEscape.ahk")
 
 ; 遍历脚本路径数组并运行每个脚本
