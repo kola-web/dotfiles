@@ -112,13 +112,13 @@ M.keys = {
 	{
 		key = "D",
 		mods = mod.cmd,
-		action = act.SplitVertical,
+		action = act.SplitVertical({ domain = "CurrentPaneDomain" }),
 	},
 	{ key = "n", mods = mod.cmd, action = act.SpawnWindow },
 	{
 		key = "d",
 		mods = mod.cmd,
-		action = act.SplitHorizontal,
+		action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }),
 	},
 	{
 		key = "w",

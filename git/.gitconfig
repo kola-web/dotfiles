@@ -19,7 +19,7 @@ l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(
 
 [core]
 pager = delta
-autocrlf = input
+autocrlf = false
 
 [interactive]
 diffFilter = delta --color-only

@@ -56,6 +56,19 @@ function lnvim() {
   $env:NVIM_APPNAME = ""
 }
 
+function mini-nvim() {
+  $env:NVIM_APPNAME = "mini-nvim"
+  nvim $args
+  $env:NVIM_APPNAME = ""
+}
+
+function kickstart-nvim() {
+  $env:NVIM_APPNAME = "kickstart.nvim"
+  nvim $args
+  $env:NVIM_APPNAME = ""
+}
+
+
 function Invoke-Starship-PreCommand {
   # 修改窗口标题
   $currentDirectory = $pwd.Path
@@ -119,6 +132,8 @@ Set-PSReadLineKeyHandler -Chord "Ctrl+n" -Function HistorySearchForward
 carapace _carapace | Out-String | Invoke-Expression
 
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
+
+
 
 #f45873b3-b655-43a6-b217-97c00aa0db58 PowerToys CommandNotFound module
 

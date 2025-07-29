@@ -22,3 +22,4 @@
  at line 214 column 15
 [2m2025-01-03T11:29:14.310841Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[17].commands: unexpected argument found
  at line 214 column 15
+[2m2025-06-19T09:55:29.185465Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m 拒绝访问。 (0x80070005)

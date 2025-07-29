@@ -8,6 +8,10 @@ require("config.domains").setup(config)
 require("plugins").setup(config)
 
 config.audible_bell = "Disabled"
+config.visual_bell = {
+	fade_in_duration_ms = 0,
+	fade_out_duration_ms = 0,
+}
 config.color_scheme = "Gruvbox Material (Gogh)"
 
 config.enable_scroll_bar = true
