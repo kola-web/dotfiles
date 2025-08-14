@@ -101,7 +101,13 @@ function Invoke-Starship-PreCommand {
 
 # plugin
 #oh-my-posh init pwsh --config "$HOME/dotfiles/windows/kola.omp.json" | Invoke-Expression
+
+# install: winget install fzf
+# install: Install-Module -Name PSFzf
+Import-Module PSFzf
+
 Import-Module PSReadLine
+
 Invoke-Expression (&starship init powershell)
 
 Set-PSReadLineOption -EditMode Vi
@@ -122,7 +128,8 @@ Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -PredictionViewStyle  InlineView
 Set-PSReadLineOption -Colors @{ "Selection" = "`e[7m" }
 
-Set-PSReadLineKeyHandler -Chord Tab -Function MenuComplete
+# Set-PSReadLineKeyHandler -Chord Tab -Function MenuComplete
+Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
 Set-PSReadLineKeyHandler -Chord Ctrl-r -Function ReverseSearchHistory -ViMode Insert
 Set-PSReadLineKeyHandler -Chord Ctrl-r -Function ReverseSearchHistory -ViMode Command
 Set-PSReadlineKeyHandler -Chord "Ctrl+e" -Function ForwardChar
