@@ -1,7 +1,3 @@
-# wsl 特定配置
-[includeIf "gitdir:/home/kola-wsl/"]
-  path = ~/.gitconfig-wsl
-
 [user]
 	name = kola-web
 	email = l15567540858@gmail.com
@@ -17,46 +13,8 @@
   p = push
   l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --decorate --date=short --color --decorate
 
-[core]
-  pager = delta
-  autocrlf = false
-  whitespace = cr-at-eol
-
-[interactive]
-  diffFilter = delta --color-only
-
-[delta]
-  navigate = true    # use n and N to move between diff sections
-  light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
-  side-by-side = false
-  line-numbers = true
-
-[pull]
-  rebase = true
-[push]
-  default = upstream
-[rebase]
-  autoStash = true
-[merge]
-  tool = diffview
-[mergetool]
-  prompt = false
-  keepBackup = false
-[mergetool "diffview"]
-  cmd = nvim -n -c "DiffviewOpen" "$MERGE"
-
-[credential "http://39.106.86.127:3000"]
-  provider = generic
-
-[difftool "sourcetree"]
-  cmd = "'' "
-
-[mergetool "sourcetree"]
-  cmd = "'' "
-  trustExitCode = true
-  keepBackup = false
-
 [diff]
   ignoreCR = true
+
 [log]
 	date = iso
