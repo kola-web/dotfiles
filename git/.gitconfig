@@ -1,20 +1,101 @@
 [user]
 	name = kola-web
 	email = l15567540858@gmail.com
-
+[core]
+	editor = nvim
+	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	pager = delta
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[tag]
+	sort = version:refname
+[init]
+	defaultBranch = master
+[checkout]
+	defaultRemote = origin
+[rerere]
+	enabled = 1
+	autoupdate = 1
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	renames = true
+	tool = nvimdiff
+[difftool]
+	prompt = false
+[push]
+	autoSetupRemote = true
+	followTags = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+[rebase]
+	autoSquash = true
+	updateRefs = true
 [color]
-  ui = true
-
+	ui = auto
+[color "branch"]
+	current = yellow bold
+	local = green bold
+	remote = cyan bold
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[color "status"]
+	added = green bold
+	changed = yellow bold
+	untracked = red bold
+[sendemail]
+	smtpencryption = tls
+	smtpserver = smtp.gmail.com
+	smtpuser = pavan.sss1991@gmail.com
+	smtppass = password
+	smtpserverport = 587
+[web]
+	browser = google-chrome
+[instaweb]
+	httpd = apache2 -f
+[delta]
+	features = line-numbers decorations
+	line-numbers = true
+[delta "decorations"]
+	minus-style = red bold normal
+	plus-style = green bold normal
+	minus-emph-style = white bold red
+	minus-non-emph-style = red bold normal
+	plus-emph-style = white bold green
+	plus-non-emph-style = green bold normal
+	file-style = yellow bold none
+	file-decoration-style = yellow box
+	hunk-header-style = magenta bold
+	hunk-header-decoration-style = magenta box
+	minus-empty-line-marker-style = normal normal
+	plus-empty-line-marker-style = normal normal
+	line-numbers-right-format = "{np:^4}│ "
+[trim]
+	bases = master,main
+	protected = *production
+[sequence]
+	editor = interactive-rebase-tool
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[log]
+	date = iso
 [alias]
   st = status -sb
   co = checkout
   c = commit --short
   ci = commit --short
   p = push
-  l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --decorate --date=short --color --decorate
-
-[diff]
-  ignoreCR = true
-
-[log]
-	date = iso
+  l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --abbrev-commit --decorate --date=format:'%Y-%m-%d' --color --decorate
+[credential "http://39.106.86.127:3000"]
+	provider = generic
