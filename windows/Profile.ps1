@@ -17,7 +17,6 @@ $env:HTTPS_PROXY = "http://127.0.0.1:7897"
 $env:SVN_LOG_ENCODING = "utf-8"
 $env:VOLTA_FEATURE_PNPM = 1
 $env:CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
-$env:DEEPSEEK_KEY = 'sk-f342fdcb8a774abfb2d275a14812bdf6'
 
 # Aliases 🔗
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
