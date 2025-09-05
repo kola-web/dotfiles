@@ -89,8 +89,7 @@ xmap <A-p> <Plug>RemoveOccurrence
 map ) <action>(com.mnw.tabmover.actions.MoveTabDownAction)
 map ( <action>(com.mnw.tabmover.actions.MoveTabUpAction)
 
-map <CR> <action>(EditorSelectWord)
-map <bs> <action>(EditorUnSelectWord)
+map <cr>  <Plug>(easymotion-bd-w)
 
 map K <action>(ShowHoverInfo)
 
@@ -110,6 +109,7 @@ map <leader>rd :%s/<div/<view/g<cr>:%s/<\/div/<\/view/g<cr>
 map <leader>rr <action>(Json2ts)
 map <leader>pp <action>(ManageRecentProjects)
 map <leader>le <action>(ShowErrorDescription)
+
 
 
 nmap gac viw<action>(StringManipulation.ToCamelCase)
