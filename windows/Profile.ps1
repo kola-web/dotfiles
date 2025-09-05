@@ -68,7 +68,6 @@ function kickstart-nvim() {
   $env:NVIM_APPNAME = ""
 }
 
-
 function Invoke-Starship-PreCommand {
   # 修改窗口标题
   $currentDirectory = $pwd.Path
@@ -97,7 +96,6 @@ function Invoke-Starship-PreCommand {
 #  $out += "PS $loc$('>' * ($nestedPromptLevel + 1)) ";
 #  return $out
 #}
-
 
 # plugin
 #oh-my-posh init pwsh --config "$HOME/dotfiles/windows/kola.omp.json" | Invoke-Expression
