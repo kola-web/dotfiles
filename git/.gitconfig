@@ -7,7 +7,6 @@
 	email = l15567540858@gmail.com
 [core]
 	editor = nvim
-	whitespace = cr-at-eol
 	pager = delta
 [column]
 	ui = auto
