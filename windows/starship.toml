@@ -1,5 +1,7 @@
 "$schema" = "https://starship.rs/config-schema.json"
 
+palette = "dracula"
+
 add_newline = true
 
 format = """
@@ -15,37 +17,42 @@ $cmd_duration\
 $line_break\
 $character"""
 
-[directory]
-style = "blue"
+[aws]
+style = "bold orange"
 
 [character]
-success_symbol = "[](purple)"
-error_symbol = "[](red)"
-vimcmd_symbol = "[](green)"
-
-[git_branch]
-format = "[$branch]($style)"
-style = "bright-black"
-
-[git_status]
-format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
-style = "cyan"
-conflicted = "​"
-untracked = "​"
-modified = "​"
-staged = "​"
-renamed = "​"
-deleted = "​"
-stashed = "≡"
-
-[git_state]
-format = '\([$state( $progress_current/$progress_total)]($style)\) '
-style = "bright-black"
+error_symbol = "[](bold red)"
+success_symbol = "[](bold green)"
 
 [cmd_duration]
-format = "[$duration]($style) "
-style = "yellow"
+style = "bold yellow"
 
-[python]
-format = "[$virtualenv]($style) "
-style = "bright-black"
+[directory]
+style = "bold green"
+
+[git_branch]
+style = "bold pink"
+
+[git_status]
+style = "bold red"
+
+[hostname]
+style = "bold purple"
+
+[username]
+format = "[$user]($style) on "
+style_user = "bold cyan"
+
+# Define Dracula color palette
+[palettes.dracula]
+background = "#282a36"
+current_line = "#44475a"
+foreground = "#f8f8f2"
+comment = "#6272a4"
+cyan = "#8be9fd"
+green = "#50fa7b"
+orange = "#ffb86c"
+pink = "#ff79c6"
+purple = "#bd93f9"
+red = "#ff5555"
+yellow = "#f1fa8c"
