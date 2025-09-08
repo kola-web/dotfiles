@@ -1,3 +1,7 @@
+# wsl 特定配置
+[includeIf "gitdir:/home/kola-wsl/"]
+  path = ~/.gitconfig-wsl
+
 [user]
 	name = kola-web
 	email = l15567540858@gmail.com
@@ -100,5 +104,4 @@
 [credential "http://39.106.86.127:3000"]
 	provider = generic
 
-[includeIf "gitdir:/home/kola-wsl/"]
-    path = ~/.gitconfig-wsl
+
