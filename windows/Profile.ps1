@@ -1,4 +1,4 @@
-# ██╗    ██╗██╗███╗   ██╗██████╗  ██████╗ ████████╗███████╗
+#CARAPACE ██╗    ██╗██╗███╗   ██╗██████╗  ██████╗ ████████╗███████╗
 # ██║    ██║██║████╗  ██║██╔══██╗██╔═══██╗╚══██╔══╝██╔════╝
 # ██║ █╗ ██║██║██╔██╗ ██║██║  ██║██║   ██║   ██║   ███████╗
 # ██║███╗██║██║██║╚██╗██║██║  ██║██║   ██║   ██║   ╚════██║
@@ -126,8 +126,9 @@ Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -PredictionViewStyle  InlineView
 Set-PSReadLineOption -Colors @{ "Selection" = "`e[7m" }
 
-# Set-PSReadLineKeyHandler -Chord Tab -Function MenuComplete
+# Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
+carapace _carapace | Out-String | Invoke-Expression
 Set-PSReadLineKeyHandler -Chord Ctrl-r -Function ReverseSearchHistory -ViMode Insert
 Set-PSReadLineKeyHandler -Chord Ctrl-r -Function ReverseSearchHistory -ViMode Command
 Set-PSReadlineKeyHandler -Chord "Ctrl+e" -Function ForwardChar
