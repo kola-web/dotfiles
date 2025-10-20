@@ -25,50 +25,67 @@ Set-Alias -Name g     -Value lazygit
 Set-Alias -Name r     -Value yy
 Set-Alias -Name open  -Value explorer
 Set-Alias -Name ls    -Value Invoke-Eza
+Set-Alias -Name qc -Value Run-QwenCode
+
+function Run-QwenCode
+{
+  $env:HTTP_PROXY = ""
+  $env:HTTPS_PROXY = ""
+  qwen @args
+}
 
 # Utilities
-function nvim_hosts {
+function nvim_hosts
+{
   nvim "C:\Windows\System32\drivers\etc\hosts"
 }
 
-function which ($command) {
+function which ($command)
+{
   Get-Command -Name $command -ErrorAction SilentlyContinue |
-  Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
+    Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
 
-function yy {
+function yy
+{
   $tmp = [System.IO.Path]::GetTempFileName()
   yazi $args --cwd-file="$tmp"
   $cwd = Get-Content -Path $tmp
-  if (-not [String]::IsNullOrEmpty($cwd) -and $cwd -ne $PWD.Path) {
+  if (-not [String]::IsNullOrEmpty($cwd) -and $cwd -ne $PWD.Path)
+  {
     Set-Location -LiteralPath $cwd
   }
   Remove-Item -Path $tmp
 }
 
-function Script:Invoke-Eza {
+function Script:Invoke-Eza
+{
   eza $args --icons=auto
 }
 
-function lnvim() {
+function lnvim()
+{
   $env:NVIM_APPNAME = "LazyVim"
   nvim $args
   $env:NVIM_APPNAME = ""
 }
 
-function mini-nvim() {
+function mini-nvim()
+{
   $env:NVIM_APPNAME = "mini-nvim"
   nvim $args
   $env:NVIM_APPNAME = ""
 }
 
-function kickstart-nvim() {
+function kickstart-nvim()
+{
   $env:NVIM_APPNAME = "kickstart.nvim"
   nvim $args
   $env:NVIM_APPNAME = ""
 }
 
-function Invoke-Starship-PreCommand {
+function Invoke-Starship-PreCommand
+{
   # 修改窗口标题
   $currentDirectory = $pwd.Path
   $parentDirectory = Split-Path -Parent $currentDirectory
@@ -79,7 +96,8 @@ function Invoke-Starship-PreCommand {
   # 兼容 starship 分割窗口保留当前路径
   $loc = $executionContext.SessionState.Path.CurrentLocation;
   $prompt = "$([char]27)]9;12$([char]7)"
-  if ($loc.Provider.Name -eq "FileSystem") {
+  if ($loc.Provider.Name -eq "FileSystem")
+  {
     $prompt += "$([char]27)]9;9;`"$($loc.ProviderPath)`"$([char]27)\"
   }
   $host.ui.Write($prompt)
@@ -110,11 +128,12 @@ Invoke-Expression (&starship init powershell)
 
 Set-PSReadLineOption -EditMode Vi
 $OnViModeChange = [scriptblock] {
-  if ($args[0] -eq 'Command') {
+  if ($args[0] -eq 'Command')
+  {
     # Set the cursor to a blinking block.
     Write-Host -NoNewLine "`e[1 q"
-  }
-  else {
+  } else
+  {
     # Set the cursor to a blinking line.
     Write-Host -NoNewLine "`e[5 q"
   }
@@ -126,16 +145,16 @@ Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -PredictionViewStyle  InlineView
 Set-PSReadLineOption -Colors @{ "Selection" = "`e[7m" }
 
-# Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
-Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
+# Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
+Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 carapace _carapace | Out-String | Invoke-Expression
+
 Set-PSReadLineKeyHandler -Chord Ctrl-r -Function ReverseSearchHistory -ViMode Insert
 Set-PSReadLineKeyHandler -Chord Ctrl-r -Function ReverseSearchHistory -ViMode Command
 Set-PSReadlineKeyHandler -Chord "Ctrl+e" -Function ForwardChar
 Set-PSReadLineKeyHandler -Chord "Ctrl+p" -Function HistorySearchBackward
 Set-PSReadLineKeyHandler -Chord "Ctrl+n" -Function HistorySearchForward
 
-carapace _carapace | Out-String | Invoke-Expression
 
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
 
