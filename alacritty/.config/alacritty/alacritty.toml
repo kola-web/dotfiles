@@ -23,6 +23,7 @@ save_to_clipboard = true
 
 [keyboard]
 bindings = [
+  { key = "Q", mods = "Alt", action = "Quit" },
   # tmux
   { chars = "\u0002c", key = "T", mods = "Command" },
   { chars = "\u0002x", key = "W", mods = "Command" },
