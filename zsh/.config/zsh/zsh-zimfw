@@ -1,8 +1,7 @@
 #!/bin/sh
 
-zstyle ':zim:zmodule' use 'degit'
-
 if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
+  echo "message"
   curl -fsSL --create-dirs -o ${ZIM_HOME}/zimfw.zsh \
       https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
 fi

@@ -21,7 +21,6 @@ setopt HIST_SAVE_NO_DUPS         # Do not write a duplicate event to the history
 setopt HIST_VERIFY               # Do not execute immediately upon history expansion.
 
 source "$ZDOTDIR/zsh-functions"
-zsh_add_file "zsh-zimfw"
 
 os=$(uname)
 
@@ -41,14 +40,14 @@ if [[ $os == "Linux" &&  -f "$(command -v wslpath)"  ]]; then
 fi
 
 
-# zsh_add_file "zsh-prompt"
+zsh_add_file "zsh-zimfw"
+zsh_add_file "zsh-prompt"
+zsh_add_file "scripts/completion.zsh"
 
 
 # +------------+
 # | COMPLETION |
 # +------------+
-
-zsh_add_file "scripts/completion.zsh"
 
 alias e='fastfetch'
 alias f='zi'
@@ -57,12 +56,10 @@ alias f='zi'
 alias r='yy' # yazi
 alias g='lazygit'
 alias lzd='lazydocker'
-alias zsh-update-plugins="find ""$ZDOTDIR"/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
 alias nvimrc='nvim ~/.config/nvim/'
 alias ls='eza --icons'
 
 # NVIM_APPNAME
-# alias nvim="NVIM_APPNAME=nvim nvim"
 alias lnvim="NVIM_APPNAME=LazyVim nvim"
 alias nnvim="NVIM_APPNAME=NvChad nvim"
 alias tnvim="NVIM_APPNAME=NativeVim nvim"
@@ -73,5 +70,4 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 export PATH="$HOME/.local/bin":$PATH
 export PATH="$HOME/.local/share/neovim/bin":$PATH
 
-eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
