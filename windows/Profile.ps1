@@ -84,6 +84,13 @@ function kickstart-nvim()
   $env:NVIM_APPNAME = ""
 }
 
+function tnvim()
+{
+  $env:NVIM_APPNAME = "tnvim"
+  nvim $args
+  $env:NVIM_APPNAME = ""
+}
+
 function Invoke-Starship-PreCommand
 {
   # 修改窗口标题

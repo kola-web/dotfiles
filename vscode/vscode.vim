@@ -22,7 +22,7 @@ map <CR> editor.action.smartSelect.expand
 map <bs> editor.action.smartSelect.shrink
 
 " 显示悬停信息
-noremap K :vsc editor.action.showHover<CR>
+" noremap K :vsc editor.action.showHover<CR>
 
 " noremap <tab> :vsc workbench.action.nextEditor<CR>
 " noremap <S-tab> :vsc workbench.action.previousEditor<CR>

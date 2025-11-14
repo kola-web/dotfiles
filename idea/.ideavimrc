@@ -62,8 +62,8 @@ map s gr
 map ss grr
 map S grr
 
-omap ii <Plug>textobj-indent-ii
 omap ai <Plug>textobj-indent-aI
+xmap ai <Plug>textobj-indent-aI
 
 map H ^
 map L $
