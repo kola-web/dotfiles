@@ -2,6 +2,7 @@
 #SingleInstance Force ; The script will Reload if launched while already running
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases
 #KeyHistory 0 ; Ensures user privacy when debugging is not needed
+Process, Priority,, H ; 将当前脚本设置为高优先级
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability
 
@@ -41,7 +42,7 @@ mapDesktopsFromRegistry()
         if ErrorLevel {
             RegRead, CurrentDesktopId, HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\%SessionId%\VirtualDesktops, CurrentVirtualDesktop
         }
-        
+
         if (CurrentDesktopId) {
             IdLength := StrLen(CurrentDesktopId)
         }

@@ -6,13 +6,13 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability
 
 
-#+s:: ; 截图
-    Run, Snipaste.exe snip
-return
-
-; #Enter::  ; Win + Enter
-;     Run, wt.exe
+; #+s:: ; 截图
+;     Run, Snipaste.exe snip
 ; return
+
+#+s::  ; 截图
+  Send {PrintScreen}
+return
 
 Pause::Media_Play_Pause
 
