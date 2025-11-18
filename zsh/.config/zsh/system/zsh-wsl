@@ -4,4 +4,6 @@ if [ -d "/home/linuxbrew/.linuxbrew/bin" ]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
+export CAROOT=/mnt/c/Users/kola/AppData/Local/mkcert
+
 alias open='explorer.exe'

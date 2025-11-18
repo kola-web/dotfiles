@@ -9,7 +9,11 @@ zstyle ':vcs_info:*' enable git
 
 # setup a hook that runs before every ptompt.
 precmd_vcs_info() { vcs_info }
+keep_current_path() {
+  printf "\e]9;9;%s\e\\" "$(wslpath -w "$PWD")"
+}
 precmd_functions+=( precmd_vcs_info )
+precmd_functions+=( keep_current_path )
 setopt prompt_subst
 
 # add a function to check for untracked files in the directory.
