@@ -1,26 +1,28 @@
-set -gx TERM xterm-256color
+fish_vi_key_bindings
 
-source ~/.config/fish/env.fish
-source ~/.config/fish/function.fish
-source ~/.config/fish/exports.fish
-source ~/.config/fish/alias.fish
-source ~/.config/fish/before.init.fish
+# 简单别名 (推荐 abbr，适合命令行快速输入，可自动补全)
+abbr e fastfetch
+abbr f zi
+abbr r yy # yazi
+alias g lazygit
+abbr lzd lazydocker
+abbr nvimrc 'nvim ~/.config/nvim/'
+abbr ls 'eza --icons'
 
+abbr lnvim 'env NVIM_APPNAME=LazyVim nvim'
+abbr nnvim 'env NVIM_APPNAME=NvChad nvim'
+abbr tnvim 'env NVIM_APPNAME=NativeVim nvim'
+
+# 或者：如果需要能在脚本里用，可以用 function 实现（见上一条回答）
+
+# 环境变量和 PATH 设置
+set -gx VOLTA_FEATURE_PNPM 1
+set -gx VOLTA_HOME $HOME/.volta
+# Fish 设置 PATH 推荐 prepend（注意顺序）
+set -gx PATH $VOLTA_HOME/bin $HOME/.local/bin $HOME/.local/share/neovim/bin $PATH
+
+# zoxide 初始化
 zoxide init fish | source
-starship init fish | source
 
-# fish_vi_key_bindings
-function fish_user_key_bindings
-    # Execute this once per mode that emacs bindings should be used in
-    fish_default_key_bindings -M insert
-
-    # Then execute the vi-bindings so they take precedence when there's a conflict.
-    # Without --no-erase fish_vi_key_bindings will default to
-    # resetting all bindings.
-    # The argument specifies the initial mode (insert, "default" or visual).
-    fish_vi_key_bindings --no-erase insert
-end
-
-fzf_configure_bindings --directory=\cf --variables=\e\cv
-set -gx VOLTA_HOME "$HOME/.volta"
-set -gx PATH "$VOLTA_HOME/bin" $PATH
+bind \cE accept-autosuggestion
+bind -M insert \cE accept-autosuggestion
