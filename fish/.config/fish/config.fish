@@ -1,5 +1,3 @@
-fish_vi_key_bindings
-
 # 简单别名 (推荐 abbr，适合命令行快速输入，可自动补全)
 abbr e fastfetch
 abbr f zi
@@ -21,8 +19,5 @@ set -gx VOLTA_HOME $HOME/.volta
 # Fish 设置 PATH 推荐 prepend（注意顺序）
 set -gx PATH $VOLTA_HOME/bin $HOME/.local/bin $HOME/.local/share/neovim/bin $PATH
 
-# zoxide 初始化
 zoxide init fish | source
-
-bind \cE accept-autosuggestion
-bind -M insert \cE accept-autosuggestion
+starship init fish | source
