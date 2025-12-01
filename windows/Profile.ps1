@@ -122,16 +122,6 @@ function Invoke-Starship-PreCommand
 #  return $out
 #}
 
-# plugin
-#oh-my-posh init pwsh --config "$HOME/dotfiles/windows/kola.omp.json" | Invoke-Expression
-
-# install: winget install fzf
-# install: Install-Module -Name PSFzf
-Import-Module PSFzf
-
-Import-Module PSReadLine
-
-Invoke-Expression (&starship init powershell)
 
 Set-PSReadLineOption -EditMode Vi
 $OnViModeChange = [scriptblock] {
@@ -146,28 +136,28 @@ $OnViModeChange = [scriptblock] {
   }
 }
 Set-PSReadLineOption -ViModeIndicator Script -ViModeChangeHandler $OnViModeChange
+Set-PSReadLineKeyHandler -Chord Ctrl-r -Function ReverseSearchHistory -ViMode Insert
+Set-PSReadLineKeyHandler -Chord Ctrl-r -Function ReverseSearchHistory -ViMode Command
+
 Set-PSReadLineOption -BellStyle None
 Set-PSReadLineOption -HistorySearchCursorMovesToEnd
 Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -PredictionViewStyle  InlineView
 Set-PSReadLineOption -Colors @{ "Selection" = "`e[7m" }
 
-# Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
-Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
-carapace _carapace | Out-String | Invoke-Expression
-
-Set-PSReadLineKeyHandler -Chord Ctrl-r -Function ReverseSearchHistory -ViMode Insert
-Set-PSReadLineKeyHandler -Chord Ctrl-r -Function ReverseSearchHistory -ViMode Command
 Set-PSReadlineKeyHandler -Chord "Ctrl+e" -Function ForwardChar
 Set-PSReadLineKeyHandler -Chord "Ctrl+p" -Function HistorySearchBackward
 Set-PSReadLineKeyHandler -Chord "Ctrl+n" -Function HistorySearchForward
 
+# install: winget install fzf
+# install: Install-Module -Name PSFzf
+Import-Module PSFzf
+Import-Module -Name Microsoft.WinGet.CommandNotFound
+Import-Module PSCompletions
+
+# Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
+# Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
+# carapace _carapace | Out-String | Invoke-Expression
 
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
 
-
-
-#f45873b3-b655-43a6-b217-97c00aa0db58 PowerToys CommandNotFound module
-
-Import-Module -Name Microsoft.WinGet.CommandNotFound
-#f45873b3-b655-43a6-b217-97c00aa0db58
