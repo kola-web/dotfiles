@@ -91,37 +91,41 @@ function tnvim()
   $env:NVIM_APPNAME = ""
 }
 
-function Invoke-Starship-PreCommand
-{
-  # 修改窗口标题
-  $currentDirectory = $pwd.Path
-  $parentDirectory = Split-Path -Parent $currentDirectory
-  $currentDirectoryName = Split-Path -Leaf $currentDirectory
-  $parentDirectoryName = Split-Path -Leaf $parentDirectory
-  $host.ui.RawUI.WindowTitle = "$parentDirectoryName\$currentDirectoryName `a"
-
-  # 兼容 starship 分割窗口保留当前路径
-  $loc = $executionContext.SessionState.Path.CurrentLocation;
-  $prompt = "$([char]27)]9;12$([char]7)"
-  if ($loc.Provider.Name -eq "FileSystem")
-  {
-    $prompt += "$([char]27)]9;9;`"$($loc.ProviderPath)`"$([char]27)\"
-  }
-  $host.ui.Write($prompt)
-}
+# function Invoke-Starship-PreCommand
+# {
+#   # 修改窗口标题
+#   $currentDirectory = $pwd.Path
+#   $parentDirectory = Split-Path -Parent $currentDirectory
+#   $currentDirectoryName = Split-Path -Leaf $currentDirectory
+#   $parentDirectoryName = Split-Path -Leaf $parentDirectory
+#   $host.ui.RawUI.WindowTitle = "$parentDirectoryName\$currentDirectoryName `a"
+#
+#   # 兼容 starship 分割窗口保留当前路径
+#   $loc = $executionContext.SessionState.Path.CurrentLocation;
+#   $prompt = "$([char]27)]9;12$([char]7)"
+#   if ($loc.Provider.Name -eq "FileSystem")
+#   {
+#     $prompt += "$([char]27)]9;9;`"$($loc.ProviderPath)`"$([char]27)\"
+#   }
+#   $host.ui.Write($prompt)
+# }
 
 # https://learn.microsoft.com/zh-cn/windows/terminal/tutorials/new-tab-same-directory
-#function prompt {
-#  $loc = $executionContext.SessionState.Path.CurrentLocation;
+# function prompt
+# {
+#   $loc = $executionContext.SessionState.Path.CurrentLocation;
 #
-#  $out = ""
-#  if ($loc.Provider.Name -eq "FileSystem") {
-#    $out += "$([char]27)]9;9;`"$($loc.ProviderPath)`"$([char]27)\"
-#  }
-#  $out += "PS $loc$('>' * ($nestedPromptLevel + 1)) ";
-#  return $out
-#}
+#   $out = ""
+#   if ($loc.Provider.Name -eq "FileSystem")
+#   {
+#     $out += "$([char]27)]9;9;`"$($loc.ProviderPath)`"$([char]27)\"
+#   }
+#   $out += "PS $loc$('>' * ($nestedPromptLevel + 1)) ";
+#   return $out
+# }
 
+Invoke-Expression (&starship init powershell)
+Invoke-Expression (& { (zoxide init powershell | Out-String) })
 
 Set-PSReadLineOption -EditMode Vi
 $OnViModeChange = [scriptblock] {
@@ -143,7 +147,10 @@ Set-PSReadLineOption -BellStyle None
 Set-PSReadLineOption -HistorySearchCursorMovesToEnd
 Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -PredictionViewStyle  InlineView
+
 Set-PSReadLineOption -Colors @{ "Selection" = "`e[7m" }
+Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
+carapace _carapace | Out-String | Invoke-Expression
 
 Set-PSReadlineKeyHandler -Chord "Ctrl+e" -Function ForwardChar
 Set-PSReadLineKeyHandler -Chord "Ctrl+p" -Function HistorySearchBackward
@@ -153,11 +160,10 @@ Set-PSReadLineKeyHandler -Chord "Ctrl+n" -Function HistorySearchForward
 # install: Install-Module -Name PSFzf
 Import-Module PSFzf
 Import-Module -Name Microsoft.WinGet.CommandNotFound
-Import-Module PSCompletions
 
-# Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
-# Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
-# carapace _carapace | Out-String | Invoke-Expression
+# Import-Module PSCompletions
+# $argc_scripts = $env:ARGC_COMPLETIONS_PATH -split [System.IO.Path]::PathSeparator | Get-ChildItem -File | ForEach-Object { $_.BaseName }
+# $PSCompletions.argc_completions($argc_scripts)
 
-Invoke-Expression (& { (zoxide init powershell | Out-String) })
+
 
