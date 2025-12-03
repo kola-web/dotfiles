@@ -91,24 +91,24 @@ function tnvim()
   $env:NVIM_APPNAME = ""
 }
 
-# function Invoke-Starship-PreCommand
-# {
-#   # 修改窗口标题
-#   $currentDirectory = $pwd.Path
-#   $parentDirectory = Split-Path -Parent $currentDirectory
-#   $currentDirectoryName = Split-Path -Leaf $currentDirectory
-#   $parentDirectoryName = Split-Path -Leaf $parentDirectory
-#   $host.ui.RawUI.WindowTitle = "$parentDirectoryName\$currentDirectoryName `a"
-#
-#   # 兼容 starship 分割窗口保留当前路径
-#   $loc = $executionContext.SessionState.Path.CurrentLocation;
-#   $prompt = "$([char]27)]9;12$([char]7)"
-#   if ($loc.Provider.Name -eq "FileSystem")
-#   {
-#     $prompt += "$([char]27)]9;9;`"$($loc.ProviderPath)`"$([char]27)\"
-#   }
-#   $host.ui.Write($prompt)
-# }
+function Invoke-Starship-PreCommand
+{
+  # 修改窗口标题
+  $currentDirectory = $pwd.Path
+  $parentDirectory = Split-Path -Parent $currentDirectory
+  $currentDirectoryName = Split-Path -Leaf $currentDirectory
+  $parentDirectoryName = Split-Path -Leaf $parentDirectory
+  $host.ui.RawUI.WindowTitle = "$parentDirectoryName\$currentDirectoryName `a"
+
+  # 兼容 starship 分割窗口保留当前路径
+  $loc = $executionContext.SessionState.Path.CurrentLocation;
+  $prompt = "$([char]27)]9;12$([char]7)"
+  if ($loc.Provider.Name -eq "FileSystem")
+  {
+    $prompt += "$([char]27)]9;9;`"$($loc.ProviderPath)`"$([char]27)\"
+  }
+  $host.ui.Write($prompt)
+}
 
 # https://learn.microsoft.com/zh-cn/windows/terminal/tutorials/new-tab-same-directory
 # function prompt
