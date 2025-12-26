@@ -2,3 +2,5 @@ git:
   pagers:
     - useExternalDiffGitConfig: true
   branchLogCmd: git log --graph --color=always --abbrev-commit --decorate --date=iso --pretty=medium {{branchName}} --
+os:
+  editPreset: 'nvim'
