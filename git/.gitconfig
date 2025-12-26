@@ -32,6 +32,8 @@
 	tool = nvimdiff
 [difftool]
 	prompt = false
+[difftool "nvimdiff"]
+        cmd = "nvim -c \"DiffviewOpen\""
 [push]
 	autoSetupRemote = true
 	followTags = true
@@ -85,3 +87,5 @@
   l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset' --abbrev-commit --decorate --date=format:'%Y-%m-%d' --color --decorate
 [credential "http://39.106.86.127:3000"]
 	provider = generic
+[http]
+	postBuffer = 524288000

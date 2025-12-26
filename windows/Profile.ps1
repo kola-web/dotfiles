@@ -70,13 +70,6 @@ function lnvim()
   $env:NVIM_APPNAME = ""
 }
 
-function mini-nvim()
-{
-  $env:NVIM_APPNAME = "mini-nvim"
-  nvim $args
-  $env:NVIM_APPNAME = ""
-}
-
 function kickstart-nvim()
 {
   $env:NVIM_APPNAME = "kickstart.nvim"
