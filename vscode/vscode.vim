@@ -18,8 +18,7 @@ noremap <C-l> <C-w>l
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>^
 
-map <CR> editor.action.smartSelect.expand
-map <bs> editor.action.smartSelect.shrink
+noremap <cr> <leader><leader><leader>bdw
 
 " 显示悬停信息
 " noremap K :vsc editor.action.showHover<CR>

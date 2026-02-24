@@ -89,3 +89,5 @@
 	provider = generic
 [http]
 	postBuffer = 524288000
+[safe]
+	directory = *

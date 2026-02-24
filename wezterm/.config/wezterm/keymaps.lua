@@ -243,9 +243,6 @@ M.key_tables = {
 
     { key = 'DownArrow', action = act.AdjustPaneSize({ 'Down', 1 }) },
     { key = 'j', action = act.AdjustPaneSize({ 'Down', 1 }) },
-
-    -- Cancel the mode by pressing escape
-    { key = 'Escape', action = 'PopKeyTable' },
   },
 }
 
