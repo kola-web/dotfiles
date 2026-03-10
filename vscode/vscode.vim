@@ -18,7 +18,8 @@ noremap <C-l> <C-w>l
 inoremap <C-e> <C-o>$
 inoremap <C-a> <C-o>^
 
-noremap <cr> <leader><leader><leader>bdw
+" noremap <cr> <leader><leader><leader>bdw
+noremap <cr> <leader><leader>s
 
 " 显示悬停信息
 " noremap K :vsc editor.action.showHover<CR>

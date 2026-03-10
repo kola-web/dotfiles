@@ -19,6 +19,7 @@ $env:HTTPS_PROXY = "http://127.0.0.1:7897"
 $env:SVN_LOG_ENCODING = "utf-8"
 $env:VOLTA_FEATURE_PNPM = 1
 $env:CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
+$env:EDITOR = "nvim"
 
 # Aliases 🔗
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -119,7 +120,7 @@ function Invoke-Starship-PreCommand
 #   return $out
 # }
 
-Invoke-Expression (&starship init powershell)
+Invoke-Expression (& starship init powershell)
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
 
 Set-PSReadLineOption -EditMode Vi
