@@ -100,11 +100,6 @@ M.keys = {
     }),
   },
   {
-    key = '3',
-    mods = 'CTRL',
-    action = act.SpawnTab({ DomainName = 'WSL:Ubuntu-24.04' }),
-  },
-  {
     key = 't',
     mods = mod.cmd,
     action = act.SpawnTab('CurrentPaneDomain'),
@@ -114,16 +109,16 @@ M.keys = {
     mods = mod.cmd,
     action = act.SplitVertical({ domain = 'CurrentPaneDomain' }),
   },
-  { key = 'n', mods = mod.cmd, action = act.SpawnWindow },
   {
     key = 'd',
     mods = mod.cmd,
     action = act.SplitHorizontal({ domain = 'CurrentPaneDomain' }),
   },
+  { key = 'n', mods = mod.cmd, action = act.SpawnWindow },
   {
     key = 'w',
     mods = mod.cmd,
-    action = act.CloseCurrentPane({ confirm = true }),
+    action = act.CloseCurrentPane({ confirm = false }),
   },
   {
     key = 'z',
@@ -206,43 +201,14 @@ M.keys = {
     action = act.Search({ CaseSensitiveString = '' }),
   },
   {
-    key = 'T',
-    mods = mod.cmd,
-    action = act.ShowLauncher,
-  },
-  {
     key = 'p',
     mods = mod.cmd,
-    action = act.ShowLauncherArgs({ flags = 'FUZZY|TABS' }),
+    action = act.ShowLauncherArgs({ flags = 'LAUNCH_MENU_ITEMS' }),
   },
   {
     key = 'P',
     mods = mod.cmd,
     action = act.ActivateCommandPalette,
-  },
-  {
-    key = 'r',
-    mods = mod.cmd,
-    action = act.ActivateKeyTable({
-      name = 'resize_pane',
-      one_shot = false,
-    }),
-  },
-}
-
-M.key_tables = {
-  resize_pane = {
-    { key = 'LeftArrow', action = act.AdjustPaneSize({ 'Left', 1 }) },
-    { key = 'h', action = act.AdjustPaneSize({ 'Left', 1 }) },
-
-    { key = 'RightArrow', action = act.AdjustPaneSize({ 'Right', 1 }) },
-    { key = 'l', action = act.AdjustPaneSize({ 'Right', 1 }) },
-
-    { key = 'UpArrow', action = act.AdjustPaneSize({ 'Up', 1 }) },
-    { key = 'k', action = act.AdjustPaneSize({ 'Up', 1 }) },
-
-    { key = 'DownArrow', action = act.AdjustPaneSize({ 'Down', 1 }) },
-    { key = 'j', action = act.AdjustPaneSize({ 'Down', 1 }) },
   },
 }
 
