@@ -7,7 +7,7 @@
 # Profile.ps1 - Scott McKendry
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-. "C:\Users\kola\api-key.ps1"
+. "$HOME\api-key.ps1"
 
 # set PowerShell to UTF-8
 [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
@@ -66,6 +66,14 @@ function Script:Invoke-Eza
   eza $args --icons=auto
 }
 
+function nvimpack()
+{
+  $env:NVIM_APPNAME = "nvimpack"
+  nvim $args
+  $env:NVIM_APPNAME = ""
+}
+
+
 function lnvim()
 {
   $env:NVIM_APPNAME = "LazyVim"
@@ -80,9 +88,9 @@ function kickstart-nvim()
   $env:NVIM_APPNAME = ""
 }
 
-function tnvim()
+function nvchad()
 {
-  $env:NVIM_APPNAME = "tnvim"
+  $env:NVIM_APPNAME = "nvchad"
   nvim $args
   $env:NVIM_APPNAME = ""
 }
