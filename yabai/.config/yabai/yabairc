@@ -8,7 +8,7 @@ grid=24:24:2:2:20:20
 BAR_HEIGHT=$(sketchybar -m --query bar | jq -r '.height')
 
 # global settings
-yabai -m config layout bsp
+yabai -m config layout stack
 yabai -m config window_zoom_persist off
 yabai -m config auto_balance off
 
@@ -28,8 +28,6 @@ yabai -m config left_padding "$GAP"
 yabai -m config right_padding "$GAP"
 yabai -m config window_gap "$GAP"
 
-yabai -m config --space 2 layout stack
-yabai -m config --space 3 layout stack
 yabai -m config --space 4 layout float
 
 # rule
@@ -37,8 +35,8 @@ yabai -m rule --add app="^(企业微信|QQ|微信|网易云音乐|喜马拉雅|Q
 yabai -m rule --add app="^(微信开发者工具)" space=3
 yabai -m rule --add app="^(Code)" space=2
 
-yabai -m rule --add app="^(CLion|PyCharm|IntelliJ IDEA|WebStorm-EAP|WebStorm)" manage=off
-yabai -m rule --add app="^(SnailSVN|pot|预览|系统设置|mpv|访达|网易邮箱大师|LiberOffice)" manage=off sub-layer=below grid=$grid
+# yabai -m rule --add app="^(CLion|PyCharm|IntelliJ IDEA|WebStorm-EAP|WebStorm)" manage=off
+yabai -m rule --add app="^(SnailSVN|pot|预览|系统设置|mpv|网易邮箱大师|LiberOffice)" manage=off
 
 # yabai -m rule --add app=".*" layer=normal
 # yabai -m rule --add app="^通知.*$" sticky=on layer=above
