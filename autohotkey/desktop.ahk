@@ -248,6 +248,71 @@ deleteVirtualDesktop()
 #8:: switchDesktopByNumber(8)
 #9:: switchDesktopByNumber(9)
 
+; ========== Window Cycling (Win+J/K) ==========
+global cycleWindowIDs := []
+global cyclePos := 0
+global cycleTick := 0
+
+#k:: CycleWindow(1)   ; Next (toward less recently used)
+#j:: CycleWindow(-1)  ; Previous (toward more recently used)
+
+CycleWindow(direction) {
+    global cycleWindowIDs, cyclePos, cycleTick, CurrentDesktop
+
+    updateGlobalVariables()
+
+    now := A_TickCount
+
+    ; Get windows on current desktop in z-order (most recently used first)
+    WinGet winIDList, list
+    windows := []
+    Loop % winIDList {
+        windowID := % winIDList%A_Index%
+        windowIsOnDesktop := DllCall(IsWindowOnDesktopNumberProc, UInt, windowID, UInt, CurrentDesktop - 1)
+        if (windowIsOnDesktop == 1) {
+            WinGetTitle title, ahk_id %windowID%
+            if (title != "")
+                windows.Push(windowID)
+        }
+    }
+
+    if (windows.Length() <= 1)
+        return
+
+    ; Reset cycle if timed out (2s)
+    if (now - cycleTick > 2000) {
+        cycleWindowIDs := windows.Clone()
+        WinGet activeID, ID, A
+        cyclePos := 0
+        Loop % cycleWindowIDs.Length() {
+            if (cycleWindowIDs[A_Index] == activeID) {
+                cyclePos := A_Index - 1  ; 0-indexed position of current window
+                break
+            }
+        }
+    }
+
+    ; Move position in the circular list
+    cyclePos += direction
+    if (cyclePos >= cycleWindowIDs.Length())
+        cyclePos := 0
+    if (cyclePos < 0)
+        cyclePos := cycleWindowIDs.Length() - 1
+
+    ; Activate window (restore if minimized)
+    targetID := cycleWindowIDs[cyclePos + 1]  ; AHK arrays are 1-indexed
+    if !WinExist("ahk_id " . targetID) {
+        cycleTick := 0  ; Window gone, force refresh on next press
+        return
+    }
+    WinGet minMax, MinMax, ahk_id %targetID%
+    if (minMax == -1)
+        WinRestore, ahk_id %targetID%
+    WinActivate, ahk_id %targetID%
+
+    cycleTick := now
+}
+
 ; 移动窗口到指定窗口
 #+1::MoveCurrentWindowToDesktop(1)
 #+2::MoveCurrentWindowToDesktop(2)
