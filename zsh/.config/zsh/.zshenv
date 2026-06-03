@@ -17,6 +17,25 @@ export ZIM_HOME=$ZDOTDIR/.zim
 # Man pages
 export MANPAGER='nvim +Man!'
 
+source "$ZDOTDIR/zsh-functions"
+
+os=$(uname)
+
+if [[ $os == "Darwin" ]]; then
+    # 这里可以添加 macOS 特有的操作
+    zsh_add_file "system/zsh-macos"
+fi
+
+if [[ $os == "Linux" && ! -f "$(command -v wslpath)"  ]]; then
+    # 这里可以添加 linux 特有的操作
+    zsh_add_file "system/zsh-linux"
+fi
+
+if [[ $os == "Linux" &&  -f "$(command -v wslpath)"  ]]; then
+    # 这里可以添加 wsl 特有的操作
+    zsh_add_file "system/zsh-wsl"
+fi
+
 # fzf
 export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"

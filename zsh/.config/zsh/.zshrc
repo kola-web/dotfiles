@@ -20,26 +20,6 @@ setopt HIST_IGNORE_SPACE         # Do not record an event starting with a space.
 setopt HIST_SAVE_NO_DUPS         # Do not write a duplicate event to the history file.
 setopt HIST_VERIFY               # Do not execute immediately upon history expansion.
 
-source "$ZDOTDIR/zsh-functions"
-
-os=$(uname)
-
-if [[ $os == "Darwin" ]]; then
-    # 这里可以添加 macOS 特有的操作
-    zsh_add_file "system/zsh-macos"
-fi
-
-if [[ $os == "Linux" && ! -f "$(command -v wslpath)"  ]]; then
-    # 这里可以添加 linux 特有的操作
-    zsh_add_file "system/zsh-linux"
-fi
-
-if [[ $os == "Linux" &&  -f "$(command -v wslpath)"  ]]; then
-    # 这里可以添加 wsl 特有的操作
-    zsh_add_file "system/zsh-wsl"
-fi
-
-
 zsh_add_file "zsh-zimfw"
 zsh_add_file "zsh-prompt"
 zsh_add_file "scripts/completion.zsh"
