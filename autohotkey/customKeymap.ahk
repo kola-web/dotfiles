@@ -6,7 +6,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability
 
 ; 1. Win+Shift+S 映射为 PrintScreen
-; #+s::PrintScreen
+$#+s::
+Send {PrintScreen}
+return
 
 ; 2. 针对 raycast 窗口
 #IfWinActive ahk_exe raycast.exe
