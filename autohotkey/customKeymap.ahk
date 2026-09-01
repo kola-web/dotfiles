@@ -5,20 +5,14 @@
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability
 
+; 1. Win+Shift+S 映射为 PrintScreen
+; #+s::PrintScreen
 
-; #+s:: ; 截图
-;     Run, Snipaste.exe snip
-; return
+; 2. 针对 raycast 窗口
+#IfWinActive ahk_exe raycast.exe
+^n::Send {Down}
+^p::Send {Up}
+#IfWinActive
 
-#+s::  ; 截图
-  Send {PrintScreen}
-return
-
-Pause::Media_Play_Pause
-
-; ^n::
-;     Send {Down}
-;     return
-; ^p::
-;     Send {Up}
-;     return
+; 3. Pause键映射为媒体播放暂停
+Pause::Send {Media_Play_Pause}

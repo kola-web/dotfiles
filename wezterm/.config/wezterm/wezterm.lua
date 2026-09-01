@@ -16,7 +16,6 @@ config.font_size = 12
 
 -- 窗口配置
 config.window_padding = { left = 0, right = 0, top = 0, bottom = 0 }
-config.window_background_opacity = 0.94
 config.window_decorations = 'RESIZE'
 config.window_close_confirmation = 'NeverPrompt'
 
@@ -32,35 +31,11 @@ config.cursor_blink_rate = 500
 config.default_cursor_style = 'BlinkingBlock'
 
 -- ==================== 性能优化 ====================
-
--- 渲染设置
-config.front_end = 'WebGpu'
-config.webgpu_power_preference = 'HighPerformance'
-config.max_fps = 60
-config.animation_fps = 60
-
--- 禁用不必要的视觉效果
-config.window_decorations = 'RESIZE'
-config.use_resize_increments = false
-
--- 光标设置（禁用闪烁减少重绘）
-config.cursor_blink_rate = 0
-config.default_cursor_style = 'SteadyBlock'
-
 -- 滚动缓冲区优化
 config.scrollback_lines = 5000
 
 -- 输入输出优化
 config.mux_output_parser_coalesce_delay_ms = 1
-
--- 禁用不必要的功能
-config.check_for_updates = false
-
--- 减少内存占用
-config.inactive_pane_hsb = {
-  saturation = 1.0,
-  brightness = 1.0,
-}
 
 -- ==================== 行为配置 ====================
 
@@ -87,14 +62,14 @@ end)
 
 -- 设置默认 shell（Windows 优先使用 PowerShell 7）
 if wezterm.target_triple:find('windows') then
-  config.default_prog = { 'pwsh.exe', '-NoLogo' }
+  config.default_prog = { 'pwsh.exe' }
 
   -- 启动菜单
   config.launch_menu = {
-    { label = 'PowerShell 7',       args = { 'pwsh.exe', '-NoLogo' } },
+    { label = 'PowerShell 7', args = { 'pwsh.exe' } },
     { label = 'Windows PowerShell', args = { 'powershell.exe', '-NoLogo' } },
-    { label = 'Command Prompt',     args = { 'cmd.exe' } },
-    { label = 'WSL Ubuntu-24.04',   args = { 'wsl.exe', '-d', 'Ubuntu-24.04' } },
+    { label = 'Command Prompt', args = { 'cmd.exe' } },
+    { label = 'WSL Ubuntu-24.04', args = { 'wsl.exe', '-d', 'Ubuntu-24.04' } },
   }
 
   -- WSL 域配置
@@ -107,14 +82,14 @@ if wezterm.target_triple:find('windows') then
 elseif wezterm.target_triple:find('apple') then
   config.default_prog = { '/bin/zsh', '-l' }
   config.launch_menu = {
-    { label = 'Zsh',  args = { '/bin/zsh', '-l' } },
+    { label = 'Zsh', args = { '/bin/zsh', '-l' } },
     { label = 'Bash', args = { '/bin/bash', '-l' } },
   }
 else
   config.default_prog = { '/bin/bash', '-l' }
   config.launch_menu = {
     { label = 'Bash', args = { '/bin/bash', '-l' } },
-    { label = 'Zsh',  args = { '/usr/bin/zsh', '-l' } },
+    { label = 'Zsh', args = { '/usr/bin/zsh', '-l' } },
   }
 end
 
