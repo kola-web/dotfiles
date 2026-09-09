@@ -41,6 +41,7 @@ bindings = [
   { chars = "\u00027", key = "Key7", mods = "Command" },
   { chars = "\u00028", key = "Key8", mods = "Command" },
   { chars = "\u00029", key = "Key9", mods = "Command" },
+  { chars = "\u00020", key = "Key0", mods = "Command" },
 
   { chars = "\u0002c", key = "T", mods = "Alt" },
   { chars = "\u0002x", key = "W", mods = "Alt" },
@@ -58,6 +59,7 @@ bindings = [
   { chars = "\u00027", key = "Key7", mods = "Alt" },
   { chars = "\u00028", key = "Key8", mods = "Alt" },
   { chars = "\u00029", key = "Key9", mods = "Alt" },
+  { chars = "\u00020", key = "Key0", mods = "Alt" },
 
   # zellij
   # { chars = "\u0002c", key = "T", mods = "Command" },

@@ -1,5 +1,49 @@
 {
+  "C:/Users/kola/AppData/Local/kickstart.nvim": [
+    {
+      "headRefName": "master",
+      "number": 2153,
+      "title": "Master",
+      "state": "CLOSED",
+      "checksState": "SUCCESS",
+      "url": "https://github.com/nvim-lua/kickstart.nvim/pull/2153",
+      "headRepositoryOwner": "SplinterSword"
+    },
+    {
+      "headRefName": "master",
+      "number": 2152,
+      "title": "sync kickstart",
+      "state": "CLOSED",
+      "url": "https://github.com/nvim-lua/kickstart.nvim/pull/2152",
+      "headRepositoryOwner": "koendebruijn"
+    },
+    {
+      "headRefName": "master",
+      "number": 2149,
+      "title": "Update with main fork",
+      "state": "CLOSED",
+      "url": "https://github.com/nvim-lua/kickstart.nvim/pull/2149",
+      "headRepositoryOwner": "DevMedic2026"
+    },
+    {
+      "headRefName": "master",
+      "number": 2145,
+      "title": "My personal changes",
+      "state": "CLOSED",
+      "url": "https://github.com/nvim-lua/kickstart.nvim/pull/2145",
+      "headRepositoryOwner": "zwka"
+    },
+    {
+      "headRefName": "master",
+      "number": 2143,
+      "title": "Update config",
+      "state": "CLOSED",
+      "url": "https://github.com/nvim-lua/kickstart.nvim/pull/2143",
+      "headRepositoryOwner": "majer565"
+    }
+  ],
   "C:/Users/kola/AppData/Local/nvim": null,
+  "C:/Users/kola/AppData/Roaming/Rime": null,
   "C:/Users/kola/dotfiles": null,
   "C:\\Users\\kola\\AppData\\Local\\nvim": null,
   "C:\\Users\\kola\\learn\\towxml-stream-typewriter": null
