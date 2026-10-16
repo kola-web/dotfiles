@@ -5,11 +5,14 @@ TERM = "xterm-256color"
 draw_bold_text_with_bright_colors = true
 
 [font]
-size = 14.0
+size = 12.0
 normal = { family = "Maple Mono NF CN" }
 
 [terminal]
-shell = "wsl --cd ~"
+shell = { program = "pwsh", args = ["-NoExit", "-Command", "Set-Location ~;"] }
+
+[cursor]
+style = { shape = 'Beam', blinking = 'On' }
 
 [window]
 decorations = "none"
