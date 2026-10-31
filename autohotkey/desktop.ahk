@@ -249,21 +249,16 @@ deleteVirtualDesktop()
 #9:: switchDesktopByNumber(9)
 
 ; ========== Window Cycling (Win+J/K) ==========
-global cycleWindowIDs := []
-global cyclePos := 0
-global cycleTick := 0
-
 #k:: CycleWindow(1)   ; Next (toward less recently used)
 #j:: CycleWindow(-1)  ; Previous (toward more recently used)
 
 CycleWindow(direction) {
-    global cycleWindowIDs, cyclePos, cycleTick, CurrentDesktop
+    global CurrentDesktop
 
     updateGlobalVariables()
 
-    now := A_TickCount
-
-    ; Get windows on current desktop in z-order (most recently used first)
+    ; Build the list of windows on the current desktop, in z-order
+    ; (most recently used first).
     WinGet winIDList, list
     windows := []
     Loop % winIDList {
@@ -276,41 +271,54 @@ CycleWindow(direction) {
         }
     }
 
+    ; Nothing to cycle between.
     if (windows.Length() <= 1)
         return
 
-    ; Reset cycle if timed out (2s)
-    if (now - cycleTick > 2000) {
-        cycleWindowIDs := windows.Clone()
-        WinGet activeID, ID, A
-        cyclePos := 0
-        Loop % cycleWindowIDs.Length() {
-            if (cycleWindowIDs[A_Index] == activeID) {
-                cyclePos := A_Index - 1  ; 0-indexed position of current window
-                break
-            }
-        }
+    ; Always re-sync the start position from the REAL foreground window on every
+    ; press. The old version cached a position for 2s; whenever the foreground
+    ; window changed (mouse click, Alt+Tab, a window closing) the cache went
+    ; stale and the next press "re-activated" an already-active window, so it
+    ; looked like nothing happened and you had to press again.
+    WinGet activeID, ID, A
+    pos := IndexOf(windows, activeID)
+    if (pos < 0) {
+        ; The active window isn't in the list (e.g. an empty title). Put it at
+        ; the front of the cycle so we never start from a phantom position.
+        windows.InsertAt(1, activeID)
+        pos := 0
     }
 
-    ; Move position in the circular list
-    cyclePos += direction
-    if (cyclePos >= cycleWindowIDs.Length())
-        cyclePos := 0
-    if (cyclePos < 0)
-        cyclePos := cycleWindowIDs.Length() - 1
+    ; Advance one step, wrapping around in both directions.
+    pos += direction
+    if (pos >= windows.Length())
+        pos := 0
+    if (pos < 0)
+        pos := windows.Length() - 1
 
-    ; Activate window (restore if minimized)
-    targetID := cycleWindowIDs[cyclePos + 1]  ; AHK arrays are 1-indexed
-    if !WinExist("ahk_id " . targetID) {
-        cycleTick := 0  ; Window gone, force refresh on next press
+    targetID := windows[pos + 1]  ; AHK arrays are 1-indexed
+    if !WinExist("ahk_id " . targetID)
         return
-    }
+
+    ; Restore then activate (WinActivate alone won't un-minimize).
     WinGet minMax, MinMax, ahk_id %targetID%
     if (minMax == -1)
         WinRestore, ahk_id %targetID%
     WinActivate, ahk_id %targetID%
 
-    cycleTick := now
+    ; Wait for the switch to actually land. Without this, a very fast second
+    ; press can still read the OLD foreground window and re-activate a window
+    ; that is already active -- the other half of the "double press" problem.
+    WinWaitActive, ahk_id %targetID%,, 200
+}
+
+; Returns the 0-based position of `value` in array `arr`, or -1 if not found.
+IndexOf(arr, value) {
+    Loop % arr.Length() {
+        if (arr[A_Index] == value)
+            return A_Index - 1
+    }
+    return -1
 }
 
 ; 移动窗口到指定窗口
