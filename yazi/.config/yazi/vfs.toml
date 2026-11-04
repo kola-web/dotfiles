@@ -1,0 +1,5 @@
+[sftp.hb127]
+host     = "39.106.86.127"
+user     = "root"
+port     = 26000
+key_file = "~/.ssh/id_rsa"

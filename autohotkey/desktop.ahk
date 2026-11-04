@@ -248,14 +248,30 @@ deleteVirtualDesktop()
 #8:: switchDesktopByNumber(8)
 #9:: switchDesktopByNumber(9)
 
+
+; 移动窗口到指定窗口
+#+1::MoveCurrentWindowToDesktop(1)
+#+2::MoveCurrentWindowToDesktop(2)
+#+3::MoveCurrentWindowToDesktop(3)
+#+4::MoveCurrentWindowToDesktop(4)
+#+5::MoveCurrentWindowToDesktop(5)
+#+6::MoveCurrentWindowToDesktop(6)
+#+7::MoveCurrentWindowToDesktop(7)
+#+8::MoveCurrentWindowToDesktop(8)
+#+9::MoveCurrentWindowToDesktop(9)
+
 ; ========== Window Cycling (Win+J/K) ==========
+global cycleTick := 0
+global lastCycledTarget := 0
+
 #k:: CycleWindow(1)   ; Next (toward less recently used)
 #j:: CycleWindow(-1)  ; Previous (toward more recently used)
 
 CycleWindow(direction) {
-    global CurrentDesktop
+    global CurrentDesktop, cycleTick, lastCycledTarget
 
     updateGlobalVariables()
+    now := A_TickCount
 
     ; Build the list of windows on the current desktop, in z-order
     ; (most recently used first).
@@ -275,18 +291,33 @@ CycleWindow(direction) {
     if (windows.Length() <= 1)
         return
 
-    ; Always re-sync the start position from the REAL foreground window on every
-    ; press. The old version cached a position for 2s; whenever the foreground
-    ; window changed (mouse click, Alt+Tab, a window closing) the cache went
-    ; stale and the next press "re-activated" an already-active window, so it
-    ; looked like nothing happened and you had to press again.
-    WinGet activeID, ID, A
-    pos := IndexOf(windows, activeID)
+    ; Decide which window to advance FROM -- with zero added latency.
+    ;
+    ; If this press continues a recent cycle (<1s) and the window we last
+    ; activated still exists, advance from THAT. Right after WinActivate the OS
+    ; may still report the old window as foreground for a few milliseconds;
+    ; re-anchoring to that stale read is exactly what caused "press does
+    ; nothing, need to press again". Remembering our own target sidesteps the
+    ; race without needing any Sleep.
+    ;
+    ; Otherwise (idle, or focus moved elsewhere) re-anchor to the real
+    ; foreground window.
+    if (now - cycleTick <= 1000 AND lastCycledTarget AND WinExist("ahk_id " lastCycledTarget)) {
+        pos := IndexOf(windows, lastCycledTarget)
+    } else {
+        WinGet activeID, ID, A
+        pos := IndexOf(windows, activeID)
+    }
+
+    ; Anchor not found in the current list (window closed / empty title):
+    ; fall back to the real foreground window, or seed the front of the list.
     if (pos < 0) {
-        ; The active window isn't in the list (e.g. an empty title). Put it at
-        ; the front of the cycle so we never start from a phantom position.
-        windows.InsertAt(1, activeID)
-        pos := 0
+        WinGet activeID, ID, A
+        pos := IndexOf(windows, activeID)
+        if (pos < 0) {
+            windows.InsertAt(1, activeID)
+            pos := 0
+        }
     }
 
     ; Advance one step, wrapping around in both directions.
@@ -306,10 +337,8 @@ CycleWindow(direction) {
         WinRestore, ahk_id %targetID%
     WinActivate, ahk_id %targetID%
 
-    ; Wait for the switch to actually land. Without this, a very fast second
-    ; press can still read the OLD foreground window and re-activate a window
-    ; that is already active -- the other half of the "double press" problem.
-    WinWaitActive, ahk_id %targetID%,, 200
+    lastCycledTarget := targetID
+    cycleTick := now
 }
 
 ; Returns the 0-based position of `value` in array `arr`, or -1 if not found.
@@ -321,13 +350,30 @@ IndexOf(arr, value) {
     return -1
 }
 
-; 移动窗口到指定窗口
-#+1::MoveCurrentWindowToDesktop(1)
-#+2::MoveCurrentWindowToDesktop(2)
-#+3::MoveCurrentWindowToDesktop(3)
-#+4::MoveCurrentWindowToDesktop(4)
-#+5::MoveCurrentWindowToDesktop(5)
-#+6::MoveCurrentWindowToDesktop(6)
-#+7::MoveCurrentWindowToDesktop(7)
-#+8::MoveCurrentWindowToDesktop(8)
-#+9::MoveCurrentWindowToDesktop(9)
+; Win+Q 关闭当前窗口（等同于点右上角 ×）
+#q::WinClose, A
+
+; Win+F 最大化/还原切换 toggle
+#f::
+WinGet, winState, MinMax, A
+if (winState = 1) {
+    SysGet, work, MonitorWorkArea, 1
+    WorkLeft := workLeft
+    WorkTop := workTop
+    WorkRight := workRight
+    WorkBottom := workBottom
+
+    WorkWidth := WorkRight - WorkLeft
+    WorkHeight := WorkBottom - WorkTop
+
+    w := Floor(WorkWidth * 0.6)
+    h := Floor(WorkHeight * 0.7)
+    x := Floor(WorkLeft + (WorkWidth - w) / 2)
+    y := Floor(WorkTop + (WorkHeight - h) / 2)
+
+    WinRestore, A
+    WinMove, A,, x, y, w, h
+} else {
+    WinMaximize, A
+}
+return

@@ -1,0 +1,27 @@
+[[mgr.prepend_keymap]]
+on = ["c", "m"]
+run = "plugin chmod"
+desc = "Chmod on selected files"
+
+[[mgr.prepend_keymap]]
+on = ["i"]
+run = "plugin easyjump"
+desc = "easyjump"
+
+# 微信小程序模板创建（原 mini.files 的 wc / wp）
+[[mgr.prepend_keymap]]
+on = ["w", "c"]
+run = "plugin mini-template -- --kind=component"
+desc = "从模板创建小程序组件 (wc)"
+
+[[mgr.prepend_keymap]]
+on = ["w", "p"]
+run = "plugin mini-template -- --kind=page"
+desc = "从模板创建小程序页面 (wp)"
+
+# w 已被 wc / wp 占用为前缀，任务管理器移到 W
+[[mgr.prepend_keymap]]
+on = ["W"]
+run = "tasks:show"
+desc = "任务管理器（原 w）"
+

@@ -1,5 +1,24 @@
-[plugin]
-deps = [{ use = "orhnk/system-clipboard", rev = "7775a80" }, { use = "Reledia/glow", rev = "f52b382" }]
+[[plugin.deps]]
+use = "orhnk/system-clipboard"
+rev = "7775a80"
+hash = ""
 
-[flavor]
-deps = []
+[[plugin.deps]]
+use = "Reledia/glow"
+rev = "f52b382"
+hash = ""
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:chmod"
+rev = "25d992d"
+hash = "87472b05a8c420100f6a2b9cde1e7746"
+
+[[plugin.deps]]
+use = "mikavilpas/easyjump.yazi:easyjump"
+rev = "c73420b"
+hash = "e19be8be472a25e08c18c2bea938f400"
+
+[[flavor.deps]]
+use = "yazi-rs/flavors:dracula"
+rev = "1183892"
+hash = "40136c9a02e166067a36d9ad618887f2"
