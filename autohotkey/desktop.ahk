@@ -261,73 +261,86 @@ deleteVirtualDesktop()
 #+9::MoveCurrentWindowToDesktop(9)
 
 ; ========== Window Cycling (Win+J/K) ==========
+global cycleWindowIDs := []   ; frozen window order for the current cycle session
+global cyclePos := 0          ; 0-based index of the window we last showed
 global cycleTick := 0
-global lastCycledTarget := 0
 
 #k:: CycleWindow(1)   ; Next (toward less recently used)
 #j:: CycleWindow(-1)  ; Previous (toward more recently used)
 
 CycleWindow(direction) {
-    global CurrentDesktop, cycleTick, lastCycledTarget
+    global CurrentDesktop, cycleWindowIDs, cyclePos, cycleTick
 
     updateGlobalVariables()
     now := A_TickCount
 
-    ; Build the list of windows on the current desktop, in z-order
-    ; (most recently used first).
+    ; Fresh snapshot of the windows on the current desktop, z-order
+    ; (foremost / most-recently-used first).
     WinGet winIDList, list
-    windows := []
+    fresh := []
     Loop % winIDList {
         windowID := % winIDList%A_Index%
         windowIsOnDesktop := DllCall(IsWindowOnDesktopNumberProc, UInt, windowID, UInt, CurrentDesktop - 1)
         if (windowIsOnDesktop == 1) {
             WinGetTitle title, ahk_id %windowID%
             if (title != "")
-                windows.Push(windowID)
+                fresh.Push(windowID)
         }
     }
 
-    ; Nothing to cycle between.
-    if (windows.Length() <= 1)
+    if (fresh.Length() <= 1)
         return
 
-    ; Decide which window to advance FROM -- with zero added latency.
+    ; Decide whether to start a NEW cycle session (freeze a fresh order) or
+    ; keep continuing the current one.
     ;
-    ; If this press continues a recent cycle (<1s) and the window we last
-    ; activated still exists, advance from THAT. Right after WinActivate the OS
-    ; may still report the old window as foreground for a few milliseconds;
-    ; re-anchoring to that stale read is exactly what caused "press does
-    ; nothing, need to press again". Remembering our own target sidesteps the
-    ; race without needing any Sleep.
-    ;
-    ; Otherwise (idle, or focus moved elsewhere) re-anchor to the real
-    ; foreground window.
-    if (now - cycleTick <= 1000 AND lastCycledTarget AND WinExist("ahk_id " lastCycledTarget)) {
-        pos := IndexOf(windows, lastCycledTarget)
-    } else {
-        WinGet activeID, ID, A
-        pos := IndexOf(windows, activeID)
+    ; The order MUST stay frozen across consecutive presses. If it were rebuilt
+    ; every press, the window we just activated would jump to the front of the
+    ; list, and advancing "front -> second" would only ping-pong between the two
+    ; most-recent windows -- every other window (a third window, or both windows
+    ; of the same app alongside another app) would never be reached.
+    newSession := (now - cycleTick > 2000) || (cycleWindowIDs.Length() != fresh.Length()) || (cyclePos >= cycleWindowIDs.Length()) || (cycleWindowIDs.Length() == 0)
+
+    ; Restart if the window we are positioned on disappeared.
+    if (!newSession) {
+        curTarget := cycleWindowIDs[cyclePos + 1]
+        if !WinExist("ahk_id " . curTarget)
+            newSession := true
     }
 
-    ; Anchor not found in the current list (window closed / empty title):
-    ; fall back to the real foreground window, or seed the front of the list.
-    if (pos < 0) {
+    ; Restart if focus moved to a window outside the current cycle set
+    ; (e.g. the user clicked another app or a new window appeared).
+    if (!newSession) {
         WinGet activeID, ID, A
-        pos := IndexOf(windows, activeID)
-        if (pos < 0) {
-            windows.InsertAt(1, activeID)
-            pos := 0
+        if (activeID AND WinExist("ahk_id " . activeID))
+            if (IndexOf(cycleWindowIDs, activeID) < 0)
+                newSession := true
+    }
+
+    if (newSession) {
+        cycleWindowIDs := fresh.Clone()
+        WinGet activeID, ID, A
+        cyclePos := IndexOf(cycleWindowIDs, activeID)
+        if (cyclePos < 0) {
+            ; Foreground window isn't in the list (empty title / not found).
+            if (activeID AND WinExist("ahk_id " . activeID)) {
+                cycleWindowIDs.InsertAt(1, activeID)
+                cyclePos := 0
+            } else {
+                cyclePos := 0
+            }
         }
+        cycleTick := now
     }
 
     ; Advance one step, wrapping around in both directions.
-    pos += direction
-    if (pos >= windows.Length())
-        pos := 0
-    if (pos < 0)
-        pos := windows.Length() - 1
+    cyclePos += direction
+    if (cyclePos >= cycleWindowIDs.Length())
+        cyclePos := 0
+    if (cyclePos < 0)
+        cyclePos := cycleWindowIDs.Length() - 1
 
-    targetID := windows[pos + 1]  ; AHK arrays are 1-indexed
+    targetID := cycleWindowIDs[cyclePos + 1]  ; AHK arrays are 1-indexed
     if !WinExist("ahk_id " . targetID)
         return
 
@@ -337,7 +350,6 @@ CycleWindow(direction) {
         WinRestore, ahk_id %targetID%
     WinActivate, ahk_id %targetID%
 
-    lastCycledTarget := targetID
     cycleTick := now
 }
 
