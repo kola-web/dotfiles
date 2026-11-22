@@ -22,10 +22,10 @@ yabai -m config window_shadow off
 
 # general space settings
 yabai -m config external_bar all:"${BAR_HEIGHT}":0
-yabai -m config top_padding "$GAP"
-yabai -m config bottom_padding "$GAP"
-yabai -m config left_padding "$GAP"
-yabai -m config right_padding "$GAP"
+# yabai -m config top_padding "$GAP"
+# yabai -m config bottom_padding "$GAP"
+# yabai -m config left_padding "$GAP"
+# yabai -m config right_padding "$GAP"
 yabai -m config window_gap "$GAP"
 
 yabai -m config --space 4 layout float
