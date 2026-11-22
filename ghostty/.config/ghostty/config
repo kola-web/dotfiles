@@ -1,0 +1,9 @@
+font-family = "Maple Mono NF CN"
+font-size = 14
+adjust-cell-height = 2
+
+keybind = cmd+h=goto_split:left
+keybind = cmd+j=goto_split:bottom
+keybind = cmd+k=goto_split:top
+keybind = cmd+l=goto_split:right
+keybind = cmd+enter=toggle_split_zoom

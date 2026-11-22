@@ -22,6 +22,7 @@ ctrl - p [
 
 # alt + shift - c : /Applications/Snipaste.app/Contents/MacOS/Snipaste pick-color
 alt + shift - s : /Applications/Snipaste.app/Contents/MacOS/Snipaste snip
+alt - o : yabai -m window --toggle windowed-fullscreen
 
 ## 关闭当前窗口
 alt - q : $(yabai -m window $(yabai -m query --windows --window | jq -re ".id") --close)
@@ -62,13 +63,10 @@ alt - s : yabai -m space --layout stack
 alt - t : yabai -m space --layout bsp
 alt - f : yabai -m space --layout float
 
-alt - o : yabai -m space --toggle padding; yabai -m space --toggle gap
-alt + shift - o : yabai -m window --toggle border
 alt - r : yabai -m space --rotate 90
 
 ## 缺划浮动
-alt - space : yabai -m window --toggle float --grid 24:24:2:2:20:20 --sub-layer below
-
+alt - space : yabai -m window --toggle float --grid 24:24:3:3:18:17 --sub-layer below 2>/dev/null
 
 # alt-, 上一个屏幕
 alt - 0x2F : yabai -m display --focus prev
