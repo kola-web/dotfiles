@@ -25,3 +25,4 @@ lazygit/.config/lazygit/state.yml
 nushell/.config/nushell/history.txt
 tmux/.config/tmux/resurrect
 zsh/.config/zsh/.zcompdump*
+/lazygit/.config/lazygit/github_pull_requests.json
